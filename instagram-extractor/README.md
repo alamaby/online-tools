@@ -40,6 +40,10 @@ results/<job-id>/
 
 ## Menjalankan extractor di laptop (tanpa Actions)
 
+Panduan lengkap (Windows, langkah demi langkah): [RUN-LOCALLY.md](RUN-LOCALLY.md).
+Berguna saat jalan via web gagal dengan `LOGIN_WALL` — IP rumah jauh
+lebih jarang kena dinding login daripada IP runner GitHub Actions.
+
 ```sh
 cd instagram-extractor
 npm install
