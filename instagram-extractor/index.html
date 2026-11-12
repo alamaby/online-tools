@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instagram Extractor — Ambil Caption &amp; Slide</title>
+<style>
+  :root { --bg:#0f172a; --card:#1e293b; --line:#334155; --text:#e2e8f0; --muted:#94a3b8; --accent:#38bdf8; --ok:#4ade80; --err:#f87171; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); }
+  main { max-width:820px; margin:0 auto; padding:24px 16px 64px; }
+  h1 { font-size:24px; margin:0 0 4px; }
+  p.sub { color:var(--muted); margin:0 0 20px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin-bottom:16px; }
+  label { display:block; font-size:13px; color:var(--muted); margin:12px 0 4px; }
+  label:first-child { margin-top:0; }
+  input[type=text], input[type=password] { width:100%; padding:10px 12px; border-radius:8px; border:1px solid var(--line); background:#0f172a; color:var(--text); font-size:15px; }
+  input:focus { outline:2px solid var(--accent); border-color:var(--accent); }
+  .row { display:flex; gap:8px; margin-top:14px; flex-wrap:wrap; }
+  button { padding:10px 18px; border-radius:8px; border:0; font-size:15px; cursor:pointer; background:var(--accent); color:#082f49; font-weight:600; }
+  button.secondary { background:transparent; color:var(--text); border:1px solid var(--line); }
+  button:disabled { opacity:.5; cursor:wait; }
+  .hint { font-size:13px; color:var(--muted); line-height:1.5; }
+  .hint a { color:var(--accent); }
+  #status { font-size:14px; line-height:1.6; white-space:pre-wrap; }
+  #status .ok { color:var(--ok); }
+  #status .err { color:var(--err); }
+  #result h2 { font-size:18px; margin:0 0 4px; }
+  #result .meta { color:var(--muted); font-size:14px; margin-bottom:12px; }
+  #result .meta a { color:var(--accent); }
+  pre.caption { background:#0f172a; border:1px solid var(--line); border-radius:8px; padding:12px; white-space:pre-wrap; word-break:break-word; font-family:inherit; font-size:15px; line-height:1.6; margin:0 0 12px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; }
+  figure { margin:0; background:#0f172a; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  figure img, figure video { width:100%; display:block; aspect-ratio:4/5; object-fit:cover; }
+  figcaption { padding:8px; font-size:13px; display:flex; justify-content:space-between; align-items:center; gap:8px; }
+  figcaption a { color:var(--accent); text-decoration:none; }
+  #jobs { font-size:14px; }
+  #jobs li { margin-bottom:6px; }
+  #jobs a { color:var(--accent); }
+  details { font-size:14px; color:var(--muted); line-height:1.6; }
+  details summary { cursor:pointer; color:var(--text); }
+  code { background:#0f172a; padding:1px 5px; border-radius:4px; font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Instagram Extractor</h1>
+  <p class="sub">Ambil caption dan semua gambar slide dari postingan Instagram publik. Tanpa login Instagram.</p>
+
+  <div class="card">
+    <label for="url">Link postingan Instagram</label>
+    <input id="url" type="text" placeholder="https://www.instagram.com/p/XXXX/" autocomplete="off" spellcheck="false">
+    <label for="token">Token GitHub (disimpan hanya di browser kamu)</label>
+    <input id="token" type="password" placeholder="github_pat_..." autocomplete="off" spellcheck="false">
+    <p class="hint">Token dipakai untuk memicu GitHub Actions di repo ini. Buat <a href="https://github.com/settings/personal-access-tokens" target="_blank" rel="noopener">fine-grained token</a> untuk repo <b>alamaby/online-tools</b> dengan akses <b>Contents: Read and write</b> dan <b>Actions: Read and write</b>. Token tidak pernah dikirim ke mana pun selain api.github.com, dan tidak ikut tersimpan di repo.</p>
+    <div class="row">
+      <button id="go">Ambil postingan</button>
+      <button id="clearToken" class="secondary">Hapus token tersimpan</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div id="status">Belum ada proses berjalan.</div>
+  </div>
+
+  <div class="card" id="resultCard" hidden>
+    <div id="result"></div>
+  </div>
+
+  <div class="card">
+    <h2 style="font-size:16px;margin:0 0 8px">Hasil sebelumnya</h2>
+    <ul id="jobs"></ul>
+    <div class="row">
+      <input id="jobLookup" type="text" placeholder="job id, mis. 20261112-083000-a1b2" style="flex:1;min-width:220px">
+      <button id="lookup" class="secondary">Cek hasil lama</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <details>
+      <summary>Cara kerja &amp; batasan</summary>
+      <p>Halaman ini tidak mengambil data Instagram secara langsung (browser memblokirnya karena CORS, dan halaman Instagram hanya berisi JavaScript tanpa data). Sebagai gantinya, halaman ini memicu workflow <code>.github/workflows/instagram-extract.yml</code> di GitHub Actions. Workflow itu membuka postingan di Chromium headless tanpa login, membaca caption, dan mengunduh tiap slide, lalu menyimpan hasilnya di <code>instagram-extractor/results/&lt;job-id&gt;/</code>. Halaman ini lalu membaca <code>result.json</code>-nya dan menampilkan caption serta gambarnya.</p>
+      <p>Prosesnya biasanya 1–3 menit. Instagram kadang menampilkan dinding login untuk IP pusat data, jadi sesekali sebuah link bisa gagal — coba lagi beberapa menit kemudian. Hanya postingan publik yang bisa diambil; postingan privat, terhapus, atau dibatasi tidak bisa.</p>
+    </details>
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+const REPO = 'alamaby/online-tools';
+const WORKFLOW = 'instagram-extract.yml';
+const BRANCH = 'main';
+const $ = (id) => document.getElementById(id);
+const statusEl = $('status');
+const resultCard = $('resultCard');
+const resultEl = $('result');
+
+const tokenInput = $('token');
+tokenInput.value = localStorage.getItem('igx_token') || '';
+tokenInput.addEventListener('change', () => localStorage.setItem('igx_token', tokenInput.value.trim()));
+$('clearToken').addEventListener('click', () => {
+  localStorage.removeItem('igx_token');
+  tokenInput.value = '';
+  setStatus('Token tersimpan dihapus.', '');
+});
+
+function setStatus(msg, cls) {
+  statusEl.innerHTML = cls ? '<span class="' + cls + '">' + msg + '</span>' : msg;
+}
+
+function saveJob(jobId, url) {
+  const jobs = JSON.parse(localStorage.getItem('igx_jobs') || '[]');
+  jobs.unshift({ id: jobId, url, at: new Date().toISOString() });
+  localStorage.setItem('igx_jobs', JSON.stringify(jobs.slice(0, 20)));
+  renderJobs();
+}
+
+function renderJobs() {
+  const jobs = JSON.parse(localStorage.getItem('igx_jobs') || '[]');
+  $('jobs').innerHTML = jobs.length
+    ? jobs.map((j) => '<li><a href="#" data-job="' + j.id + '">' + j.id + '</a> — ' + escapeHtml(j.url) + '</li>').join('')
+    : '<li>Belum ada.</li>';
+  document.querySelectorAll('#jobs a[data-job]').forEach((a) => {
+    a.addEventListener('click', (e) => { e.preventDefault(); loadResult(a.dataset.job); });
+  });
+}
+
+function escapeHtml(s) {
+  return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+function resultBase(jobId) {
+  return 'https://raw.githubusercontent.com/' + REPO + '/' + BRANCH + '/instagram-extractor/results/' + jobId;
+}
+
+async function dispatchWorkflow(postUrl, jobId, token) {
+  const res = await fetch('https://api.github.com/repos/' + REPO + '/actions/workflows/' + WORKFLOW + '/dispatches', {
+    method: 'POST',
+    headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ref: BRANCH, inputs: { post_url: postUrl, job_id: jobId } }),
+  });
+  if (res.status === 204) return true;
+  const body = await res.json().catch(() => ({}));
+  throw new Error('GitHub API ' + res.status + ': ' + (body.message || 'gagal memicu workflow'));
+}
+
+async function fetchResult(jobId) {
+  const res = await fetch(resultBase(jobId) + '/result.json?ts=' + Date.now());
+  if (!res.ok) return null;
+  return res.json();
+}
+
+function sleep(ms) { return new Promise((r) => setTimeout(r, ms)); }
+
+async function pollResult(jobId) {
+  for (let i = 0; i < 42; i++) { // ~7 menit
+    const data = await fetchResult(jobId);
+    if (data) return data;
+    setStatus('Menunggu hasil… (' + (i + 1) + '/42) — workflow sedang membuka postingan dan mengunduh slide. Halaman ini boleh ditinggal; hasil tersimpan di job ' + jobId + '.', '');
+    await sleep(10000);
+  }
+  return null;
+}
+
+function renderResult(data, jobId) {
+  resultCard.hidden = false;
+  if (data.error) {
+    resultEl.innerHTML = '<h2>Gagal mengambil postingan</h2><p class="meta">' + escapeHtml(data.post_url || '') + '</p><p>' + escapeHtml(data.error) + '</p><p class="hint">Kode: ' + escapeHtml(data.error_code || '-') + ' — coba lagi beberapa menit kemudian, atau ambil lewat chat seperti biasa.</p>';
+    return;
+  }
+  const author = data.author || {};
+  const meta = [
+    author.username ? '<a href="https://www.instagram.com/' + escapeHtml(author.username) + '/" target="_blank" rel="noopener">@' + escapeHtml(author.username) + '</a>' + (author.verified ? ' ✓' : '') : '',
+    author.display_name && author.display_name !== author.username ? escapeHtml(author.display_name) : '',
+    data.posted_at ? new Date(data.posted_at).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }) : '',
+    data.likes ? escapeHtml(String(data.likes)) + ' likes' : '',
+    data.comments ? escapeHtml(String(data.comments)) + ' komentar' : '',
+    data.slide_count + ' slide',
+  ].filter(Boolean).join(' · ');
+  const base = resultBase(jobId);
+  const slides = (data.slides || []).map((s) => {
+    const src = base + '/' + s.file;
+    const media = s.kind === 'video'
+      ? '<video controls preload="metadata" src="' + src + '"' + (s.poster ? ' poster="' + base + '/' + s.poster + '"' : '') + '></video>'
+      : '<img src="' + src + '" alt="Slide ' + s.index + '" loading="lazy">';
+    return '<figure>' + media + '<figcaption><span>Slide ' + s.index + (s.kind === 'video' ? ' (video)' : '') + '</span><a href="' + src + '" download="' + s.file + '">Unduh</a></figcaption></figure>';
+  }).join('');
+  resultEl.innerHTML =
+    '<h2>' + escapeHtml(author.display_name || author.username || 'Postingan Instagram') + '</h2>' +
+    '<p class="meta">' + meta + ' · <a href="' + escapeHtml(data.post_url) + '" target="_blank" rel="noopener">Buka postingan asli</a></p>' +
+    (data.caption ? '<pre class="caption">' + escapeHtml(data.caption) + '</pre>' : '<p class="hint">Caption tidak ditemukan.</p>') +
+    '<div class="row"><button id="copyCaption">Salin caption</button><button id="zipAll" class="secondary">Unduh semua (ZIP)</button></div>' +
+    '<div class="grid" style="margin-top:14px">' + slides + '</div>';
+  $('copyCaption').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(data.caption || ''); $('copyCaption').textContent = 'Tersalin ✓'; }
+    catch { $('copyCaption').textContent = 'Gagal menyalin'; }
+  });
+  $('zipAll').addEventListener('click', async () => {
+    if (typeof JSZip === 'undefined') { alert('JSZip belum termuat, periksa koneksi lalu coba lagi.'); return; }
+    $('zipAll').disabled = true;
+    $('zipAll').textContent = 'Menyiapkan ZIP…';
+    try {
+      const zip = new JSZip();
+      for (const s of data.slides || []) {
+        const res = await fetch(base + '/' + s.file);
+        if (res.ok) zip.file(s.file, await res.blob());
+        if (s.poster) {
+          const pres = await fetch(base + '/' + s.poster);
+          if (pres.ok) zip.file(s.poster, await pres.blob());
+        }
+      }
+      zip.file('caption.txt', (data.caption || '') + '\n\nSumber: ' + data.post_url + '\n');
+      const blob = await zip.generateAsync({ type: 'blob' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = jobId + '.zip';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    } finally {
+      $('zipAll').disabled = false;
+      $('zipAll').textContent = 'Unduh semua (ZIP)';
+    }
+  });
+  window.scrollTo({ top: resultCard.offsetTop - 12, behavior: 'smooth' });
+}
+
+async function loadResult(jobId) {
+  setStatus('Memuat hasil ' + jobId + '…', '');
+  const data = await fetchResult(jobId);
+  if (!data) { setStatus('Hasil ' + jobId + ' belum ada. Pastikan job id benar dan workflow sudah selesai.', 'err'); return; }
+  setStatus('Hasil ' + jobId + ' dimuat.', 'ok');
+  renderResult(data, jobId);
+}
+
+$('go').addEventListener('click', async () => {
+  const url = $('url').value.trim();
+  const token = tokenInput.value.trim();
+  if (!/^https?:\/\/(www\.)?instagram\.com\/(p|reel)\/[A-Za-z0-9_-]+\/?/.test(url)) {
+    setStatus('Link tidak valid. Tempel link postingan Instagram, mis. https://www.instagram.com/p/XXXX/', 'err');
+    return;
+  }
+  if (!token) {
+    setStatus('Isi token GitHub dulu (lihat petunjuk di bawah kolom token).', 'err');
+    return;
+  }
+  const jobId = new Date().toISOString().slice(0, 19).replace(/[-:T]/g, '') + '-' + Math.random().toString(36).slice(2, 6);
+  const btn = $('go');
+  btn.disabled = true;
+  try {
+    setStatus('Memicu workflow untuk job ' + jobId + '…', '');
+    await dispatchWorkflow(url, jobId, token);
+    saveJob(jobId, url);
+    setStatus('Workflow berjalan untuk job ' + jobId + '. Menunggu hasil…', '');
+    const data = await pollResult(jobId);
+    if (!data) {
+      setStatus('Waktu tunggu habis (7 menit) tapi hasil belum muncul. Cek tab Actions repo — kalau workflow selesai, klik job ' + jobId + ' di "Hasil sebelumnya" atau tombol "Cek hasil lama".', 'err');
+      return;
+    }
+    setStatus('Selesai — job ' + jobId + '.', 'ok');
+    renderResult(data, jobId);
+  } catch (e) {
+    setStatus('Gagal: ' + e.message, 'err');
+  } finally {
+    btn.disabled = false;
+  }
+});
+
+$('lookup').addEventListener('click', () => {
+  const jobId = $('jobLookup').value.trim();
+  if (jobId) loadResult(jobId);
+});
+
+renderJobs();
+</script>
+</body>
+</html>
