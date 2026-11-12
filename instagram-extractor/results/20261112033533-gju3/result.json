@@ -1,0 +1,21 @@
+{
+  "job_id": "20261112033533-gju3",
+  "post_url": "https://www.instagram.com/p/DfJ7wohlEY-/?img_index=2&exln=MnZ1Mjljd2dyb3p5",
+  "shortcode": "DfJ7wohlEY-",
+  "extracted_at": "2026-11-12T03:36:17.567Z",
+  "type": "image",
+  "author": {
+    "username": null,
+    "display_name": null,
+    "verified": false
+  },
+  "posted_at": null,
+  "likes": null,
+  "comments": null,
+  "caption": null,
+  "caption_source": null,
+  "slide_count": 0,
+  "slides": [],
+  "error": "Instagram showed a login wall for this post from this network. Try again later, or extract it from a browser session instead.",
+  "error_code": "LOGIN_WALL"
+}
