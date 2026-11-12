@@ -15,8 +15,8 @@ GitHub Pages murni tidak bisa mengambil data Instagram langsung: browser memblok
 
 1. **Aktifkan GitHub Pages:** repo → Settings → Pages → Build and deployment → Source: **Deploy from a branch** → Branch: `main`, folder `/ (root)`.
 2. **Buat token GitHub** (fine-grained): https://github.com/settings/personal-access-tokens → New token → pilih repo `online-tools` → Permissions:
-   - Contents: **Read and write**
-   - Actions: **Read and write**
+   - Actions: **Read and write** (ini saja sudah cukup untuk memicu workflow dari halaman tool)
+   - Masa berlaku: pilih yang paling lama (maksimal 1 tahun) supaya jarang mengulang.
 3. **Izinkan Actions menulis ke repo:** repo → Settings → Actions → General → Workflow permissions → **Read and write permissions** (atau workflow akan gagal saat `git push`).
 4. Buka halaman tool, tempel token di kolom token (token hanya disimpan di `localStorage` browser kamu, tidak pernah masuk repo).
 
