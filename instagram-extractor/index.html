@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Instagram Extractor — Ambil Caption &amp; Slide</title>
+<link rel="icon" type="image/png" href="favicon.png">
 <style>
   :root { --bg:#0f172a; --card:#1e293b; --line:#334155; --text:#e2e8f0; --muted:#94a3b8; --accent:#38bdf8; --ok:#4ade80; --err:#f87171; }
   * { box-sizing:border-box; }
@@ -12,6 +13,8 @@
   h1 { font-size:24px; margin:0 0 4px; }
   p.sub { color:var(--muted); margin:0 0 20px; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin-bottom:16px; }
+  .hero { margin:0 0 16px; }
+  .hero img { width:100%; display:block; border-radius:12px; border:1px solid var(--line); }
   label { display:block; font-size:13px; color:var(--muted); margin:12px 0 4px; }
   label:first-child { margin-top:0; }
   input[type=text], input[type=password] { width:100%; padding:10px 12px; border-radius:8px; border:1px solid var(--line); background:#0f172a; color:var(--text); font-size:15px; }
@@ -46,6 +49,8 @@
 <main>
   <h1>Instagram Extractor</h1>
   <p class="sub">Ambil caption dan semua gambar slide dari postingan Instagram publik. Tanpa login Instagram.</p>
+
+  <figure class="hero"><img src="hero.png" alt="Ilustrasi: slide carousel keluar dari ponsel menjadi tumpukan gambar siap diunduh beserta caption"></figure>
 
   <div class="card">
     <label for="url">Link postingan Instagram</label>
