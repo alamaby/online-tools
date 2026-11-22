@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aluna Prompt Studio — Web Edition</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧙‍♀️</text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <!-- Load auto-generated master catalog data bundle -->
+  <script src="data/data.js"></script>
+  <!-- Load standalone prompt generator engine -->
+  <script src="generator.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="header-brand">
+      <h1>🧙‍♀️ Aluna Prompt Studio</h1>
+      <span class="badge-version">Web Edition (GitHub Pages)</span>
+    </div>
+    <p class="header-sub">Generator prompt gambar AI karakter Aluna Arundati Buana (Midjourney, SDXL/Flux, Natural Language) dengan konsistensi kanon 100% akurat.</p>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="nav-tabs" role="tablist">
+    <button class="tab-btn active" data-tab="tab-studio">🎨 Studio Utama</button>
+    <button class="tab-btn" data-tab="tab-wardrobe">👗 Wardrobe Modular</button>
+    <button class="tab-btn" data-tab="tab-traits">🧙‍♀️ Explore Karakter</button>
+    <button class="tab-btn" data-tab="tab-bulk">📦 Bulk Vibe &amp; Fitting Room</button>
+  </nav>
+
+  <!-- Quick Action Bar (Desktop / Tablet) -->
+  <div class="quick-action-bar">
+    <div class="quick-btn-group">
+      <button id="btn-quick-roll-character" class="btn btn-gold" title="Pintasan: Tekan Z">🎲 Acak Karakter (Z)</button>
+      <button id="btn-quick-roll-vibe" class="btn btn-purple" title="Pintasan: Tekan X">✨ Roll Bertema (X)</button>
+      <button id="btn-quick-roll-total" class="btn btn-outline" title="Pintasan: Tekan T">🌐 Acak Total (T)</button>
+    </div>
+    <div class="quick-btn-group">
+      <button id="btn-quick-generate" class="btn btn-primary" title="Pintasan: Tekan G">⚡ Generate Prompt (G)</button>
+      <button id="btn-quick-copy" class="btn btn-outline" title="Pintasan: Tekan C">📋 Salin Prompt (C)</button>
+      <button id="btn-quick-download" class="btn btn-outline" title="Pintasan: Tekan S">📥 Unduh MD (S)</button>
+      <button id="btn-quick-reset" class="btn btn-outline" title="Pintasan: Tekan R">🔄 Reset Form (R)</button>
+    </div>
+  </div>
+
+  <!-- TAB 1: STUDIO UTAMA -->
+  <main id="tab-studio" class="tab-pane active">
+    <div class="studio-grid">
+      <!-- Left Column: Form Parameters -->
+      <div class="input-column">
+        
+        <!-- Engine & Rasio Card -->
+        <div class="card">
+          <div class="card-title">
+            <span>⚙️ 1. Target Engine &amp; Aspek Rasio</span>
+          </div>
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label class="form-label" for="select-engine">Target Engine</label>
+              <select id="select-engine"></select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="select-ar">Aspek Rasio</label>
+              <select id="select-ar"></select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="select-image-ref">Image Reference (--cref)</label>
+            <select id="select-image-ref"></select>
+          </div>
+          <div class="form-group" id="group-custom-ref">
+            <label class="form-label" for="input-custom-ref">Custom Reference URL / Path <span class="note">(Opsional)</span></label>
+            <input type="text" id="input-custom-ref" placeholder="https://... atau path aset gambar">
+          </div>
+        </div>
+
+        <!-- Busana & Attire Card -->
+        <div class="card">
+          <div class="card-title">
+            <span>👗 2. Busana Karakter (103 Koleksi Kanon)</span>
+            <button id="btn-goto-modular" class="btn btn-outline btn-sm">Buka Wardrobe Modular ↗</button>
+          </div>
+          <div id="modular-active-badge" class="compat-badge compat-matched" style="display:none;margin-bottom:12px;width:100%;">
+            ✨ Busana Kustom Modular Aktif! Mengabaikan dropdown preset di bawah.
+            <button id="btn-clear-modular" class="btn btn-outline btn-sm" style="margin-left:auto;padding:2px 8px;">Lepas</button>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="select-outfit-category">Filter Kategori Busana</label>
+            <select id="select-outfit-category">
+              <option value="all">Semua Kategori (103 Busana)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="select-outfit">Pilih Busana Kanon</label>
+            <select id="select-outfit"></select>
+          </div>
+        </div>
+
+        <!-- Latar & Pencahayaan Card -->
+        <div class="card">
+          <div class="card-title">
+            <span>🏛️ 3. Latar Tempat &amp; Tata Cahaya</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="select-scenery">Latar Tempat (Scenery)</label>
+            <select id="select-scenery"></select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="select-lighting">Tata Cahaya &amp; Atmosfer (Lighting)</label>
+            <select id="select-lighting"></select>
+          </div>
+        </div>
+
+        <!-- Pose & Sudut Kamera Card -->
+        <div class="card">
+          <div class="card-title">
+            <span>📸 4. Pose &amp; Sudut Pandang Kamera</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="select-pose">Pose Karakter (144 Gerakan &amp; Gestur)</label>
+            <select id="select-pose"></select>
+          </div>
+          <div class="form-group" id="group-lover-profile" style="display:none;">
+            <label class="form-label" for="select-lover-profile">Profil Mature Lover (Duo Pose)</label>
+            <select id="select-lover-profile"></select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="select-camera-angle">Sudut Kamera (Camera Angle)</label>
+            <select id="select-camera-angle"></select>
+          </div>
+          <div id="pairing-status-badge" class="compat-badge compat-matched">
+            ✨ Komposisi Serasi (Best Match / Pasangan Sinematik Direkomendasikan)
+          </div>
+        </div>
+
+        <!-- Regalia & Pengaman Spasial Card -->
+        <div class="card">
+          <div class="card-title">
+            <span>🔮 5. Pusaka Arcana &amp; Tata Spasial</span>
+          </div>
+          <div class="checkbox-grid">
+            <label class="checkbox-label">
+              <input type="checkbox" id="check-regalia" checked>
+              <span>Pusaka Klan Arcana</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="check-bolang" checked>
+              <span>Familiar Aki Bolang</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="check-lunar" checked>
+              <span>Lapisan Lunar Ward</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="check-spatial" checked>
+              <span>Spatial Guard (Adaptasi Kendaraan)</span>
+            </label>
+          </div>
+          <div class="form-group" style="margin-top:12px;">
+            <label class="form-label" for="input-custom-details">Detail Kustom Tambahan <span class="note">(Opsional)</span></label>
+            <textarea id="input-custom-details" placeholder="Tambahkan objek, atmosfer, atau interaksi spesifik..."></textarea>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Output Prompt Box & Actions (Sticky) -->
+      <div class="output-column">
+        <div class="card">
+          <div class="card-title">
+            <span>✨ Master Prompt Output</span>
+            <button id="btn-copy-prompt" class="btn btn-primary btn-sm">📋 Salin (C)</button>
+          </div>
+
+          <div class="meta-chips" id="meta-chips-container"></div>
+
+          <div class="form-label">Teks Prompt Utama</div>
+          <div id="output-prompt-box" class="prompt-output-box" tabindex="0">Memuat katalog prompt...</div>
+
+          <div id="negative-prompt-section" style="display:none;margin-top:12px;">
+            <div class="form-label" style="color:var(--err);">Negative Prompt (SDXL / Flux)</div>
+            <div id="output-negative-box" class="prompt-output-box negative-box"></div>
+            <button id="btn-copy-negative" class="btn btn-outline btn-sm" style="margin-top:4px;">📋 Salin Negative Prompt</button>
+          </div>
+
+          <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;">
+            <button id="btn-export-md" class="btn btn-outline" style="flex:1;">📥 Unduh Markdown (.md)</button>
+            <button id="btn-reset-form" class="btn btn-outline">🔄 Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- TAB 2: WARDROBE MODULAR -->
+  <section id="tab-wardrobe" class="tab-pane">
+    <div class="card">
+      <div class="card-title">
+        <span>👗 Modular Wardrobe Mix &amp; Match Studio</span>
+        <button id="btn-random-wardrobe" class="btn btn-gold btn-sm">🎲 Acak Busana Modular</button>
+      </div>
+      <p style="color:var(--text-muted);margin-bottom:16px;">Kombinasikan pakaian per lapisan (Inner, Outer, Layer, Footwear) atau terapkan salah satu dari 104 resep busana gaya novel kanon.</p>
+
+      <div class="form-group" style="background:var(--bg-input);padding:12px;border-radius:var(--radius-sm);border:1px solid var(--border);">
+        <label class="form-label" for="select-wardrobe-recipe">📖 Terapkan Resep Gaya Kanon (104 Resep)</label>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <select id="select-wardrobe-recipe" style="flex:1;min-width:240px;"></select>
+          <button id="btn-apply-recipe" class="btn btn-primary">Terapkan Resep</button>
+        </div>
+      </div>
+
+      <div class="form-row two-col" style="margin-top:16px;">
+        <div class="form-group">
+          <label class="form-label" for="select-inner-top">1. Pakaian Dalam Atas (Inner Top)</label>
+          <select id="select-inner-top"></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="select-inner-bottom">2. Pakaian Dalam Bawah (Inner Bottom)</label>
+          <select id="select-inner-bottom"></select>
+        </div>
+      </div>
+
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label class="form-label" for="select-outer-top">3. Pakaian Luar Atas / Terusan (Outer Top)</label>
+          <select id="select-outer-top"></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="select-outer-bottom">4. Pakaian Luar Bawah (Outer Bottom)</label>
+          <select id="select-outer-bottom"></select>
+        </div>
+      </div>
+
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label class="form-label" for="select-layer-acc">5. Layer &amp; Aksesoris Pinggang / Rompi</label>
+          <select id="select-layer-acc"></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="select-footwear">6. Alas Kaki &amp; Sepatu (Footwear)</label>
+          <select id="select-footwear"></select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="select-inner-visibility">Visibilitas Pakaian Dalam (Innerwear Visibility)</label>
+        <select id="select-inner-visibility">
+          <option value="hidden">Hidden — Tertutup Rapat / Tersembunyi</option>
+          <option value="subtle">Subtle — Mengintip Samar di Kerah/Celah</option>
+          <option value="exposed">Exposed — Terlihat Nyata / Layer Terbuka</option>
+        </select>
+      </div>
+
+      <!-- Modular Synthesized Preview Card -->
+      <div style="background:#060911;border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;margin-top:16px;">
+        <div class="form-label" style="color:var(--gold);">Ringkasan Busana Modular Terpasang</div>
+        <div id="wardrobe-summary-text" style="color:var(--text);font-size:13px;margin-bottom:8px;">Belum diramu.</div>
+        <div class="form-label">Deskripsi Prompt Sintesis (English)</div>
+        <div id="wardrobe-prompt-text" style="font-family:var(--font-mono);font-size:12px;color:var(--accent);line-height:1.6;">-</div>
+      </div>
+
+      <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button id="btn-use-modular-in-studio" class="btn btn-primary">⚡ Gunakan Busana Ini di Studio Utama</button>
+        <button id="btn-copy-modular-prompt" class="btn btn-outline">📋 Salin Teks Busana</button>
+        <button id="btn-download-modular-md" class="btn btn-outline">📥 Unduh Berkas Markdown</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 3: EXPLORE KARAKTER -->
+  <section id="tab-traits" class="tab-pane">
+    <div class="card">
+      <div class="card-title">
+        <span>🧙‍♀️ Aluna Character Physical Exploration Studio</span>
+        <button id="btn-random-traits" class="btn btn-gold btn-sm">🎲 Acak Sifat Karakter</button>
+      </div>
+      <p style="color:var(--text-muted);margin-bottom:16px;">Eksplorasi variasi gaya rambut, ekspresi wajah, rona kulit, dan potret acuan visual karakter Aluna tanpa merusak konsistensi kanon etnis Sunda dan proporsi tubuh.</p>
+
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label class="form-label" for="select-trait-hairstyle">1. Gaya Rambut (Hairstyle)</label>
+          <select id="select-trait-hairstyle"></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="select-trait-haircolor">2. Warna Rambut (Hair Color)</label>
+          <select id="select-trait-haircolor"></select>
+        </div>
+      </div>
+
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label class="form-label" for="select-trait-expression">3. Ekspresi Wajah (Expression)</label>
+          <select id="select-trait-expression"></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="select-trait-complexion">4. Rona Kulit (Complexion)</label>
+          <select id="select-trait-complexion"></select>
+        </div>
+      </div>
+
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label class="form-label" for="select-trait-faceshape">5. Bentuk Wajah (Face Contour)</label>
+          <select id="select-trait-faceshape"></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="select-trait-eyetype">6. Bentuk Mata (Eye Shape &amp; Iris)</label>
+          <select id="select-trait-eyetype"></select>
+        </div>
+      </div>
+
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label class="form-label" for="select-trait-detail">7. Detail Wajah / Riasan (Facial Detail)</label>
+          <select id="select-trait-detail"></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="select-trait-shottype">8. Tipe Potret (Shot Framing)</label>
+          <select id="select-trait-shottype"></select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="select-trait-attire">9. Busana Netral Studio Acuan</label>
+        <select id="select-trait-attire"></select>
+      </div>
+
+      <!-- Preview Trait Prompt -->
+      <div style="background:#060911;border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;margin-top:16px;">
+        <div class="form-label" style="color:var(--gold);">Prompt Potret Acuan Karakter</div>
+        <div id="trait-prompt-preview" class="bulk-pre" style="color:#e2e8f0;margin-top:6px;">-</div>
+      </div>
+
+      <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button id="btn-apply-hair-to-studio" class="btn btn-primary">⚡ Terapkan Gaya Rambut Ini ke Studio Utama</button>
+        <button id="btn-copy-trait-prompt" class="btn btn-outline">📋 Salin Prompt Potret Acuan</button>
+        <button id="btn-download-trait-md" class="btn btn-outline">📥 Unduh Berkas Markdown</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 4: BULK VIBE & VIRTUAL FITTING ROOM -->
+  <section id="tab-bulk" class="tab-pane">
+    <div class="card">
+      <div class="card-title">
+        <span>📦 Mode Bulk Vibe &amp; Virtual Fitting Room</span>
+      </div>
+      <p style="color:var(--text-muted);margin-bottom:16px;">Hasilkan kumpulan prompt sekaligus dalam satu tema suasana atau uji coba komparasi seluruh busana kanon dengan faktor gestur dan latar statis (*ceteris paribus*).</p>
+
+      <!-- Mode Selector -->
+      <div class="form-row two-col" style="margin-bottom:16px;">
+        <div class="form-group">
+          <label class="form-label" for="select-bulk-mode">Pilih Mode Eksekusi</label>
+          <select id="select-bulk-mode">
+            <option value="vibe">Mode 1: Bulk Thematic Vibe (Batch Prompt Bertema)</option>
+            <option value="fitting_room">Mode 2: Virtual Fitting Room Matrix (Komparasi 103 Busana)</option>
+          </select>
+        </div>
+        <div class="form-group" id="group-bulk-vibe-select">
+          <label class="form-label" for="select-bulk-vibe">Pilihan Suasana Bertema (15 Suasana)</label>
+          <select id="select-bulk-vibe"></select>
+        </div>
+      </div>
+
+      <!-- Bulk Vibe Settings -->
+      <div id="bulk-vibe-controls">
+        <div class="form-row two-col">
+          <div class="form-group">
+            <label class="form-label" for="select-bulk-count">Jumlah Prompt dalam Batch</label>
+            <select id="select-bulk-count">
+              <option value="3">3 Prompt Unik</option>
+              <option value="5" selected>5 Prompt Unik</option>
+              <option value="10">10 Prompt Unik</option>
+              <option value="15">15 Prompt Unik</option>
+              <option value="20">20 Prompt Unik</option>
+              <option value="30">30 Prompt Unik (Maksimal)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-label" style="margin-top:10px;">Kunci Parameter Tertentu (Selective Lock):</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-label">
+            <input type="checkbox" id="check-lock-outfit">
+            <span>Kunci Busana Saat Ini</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="check-lock-pose">
+            <span>Kunci Pose Saat Ini</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="check-lock-scenery">
+            <span>Kunci Latar Saat Ini</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="check-lock-angle">
+            <span>Kunci Sudut Kamera Saat Ini</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Fitting Room Settings -->
+      <div id="fitting-room-controls" style="display:none;">
+        <div class="compat-badge compat-matched" style="margin-bottom:12px;width:100%;">
+          👗 Prinsip Ceteris Paribus: Pose, Latar, Sudut Kamera, dan Cahaya saat ini akan dikunci mati. Sistem akan mengompilasi variasi seluruh katalog busana.
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="select-fitting-category">Filter Klaster Busana yang Diuji</label>
+          <select id="select-fitting-category">
+            <option value="all">Semua Koleksi (103 Busana Penuh)</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-top:16px;">
+        <button id="btn-generate-bulk-run" class="btn btn-primary">⚡ Mulai Generate Batch</button>
+      </div>
+
+      <!-- Bulk Results Viewer -->
+      <div id="bulk-results-area" style="margin-top:24px;display:none;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+          <h3 id="bulk-results-title" style="font-size:15px;color:#fff;">Hasil Batch Prompt (0 item)</h3>
+          <div style="display:flex;gap:8px;">
+            <button id="btn-copy-all-bulk" class="btn btn-outline btn-sm">📋 Salin Semua Batch</button>
+            <button id="btn-download-bulk-md" class="btn btn-primary btn-sm">📥 Unduh Berkas Markdown</button>
+          </div>
+        </div>
+        <div id="bulk-items-container"></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Sticky Bottom Floating Action Bar for Mobile -->
+<div class="mobile-bottom-bar">
+  <button id="btn-m-roll-char" class="btn btn-gold btn-sm">🎲 Acak (Z)</button>
+  <button id="btn-m-roll-vibe" class="btn btn-purple btn-sm">✨ Vibe (X)</button>
+  <button id="btn-m-generate" class="btn btn-primary btn-sm">⚡ Gen (G)</button>
+  <button id="btn-m-copy" class="btn btn-outline btn-sm">📋 Salin (C)</button>
+  <button id="btn-m-download" class="btn btn-outline btn-sm">📥 Unduh (S)</button>
+</div>
+
+<!-- Toast Container -->
+<div id="toast-container"></div>
+
+<!-- Main Application Controller -->
+<script src="app.js"></script>
+</body>
+</html>

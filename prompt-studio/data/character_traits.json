@@ -1,0 +1,1122 @@
+{
+  "locked_demographics": "23-year-old Sundanese-Indonesian woman named Aluna Arundati Buana (Teh Luna), mojang Priangan",
+  "locked_figure_proportions": "162 cm / 50 kg, slender graceful natural hourglass figure with a flattering tapered waistline, poised posture",
+  "locked_figure_concise": "23-year-old Sundanese woman Aluna Arundati Buana (Teh Luna), 162cm/50kg, slender natural hourglass figure",
+  "hairstyles": [
+    {
+      "id": "hair_barista_bun",
+      "name": "1. High Barista Bun (Kanon Toko)",
+      "description": "Cepol tinggi rapi barista dikunci tusuk akasia wulung, helai halus di pelipis dan selangka.",
+      "prompt_fragment": "hair styled in an elegant high barista bun secured firmly with a carved dark acacia wulung wooden hairpin, with delicate loose tendrils naturally framing her temples and collarbone",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "bun"
+      }
+    },
+    {
+      "id": "hair_side_braid_jasmine",
+      "name": "2. Side Braid with Jasmine (Adat Arcana)",
+      "description": "Kepang samping feminin berhias ronce melati putih segar, tusuk akasia di pangkal kepang.",
+      "prompt_fragment": "hair elegantly woven into a soft side braid draped over her shoulder with tiny fresh white jasmine buds intertwined in the strands, anchored at the crown with a carved dark acacia wulung wooden hairpin",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "braid"
+      }
+    },
+    {
+      "id": "hair_modern_encim_updo",
+      "name": "3. Modern Encim Updo (Sanggul Modern)",
+      "description": "Sanggul modern halus bertekstur lembut dengan tusuk akasia horizontal.",
+      "prompt_fragment": "hair gathered into a graceful modern low chignon bun secured horizontally with a polished dark acacia wooden hairpin, loose wisps softening her jawline",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "chignon"
+      }
+    },
+    {
+      "id": "hair_casual_shoulder_waves",
+      "name": "4. Shoulder-Length Loose Waves (Kasual Dago)",
+      "description": "Rambut bergelombang lembut sebahu terurai alami, jepit akasia tersemat di pelipis kanan.",
+      "prompt_fragment": "soft wavy hair falling naturally to her shoulders, held off her face by a carved dark acacia wooden hairpin tucked neatly at her right temple, airy texture and delicate loose strands",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "temple"
+      }
+    },
+    {
+      "id": "hair_half_up_half_down",
+      "name": "5. Half-Up Half-Down (Santai Anggun)",
+      "description": "Setengah rambut diikat ke belakang dengan tusuk akasia, sisanya terurai bergelombang di pundak.",
+      "prompt_fragment": "hair styled in a graceful half-up half-down twist fastened by a carved dark acacia wooden pin, with gentle soft waves cascading over her shoulders",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "half_up"
+      }
+    },
+    {
+      "id": "hair_chic_wavy_bob",
+      "name": "6. Textured Long Wavy Bob (Modern Chic)",
+      "description": "Potongan bob panjang bergelombang sebahu membingkai wajah manis dengan tusuk akasia di belakang telinga.",
+      "prompt_fragment": "chic textured wavy collarbone-length bob with soft airy layers framing her face, a rustic dark acacia wooden hairpin tucked stylishly behind her right ear",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "behind_ear"
+      }
+    },
+    {
+      "id": "hair_twin_soft_braids",
+      "name": "7. Twin Soft Bohemian Braids (Gaya Muda Kasual)",
+      "description": "Dua kepangan longgar lembut santai khas gadis muda Bandung dengan ornamen akasia kecil.",
+      "prompt_fragment": "hair parted cleanly and woven into two loose, charming bohemian side braids resting over her collarbones, with delicate face-framing strands",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "none"
+      }
+    },
+    {
+      "id": "hair_unbound_prana_flow",
+      "name": "8. Unbound Prana Flow (Mode Darurat Sakral)",
+      "description": "Rambut terurai bebas melayang tertiup pusaran angin eterik (tusuk akasia dipegang di tangan).",
+      "prompt_fragment": "hair unbound and billowing softly around her shoulders lifted by a gentle ethereal prana breeze, wild yet graceful, holding the dark acacia wulung hairpin in her right hand",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "hand"
+      }
+    },
+    {
+      "id": "hair_messy_topknot",
+      "name": "9. Messy Casual Topknot (Cepol Santai Berantakan)",
+      "description": "Cepol kasual tinggi sedikit longgar dengan helaian anak rambut jatuh santai di tengkuk dan pelipis.",
+      "prompt_fragment": "hair swept into a loose charming messy topknot with delicate wisps drifting along her nape and temples, dark acacia pin angled casually through the bun",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "bun"
+      }
+    },
+    {
+      "id": "hair_low_ponytail_ribbon",
+      "name": "10. Low Sleek Ponytail (Kuncir Rendah Berpita Sutra)",
+      "description": "Kuncir kuda rendah di tengkuk diikat pita sutra gelap minimalis, rapi dan anggun.",
+      "prompt_fragment": "hair gathered into a low sleek ponytail at the nape tied with a slender dark ribbon, polished dark acacia hairpin pinned gracefully above the tie",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "nape"
+      }
+    },
+    {
+      "id": "hair_french_twist",
+      "name": "11. French Twist Klasik (Sanggul Lipat Vertikal)",
+      "description": "Sanggul lipat vertikal Prancis yang rapi dan berkelas, menonjolkan leher jenjang Aluna.",
+      "prompt_fragment": "hair styled in an immaculate classic French twist updo, fastened securely by a vertical carved dark acacia wulung hairpin, pristine professional poise",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "twist"
+      }
+    },
+    {
+      "id": "hair_curtain_bangs_waves",
+      "name": "12. Curtain Bangs & Cascading Waves (Poni Tirai)",
+      "description": "Poni belah tengah tirai membingkai mata kenari dengan rambut bergelombang sebahu menjuntai anggun.",
+      "prompt_fragment": "glossy soft wavy hair featuring face-framing curtain bangs parting naturally over her forehead, pinned at the right side with a dark acacia wooden hair clip",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "temple"
+      }
+    },
+    {
+      "id": "hair_crown_braid",
+      "name": "13. Crown Halo Braid (Kepang Mahkota Priangan)",
+      "description": "Rambut dikepang melingkari mahkota kepala seperti tiara alami khas mojang Parahyangan.",
+      "prompt_fragment": "hair intricately woven into a delicate crown halo braid encircling her head like a natural tiara, accented with a slender dark acacia pin at the back",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "crown"
+      }
+    },
+    {
+      "id": "hair_fishtail_side_braid",
+      "name": "14. Fishtail Side Plait (Kepang Tulang Ikan Samping)",
+      "description": "Kepangan model ekor ikan padat menjuntai di bahu kiri dengan tekstur rajutan mendetail.",
+      "prompt_fragment": "hair braided into a detailed fishtail side plait draped over her left collarbone, tiny acacia wooden hairpin nestled near the ear",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "braid"
+      }
+    },
+    {
+      "id": "hair_space_buns",
+      "name": "15. Playful Double Buns (Dua Cepol Imut Kembar)",
+      "description": "Dua cepol mungil di kiri-kanan atas kepala khas gaya santai anak muda gaul Bandung.",
+      "prompt_fragment": "hair styled into two playful youthful mini space buns on either side of her head, with soft loose tendrils framing her cheeks",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "buns"
+      }
+    },
+    {
+      "id": "hair_sleek_straight_lob",
+      "name": "16. Sleek Straight Long Bob (Bob Lurus Berkilau)",
+      "description": "Potongan bob panjang lurus presisi jatuh di tulang selangka dengan belahan samping rapi.",
+      "prompt_fragment": "glossy sleek straight long bob hair skimming her porcelain collarbone with sharp elegant taper, rustic acacia hairpin tucked behind right ear",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "behind_ear"
+      }
+    },
+    {
+      "id": "hair_high_ponytail_wavy",
+      "name": "17. High Dynamic Ponytail (Kuncir Kuda Tinggi Membal)",
+      "description": "Kuncir kuda tinggi di puncak kepala dengan ekor rambut bergelombang membal saat bergerak lincah.",
+      "prompt_fragment": "hair drawn into a high dynamic bouncy wavy ponytail at the crown, fastened by a carved dark acacia hair clamp, energetic retail posture",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "crown"
+      }
+    },
+    {
+      "id": "hair_waterfall_braid",
+      "name": "18. Waterfall Braid Half-Crown (Kepang Air Terjun)",
+      "description": "Jalinan kepang air terjun melingkar di belakang kepala dengan helaian gelombang jatuh bebas.",
+      "prompt_fragment": "hair featuring an elegant waterfall half-braid across the back, allowing glossy soft waves to cascade freely down her shoulders",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "half_up"
+      }
+    }
+  ],
+  "hair_colors": [
+    {
+      "id": "color_glossy_raven_black",
+      "name": "1. Glossy Raven-Black (Hitam Legam Kanon)",
+      "description": "Hitam legam mengilap alami mojang Priangan.",
+      "prompt_fragment": "glossy raven-black",
+      "category": "hair_color",
+      "extra": null
+    },
+    {
+      "id": "color_dark_espresso_black",
+      "name": "2. Dark Espresso Black (Hitam Kopi Hangat)",
+      "description": "Hitam pekat alami dengan bias hangat cokelat espresso di bawah cahaya.",
+      "prompt_fragment": "natural deep espresso-black with faint warm dark coffee undertones",
+      "category": "hair_color",
+      "extra": null
+    },
+    {
+      "id": "color_soft_charcoal_black",
+      "name": "3. Soft Charcoal Black (Hitam Arang Bertekstur)",
+      "description": "Hitam arang lembut bertekstur halus alami.",
+      "prompt_fragment": "soft charcoal-black with natural silky sheen",
+      "category": "hair_color",
+      "extra": null
+    },
+    {
+      "id": "color_warm_sunlit_black",
+      "name": "4. Sunlit Warm Sheen Black (Hitam Terpaan Pagi)",
+      "description": "Hitam pekat dengan kilau keemasan lembut saat terkena sinar matahari.",
+      "prompt_fragment": "deep glossy black with subtle warm amber highlights glistening in the sunlight",
+      "category": "hair_color",
+      "extra": null
+    },
+    {
+      "id": "color_blue_black_sheen",
+      "name": "5. Midnight Blue-Black (Kilau Biru Malam)",
+      "description": "Hitam legam dengan kilau kebiruan safir eterik saat terkena bias cahaya bulan atau lampu toko.",
+      "prompt_fragment": "deep midnight raven-black hair with subtle sapphire-blue sheen reflecting under the light",
+      "category": "hair_color",
+      "extra": null
+    },
+    {
+      "id": "color_cinnamon_dark_brown",
+      "name": "6. Dark Cinnamon Brown (Cokelat Rempah Pekat)",
+      "description": "Cokelat gelap hangat bernuansa rempah kayu manis alami, tampak hitam pekat dari kejauhan.",
+      "prompt_fragment": "rich dark cinnamon-brown hair with warm organic spice undertones visible in direct light",
+      "category": "hair_color",
+      "extra": null
+    },
+    {
+      "id": "color_glossy_ink_black",
+      "name": "7. Pure Liquid Ink Black (Hitam Tinta Basah)",
+      "description": "Hitam super pekat bertekstur basah mengilap layaknya tinta kaligrafi Cina klasik.",
+      "prompt_fragment": "pure liquid-ink black hair with a pristine glossy lacquered sheen and deep obsidian saturation",
+      "category": "hair_color",
+      "extra": null
+    },
+    {
+      "id": "color_dark_chestnut_tint",
+      "name": "8. Deep Roasted Chestnut (Cokelat Kastanye Panggang)",
+      "description": "Nuansa cokelat tua kastanye sangrai yang ramah, hangat, dan bersahaja.",
+      "prompt_fragment": "deep roasted-chestnut dark hair with subtle warm nutty brown reflections",
+      "category": "hair_color",
+      "extra": null
+    },
+    {
+      "id": "color_violet_arcana_sheen",
+      "name": "9. Subtle Arcana Violet (Hitam Pendar Lembayung)",
+      "description": "Hitam legam dengan bias ungu lembayung mikro yang hanya memendar saat resonansi mana aktif.",
+      "prompt_fragment": "glossy black hair with faint mystical violet undertones shimmering softly beneath ambient lighting",
+      "category": "hair_color",
+      "extra": null
+    },
+    {
+      "id": "color_smoky_ash_black",
+      "name": "10. Smoky Ash Charcoal (Hitam Abu-Abu Berasap)",
+      "description": "Nuansa abu-abu arang dingin modern (cool undertone) dengan finishing satin halus.",
+      "prompt_fragment": "smoky ash-charcoal black hair with a soft velvety cool-toned matte finish",
+      "category": "hair_color",
+      "extra": null
+    },
+    {
+      "id": "color_dark_cocoa_matte",
+      "name": "11. Dark Cocoa Velvet (Cokelat Kakao Pekat)",
+      "description": "Cokelat tua gelap bertekstur beludru matte lembut tanpa kilap minyak berlebih.",
+      "prompt_fragment": "velvety dark cocoa-black hair with rich organic depth and natural unstyled softness",
+      "category": "hair_color",
+      "extra": null
+    },
+    {
+      "id": "color_golden_bronze_glow",
+      "name": "12. Dark Bronze Glaze (Semburat Perunggu Hangat)",
+      "description": "Warna gelap dengan bias tembaga keemasan halus saat terpapar cahaya lampu barista kafe.",
+      "prompt_fragment": "dark espresso hair glazed with subtle warm golden-bronze highlights catching the light",
+      "category": "hair_color",
+      "extra": null
+    },
+    {
+      "id": "color_obsidian_mirror_shine",
+      "name": "13. Obsidian Glass Shine (Hitam Kaca Vulkanik)",
+      "description": "Hitam legam dengan refleksi cermin kaca batu obsidian yang memantulkan garis cahaya tajam.",
+      "prompt_fragment": "obsidian-black hair with sharp reflective mirror-like glossy highlights along the hair curves",
+      "category": "hair_color",
+      "extra": null
+    },
+    {
+      "id": "color_natural_priangan_black",
+      "name": "14. Priangan Urang-Aring Black (Hitam Alami Priangan)",
+      "description": "Hitam alami pekat khas mojang Priangan yang terawat minyak urang-aring alami pegunungan.",
+      "prompt_fragment": "authentic Sundanese natural pitch-black hair, rich, lush, and nourished with pristine natural luster",
+      "category": "hair_color",
+      "extra": null
+    }
+  ],
+  "expressions": [
+    {
+      "id": "expr_retail_sop_smile",
+      "name": "1. Senyum Ramah SOP Ritel (Kanon 2-Jari Simetris)",
+      "description": "Senyum ramah dua jari simetris standar SOP ritel BumiMart yang tulus dan menyejukkan.",
+      "prompt_fragment": "an authentic welcoming two-finger symmetric retail smile radiating genuine hospitality, natural rosy lips",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_analytical_focus",
+      "name": "2. Fokus Analitis POS & Neraca (Konsentrasi Tenang)",
+      "description": "Bibir terkatup rapi, alis sedikit terangkat dalam konsentrasi profesional.",
+      "prompt_fragment": "calm professional composure with focused analytical gaze, eyebrows gently poised in thoughtful concentration, soft rosy lips",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_morning_yawn",
+      "name": "3. Menguap Manis Pagi Subuh (Cute Sleepy Yawn)",
+      "description": "Menguap manis menahan kantuk shift pagi, tangan menutup mulut sopan.",
+      "prompt_fragment": "a charming sleepy dawn expression, delicate hand politely raised to cover a soft morning yawn, relaxed gentle eyes",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_arcana_majesty",
+      "name": "4. Wibawa Eterik Arcana (Tenang & Misterius)",
+      "description": "Senyum tipis misterius penuh pengetahuan kuno klan Arcana-Parahyangan.",
+      "prompt_fragment": "serene authoritative arcane expression, a faint knowing smile conveying ancient magical lineage and inner confidence",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_bashful_smile",
+      "name": "5. Senyum Tersipu Malu (Sweet Bashful Head-Tilt)",
+      "description": "Senyum manis menunduk sedikit dengan mata berbinar malu-malu.",
+      "prompt_fragment": "a sweet bashful smile with head gently tilted, a shy charming twinkle in her eyes and soft blush on her cheeks",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_warm_sisterly_smile",
+      "name": "6. Senyum Hangat Teteh Sunda (Reassuring Sister)",
+      "description": "Senyum keibuan/kakak perempuan yang menenangkan dan membuat nyaman.",
+      "prompt_fragment": "a warm reassuring elder-sister smile, gentle crinkling eyes expressing genuine empathy and patient care",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_playful_smirk",
+      "name": "7. Senyum Jahil Tipis (Mischievous Tease)",
+      "description": "Senyum tipis menggoda di salah satu sudut bibir saat meledek Aki Bolang.",
+      "prompt_fragment": "a playful subtle smirk with a mischievous glimmer in her warm hazel gaze, youthful vivacity",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_pouty_annoyed",
+      "name": "8. Pouty Annoyed Pout (Cemberut Imut Menahan Gemas)",
+      "description": "Bibir sedikit mengerucut cemberut manis saat Aki Bolang malas menjaga pintu atau saat digoda.",
+      "prompt_fragment": "a cute pouty annoyed expression with gently pursed rosy lips and playfully furrowed brows",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_radiant_laugh",
+      "name": "9. Joyful Genuine Laughter (Tawa Lepas Gembira)",
+      "description": "Tawa lepas dengan mulut terbuka riang dan mata menyipit bahagia merayakan keberhasilan toko.",
+      "prompt_fragment": "radiant uninhibited laughter, crinkled joyful eyes and open genuine smile showing bright teeth",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_confident_smug",
+      "name": "10. Confident Smug Grin (Senyum Puas Percaya Diri)",
+      "description": "Senyum puas bangga saat berhasil memenangkan strategi ritel melawan toko sebelah.",
+      "prompt_fragment": "a confident smug grin with a knowing sparkle in her eyes, triumphant and intelligently poised",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_startled_gasp",
+      "name": "11. Cute Startled Gasp (Kaget Terkesiap Imut)",
+      "description": "Mata membulat kaget dengan tangan menempel di dada saat ada kejadian mengejutkan mendadak.",
+      "prompt_fragment": "a cute startled gasp, wide expressive almond eyes and delicate hand raised to her chest in surprise",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_pensive_looking_away",
+      "name": "12. Pensive Window Gaze (Menatap Jendela Berpikir Jauh)",
+      "description": "Tatapan menerawang ke arah kaca toko melihat gerimis hujan Bandung sambil memegang cangkir kopi.",
+      "prompt_fragment": "pensive wistful expression looking slightly off-camera past the window, deep in thoughtful reverie",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_gentle_comforting",
+      "name": "13. Gentle Empathy Listening (Mendengarkan Curhat Simpati)",
+      "description": "Wajah penuh kelembutan saat mendengarkan keluh kesah pembeli atau rekan kerja toko.",
+      "prompt_fragment": "tender compassionate expression listening intently, soft warm gaze radiating reassurance",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_determined_grit",
+      "name": "14. Determined Gritted Poise (Ekspresi Gigih Pantang Mundur)",
+      "description": "Tatapan tegas dengan rahang mantap siap lembur shift malam demi menyelesaikan audit.",
+      "prompt_fragment": "determined gritted resolve, steady focused jawline and unwavering gaze full of tenacious grit",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_relieved_sigh",
+      "name": "15. Soft Relieved Exhale (Helaan Napas Lega Usai Audit)",
+      "description": "Mata terpejam lembut dengan senyum tipis lega setelah perhitungan uang brankas cocok 100%.",
+      "prompt_fragment": "a soft relieved exhale, gentle closed-eye peaceful smile savoring a hard-earned victory",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_winking_friendly",
+      "name": "16. Friendly Playful Wink (Kedipan Ramah Barista)",
+      "description": "Satu mata berkedip santai ceria saat menyodorkan cup kopi latte pesanan pembeli.",
+      "prompt_fragment": "a playful friendly wink with one eye and a cheerful sunny smile, charming barista hospitality",
+      "category": "expression",
+      "extra": null
+    },
+    {
+      "id": "expr_mysterious_whisper",
+      "name": "17. Arcana Whispering Stance (Merapal Mantra Berbisik)",
+      "description": "Bibir terbuka tipis merapal mantra ritel mikro dengan tatapan terkonsentrasi penuh.",
+      "prompt_fragment": "lips parted slightly in a focused whisper chanting a quiet retail incantation, mysterious aura",
+      "category": "expression",
+      "extra": null
+    }
+  ],
+  "skin_complexions": [
+    {
+      "id": "skin_porcelain_bright",
+      "name": "1. Putih Cerah Berseri (Kanon Porselen)",
+      "description": "Putih cerah bersih porselen khas mojang Priangan, sangat halus dan bercahaya alami.",
+      "prompt_fragment": "flawless radiant porcelain-bright fair skin (kulit putih cerah berseri), extraordinarily smooth and luminous with translucent purity",
+      "category": "complexion",
+      "extra": null
+    },
+    {
+      "id": "skin_dewy_porcelain",
+      "name": "2. Dewy Porcelain Glow (Segar & Lembap)",
+      "description": "Kulit porselen dengan kilau segar lembap sehat seperti embun pagi.",
+      "prompt_fragment": "dewy radiant porcelain-fair complexion with a fresh hydrated glow, silky smooth texture and natural inner radiance",
+      "category": "complexion",
+      "extra": null
+    },
+    {
+      "id": "skin_peach_rosy_porcelain",
+      "name": "3. Porselen Rona Persik Lembut (Rosy Peach Flush)",
+      "description": "Putih porselen dengan semburat merah muda persik segar di tulang pipi.",
+      "prompt_fragment": "luminous fair porcelain skin with soft delicate peach-rosy blush on cheeks, healthy vibrant complexion with tender warmth",
+      "category": "complexion",
+      "extra": null
+    },
+    {
+      "id": "skin_lunar_ward_sheen",
+      "name": "4. Porselen + Selubung Lunar Ward (Magis Eterik)",
+      "description": "Putih porselen dengan pendaran pasif perak kebiruan menyejukkan penangkal energi negatif.",
+      "prompt_fragment": "radiant porcelain-bright fair skin veiled in a serene, faint silvery-blue translucent sheen from her passive lunar ward protection, celestial moonlit glow",
+      "category": "complexion",
+      "extra": null
+    },
+    {
+      "id": "skin_golden_morning_fair",
+      "name": "5. Porselen Terpaan Surya Pagi (Golden Dawn Glow)",
+      "description": "Putih porselen bermandikan hangatnya cahaya matahari subuh Bandung.",
+      "prompt_fragment": "fair porcelain complexion kissed by warm golden morning sunbeams, creating a soft amber rim light on her translucent skin",
+      "category": "complexion",
+      "extra": null
+    },
+    {
+      "id": "skin_alabaster_milky",
+      "name": "6. Milky Alabaster White (Putih Susu Murni)",
+      "description": "Kulit putih susu sangat bersih dengan kehalusan tekstur layaknya marmer porselen halus.",
+      "prompt_fragment": "pure milky alabaster fair skin (kulit putih cerah berseri), impeccably clean and velvety smooth",
+      "category": "complexion",
+      "extra": null
+    },
+    {
+      "id": "skin_pearly_opalescent",
+      "name": "7. Pearly Opalescent Sheen (Kilau Mutiara Air Tawar)",
+      "description": "Putih cerah dengan pendaran mutiara lembut seperti bagian dalam kerang danau Situ Patenggang.",
+      "prompt_fragment": "porcelain fair complexion reflecting a subtle pearlescent opalescent sheen, luminous and pure",
+      "category": "complexion",
+      "extra": null
+    },
+    {
+      "id": "skin_mountain_breeze_cool",
+      "name": "8. Cool Mountain Breeze (Rona Dingin Ciwidey)",
+      "description": "Kulit porselen dengan rona dingin menyegarkan khas udara pegunungan Bandung Selatan.",
+      "prompt_fragment": "radiant fair porcelain skin with a crisp, cool-toned mountain-air freshness, soothing and clear",
+      "category": "complexion",
+      "extra": null
+    },
+    {
+      "id": "skin_rosewater_hydration",
+      "name": "9. Rosewater Hydrated Flush (Segar Air Mawar)",
+      "description": "Porselen putih lembap bercahaya dengan kesegaran alami seperti dibasuh air mawar embun pagi.",
+      "prompt_fragment": "hydrated porcelain-bright skin blooming with delicate natural rosewater dewiness, healthy vitality",
+      "category": "complexion",
+      "extra": null
+    },
+    {
+      "id": "skin_subtle_golden_undertone",
+      "name": "10. Fair Porcelain Honey Glaze (Porselen Madu Tipis)",
+      "description": "Putih cerah berseri dengan semburat keemasan madu liar yang sangat tipis dan hangat.",
+      "prompt_fragment": "fair porcelain skin warmed by a whisper-thin golden honey undertone, glowing with tender warmth",
+      "category": "complexion",
+      "extra": null
+    },
+    {
+      "id": "skin_translucent_porcelain",
+      "name": "11. Ultra-Translucent Porcelain (Porselen Transparan)",
+      "description": "Lapisan kulit yang saking halusnya membiaskan cahaya alami secara lembut dan tembus pandang.",
+      "prompt_fragment": "ultra-translucent fair porcelain complexion with fine ethereal translucency, extraordinarily pure",
+      "category": "complexion",
+      "extra": null
+    },
+    {
+      "id": "skin_matte_velvet_porcelain",
+      "name": "12. Matte Velvet Finish (Porselen Bedak Beras)",
+      "description": "Kulit porselen matte halus seperti bedak beras dingin tradisional Jawa Barat tanpa minyak.",
+      "prompt_fragment": "matte velvet porcelain skin texture, softly diffused and powder-smooth without oily reflection",
+      "category": "complexion",
+      "extra": null
+    },
+    {
+      "id": "skin_candlelite_warm_porcelain",
+      "name": "13. Candlelit Amber Porcelain (Porselen Hangat Kafe)",
+      "description": "Putih porselen yang menangkap hangatnya cahaya temaram lentera kafe kopi subuh.",
+      "prompt_fragment": "fair porcelain complexion catching the soft amber ambiance of warm coffee shop lighting",
+      "category": "complexion",
+      "extra": null
+    },
+    {
+      "id": "skin_frost_touched_fair",
+      "name": "14. Frost-Touched Porcelain (Porselen Sejuk Kristal)",
+      "description": "Putih porselen dengan efek dingin tipis resonansi Cincin Perak Eterik, bebas kemerahan.",
+      "prompt_fragment": "cool frost-touched porcelain skin with crystal-clear calm clarity, serene and unblemished",
+      "category": "complexion",
+      "extra": null
+    },
+    {
+      "id": "skin_silken_satin_glow",
+      "name": "15. Silken Satin Sheen (Porselen Sutra Priangan)",
+      "description": "Tekstur kulit berkilau halus seperti kain sutra tenun Priangan bermutu tinggi.",
+      "prompt_fragment": "luminous fair porcelain skin boasting the rich, soft sheen of hand-spun Priangan silk",
+      "category": "complexion",
+      "extra": null
+    }
+  ],
+  "face_shapes": [
+    {
+      "id": "face_oval_delicate",
+      "name": "1. Oval Manis Mojang Priangan (Kanon)",
+      "description": "Bentuk wajah oval manis dengan garis dagu meruncing lembut khas Jawa Barat.",
+      "prompt_fragment": "charming oval face with delicate soft jawline and well-defined cheekbones",
+      "category": "face_shape",
+      "extra": null
+    },
+    {
+      "id": "face_soft_vline",
+      "name": "2. Soft Tapered V-Line (Tirus Anggun)",
+      "description": "Bentuk wajah sedikit lebih tirus ramping dengan dagu anggun proporsional.",
+      "prompt_fragment": "delicate soft V-line face with graceful chin contour and refined feminine features",
+      "category": "face_shape",
+      "extra": null
+    },
+    {
+      "id": "face_heart_shaped",
+      "name": "3. Youthful Heart-Shaped (Dagu Ramping Manis)",
+      "description": "Bentuk wajah hati muda dengan tulang pipi halus dan dagu mungil.",
+      "prompt_fragment": "graceful youthful heart-shaped face with gentle cheek contours and a delicate slender chin",
+      "category": "face_shape",
+      "extra": null
+    },
+    {
+      "id": "face_soft_rounded_mojang",
+      "name": "4. Soft Rounded Mojang (Imut & Segar)",
+      "description": "Pipi sedikit lebih penuh alami, awet muda dan ramah bersahaja.",
+      "prompt_fragment": "sweet youthful softly rounded face with charming gentle cheek fullness and kind facial contours",
+      "category": "face_shape",
+      "extra": null
+    },
+    {
+      "id": "face_sculpted_soft_oval",
+      "name": "5. Sculpted Elegant Oval (Oval Berdefinisi Anggun)",
+      "description": "Oval proporsional dengan tulang pipi terangkat halus dan kontur rahang terdefinisi rapi.",
+      "prompt_fragment": "elegantly sculpted oval face with refined high cheekbones and graceful feminine jawline",
+      "category": "face_shape",
+      "extra": null
+    },
+    {
+      "id": "face_diamond_delicate",
+      "name": "6. Delicate Diamond Shape (Bentuk Berlian Lembut)",
+      "description": "Dagu runcing manis dengan tulang pipi menonjol halus dan pelipis proporsional.",
+      "prompt_fragment": "delicate diamond-shaped face with tapered chin and softly defined cheek contours",
+      "category": "face_shape",
+      "extra": null
+    },
+    {
+      "id": "face_soft_square_feminine",
+      "name": "7. Soft Feminine Square Jaw (Rahang Persegi Halus)",
+      "description": "Garis rahang sedikit tegas terstruktur namun bersudut tumpul lembut, memancarkan ketegasan.",
+      "prompt_fragment": "soft structured feminine square jawline with rounded gentle angles, poised and dignified",
+      "category": "face_shape",
+      "extra": null
+    },
+    {
+      "id": "face_petite_tapered",
+      "name": "8. Petite Pixie Mojang (Wajah Mungil Tirus)",
+      "description": "Struktur wajah mungil dengan proporsi fitur mata dan bibir yang tampak dominan memikat.",
+      "prompt_fragment": "petite delicate face with slender tapered chin and charming compact proportions",
+      "category": "face_shape",
+      "extra": null
+    },
+    {
+      "id": "face_long_oval_grace",
+      "name": "9. Graceful Oblong Oval (Oval Ramping Semampai)",
+      "description": "Bentuk wajah sedikit memanjang anggun layaknya mojang model sampul majalah klasik Priangan.",
+      "prompt_fragment": "graceful elongated oval face with serene vertical proportions and a slender elegant jaw",
+      "category": "face_shape",
+      "extra": null
+    },
+    {
+      "id": "face_youthful_apple_cheeks",
+      "name": "10. High Apple Cheeks (Pipi Apel Muda Menawan)",
+      "description": "Pipi atas membulat manis kenyal khas gadis pegunungan Parahyangan saat tersenyum ramah.",
+      "prompt_fragment": "sweet youthful face featuring charming prominent high apple cheeks and gentle chin contour",
+      "category": "face_shape",
+      "extra": null
+    },
+    {
+      "id": "face_classic_kebaya_profile",
+      "name": "11. Aristocrat Priangan Profile (Profil Putri Priangan)",
+      "description": "Garis rahang bangsawan Sunda klasik yang simetris sempurna dan bersahaja.",
+      "prompt_fragment": "aristocratic Priangan facial profile with immaculate bone structure and dignified graceful jawline",
+      "category": "face_shape",
+      "extra": null
+    },
+    {
+      "id": "face_refined_contour",
+      "name": "12. Clean Refined Jawline (Garis Rahang Bersih Ramping)",
+      "description": "Garis rahang bawah ultra-bersih tanpa lipatan, menyambung mulus ke leher jenjang.",
+      "prompt_fragment": "crisp refined jawline tapering cleanly into an elegant slender neck, flawless silhouette",
+      "category": "face_shape",
+      "extra": null
+    },
+    {
+      "id": "face_soft_pointed_chin",
+      "name": "13. Soft Pointed Chin (Dagu Lancip Halus Alami)",
+      "description": "Dagu lancip manis alami yang memberi kesan cerdas, tanggap, dan ekspresif.",
+      "prompt_fragment": "charming soft pointed chin with gentle jaw taper, expressive and youthful feminine contours",
+      "category": "face_shape",
+      "extra": null
+    },
+    {
+      "id": "face_gentle_cushioned_jaw",
+      "name": "14. Cushioned Youthful Jaw (Rahang Belia Menggemaskan)",
+      "description": "Garis rahang belia yang halus dan penuh pesona kemudaan usia 23 tahun.",
+      "prompt_fragment": "tender youthful jawline with soft cushioned contours, radiant 23-year-old freshness",
+      "category": "face_shape",
+      "extra": null
+    }
+  ],
+  "eye_types": [
+    {
+      "id": "eyes_walnut_almond",
+      "name": "1. Almond Cokelat Kenari Hangat (Kanon)",
+      "description": "Bentuk almond dengan iris cokelat kenari hangat yang ramah dan cerdas.",
+      "prompt_fragment": "warm walnut-brown almond eyes with a gentle, intelligent, and welcoming gaze",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_morning_shift_fatigue",
+      "name": "2. Sayu Shift Subuh 06.00 WIB (Khas Kasir Pagi)",
+      "description": "Mata almond kenari hangat dengan bayangan sayu lelah tipis shift subuh yang memikat.",
+      "prompt_fragment": "warm dark hazel almond eyes showing charming slight morning shift fatigue, crinkling kindly at the corners",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_golden_arcana_halo",
+      "name": "3. Mata Purna Waktu (Golden Arcana Halo)",
+      "description": "Kedua pupil memancarkan cincin pendar emas tipis saat mendeteksi aura kejujuran atau tanggal kedaluwarsa.",
+      "prompt_fragment": "authoritative dark almond eyes with both pupils illuminated by a glowing thin golden halo ring (Mata Purna Waktu), detecting subtle arcane energies with serene majesty",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_doe_brown_gentle",
+      "name": "4. Doe Eyes Teduh & Hangat (Ramah Bersahaja)",
+      "description": "Mata bulat almond besar yang polos, ramah, dan memancarkan empati mendalam.",
+      "prompt_fragment": "expressive wide doe-like warm brown eyes with a soothing, comforting, and honest gaze",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_sharp_analytical_focus",
+      "name": "5. Tatapan Analitis Kasir Fokus (Cerdas & Cermat)",
+      "description": "Tatapan tajam fokus menghitung neraca kas POS dan memeriksa barcode produk.",
+      "prompt_fragment": "sharp analytical dark hazel eyes full of quick calculation, keen retail vigilance, and calm poise",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_amber_mystic_reflection",
+      "name": "6. Refleksi Serpihan Amber Magis (Pusaka Klan)",
+      "description": "Iris cokelat gelap dengan kilau serpihan emas amber eterik.",
+      "prompt_fragment": "deep chestnut-brown almond eyes reflecting subtle golden-amber sparks of latent arcane heritage",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_fox_sly_almond",
+      "name": "7. Fox-Like Almond Eyes (Mata Almond Rubah Anggun)",
+      "description": "Sudut luar mata sedikit terangkat ke atas, memancarkan kecerdikan dan pesona menawan.",
+      "prompt_fragment": "expressive fox-like almond hazel eyes with subtly upturned outer corners, witty and enchanting",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_coffee_espresso_deep",
+      "name": "8. Deep Espresso Dark Brown (Cokelat Kopi Pekat)",
+      "description": "Iris gelap sedalam seduhan kopi tubruk pekat yang memikat dan penuh misteri batin.",
+      "prompt_fragment": "deep espresso-black almond eyes with profound dark depth, calm, contemplative, and sincere",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_sparkling_curious",
+      "name": "9. Sparkling Curious Gaze (Binar Mata Penasaran)",
+      "description": "Mata berbinar cerah penuh rasa ingin tahu saat meracik formula bisnis atau mantra baru.",
+      "prompt_fragment": "sparkling dark hazel almond eyes alight with lively curiosity, vibrant warmth, and keen interest",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_half_lidded_sultry",
+      "name": "10. Half-Lidded Dreamy Gaze (Tatapan Sayu Lamunan)",
+      "description": "Kelopak mata setengah turun alami yang memberi kesan romantis, santai, dan lembut.",
+      "prompt_fragment": "half-lidded warm brown almond eyes with a dreamy, relaxed gaze, soft and invitingly tranquil",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_twilight_sapphire_flecks",
+      "name": "11. Sapphire Mist Arcana Gaze (Cincin Safir Biru Bulan)",
+      "description": "Iris cokelat tua dengan serpihan biru safir eterik saat mantra Tirta Hawa aktif.",
+      "prompt_fragment": "chestnut-brown almond eyes sparkling with microscopic sapphire-blue ethereal motes of lunar mana",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_steady_unflinching",
+      "name": "12. Calm Resilient Retail Gaze (Tatapan Tegas Kasir)",
+      "description": "Tatapan mantap, berani, dan berwibawa saat menghadapi preman jalanan atau spekulan.",
+      "prompt_fragment": "steady unflinching dark hazel gaze radiating calm courage, composed resilience, and authority",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_crinkled_laughing",
+      "name": "13. Warm Laughing Crescent Eyes (Mata Bulan Sabit Tawa)",
+      "description": "Sudut mata menyipit manis membentuk bulan sabit saat tertawa lepas bersama pembeli.",
+      "prompt_fragment": "warm walnut eyes crinkled into sweet laughing crescents, overflowing with genuine joyful warmth",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_wide_innocent_cat",
+      "name": "14. Feline Resonant Gaze (Mata Tajam Sensasi Batin)",
+      "description": "Iris cokelat terang dengan ketajaman persepsi batin selaras dengan mata Aki Bolang.",
+      "prompt_fragment": "alert wide almond eyes with subtle golden feline alertness, intuitively reading hidden intentions",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_intense_mana_focus",
+      "name": "15. Piercing Mana Focus (Konsentrasi Prana Tajam)",
+      "description": "Pupil terfokus presisi memancarkan konsentrasi batin tinggi pengendali energi kinetik.",
+      "prompt_fragment": "piercing dark eyes locked in sharp arcane concentration, radiating serene focus and inner power",
+      "category": "eye_type",
+      "extra": null
+    },
+    {
+      "id": "eyes_gentle_melancholy",
+      "name": "16. Tender Empathetic Eyes (Tatapan Empati Menenangkan)",
+      "description": "Tatapan mata yang sangat peka dan menyejukkan terhadap keluhan batin warga tertindas.",
+      "prompt_fragment": "tender warm brown almond eyes reflecting deep empathy, patient understanding, and gentle comfort",
+      "category": "eye_type",
+      "extra": null
+    }
+  ],
+  "facial_details": [
+    {
+      "id": "detail_right_dimple",
+      "name": "1. Lesung Pipi Kanan Samar (Kanon)",
+      "description": "Lesung pipi samar di sisi kanan saat tersenyum ramah.",
+      "prompt_fragment": "subtle right-cheek dimple accentuating her gentle smile, delicate straight nose",
+      "category": "facial_detail",
+      "extra": null
+    },
+    {
+      "id": "detail_dual_dimples",
+      "name": "2. Lesung Pipi Ganda Simetris (Sangat Manis)",
+      "description": "Lesung pipi manis di kedua pipi yang tampak jelas saat tersenyum lebar.",
+      "prompt_fragment": "delicate charming dimples on both cheeks when smiling, refined soft nasal bridge",
+      "category": "facial_detail",
+      "extra": null
+    },
+    {
+      "id": "detail_cute_beauty_mark",
+      "name": "3. Tahi Lalat Pemanis Bawah Mata (Charming Accent)",
+      "description": "Titik tahi lalat mungil pemikat di bawah kelopak mata kanan, menambah pesona.",
+      "prompt_fragment": "a subtle cute beauty mark delicately placed beneath her right eye, smooth porcelain cheeks",
+      "category": "facial_detail",
+      "extra": null
+    },
+    {
+      "id": "detail_natural_cheek_flush",
+      "name": "4. Semburat Pipi Segar Alami (Fresh Glow)",
+      "description": "Rona kemerahan alami yang sehat di tulang pipi tanpa riasan tebal.",
+      "prompt_fragment": "soft natural rosy flush dusting her delicate cheekbones, smooth unblemished skin",
+      "category": "facial_detail",
+      "extra": null
+    },
+    {
+      "id": "detail_pristine_clean",
+      "name": "5. Polos Murni Porselen (Ultra-Clean Studio)",
+      "description": "Wajah ultra-bersih tanpa noda, fokus murni pada struktur kranial dan proporsi.",
+      "prompt_fragment": "pristine unadorned porcelain complexion with perfectly smooth contours and elegant features",
+      "category": "facial_detail",
+      "extra": null
+    },
+    {
+      "id": "detail_corner_lip_dimple",
+      "name": "6. Corner Lip Dimple (Lesung Sudut Bibir)",
+      "description": "Titik lesung mungil tepat di sudut bibir kanan saat tersenyum simpul.",
+      "prompt_fragment": "a tiny charming dimple nestled right at the corner of her smiling lips, delicate facial accents",
+      "category": "facial_detail",
+      "extra": null
+    },
+    {
+      "id": "detail_upper_lip_beauty_mark",
+      "name": "7. Upper Lip Beauty Mark (Tahi Lalat Bibir Atas)",
+      "description": "Tahi lalat kecil berukuran mikro tepat di atas garis bibir kiri atas, menambah daya pikat.",
+      "prompt_fragment": "a subtle pinpoint beauty mark resting delicately above the left arch of her upper lip",
+      "category": "facial_detail",
+      "extra": null
+    },
+    {
+      "id": "detail_soft_freckles_bridge",
+      "name": "8. Gentle Bridge Freckles (Bintik Halus Batang Hidung)",
+      "description": "Sedikit bintik kecokelatan halus di pangkal hidung yang manis, alami, dan menggemaskan.",
+      "prompt_fragment": "a light dusting of soft natural sun-freckles across the bridge of her delicate straight nose",
+      "category": "facial_detail",
+      "extra": null
+    },
+    {
+      "id": "detail_defined_cupids_bow",
+      "name": "9. Crisp Sculpted Cupid's Bow (Busur Cupid Terdefinisi)",
+      "description": "Lekukan tengah bibir atas yang tegas, anggun, dan berbentuk busur rapi alami.",
+      "prompt_fragment": "crisply sculpted Cupid's bow on her natural rosy lips, adding refined elegance to her smile",
+      "category": "facial_detail",
+      "extra": null
+    },
+    {
+      "id": "detail_delicate_button_nose",
+      "name": "10. Petite Button Nose (Hidung Mungil Mancung Lembut)",
+      "description": "Bentuk hidung mungil imut dengan ujung yang membulat halus khas wanita Sunda.",
+      "prompt_fragment": "a cute petite button nose with smooth gentle bridge and softly rounded tip",
+      "category": "facial_detail",
+      "extra": null
+    },
+    {
+      "id": "detail_high_cheekbone_contour",
+      "name": "11. High Cheekbone Shadow (Bayangan Tulang Pipi Anggun)",
+      "description": "Kontur tulang pipi tinggi alami yang memberi dimensi wajah fotogenik tanpa makeup tebal.",
+      "prompt_fragment": "naturally high cheekbones casting soft elegant facial contours under studio lighting",
+      "category": "facial_detail",
+      "extra": null
+    },
+    {
+      "id": "detail_chin_cleft_subtle",
+      "name": "12. Subtle Chin Cleft (Bayangan Lembut Dagu)",
+      "description": "Lekukan sangat samar di tengah dagu yang memberi karakter tegas dan karismatik.",
+      "prompt_fragment": "a whisper-thin subtle cleft shadow at the center of her delicate rounded chin",
+      "category": "facial_detail",
+      "extra": null
+    },
+    {
+      "id": "detail_dewy_forehead_glow",
+      "name": "13. Radiant Smooth Forehead (Dahi Bersih Mulus)",
+      "description": "Dahi mulus tanpa kerutan yang memantulkan cahaya lembut alami mojang terawat.",
+      "prompt_fragment": "pristine smooth porcelain forehead catching the soft ambient morning rim light",
+      "category": "facial_detail",
+      "extra": null
+    },
+    {
+      "id": "detail_feathery_natural_brows",
+      "name": "14. Feathery Soft Natural Brows (Alis Rapi Berserat Alami)",
+      "description": "Alis hitam alami bertekstur serat bulu rapi tanpa kesan tebal digambar pensil.",
+      "prompt_fragment": "neatly groomed feathery soft natural black eyebrows with a gentle flattering feminine arch",
+      "category": "facial_detail",
+      "extra": null
+    },
+    {
+      "id": "detail_soft_lip_tint_gradient",
+      "name": "15. Gradient Lip Rosiness (Gradasi Bibir Merona Alami)",
+      "description": "Bibir bagian dalam lebih merona merah delima alami memudar lembut ke tepian luar.",
+      "prompt_fragment": "natural gradient rosy lips, softly flushed at the center like fresh pomegranate petals",
+      "category": "facial_detail",
+      "extra": null
+    }
+  ],
+  "shot_types": [
+    {
+      "id": "shot_turnaround_4views",
+      "name": "1. Master Turnaround Sheet (4 Sudut Pandang Konsisten - 16:9)",
+      "description": "Tampak Depan, 3/4, Samping, dan Belakang dalam satu lembar acuan proporsional.",
+      "prompt_fragment": "horizontal wide composition displaying 4 full-body views in consistent proportions: Front View, Three-Quarter (3/4) View, Side Profile View, and Back View of the same character on a clean neutral studio backdrop",
+      "category": "shot_type",
+      "extra": {
+        "ar": "16:9",
+        "type": "turnaround"
+      }
+    },
+    {
+      "id": "shot_half_body_portrait",
+      "name": "2. Half-Body Character Portrait (Kepala s.d. Paha - 2:3)",
+      "description": "Potret separuh badan menonjolkan fitur wajah, rambut, dan siluet tubuh fitted.",
+      "prompt_fragment": "medium close-up portrait shot capturing from top of head to mid-thigh, emphasizing facial features, hair styling, and fitted upper body silhouette against a soft warm studio backdrop",
+      "category": "shot_type",
+      "extra": {
+        "ar": "2:3",
+        "type": "portrait"
+      }
+    },
+    {
+      "id": "shot_facial_closeup_macro",
+      "name": "3. Close-Up Facial Headshot (Makro Wajah & Tekstur Kulit - 1:1)",
+      "description": "Fokus makro pada mata, bibir, kontur wajah, dan tekstur kulit porselen.",
+      "prompt_fragment": "extreme close-up facial portrait capturing head and shoulders, immaculate focus on eyes, lip contours, fine hair strands, and flawless porcelain skin texture against soft blurred neutral background",
+      "category": "shot_type",
+      "extra": {
+        "ar": "1:1",
+        "type": "headshot"
+      }
+    },
+    {
+      "id": "shot_expression_sheet_4panel",
+      "name": "4. Multi-Panel Facial Expression Sheet (4 Ekspresi - 16:9)",
+      "description": "Studi 4 variasi ekspresi wajah Aluna dalam satu kanvas 16:9.",
+      "prompt_fragment": "horizontal 16:9 multi-panel master reference displaying 4 distinct bust portraits of Aluna with identical facial proportions and features showing 4 contrasting expressions",
+      "category": "shot_type",
+      "extra": {
+        "ar": "16:9",
+        "type": "expressions"
+      }
+    },
+    {
+      "id": "shot_full_body_hero",
+      "name": "5. Full-Body Hero Standee Poster (Ujung Kepala s.d. Kaki - 2:3)",
+      "description": "Siluet penuh berdiri anggun dari puncak kepala hingga alas kaki.",
+      "prompt_fragment": "full-length vertical full-body standing character study poster, displaying entire figure from head to toe with pristine anatomical accuracy on a soft neutral studio backdrop",
+      "category": "shot_type",
+      "extra": {
+        "ar": "2:3",
+        "type": "fullbody"
+      }
+    }
+  ],
+  "neutral_attires": [
+    {
+      "id": "attire_fitted_ivory_mockneck",
+      "name": "1. Fitted Ivory Mock-Neck & Black Trousers (Rekomendasi Utama)",
+      "description": "Atasan kaus rajut ribbed putih gading pas badan lengan pendek dan celana katun hitam high-waist slim-straight.",
+      "prompt_fragment": "a form-fitting ivory-white ribbed mock-neck short-sleeved top neatly accentuating her natural hourglass silhouette, paired with tailored high-waisted black stretch-cotton trousers cut cleanly at the ankle, and sleek minimalist footwear",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_fitted_charcoal_crewneck",
+      "name": "2. Fitted Charcoal Crewneck & Dark Slate Trousers",
+      "description": "Kaus fitted abu-abu arang pas badan dimasukkan rapi ke celana panjang gelap berpotongan ankle.",
+      "prompt_fragment": "a snug fitted charcoal-gray stretch cotton crewneck t-shirt neatly tucked into slim-straight slate black trousers with clean ankle taper, emphasizing her slender waistline",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_fitted_sand_camisole",
+      "name": "3. Fitted Sand-Beige Knit Top & Stretch Pants",
+      "description": "Atasan rajut fitted tanpa lengan warna pasir krem dan celana stretch katun hitam.",
+      "prompt_fragment": "a fitted sand-beige ribbed knit sleeveless top following her natural slender curves, paired with high-waisted fitted black stretch ankle pants",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_fitted_minimal_bodycon",
+      "name": "4. Fitted Minimalist Studio Bodycon Silhouette Top",
+      "description": "Atasan fitted hitam polos tanpa lengan siluet bodycon menonjolkan lekuk pinggang alami.",
+      "prompt_fragment": "a minimalist form-fitting matte black sleeveless studio top accentuating her tapered waistline and natural feminine hourglass curves, paired with sleek fitted black leggings",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_canon_bumimart_fitted",
+      "name": "5. Seragam Resmi Shift Pagi BumiMart (Kanon)",
+      "description": "Rompi toska fitted princess seams, polo putih, apron cokelat espresso, celana katun hitam.",
+      "prompt_fragment": "official tailored mint sage-green retail vest with princess seams and cream edge trim over an ivory polo shirt, espresso-brown canvas half-apron tied at the high waist, black trousers",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_canon_casual_dago_fitted",
+      "name": "6. Kasual Jalanan Dago (Kanon)",
+      "description": "Jaket cropped denim vintage fitted, kaus krem, celana corduroy karamel.",
+      "prompt_fragment": "fitted cropped vintage blue denim jacket over cream ribbed mock-neck top, tailored caramel corduroy trousers",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_canon_kebaya_fitted",
+      "name": "7. Kebaya Warisan Klan Arcana (Kanon)",
+      "description": "Kebaya kutubaru hijau zamrud fitted bersulam brokat, stagen tenun tembaga, rok batik Parang.",
+      "prompt_fragment": "fitted emerald green kutubaru kebaya with delicate brocade embroidery, golden copper stagen waist sash, Parang-Priangan batik wrap skirt",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_fitted_black_turtleneck",
+      "name": "8. Fitted Black Turtleneck & Slacks (Turtleneck Hitam)",
+      "description": "Turtleneck rajut hitam pas badan membingkai leher jenjang dan dada dengan celana bahan berpotongan rapi.",
+      "prompt_fragment": "a form-fitting jet-black ribbed knit turtleneck top accentuating her slender neck and hourglass waist, paired with tailored straight-leg trousers",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_fitted_white_henley",
+      "name": "9. Fitted White Henley & Ankle Denim (Kaus Kancing Henley)",
+      "description": "Atasan henley putih tulang berderet 3 kancing mini pas badan dan celana denim gelap fitted.",
+      "prompt_fragment": "a snug ivory-white short-sleeve henley top with subtle neckline buttons tracing her feminine silhouette, tucked into slim-straight dark denim pants",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_fitted_oatmeal_wrap",
+      "name": "10. Fitted Oatmeal Knit Wrap Top (Rajut Silang Pinggang)",
+      "description": "Atasan rajut model wrap warna oatmeal hangat yang membalut ramping lekuk pinggang alami.",
+      "prompt_fragment": "a fitted oatmeal-beige ribbed knit wrap top neatly cinched at her natural high waistline, paired with tailored black ankle trousers",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_fitted_olive_scoop",
+      "name": "11. Fitted Olive-Sage Scoop Neck (Rajut Kerah Oval)",
+      "description": "Kaus rajut warna sage-olive pas badan berkerah oval scoop neck yang anggun dan celana katun hitam.",
+      "prompt_fragment": "a form-fitting muted sage-olive ribbed knit scoop-neck top highlighting her collarbone, paired with sleek high-waisted black stretch trousers",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_fitted_slate_studio_set",
+      "name": "12. Minimalist Slate Studio Set (Setelan Studio Abu-abu)",
+      "description": "Setelan studio atletis warna abu-abu batu pas badan yang memperjelas garis anatomi torso secara murni.",
+      "prompt_fragment": "a minimalist fitted slate-gray studio top and matching high-waisted leggings contouring her natural curves with clean athletic poise",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_fitted_espresso_polo_plain",
+      "name": "13. Plain Espresso Polo & Chinos (Polo Polos Cokelat Kopi)",
+      "description": "Kaus polo polos cokelat kopi fitted menempel di pinggang dengan celana chino krem berpotongan lurus.",
+      "prompt_fragment": "a fitted plain espresso-brown knit polo shirt tailored cleanly around her slender waistline, paired with tailored cream-beige chino trousers",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_fitted_lavender_square",
+      "name": "14. Fitted Lavender Square-Neck (Rajut Kerah Kotak)",
+      "description": "Atasan rajut fitted berkerah kotak warna lavender pucat yang mempertegas garis tulang selangka porselen.",
+      "prompt_fragment": "a snug pastel lavender ribbed square-neck short-sleeved top framing her porcelain collarbone, paired with tailored high-rise charcoal pants",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_fitted_charcoal_sleeveless",
+      "name": "15. Sleeveless Mock-Neck & Trousers (Rajut Tanpa Lengan)",
+      "description": "Atasan rajut arang tanpa lengan yang memperlihatkan bahu tegak terlatih Aluna dan pinggang ramping.",
+      "prompt_fragment": "a form-fitting sleeveless charcoal-black mock-neck knit top accentuating her toned shoulders and tapered waistline, paired with slim black slacks",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_fitted_terracotta_longsleeve",
+      "name": "16. Terracotta Ribbed Long-Sleeve (Rajut Terakota Bata)",
+      "description": "Kaus rajut lengan panjang fitted warna terakota bata yang kontras indah di atas kulit putih porselen.",
+      "prompt_fragment": "a fitted burnt-terracotta ribbed long-sleeve top providing rich warm contrast against her fair porcelain skin, paired with tailored dark trousers",
+      "category": "neutral_attire",
+      "extra": null
+    },
+    {
+      "id": "attire_fitted_corset_seamed_tee",
+      "name": "17. Corset-Seamed Fitted White Tee (Kaus Jahitan Princess)",
+      "description": "Kaus katun putih dengan jahitan kontur ala korset (princess seams) yang mempertegas lekuk jam pasir alami.",
+      "prompt_fragment": "a tailored white cotton short-sleeved top featuring subtle structured corset seams hugging her natural hourglass waist, paired with dark ankle pants",
+      "category": "neutral_attire",
+      "extra": null
+    }
+  ]
+}
