@@ -558,12 +558,12 @@
       // Hair / Hijab
       const isHijab = hairstyle && hairstyle.extra && hairstyle.extra.is_hijab;
       const colorText = hairColor ? hairColor.prompt_fragment : 'glossy raven-black';
-      const styleText = hairstyle ? hairstyle.prompt_fragment : 'hair styled in an elegant high barista bun';
+      const hairStyleText = hairstyle ? hairstyle.prompt_fragment : 'hair styled in an elegant high barista bun';
       let hairOrHijabPrompt = '';
       if (isHijab) {
         hairOrHijabPrompt = `Headwear & Hijab: ${hairstyle.prompt_fragment}, with hair, ears, and neck completely concealed underneath`;
       } else {
-        hairOrHijabPrompt = `Hair: ${colorText} ${styleText}`;
+        hairOrHijabPrompt = `Hair: ${colorText} ${hairStyleText}`;
       }
       parts.push(hairOrHijabPrompt);
 
@@ -588,7 +588,7 @@
 
       return {
         promptText: parts.join(', '),
-        hairstylePrompt: isHijab ? hairstyle.prompt_fragment : (hairstyle ? `${colorText} ${styleText}` : ''),
+        hairstylePrompt: isHijab ? hairstyle.prompt_fragment : (hairstyle ? `${colorText} ${hairStyleText}` : ''),
       };
     }
   }
