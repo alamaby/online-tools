@@ -69,9 +69,7 @@
     facial_detail_id: 'detail_natural_radiance',
     shot_type_id: 'shot_intimate_closeup',
     neutral_attire_id: 'attire_black_crewneck_cotton',
-    include_hairpin: true,
-    include_sapphire_ring: true,
-    include_tridatu_wristband: true,
+    include_clan_regalia: true,
   };
 
   // Bulk Results Storage
@@ -757,7 +755,8 @@
     md += `- **Bentuk Mata:** ${$('select-trait-eyetype').options[$('select-trait-eyetype').selectedIndex]?.text || traitsState.eye_type_id}\n`;
     md += `- **Detail Wajah:** ${$('select-trait-detail').options[$('select-trait-detail').selectedIndex]?.text || traitsState.facial_detail_id}\n`;
     md += `- **Framing Shot:** ${$('select-trait-shottype').options[$('select-trait-shottype').selectedIndex]?.text || traitsState.shot_type_id}\n`;
-    md += `- **Busana Netral:** ${$('select-trait-attire').options[$('select-trait-attire').selectedIndex]?.text || traitsState.neutral_attire_id}\n\n`;
+    md += `- **Busana Netral:** ${$('select-trait-attire').options[$('select-trait-attire').selectedIndex]?.text || traitsState.neutral_attire_id}\n`;
+    md += `- **Pusaka Klan Arcana:** ${traitsState.include_clan_regalia !== false ? 'Ya (Sertakan 4 Pusaka)' : 'Tidak (Dilepas / Tanpa Pusaka)'}\n\n`;
 
     md += `## 📋 Prompt Potret Acuan Karakter\n\n`;
     md += `\`\`\`text\n${res.promptText}\n\`\`\`\n\n`;
@@ -1077,6 +1076,13 @@
         updateTraitPromptPreview();
       });
     });
+
+    if ($('check-trait-regalia')) {
+      $('check-trait-regalia').addEventListener('change', (e) => {
+        traitsState.include_clan_regalia = e.target.checked;
+        updateTraitPromptPreview();
+      });
+    }
 
     $('btn-random-traits').addEventListener('click', () => {
       const pick = (arr) => arr && arr.length ? arr[Math.floor(Math.random() * arr.length)].id : '';

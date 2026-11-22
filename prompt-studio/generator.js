@@ -573,14 +573,11 @@
       }
 
       // Regalia
-      if (t.include_hairpin && this.presets.clan_regalia_accessories) {
-        parts.push(`Sacred Hairpin: 15cm carved rustic dark acacia wulung wooden hairpin (Pasak Pangeker Mana limiter)`);
-      }
-      if (t.include_sapphire_ring) {
-        parts.push(`Sacred Ring: delicate sterling silver ring set with an uncut sub-zero sapphire glowing with faint cold mist`);
-      }
-      if (t.include_tridatu_wristband) {
-        parts.push(`Sacred Wristband: braided Tridatu sacred thread (red-black-white) bound at wrist`);
+      if (t.include_clan_regalia !== false) {
+        if (!isHijab && this.presets.clan_regalia_accessories) {
+          parts.push(`Sacred Hairpin: 15cm carved rustic dark acacia wulung wooden hairpin (Pasak Pangeker Mana limiter)`);
+        }
+        parts.push(`Sacred Clan Regalia: hand-braided red-white-black Tridatu cord bracelet on left wrist, minimalist plain 925 sterling silver band ring on left pinky finger, and subtle silver kemuning leaf charm anklet on right ankle`);
       }
 
       // Lighting & backdrop
