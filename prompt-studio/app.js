@@ -546,6 +546,26 @@
   }
 
   // --- Character Traits Handlers ---
+  function syncTraitAttireForHair() {
+    const curHairId = $('select-trait-hairstyle').value;
+    const hairObj = (traits.hairstyles || []).find(x => x.id === curHairId);
+    const isHijab = hairObj && hairObj.extra && hairObj.extra.is_hijab;
+    let availAttires = traits.neutral_attires || [];
+    if (isHijab) {
+      availAttires = availAttires.filter(a => a.extra && a.extra.modest_compatible);
+    }
+    const curAttire = $('select-trait-attire').value;
+    populateSelect($('select-trait-attire'), availAttires, curAttire);
+    if (!availAttires.some(a => a.id === $('select-trait-attire').value)) {
+      if (availAttires.length > 0) {
+        $('select-trait-attire').value = availAttires[0].id;
+        traitsState.neutral_attire_id = availAttires[0].id;
+      }
+    } else {
+      traitsState.neutral_attire_id = $('select-trait-attire').value;
+    }
+  }
+
   function updateTraitPromptPreview() {
     const res = generator.buildCharacterExplorationPrompt(traitsState);
     $('trait-prompt-preview').textContent = res.promptText;
@@ -1035,26 +1055,6 @@
       copyTextToClipboard($('wardrobe-prompt-text').textContent, 'Teks busana modular disalin!');
     });
     $('btn-download-modular-md').addEventListener('click', downloadModularWardrobeMarkdown);
-
-    function syncTraitAttireForHair() {
-      const curHairId = $('select-trait-hairstyle').value;
-      const hairObj = (traits.hairstyles || []).find(x => x.id === curHairId);
-      const isHijab = hairObj && hairObj.extra && hairObj.extra.is_hijab;
-      let availAttires = traits.neutral_attires || [];
-      if (isHijab) {
-        availAttires = availAttires.filter(a => a.extra && a.extra.modest_compatible);
-      }
-      const curAttire = $('select-trait-attire').value;
-      populateSelect($('select-trait-attire'), availAttires, curAttire);
-      if (!availAttires.some(a => a.id === $('select-trait-attire').value)) {
-        if (availAttires.length > 0) {
-          $('select-trait-attire').value = availAttires[0].id;
-          traitsState.neutral_attire_id = availAttires[0].id;
-        }
-      } else {
-        traitsState.neutral_attire_id = $('select-trait-attire').value;
-      }
-    }
 
     // Character Traits Events
     [
