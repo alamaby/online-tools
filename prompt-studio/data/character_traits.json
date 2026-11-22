@@ -2,6 +2,129 @@
   "locked_demographics": "23-year-old Sundanese-Indonesian woman named Aluna Arundati Buana (Teh Luna), mojang Priangan",
   "locked_figure_proportions": "162 cm / 50 kg, slender graceful natural hourglass figure with a flattering tapered waistline, poised posture",
   "locked_figure_concise": "23-year-old Sundanese woman Aluna Arundati Buana (Teh Luna), 162cm/50kg, slender natural hourglass figure",
+  "art_styles": [
+    {
+      "id": "style_semi_realistic_ln",
+      "name": "1. Semi-Realistic Anime Light Novel (Kanon Master Aluna)",
+      "description": "Gaya kanon novel Aluna: perpaduan Makoto Shinkai & Kyoto Animation, tekstur kain nyata, kedalaman sinematik.",
+      "prompt_fragment": "Semi-realistic anime light novel art style, soft painterly digital art, Kyoto Animation meets Makoto Shinkai aesthetic, authentic rich fabric textures, cinematic depth of field, fine-art digital painting, master reference fidelity, pristine anatomical accuracy, 8k resolution.. Semi-realistic anime light novel character reference sheet",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "official art, Semi-realistic anime light novel style, soft painterly digital art, Makoto Shinkai meets Kyoto Animation aesthetic, crisp focus, 8k resolution.",
+        "neg": ""
+      }
+    },
+    {
+      "id": "style_photorealistic",
+      "name": "2. Hyperrealistic Candid Photography (Foto Realistis)",
+      "description": "Foto potret manusia nyata Sunda Mojang Priangan, tekstur pori mikro alami, lensa 35mm Leica M11 f/1.4.",
+      "prompt_fragment": "Hyperrealistic authentic candid portrait photography of a real Sundanese Indonesian young woman, shot on 35mm Leica M11, 85mm f/1.4 lens, natural skin pores and subtle complexion luster, realistic studio soft lighting, lifelike human fidelity, 8k resolution, raw photo",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "raw photo, realistic photo portrait of authentic Sundanese young woman, 8k uhd, dslr, soft lighting, film grain",
+        "neg": "anime, 2d, cartoon, illustration, drawing, 3d render, cgi, doll, plastic skin, airbrushed"
+      }
+    },
+    {
+      "id": "style_cinematic_film",
+      "name": "3. Cinematic 35mm Live-Action Film Still (Sinematik Film)",
+      "description": "Tangkapan layar film bioskop 35mm, lensa anamorphic, color grading Kodak Portra 400 Arri Alexa.",
+      "prompt_fragment": "Cinematic 35mm movie still, shot on Arri Alexa LF with anamorphic lenses, subtle anamorphic lens flare, Kodak Portra 400 film stock color grading, atmospheric soft morning rim lighting, shallow depth of field, authentic live-action feature film aesthetic, rich film grain, 8k resolution",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "cinematic film still, 35mm movie photography, Kodak Portra 400, anamorphic lens, photorealistic lighting, 8k",
+        "neg": "anime, cartoon, 3d render, flat lighting, drawing, oversaturated"
+      }
+    },
+    {
+      "id": "style_retro_90s_anime",
+      "name": "4. Vintage 1990s Retro Anime (Animasi Sel Klasik)",
+      "description": "Estetika anime sel fisik tahun 90-an bernuansa nostalgia Studio Ghibli dan Sailor Moon dengan grain lembut.",
+      "prompt_fragment": "Vintage 1990s retro anime aesthetic, nostalgic hand-drawn physical cel animation art style, soft retro film grain, pastel color palette, delicate ink outlines, classic 90s aesthetic reminiscent of Studio Ghibli and early Kyoto Animation, authentic retro anime aesthetic, 8k resolution",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "1990s retro anime style, vintage cel animation, hand-drawn anime aesthetic, classic anime screencap, film grain, nostalgic 90s aesthetic",
+        "neg": "3d, photorealistic, modern digital vector, high gloss, cgi"
+      }
+    },
+    {
+      "id": "style_korean_manhwa",
+      "name": "5. Modern Korean Webtoon / Manhwa (Cover Art Digital)",
+      "description": "Gaya webtoon manhwa Korea premium, line art ultra-bersih, pencahayaan gradasi berkilau, estetika romantis.",
+      "prompt_fragment": "High-end modern Korean webtoon manhwa cover art style, crisp ultra-clean digital line art, luminous gradient shading, vibrant romantic fantasy manhwa aesthetic, sparkling eye highlights, glossy delicate hair rendering, premium KakaoPage master webcomic quality, 8k resolution",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "webtoon manhwa art style, crisp lineart, digital illustration, vibrant gradient colors, clean Korean webcomic aesthetic, high resolution",
+        "neg": "photorealistic, real life photo, messy lines, lowres, flat 2d western comic"
+      }
+    },
+    {
+      "id": "style_kyoto_animation",
+      "name": "6. Kyoto Animation Pristine TV Anime (Modern KyoAni & Shinkai)",
+      "description": "Gaya produksi serial TV anime Kyoto Animation, refleksi mata jernih, difusi cahaya lembut dan estetika bersih.",
+      "prompt_fragment": "Pristine television anime production art style by Kyoto Animation and CoMix Wave Films, luminous transparent eye reflections, soft atmospheric light diffusion, clean master key animation frame, soft glowing rim light, breathtaking polished anime aesthetic, 8k resolution",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "Kyoto Animation style, Makoto Shinkai lighting, pristine key animation frame, luminous eyes, vibrant anime aesthetic, best quality",
+        "neg": "photorealistic, photo, messy sketch, western cartoon, 3d render"
+      }
+    },
+    {
+      "id": "style_soft_watercolor",
+      "name": "7. Soft Watercolor & Gouache (Cat Air & Ilustrasi Estetik)",
+      "description": "Ilustrasi cat air dan gouache di atas kertas katun bertekstur, sapuan warna transparan dan garis tinta puitis.",
+      "prompt_fragment": "Ethereal soft watercolor and gouache fine-art illustration on textured cold-press cotton paper, dreamy translucent color washes, organic pigment blooms, soft deckled paper edges, delicate graphite and ink contours, whimsical poetic fairy-tale aesthetic, fine-art museum quality, 8k resolution",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "watercolor painting, gouache illustration, soft translucent washes, visible paper texture, delicate lineart, fine art digital watercolor",
+        "neg": "photo, photorealistic, 3d render, hard vector lines, shiny plastic, neon"
+      }
+    },
+    {
+      "id": "style_cyberpunk_neon",
+      "name": "8. Cyberpunk & Techwear Neon-Noir (Bandung Arcana Masa Depan)",
+      "description": "Estetika cyberpunk neon-noir masa depan, pencahayaan bioluminescent cyan dan magenta, refleksi aspal basah.",
+      "prompt_fragment": "Cyberpunk neon-noir aesthetic, moody bioluminescent cyan and magenta rim lighting, wet reflective surfaces, atmospheric rain haze, sleek futuristic techwear accents, high-contrast chiaroscuro shadows, Blade Runner 2049 meets Ghost in the Shell atmosphere, hyper-detailed 8k digital art",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "cyberpunk neon-noir style, volumetric neon lighting, cyan and magenta glow, dark moody atmosphere, futuristic aesthetic, 8k",
+        "neg": "bright daytime, pastel, flat cartoon, sepia, rustic"
+      }
+    },
+    {
+      "id": "style_renaissance_oil",
+      "name": "9. Classical Renaissance Oil Painting (Lukisan Minyak Klasik)",
+      "description": "Lukisan minyak klasik era Renaissance, tekstur impasto berlapis, pencahayaan chiaroscuro dramatis Rembrandt.",
+      "prompt_fragment": "Classical Renaissance fine-art oil painting, rich impasto canvas texture, dramatic chiaroscuro Rembrandt lighting, warm golden umber and deep sienna palette, master museum oil portrait, soft sfumato blending, timeless historical oil masterpiece fidelity, 8k resolution",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "classical oil painting on canvas, Rembrandt lighting, chiaroscuro, rich paint texture, fine art museum portrait, traditional art",
+        "neg": "anime, 3d, digital flat, bright neon, cartoon, photo"
+      }
+    },
+    {
+      "id": "style_kawaii_chibi",
+      "name": "10. Kawaii Chibi & Sticker Concept (Cute Super-Deformed)",
+      "description": "Karakter chibi imut proporsi 2,5 kepala, mata besar berbinar, garis luar stiker bersih untuk merchandise.",
+      "prompt_fragment": "Adorable kawaii chibi character reference sheet, super-deformed cute 2.5-head-tall proportions, oversized expressive sparkling eyes, cute micro-expressions, clean vector outline, soft pastel pop colors, official anime merchandise sticker and acrylic standee concept art, 8k resolution",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "cute chibi style, super deformed, adorable kawaii proportions, big sparkling eyes, sticker design, vector clean art, pastel colors",
+        "neg": "photorealistic, realistic proportions, tall figure, gritty, dark, horror"
+      }
+    },
+    {
+      "id": "style_seinen_manga_ink",
+      "name": "11. High-Contrast Seinen Manga Ink (Tinta Manga & Screentone)",
+      "description": "Ilustrasi tinta manga hitam-putih tradisional, garis pena G-Pen tajam, arsir silang dan tekstur screentone halus.",
+      "prompt_fragment": "High-end Japanese seinen manga ink illustration, crisp black and white line art with delicate traditional screentone textures, dramatic hatched shading, authentic G-pen manga linework, Young Jump and Afternoon magazine cover quality, expressive monochrome fine line art, 8k resolution",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "monochrome manga illustration, detailed ink linework, screentone shading, black and white manga page, sharp G-pen lines",
+        "neg": "full color, chromatic, rainbow, photo, 3d render, western comic, blurry"
+      }
+    }
+  ],
   "hairstyles": [
     {
       "id": "hair_barista_bun",
@@ -181,6 +304,72 @@
       "category": "hairstyle",
       "extra": {
         "pin_pos": "half_up"
+      }
+    },
+    {
+      "id": "hair_hijab_clean_voal_square",
+      "name": "19. [Hijab] Clean Voal Square Hijab (Segi Empat Syar'i Rapi)",
+      "description": "Hijab segi empat bahan voal premium warna sage-mint lembut membingkai wajah oval anggun, menutup dada penuh dengan lilitan rapi bersahaja, rambut tersembunyi sempurna.",
+      "prompt_fragment": "wearing an elegant dusty sage-green premium voal square hijab neatly framing her delicate oval face and porcelain jawline, draped modestly and cleanly over her chest with pristine fabric folds, completely concealing her hair, fastened with a rustic carved dark acacia wooden pin",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "brooch",
+        "is_hijab": true
+      }
+    },
+    {
+      "id": "hair_hijab_pashmina_silk_flow",
+      "name": "20. [Hijab] Flowing Silk Georgette Pashmina (Pashmina Drape Anggun)",
+      "description": "Pashmina sutra georgette warna krem vanila jatuh melayang lembut di satu pundak dengan juntaian feminin bertekstur mewah, leher dan rambut tertutup rapat.",
+      "prompt_fragment": "wearing a sophisticated warm cream-vanilla silk georgette pashmina draped softly in fluid cascading folds over one shoulder, gracefully contouring her cheekbones, neck and hair fully covered, accented with a subtle acacia wooden brooch",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "brooch",
+        "is_hijab": true
+      }
+    },
+    {
+      "id": "hair_hijab_modern_turban_neck",
+      "name": "21. [Hijab] Modern Urban Chic Turban & Full Neck Cover (Turban Modis Tertutup)",
+      "description": "Lilitan turban modis warna abu-abu arang modern dengan inner ninja menutupi leher dan telinga secara sempurna, siluet rapi dan dinamis untuk barista aktif.",
+      "prompt_fragment": "wearing a stylish minimalist charcoal-gray modern turban hijab wrapped neatly at the crown, paired with a matching high-neck inner cowl completely covering her neck, ears, and hair, exuding modern urban barista poise",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "brooch",
+        "is_hijab": true
+      }
+    },
+    {
+      "id": "hair_hijab_bergo_casual_jersey",
+      "name": "22. [Hijab] Cozy Jersey Daily Bergo (Bergo Instan Kasual Santai)",
+      "description": "Bergo instan katun jersey premium warna toska pastel dengan pet lembut di dahi, praktis, nyaman, dan bersahaja khas mojang santai di Bandung.",
+      "prompt_fragment": "wearing a cozy pastel teal stretch-cotton jersey daily bergo hijab with a soft padded visor framing her forehead, falling smoothly down her shoulders and chest, hair and ears fully concealed, effortless natural modest charm",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "none",
+        "is_hijab": true
+      }
+    },
+    {
+      "id": "hair_hijab_paris_tied_dago",
+      "name": "23. [Hijab] Casual Tied-Front Paris Cotton Hijab (Paris Simpul Kasual)",
+      "description": "Hijab paris katun ringan warna terakota hangat diikat simpul rapi manis di depan dada, gaya kasual santai khas anak muda Dago Bandung.",
+      "prompt_fragment": "wearing a lightweight breathable terracotta-orange cotton Paris hijab neatly framing her face, tied in a charming tidy knot at the front collar, completely covering her hair and ears with effortless youthfulness",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "knot",
+        "is_hijab": true
+      }
+    },
+    {
+      "id": "hair_hijab_priangan_botanical_voal",
+      "name": "24. [Hijab] Priangan Heritage Botanical Voal (Voal Motif Etnik Sunda)",
+      "description": "Hijab voal sutra berornamen motif dedaunan botani pakis dan melati Parahyangan bernuansa zamrud-tembaga anggun, dilipat rapi dengan bros perak etnik.",
+      "prompt_fragment": "wearing an exquisite deep emerald and copper-toned silk voal scarf adorned with subtle Sundanese botanical fern patterns, wrapped gracefully around her head and framing her gentle features, hair fully tucked, pinned with an ornate silver leaf brooch",
+      "category": "hairstyle",
+      "extra": {
+        "pin_pos": "brooch",
+        "is_hijab": true
       }
     }
   ],
@@ -1028,7 +1217,9 @@
       "description": "Jaket cropped denim vintage fitted, kaus krem, celana corduroy karamel.",
       "prompt_fragment": "fitted cropped vintage blue denim jacket over cream ribbed mock-neck top, tailored caramel corduroy trousers",
       "category": "neutral_attire",
-      "extra": null
+      "extra": {
+        "modest_compatible": true
+      }
     },
     {
       "id": "attire_canon_kebaya_fitted",
@@ -1036,7 +1227,9 @@
       "description": "Kebaya kutubaru hijau zamrud fitted bersulam brokat, stagen tenun tembaga, rok batik Parang.",
       "prompt_fragment": "fitted emerald green kutubaru kebaya with delicate brocade embroidery, golden copper stagen waist sash, Parang-Priangan batik wrap skirt",
       "category": "neutral_attire",
-      "extra": null
+      "extra": {
+        "modest_compatible": true
+      }
     },
     {
       "id": "attire_fitted_black_turtleneck",
@@ -1044,7 +1237,9 @@
       "description": "Turtleneck rajut hitam pas badan membingkai leher jenjang dan dada dengan celana bahan berpotongan rapi.",
       "prompt_fragment": "a form-fitting jet-black ribbed knit turtleneck top accentuating her slender neck and hourglass waist, paired with tailored straight-leg trousers",
       "category": "neutral_attire",
-      "extra": null
+      "extra": {
+        "modest_compatible": true
+      }
     },
     {
       "id": "attire_fitted_white_henley",
@@ -1108,7 +1303,9 @@
       "description": "Kaus rajut lengan panjang fitted warna terakota bata yang kontras indah di atas kulit putih porselen.",
       "prompt_fragment": "a fitted burnt-terracotta ribbed long-sleeve top providing rich warm contrast against her fair porcelain skin, paired with tailored dark trousers",
       "category": "neutral_attire",
-      "extra": null
+      "extra": {
+        "modest_compatible": true
+      }
     },
     {
       "id": "attire_fitted_corset_seamed_tee",
@@ -1117,6 +1314,46 @@
       "prompt_fragment": "a tailored white cotton short-sleeved top featuring subtle structured corset seams hugging her natural hourglass waist, paired with dark ankle pants",
       "category": "neutral_attire",
       "extra": null
+    },
+    {
+      "id": "attire_modest_ivory_longsleeve_mockneck",
+      "name": "18. [Modest] Fitted Ivory Long-Sleeve Mockneck & Black Slacks (Rekomendasi Utama Modest)",
+      "description": "Atasan rajut ribbed putih gading pas badan lengan panjang tertutup rapi dan celana bahan katun hitam berpotongan lurus hingga mata kaki.",
+      "prompt_fragment": "a tailored form-fitting ivory-white ribbed knit high mock-neck long-sleeved top covering her wrists and collarbone, paired with tailored high-waisted black stretch-cotton straight-leg trousers falling to the ankles, and sleek minimalist footwear",
+      "category": "neutral_attire",
+      "extra": {
+        "modest_compatible": true
+      }
+    },
+    {
+      "id": "attire_modest_sage_linen_tunic",
+      "name": "19. [Modest] Sage-Mint Buttoned Linen Tunic & Wide Trousers (Tunik Linen Sage-Mint)",
+      "description": "Tunik linen berkancing warna sage-mint lembut lengan panjang menutup paha, dipadu celana kulot katun lebar warna krem vanila.",
+      "prompt_fragment": "a modest flowing sage-mint green long-sleeved button-down linen tunic falling to mid-thigh, paired with relaxed tailored cream-vanilla wide-leg cotton trousers",
+      "category": "neutral_attire",
+      "extra": {
+        "modest_compatible": true
+      }
+    },
+    {
+      "id": "attire_modest_bumimart_longsleeve",
+      "name": "20. [Modest] Seragam Resmi Shift Pagi BumiMart Versi Muslimah (Kanon)",
+      "description": "Kemeja katun putih lengan panjang rapi di balik rompi toska fitted, apron kanvas cokelat espresso, dan celana katun hitam panjang.",
+      "prompt_fragment": "official modest BumiMart morning shift uniform: a crisp tailored long-sleeved white cotton collared shirt buttoned to the wrists underneath a fitted mint sage-green retail vest, espresso-brown canvas half-apron tied at the high waist, and tailored black trousers",
+      "category": "neutral_attire",
+      "extra": {
+        "modest_compatible": true
+      }
+    },
+    {
+      "id": "attire_modest_oatmeal_cardigan_maxi",
+      "name": "21. [Modest] Oatmeal Knit Cardigan, Inner Turtleneck & Pleated Maxi Skirt (Kardigan & Rok Maxi)",
+      "description": "Kardigan rajut panjang warna oatmeal hangat di atas kaus manset leher tinggi lengan panjang dan rok plisket maxi hitam menutup mata kaki.",
+      "prompt_fragment": "a cozy long-line oatmeal-beige fine-knit cardigan layered over a fitted long-sleeved high-neck top, paired with an elegant flowing black pleated maxi skirt extending down to the ankles",
+      "category": "neutral_attire",
+      "extra": {
+        "modest_compatible": true
+      }
     }
   ]
 }

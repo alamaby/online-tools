@@ -54,10 +54,12 @@
     layer_accessory: 'layer_bumimart_vest',
     footwear: 'footwear_bumimart_sneakers',
     inner_visibility: 'hidden',
+    slot_colors: {},
   };
 
   // Character Traits State
   const traitsState = {
+    art_style_id: 'style_semi_realistic_ln',
     hairstyle_id: 'hair_barista_bun',
     hair_color_id: 'color_raven_black',
     expression_id: 'expr_composed_smile',
@@ -211,6 +213,7 @@
     populateSelect($('select-footwear'), wardrobe.footwear, wardrobeState.footwear);
 
     // 11. Character Traits
+    populateSelect($('select-trait-artstyle'), traits.art_styles, traitsState.art_style_id);
     populateSelect($('select-trait-hairstyle'), traits.hairstyles, traitsState.hairstyle_id);
     populateSelect($('select-trait-haircolor'), traits.hair_colors, traitsState.hair_color_id);
     populateSelect($('select-trait-expression'), traits.expressions, traitsState.expression_id);
@@ -220,6 +223,7 @@
     populateSelect($('select-trait-detail'), traits.facial_details, traitsState.facial_detail_id);
     populateSelect($('select-trait-shottype'), traits.shot_types, traitsState.shot_type_id);
     populateSelect($('select-trait-attire'), traits.neutral_attires, traitsState.neutral_attire_id);
+    syncTraitAttireForHair();
 
     // 12. Bulk Vibe & Fitting Categories
     const vibeSelect = $('select-bulk-vibe');
@@ -469,7 +473,39 @@
   }
 
   // --- Modular Wardrobe Handlers ---
+  function syncColorSelect(slotName, pieceId, selectElId) {
+    const el = $(selectElId);
+    if (!el) return;
+    const piece = (wardrobe.inner_tops || []).find(p => p.id === pieceId) ||
+      (wardrobe.inner_bottoms || []).find(p => p.id === pieceId) ||
+      (wardrobe.outer_tops || []).find(p => p.id === pieceId) ||
+      (wardrobe.outer_bottoms || []).find(p => p.id === pieceId);
+
+    if (piece && piece.color_palette) {
+      const palette = (wardrobe.color_palettes || {})[piece.color_palette] || [];
+      el.style.display = 'block';
+      el.innerHTML = '';
+      palette.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c.id;
+        opt.textContent = `🎨 ${c.name}`;
+        el.appendChild(opt);
+      });
+      const curColor = wardrobeState.slot_colors[slotName] || piece.default_color_id || (palette[0] && palette[0].id);
+      el.value = curColor;
+      wardrobeState.slot_colors[slotName] = curColor;
+    } else {
+      el.style.display = 'none';
+      delete wardrobeState.slot_colors[slotName];
+    }
+  }
+
   function updateModularPreview() {
+    syncColorSelect('inner_top', wardrobeState.inner_top, 'select-color-inner-top');
+    syncColorSelect('inner_bottom', wardrobeState.inner_bottom, 'select-color-inner-bottom');
+    syncColorSelect('outer_top', wardrobeState.outer_top, 'select-color-outer-top');
+    syncColorSelect('outer_bottom', wardrobeState.outer_bottom, 'select-color-outer-bottom');
+
     const synth = generator.synthesizeModularAttire(wardrobeState, wardrobeState.inner_visibility);
     $('wardrobe-summary-text').textContent = synth.summaryText || 'Tanpa busana modular.';
     $('wardrobe-prompt-text').textContent = synth.promptText || '-';
@@ -918,6 +954,55 @@
         updateModularPreview();
       });
     });
+
+    // Modular Color Change Events
+    ['inner-top', 'inner-bottom', 'outer-top', 'outer-bottom'].forEach(slot => {
+      const key = slot.replace('-', '_');
+      const el = $(`select-color-${slot}`);
+      if (el) {
+        el.addEventListener('change', (e) => {
+          wardrobeState.slot_colors[key] = e.target.value;
+          updateModularPreview();
+        });
+      }
+    });
+
+    $('btn-match-set-colors').addEventListener('click', () => {
+      let matched = false;
+      const itPiece = (wardrobe.inner_tops || []).find(p => p.id === wardrobeState.inner_top);
+      const ibPiece = (wardrobe.inner_bottoms || []).find(p => p.id === wardrobeState.inner_bottom);
+      if (itPiece && ibPiece && itPiece.color_palette && ibPiece.color_palette) {
+        const itColor = wardrobeState.slot_colors.inner_top || itPiece.default_color_id;
+        const palette = (wardrobe.color_palettes || {})[ibPiece.color_palette] || [];
+        if (palette.some(c => c.id === itColor)) {
+          wardrobeState.slot_colors.inner_bottom = itColor;
+          const el = $('select-color-inner-bottom');
+          if (el) el.value = itColor;
+          matched = true;
+        }
+      }
+
+      const otPiece = (wardrobe.outer_tops || []).find(p => p.id === wardrobeState.outer_top);
+      const obPiece = (wardrobe.outer_bottoms || []).find(p => p.id === wardrobeState.outer_bottom);
+      if (otPiece && obPiece && otPiece.color_palette && obPiece.color_palette) {
+        const otColor = wardrobeState.slot_colors.outer_top || otPiece.default_color_id;
+        const palette = (wardrobe.color_palettes || {})[obPiece.color_palette] || [];
+        if (palette.some(c => c.id === otColor)) {
+          wardrobeState.slot_colors.outer_bottom = otColor;
+          const el = $('select-color-outer-bottom');
+          if (el) el.value = otColor;
+          matched = true;
+        }
+      }
+
+      if (matched) {
+        updateModularPreview();
+        showToast('🔗 Warna setelan atasan & bawahan berhasil diserasikan!', 'ok');
+      } else {
+        showToast('⚠️ Part yang dipilih belum memiliki palet warna serasi.', 'info');
+      }
+    });
+
     $('select-inner-visibility').addEventListener('change', (e) => {
       wardrobeState.inner_visibility = e.target.value;
       updateModularPreview();
@@ -951,8 +1036,29 @@
     });
     $('btn-download-modular-md').addEventListener('click', downloadModularWardrobeMarkdown);
 
+    function syncTraitAttireForHair() {
+      const curHairId = $('select-trait-hairstyle').value;
+      const hairObj = (traits.hairstyles || []).find(x => x.id === curHairId);
+      const isHijab = hairObj && hairObj.extra && hairObj.extra.is_hijab;
+      let availAttires = traits.neutral_attires || [];
+      if (isHijab) {
+        availAttires = availAttires.filter(a => a.extra && a.extra.modest_compatible);
+      }
+      const curAttire = $('select-trait-attire').value;
+      populateSelect($('select-trait-attire'), availAttires, curAttire);
+      if (!availAttires.some(a => a.id === $('select-trait-attire').value)) {
+        if (availAttires.length > 0) {
+          $('select-trait-attire').value = availAttires[0].id;
+          traitsState.neutral_attire_id = availAttires[0].id;
+        }
+      } else {
+        traitsState.neutral_attire_id = $('select-trait-attire').value;
+      }
+    }
+
     // Character Traits Events
     [
+      ['select-trait-artstyle', 'art_style_id'],
       ['select-trait-hairstyle', 'hairstyle_id'],
       ['select-trait-haircolor', 'hair_color_id'],
       ['select-trait-expression', 'expression_id'],
@@ -965,12 +1071,16 @@
     ].forEach(([elId, prop]) => {
       $(elId).addEventListener('change', (e) => {
         traitsState[prop] = e.target.value;
+        if (elId === 'select-trait-hairstyle') {
+          syncTraitAttireForHair();
+        }
         updateTraitPromptPreview();
       });
     });
 
     $('btn-random-traits').addEventListener('click', () => {
       const pick = (arr) => arr && arr.length ? arr[Math.floor(Math.random() * arr.length)].id : '';
+      traitsState.art_style_id = pick(traits.art_styles);
       traitsState.hairstyle_id = pick(traits.hairstyles);
       traitsState.hair_color_id = pick(traits.hair_colors);
       traitsState.expression_id = pick(traits.expressions);
@@ -979,7 +1089,9 @@
       traitsState.eye_type_id = pick(traits.eye_types);
       traitsState.facial_detail_id = pick(traits.facial_details);
 
+      $('select-trait-artstyle').value = traitsState.art_style_id;
       $('select-trait-hairstyle').value = traitsState.hairstyle_id;
+      syncTraitAttireForHair();
       $('select-trait-haircolor').value = traitsState.hair_color_id;
       $('select-trait-expression').value = traitsState.expression_id;
       $('select-trait-complexion').value = traitsState.skin_complexion_id;

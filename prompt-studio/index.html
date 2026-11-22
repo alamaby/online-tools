@@ -214,6 +214,7 @@
         <div style="display:flex;gap:8px;flex-wrap:wrap;">
           <select id="select-wardrobe-recipe" style="flex:1;min-width:240px;"></select>
           <button id="btn-apply-recipe" class="btn btn-primary">Terapkan Resep</button>
+          <button id="btn-match-set-colors" class="btn btn-outline" title="Serasikan warna atasan & bawahan bikini/setelan">🔗 Serasikan Warna Set</button>
         </div>
       </div>
 
@@ -221,10 +222,12 @@
         <div class="form-group">
           <label class="form-label" for="select-inner-top">1. Pakaian Dalam Atas (Inner Top)</label>
           <select id="select-inner-top"></select>
+          <select id="select-color-inner-top" style="margin-top:6px;font-size:12px;"></select>
         </div>
         <div class="form-group">
           <label class="form-label" for="select-inner-bottom">2. Pakaian Dalam Bawah (Inner Bottom)</label>
           <select id="select-inner-bottom"></select>
+          <select id="select-color-inner-bottom" style="margin-top:6px;font-size:12px;"></select>
         </div>
       </div>
 
@@ -232,10 +235,12 @@
         <div class="form-group">
           <label class="form-label" for="select-outer-top">3. Pakaian Luar Atas / Terusan (Outer Top)</label>
           <select id="select-outer-top"></select>
+          <select id="select-color-outer-top" style="margin-top:6px;font-size:12px;"></select>
         </div>
         <div class="form-group">
           <label class="form-label" for="select-outer-bottom">4. Pakaian Luar Bawah (Outer Bottom)</label>
           <select id="select-outer-bottom"></select>
+          <select id="select-color-outer-bottom" style="margin-top:6px;font-size:12px;"></select>
         </div>
       </div>
 
@@ -328,9 +333,15 @@
         </div>
       </div>
 
-      <div class="form-group">
-        <label class="form-label" for="select-trait-attire">9. Busana Netral Studio Acuan</label>
-        <select id="select-trait-attire"></select>
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label class="form-label" for="select-trait-attire">9. Busana Netral Studio Acuan</label>
+          <select id="select-trait-attire"></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="select-trait-artstyle">10. Gaya Seni Acuan (Art Style &amp; Aesthetic)</label>
+          <select id="select-trait-artstyle"></select>
+        </div>
       </div>
 
       <!-- Preview Trait Prompt -->

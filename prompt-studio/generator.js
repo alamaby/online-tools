@@ -403,6 +403,24 @@
       return results;
     }
 
+    renderPiece(piece, colorId) {
+      if (!piece) return { prompt: '', name: '' };
+      if (!piece.color_palette || !piece.color_template) {
+        return { prompt: piece.prompt_fragment || '', name: piece.name || '' };
+      }
+      const palette = (this.wardrobe.color_palettes || {})[piece.color_palette] || [];
+      const activeColorId = colorId || piece.default_color_id;
+      const colorOpt = palette.find(c => c.id === activeColorId) || palette[0];
+      if (!colorOpt) {
+        return { prompt: piece.prompt_fragment || '', name: piece.name || '' };
+      }
+      const renderedPrompt = piece.color_template.replace('{color}', colorOpt.en_color);
+      const renderedName = piece.id_name_template
+        ? piece.id_name_template.replace('{color_id}', colorOpt.id_color)
+        : `${piece.name} (${colorOpt.id_color})`;
+      return { prompt: renderedPrompt, name: renderedName };
+    }
+
     synthesizeModularAttire(slots, innerVisibility) {
       const innerTop = this.innerTopMap.get(slots.inner_top) || null;
       const innerBottom = this.innerBottomMap.get(slots.inner_bottom) || null;
@@ -410,6 +428,14 @@
       const outerBottom = this.outerBottomMap.get(slots.outer_bottom) || null;
       const layerAcc = this.layerAccMap.get(slots.layer_accessory) || null;
       const footwear = this.footwearMap.get(slots.footwear) || null;
+
+      const colors = slots.slot_colors || {};
+      const itR = this.renderPiece(innerTop, colors.inner_top);
+      const ibR = this.renderPiece(innerBottom, colors.inner_bottom);
+      const otR = this.renderPiece(outerTop, colors.outer_top);
+      const obR = this.renderPiece(outerBottom, colors.outer_bottom);
+      const laR = this.renderPiece(layerAcc, colors.layer_accessory);
+      const fwR = this.renderPiece(footwear, colors.footwear);
 
       const vis = innerVisibility || 'hidden';
       const enParts = [];
@@ -421,42 +447,42 @@
       if (layerAcc && layerAcc.id !== 'layer_none') {
         const isUpperLayer = ['vest', 'jacket', 'bolero', 'cardigan'].some(k => layerAcc.id.includes(k));
         if (isUpperLayer) {
-          enParts.push(layerAcc.prompt_fragment);
-          idParts.push(`Layer: ${layerAcc.name}`);
+          enParts.push(laR.prompt);
+          idParts.push(`Layer: ${laR.name}`);
         }
       }
 
       // 2. Outer Top or Standalone Inner Top
       if (outerTop && outerTop.id !== 'outer_top_none') {
-        let topText = outerTop.prompt_fragment;
+        let topText = otR.prompt;
         if (innerTop && innerTop.id !== 'inner_top_none') {
           if (vis === 'subtle') {
-            topText += `, with a subtle glimpse of ${innerTop.prompt_fragment} beneath`;
+            topText += `, with a subtle glimpse of ${itR.prompt} beneath`;
           } else if (vis === 'exposed') {
-            topText += `, layered revealingly over ${innerTop.prompt_fragment}`;
+            topText += `, layered revealingly over ${itR.prompt}`;
           }
         }
         enParts.push(topText);
-        idParts.push(`Atasan: ${outerTop.name}`);
+        idParts.push(`Atasan: ${otR.name}`);
         if (innerTop && innerTop.id !== 'inner_top_none' && vis !== 'hidden') {
-          idParts.push(`Dalaman Atas (${vis}): ${innerTop.name}`);
+          idParts.push(`Dalaman Atas (${vis}): ${itR.name}`);
         }
       } else if (innerTop && innerTop.id !== 'inner_top_none') {
-        enParts.push(`wearing ${innerTop.prompt_fragment}`);
-        idParts.push(`Atasan (Innerwear Standalone): ${innerTop.name}`);
+        enParts.push(`wearing ${itR.prompt}`);
+        idParts.push(`Atasan (Innerwear Standalone): ${itR.name}`);
       }
 
       // 3. Outer Bottom or Standalone Inner Bottom
       if (!isOnePiece) {
         if (outerBottom && outerBottom.id !== 'outer_bottom_none') {
-          enParts.push(`paired with ${outerBottom.prompt_fragment}`);
-          idParts.push(`Bawahan: ${outerBottom.name}`);
+          enParts.push(`paired with ${obR.prompt}`);
+          idParts.push(`Bawahan: ${obR.name}`);
           if (innerBottom && innerBottom.id !== 'inner_bottom_none' && (vis === 'subtle' || vis === 'exposed')) {
-            idParts.push(`Dalaman Bawah: ${innerBottom.name}`);
+            idParts.push(`Dalaman Bawah: ${ibR.name}`);
           }
         } else if (innerBottom && innerBottom.id !== 'inner_bottom_none') {
-          enParts.push(`paired with ${innerBottom.prompt_fragment}`);
-          idParts.push(`Bawahan (Innerwear Standalone): ${innerBottom.name}`);
+          enParts.push(`paired with ${ibR.prompt}`);
+          idParts.push(`Bawahan (Innerwear Standalone): ${ibR.name}`);
         }
       } else {
         idParts.push('Bawahan: [Menyatu dalam Gaun Terusan]');
@@ -466,24 +492,24 @@
       if (layerAcc && layerAcc.id !== 'layer_none') {
         const isWaistLayer = ['tied', 'apron', 'sarong', 'stagen', 'belt'].some(k => layerAcc.id.includes(k));
         if (isWaistLayer) {
-          enParts.push(`accentuated by ${layerAcc.prompt_fragment}`);
+          enParts.push(`accentuated by ${laR.prompt}`);
           if (!idParts.some(p => p.startsWith('Layer:'))) {
-            idParts.push(`Layer Pinggang: ${layerAcc.name}`);
+            idParts.push(`Layer Pinggang: ${laR.name}`);
           }
         }
       }
 
       // 5. Footwear
       if (footwear && footwear.id !== 'footwear_barefoot' && footwear.prompt_fragment) {
-        enParts.push(`completing the ensemble with ${footwear.prompt_fragment}`);
-        idParts.push(`Alas Kaki: ${footwear.name}`);
+        enParts.push(`completing the ensemble with ${fwR.prompt}`);
+        idParts.push(`Alas Kaki: ${fwR.name}`);
       } else if (footwear && footwear.id === 'footwear_barefoot') {
-        enParts.push(footwear.prompt_fragment);
-        idParts.push(`Alas Kaki: ${footwear.name}`);
+        enParts.push(fwR.prompt);
+        idParts.push(`Alas Kaki: ${fwR.name}`);
       }
 
-      const enPrompt = enParts.join(', ');
-      const idSummary = idParts.join(' | ');
+      const enPrompt = enParts.join('; ').trim() + (enParts.length ? '.' : '');
+      const idSummary = idParts.join('\n');
 
       return {
         promptText: enPrompt,
@@ -507,7 +533,9 @@
 
       // Shot type & master style
       const shotText = shotType ? shotType.prompt_fragment : 'intimate close-up portrait';
-      parts.push(`${shotText}, ${this.presets.art_style_master}`);
+      const artStyle = (this.traits.art_styles || []).find(x => x.id === t.art_style_id);
+      const styleText = artStyle ? artStyle.prompt_fragment : this.presets.art_style_master;
+      parts.push(`${shotText}, ${styleText}`);
 
       // Locked canonical demographics
       parts.push(`depicting a 23-year-old Sundanese young woman with graceful Sundanese facial features`);
@@ -527,10 +555,17 @@
         parts.push(facialDetail.prompt_fragment);
       }
 
-      // Hair
+      // Hair / Hijab
+      const isHijab = hairstyle && hairstyle.extra && hairstyle.extra.is_hijab;
       const colorText = hairColor ? hairColor.prompt_fragment : 'glossy raven-black';
       const styleText = hairstyle ? hairstyle.prompt_fragment : 'hair styled in an elegant high barista bun';
-      parts.push(`${colorText} ${styleText}`);
+      let hairOrHijabPrompt = '';
+      if (isHijab) {
+        hairOrHijabPrompt = `Headwear & Hijab: ${hairstyle.prompt_fragment}, with hair, ears, and neck completely concealed underneath`;
+      } else {
+        hairOrHijabPrompt = `Hair: ${colorText} ${styleText}`;
+      }
+      parts.push(hairOrHijabPrompt);
 
       // Neutral attire
       if (neutralAttire && neutralAttire.prompt_fragment) {
@@ -553,7 +588,7 @@
 
       return {
         promptText: parts.join(', '),
-        hairstylePrompt: hairstyle ? `${colorText} ${styleText}` : '',
+        hairstylePrompt: isHijab ? hairstyle.prompt_fragment : (hairstyle ? `${colorText} ${styleText}` : ''),
       };
     }
   }

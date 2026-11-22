@@ -9,7 +9,11 @@
       "is_one_piece": false,
       "style_tags": [
         "universal"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_mint_lace_bralette",
@@ -22,7 +26,11 @@
         "retail",
         "casual",
         "lingerie"
-      ]
+      ],
+      "color_palette": "silk_lace",
+      "default_color_id": "mint_sage",
+      "color_template": "a delicate {color} lace bralette with soft scalloped edges and narrow straps",
+      "id_name_template": "Bralette Renda Lembut ({color_id})"
     },
     {
       "id": "inner_top_onyx_balconette",
@@ -35,7 +43,11 @@
         "mature",
         "formal",
         "lingerie"
-      ]
+      ],
+      "color_palette": "silk_lace",
+      "default_color_id": "onyx_black",
+      "color_template": "a structured {color} balconette bra with sleek tailored contours",
+      "id_name_template": "Balconette Bra Sutra Satin ({color_id})"
     },
     {
       "id": "inner_top_white_cotton_kemben",
@@ -48,7 +60,11 @@
         "casual",
         "traditional",
         "lounge"
-      ]
+      ],
+      "color_palette": "casual_cotton",
+      "default_color_id": "pure_white",
+      "color_template": "a fitted {color} stretch-cotton strapless bandeau tube top",
+      "id_name_template": "Kemben Katun Polos ({color_id})"
     },
     {
       "id": "inner_top_terracotta_silk_kemben",
@@ -60,7 +76,11 @@
       "style_tags": [
         "traditional",
         "arcana"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_sheer_floral_triangle",
@@ -72,7 +92,11 @@
       "style_tags": [
         "lingerie",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_crimson_strappy",
@@ -84,7 +108,11 @@
       "style_tags": [
         "lingerie",
         "gothic"
-      ]
+      ],
+      "color_palette": "silk_lace",
+      "default_color_id": "crimson_maroon",
+      "color_template": "a {color} strappy lace bralette featuring subtle geometric crisscross chest straps",
+      "id_name_template": "Strappy Cage Bralette ({color_id})"
     },
     {
       "id": "inner_top_sport_compression_bra",
@@ -96,7 +124,11 @@
       "style_tags": [
         "sport",
         "casual"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_halter_micro_bikini",
@@ -108,7 +140,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": "swimwear_metallic",
+      "default_color_id": "emerald_green",
+      "color_template": "a {color} micro halter string bikini top with gilded cord tips",
+      "id_name_template": "Atasan Bikini Mikro Bertali Leher ({color_id})"
     },
     {
       "id": "inner_top_ribbed_nude_camisole",
@@ -120,7 +156,11 @@
       "style_tags": [
         "casual",
         "lounge"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_cage_leather_harness",
@@ -132,7 +172,11 @@
       "style_tags": [
         "tactical",
         "gothic"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_ribbed_ivory_camisole",
@@ -145,7 +189,11 @@
         "retail",
         "casual",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_bumimart_halter_bikini",
@@ -158,7 +206,11 @@
         "beach",
         "summer",
         "retail"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_turquoise_ring_bandeau",
@@ -170,7 +222,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_lilac_multistrap_triangle_bikini",
@@ -182,7 +238,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_nautical_striped_halter",
@@ -194,7 +254,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_copper_micro_triangle",
@@ -206,7 +270,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_coral_satin_underwire_bikini",
@@ -219,7 +287,11 @@
         "beach",
         "summer",
         "lingerie"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_sheer_lace_corset_liner",
@@ -232,7 +304,11 @@
         "party",
         "lingerie",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_kemben_sutra_emas",
@@ -245,7 +321,11 @@
         "traditional",
         "adat",
         "party"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_cosplay_2b_white_leotard",
@@ -259,7 +339,11 @@
         "anime",
         "gaming",
         "leotard"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_translucent_ivory_organza_blouse",
@@ -273,7 +357,11 @@
         "office",
         "formal",
         "sheer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_crimson_lace_cage_bralette",
@@ -287,7 +375,11 @@
         "lingerie",
         "lace",
         "bralette"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_sapphire_satin_balconette_bra",
@@ -301,7 +393,11 @@
         "lingerie",
         "silk",
         "bra"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_snow_white_french_lace_triangle_bra",
@@ -315,7 +411,11 @@
         "lingerie",
         "bridal",
         "bra"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_champagne_metallic_micro_triangle",
@@ -329,7 +429,11 @@
         "micro",
         "metallic",
         "bikini"
-      ]
+      ],
+      "color_palette": "swimwear_metallic",
+      "default_color_id": "champagne_gold",
+      "color_template": "a minimalist {color} micro string bikini top with sliding triangle cups",
+      "id_name_template": "Atasan Bikini Mikro Segitiga ({color_id})"
     },
     {
       "id": "inner_top_onyx_cage_harness_mesh_bralette",
@@ -343,7 +447,11 @@
         "harness",
         "mesh",
         "bralette"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_dusty_rose_chiffon_plunge_teddy",
@@ -357,7 +465,11 @@
         "lingerie",
         "chiffon",
         "teddy"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_cobalt_underwire_halter_bikini",
@@ -371,7 +483,11 @@
         "swim",
         "bikini",
         "halter"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_lavender_velvet_lace_plunge_bra",
@@ -385,7 +501,11 @@
         "lingerie",
         "velvet",
         "bra"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_scarlet_ruched_bandeau_ring",
@@ -399,7 +519,11 @@
         "swim",
         "bandeau",
         "bikini"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_midnight_plum_corset_chemise",
@@ -413,7 +537,11 @@
         "lingerie",
         "corset",
         "chemise"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_tropical_sage_halter_bikini",
@@ -428,7 +556,11 @@
         "sage",
         "halter",
         "minimalist"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_sand_beige_crochet_halter_bikini",
@@ -443,7 +575,11 @@
         "bohemian",
         "halter",
         "beige"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_top_emerald_micro_triangle_bikini",
@@ -458,7 +594,11 @@
         "bikini",
         "emerald",
         "micro"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "outer_tops": [
@@ -471,7 +611,11 @@
       "is_one_piece": false,
       "style_tags": [
         "universal"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_bumimart_polo",
@@ -483,7 +627,11 @@
       "style_tags": [
         "retail",
         "uniform"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_dago_mockneck_knit",
@@ -495,7 +643,11 @@
       "style_tags": [
         "casual",
         "streetwear"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_pasarbaru_sleeveless_black",
@@ -507,7 +659,11 @@
       "style_tags": [
         "casual",
         "streetwear"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_halter_terakota",
@@ -520,7 +676,11 @@
         "mature",
         "traditional",
         "party"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_kebaya_kutubaru_arcana",
@@ -532,7 +692,11 @@
       "style_tags": [
         "traditional",
         "arcana"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_micro_kebaya_encim",
@@ -545,7 +709,11 @@
         "traditional",
         "modern",
         "formal"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_oversized_white_poplin",
@@ -557,7 +725,11 @@
       "style_tags": [
         "casual",
         "lounge"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_sweetheart_corset_bustier",
@@ -570,7 +742,11 @@
         "gothic",
         "mature",
         "party"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_offshoulder_cashmere_vanilla",
@@ -583,7 +759,11 @@
         "casual",
         "autumn",
         "lounge"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_tied_front_crop_shirt",
@@ -595,7 +775,11 @@
       "style_tags": [
         "retail",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_bodycon_dress",
@@ -607,7 +791,11 @@
       "style_tags": [
         "casual",
         "party"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_bumimart_apron_dress",
@@ -619,7 +807,11 @@
       "style_tags": [
         "retail",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_ruby_qipao",
@@ -631,7 +823,11 @@
       "style_tags": [
         "party",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_cutout_monokini",
@@ -643,7 +839,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_bumimart_sleeveless_crop_polo",
@@ -656,7 +856,11 @@
         "retail",
         "summer",
         "uniform"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_bumimart_offshoulder_knit",
@@ -669,7 +873,11 @@
         "retail",
         "summer",
         "casual"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_bumimart_zip_plunge_polo",
@@ -682,7 +890,11 @@
         "retail",
         "summer",
         "sport"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_bumimart_sheer_blouse",
@@ -695,7 +907,11 @@
         "retail",
         "formal",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_bumimart_sweetheart_baby_tee",
@@ -708,7 +924,11 @@
         "retail",
         "summer",
         "casual"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_bumimart_mockneck_bodysuit",
@@ -721,7 +941,11 @@
         "retail",
         "summer",
         "barista"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_bumimart_pop_up_bikini_top",
@@ -734,7 +958,11 @@
         "retail",
         "summer",
         "beach"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_bumimart_nightshift_cutout_dress",
@@ -747,7 +975,11 @@
         "retail",
         "night",
         "party"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_sunset_amber_monokini",
@@ -759,7 +991,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_scarlet_highcut_swimsuit",
@@ -772,7 +1008,11 @@
         "beach",
         "summer",
         "retro"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_turquoise_ring_bandeau",
@@ -784,7 +1024,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_lilac_multistrap_bikini",
@@ -796,7 +1040,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_nautical_striped_halter",
@@ -808,7 +1056,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_golden_lurex_fishnet_dress",
@@ -821,7 +1073,11 @@
         "beach",
         "summer",
         "party"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_tropical_flora_crop_rashguard",
@@ -834,7 +1090,11 @@
         "beach",
         "summer",
         "sport"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_white_eyelet_ruffle_bandeau",
@@ -847,7 +1107,11 @@
         "beach",
         "summer",
         "resort"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_asymmetric_emerald_swimsuit",
@@ -860,7 +1124,11 @@
         "beach",
         "summer",
         "arcana"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_coral_satin_bikini",
@@ -873,7 +1141,11 @@
         "beach",
         "summer",
         "lingerie"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_midnight_illusion_bodycon",
@@ -886,7 +1158,11 @@
         "party",
         "night",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_champagne_bardot_mini",
@@ -899,7 +1175,11 @@
         "party",
         "formal",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_cyber_arcana_bodysuit",
@@ -912,7 +1192,11 @@
         "fantasy",
         "arcana",
         "cyber"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_tuxedo_blazer_dress",
@@ -925,7 +1209,11 @@
         "party",
         "formal",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_champagne_silk_halter_blouse",
@@ -938,7 +1226,11 @@
         "party",
         "formal",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_emerald_sheath_dress",
@@ -951,7 +1243,11 @@
         "formal",
         "party",
         "arcana"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_burgundy_velvet_blazer",
@@ -964,7 +1260,11 @@
         "formal",
         "party",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_obsidian_onesleeve_midi",
@@ -977,7 +1277,11 @@
         "formal",
         "party",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_kemben_prada_bali",
@@ -990,7 +1294,11 @@
         "traditional",
         "adat",
         "bali"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_kebaya_beludru_keraton_jawa",
@@ -1003,7 +1311,11 @@
         "traditional",
         "adat",
         "jawa"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_kurung_batabue_minang",
@@ -1016,7 +1328,11 @@
         "traditional",
         "adat",
         "minang"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_baju_bodo_organza_bugis",
@@ -1029,7 +1345,11 @@
         "traditional",
         "adat",
         "bugis"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_kemeja_tenun_mandarin_batak",
@@ -1042,7 +1362,11 @@
         "traditional",
         "adat",
         "batak"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_korset_tenun_ikat_sumba",
@@ -1055,7 +1379,11 @@
         "traditional",
         "adat",
         "ntt"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_rompi_taa_manik_dayak",
@@ -1068,7 +1396,11 @@
         "traditional",
         "adat",
         "dayak"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_kebaya_garis_baju_cele_maluku",
@@ -1081,7 +1413,11 @@
         "traditional",
         "adat",
         "maluku"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_kurung_meukasah_aceh",
@@ -1094,7 +1430,11 @@
         "traditional",
         "adat",
         "aceh"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_kebaya_beludru_ivory_lampung",
@@ -1107,7 +1447,11 @@
         "traditional",
         "adat",
         "lampung"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cosplay_yor_thorn_dress",
@@ -1121,7 +1465,11 @@
         "anime",
         "assassin",
         "dress"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cosplay_tifa_ribbed_tank",
@@ -1135,7 +1483,11 @@
         "gaming",
         "athletic",
         "top"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cosplay_fern_black_gown",
@@ -1149,7 +1501,11 @@
         "anime",
         "mage",
         "gown"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cosplay_boa_hancock_cheongsam",
@@ -1163,7 +1519,11 @@
         "anime",
         "empress",
         "cheongsam"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cosplay_kiki_navy_dress",
@@ -1177,7 +1537,11 @@
         "anime",
         "cozy",
         "dress"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cosplay_2b_combat_dress",
@@ -1191,7 +1555,11 @@
         "gaming",
         "gothic",
         "dress"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cosplay_rin_crimson_turtleneck",
@@ -1205,7 +1573,11 @@
         "anime",
         "knit",
         "top"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cosplay_chunli_blue_qipao",
@@ -1219,7 +1591,11 @@
         "gaming",
         "fighter",
         "qipao"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cosplay_makima_white_shirt",
@@ -1233,7 +1609,11 @@
         "anime",
         "formal",
         "shirt"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cosplay_lara_teal_tank",
@@ -1247,7 +1627,11 @@
         "gaming",
         "athletic",
         "tanktop"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_biz_pinstripe_vest",
@@ -1261,7 +1645,11 @@
         "office",
         "formal",
         "vest"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_biz_black_peplum_corset_bustier",
@@ -1275,7 +1663,11 @@
         "office",
         "formal",
         "corset"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_biz_folded_offshoulder_cashmere",
@@ -1289,7 +1681,11 @@
         "casual",
         "knit",
         "offshoulder"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_biz_toffee_leather_trench_dress",
@@ -1303,7 +1699,11 @@
         "office",
         "leather",
         "dress"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_biz_navy_pinstripe_bustier",
@@ -1317,7 +1717,11 @@
         "office",
         "formal",
         "bustier"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_retail_babyblue_sabrina_knit_dress",
@@ -1331,7 +1735,11 @@
         "casual",
         "knit",
         "dress"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_retail_sagemint_crop_tank",
@@ -1345,7 +1753,11 @@
         "casual",
         "sporty",
         "top"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_retail_dewy_white_crop_tank",
@@ -1359,7 +1771,11 @@
         "casual",
         "summer",
         "tanktop"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_etnik_champagne_gold_kemben_bustier",
@@ -1373,7 +1789,11 @@
         "party",
         "etnik",
         "kemben"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_boudoir_silk_chantilly_babydoll",
@@ -1387,7 +1807,11 @@
         "lingerie",
         "lounge",
         "dress"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_sport_mauve_halter_crop",
@@ -1401,7 +1825,11 @@
         "yoga",
         "seamless",
         "top"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_sport_emerald_zip_crop_polo",
@@ -1415,7 +1843,11 @@
         "tennis",
         "polo",
         "top"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_sport_onyx_wetlook_catsuit",
@@ -1429,7 +1861,11 @@
         "catsuit",
         "bodysuit",
         "spandex"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_sport_sagemint_crisscross_bra",
@@ -1443,7 +1879,11 @@
         "pilates",
         "bra",
         "top"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_sport_scarlet_scoop_sports_bra",
@@ -1457,7 +1897,11 @@
         "running",
         "bra",
         "top"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_sport_charcoal_cutout_crop",
@@ -1471,7 +1915,11 @@
         "gym",
         "compression",
         "top"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_sport_yellow_coral_ringer_tee",
@@ -1485,7 +1933,11 @@
         "retro",
         "casual",
         "tee"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_sport_ruby_crossback_bra",
@@ -1499,7 +1951,11 @@
         "combat",
         "bra",
         "top"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_sport_cobalt_cropped_rashguard",
@@ -1513,7 +1969,11 @@
         "surf",
         "swim",
         "rashguard"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_sport_burgundy_aerial_leotard",
@@ -1527,7 +1987,11 @@
         "gymnastics",
         "leotard",
         "velvet"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_crimson_lace_cage_bralette",
@@ -1541,7 +2005,11 @@
         "lingerie",
         "lace",
         "bralette"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_sapphire_satin_balconette_bra",
@@ -1555,7 +2023,11 @@
         "lingerie",
         "silk",
         "bra"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_snow_white_french_lace_triangle_bra",
@@ -1569,7 +2041,11 @@
         "lingerie",
         "bridal",
         "bra"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_champagne_metallic_micro_triangle",
@@ -1583,7 +2059,11 @@
         "micro",
         "metallic",
         "bikini"
-      ]
+      ],
+      "color_palette": "swimwear_metallic",
+      "default_color_id": "champagne_gold",
+      "color_template": "a dazzling {color} micro string bikini top, featuring minimalist sliding triangle cups",
+      "id_name_template": "Atasan Bikini Mikro Segitiga ({color_id})"
     },
     {
       "id": "outer_top_onyx_cage_harness_mesh_bralette",
@@ -1597,7 +2077,11 @@
         "harness",
         "mesh",
         "bralette"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_dusty_rose_chiffon_plunge_teddy",
@@ -1611,7 +2095,11 @@
         "lingerie",
         "chiffon",
         "teddy"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cobalt_underwire_halter_bikini",
@@ -1625,7 +2113,11 @@
         "swim",
         "bikini",
         "halter"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_lavender_velvet_lace_plunge_bra",
@@ -1639,7 +2131,11 @@
         "lingerie",
         "velvet",
         "bra"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_scarlet_ruched_bandeau_ring",
@@ -1653,7 +2149,11 @@
         "swim",
         "bandeau",
         "bikini"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_midnight_plum_corset_chemise",
@@ -1667,7 +2167,11 @@
         "lingerie",
         "corset",
         "chemise"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_tropical_sage_halter_bikini",
@@ -1681,7 +2185,11 @@
         "swimwear",
         "sage",
         "halter"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_sand_beige_crochet_halter_bikini",
@@ -1695,7 +2203,11 @@
         "crochet",
         "bohemian",
         "halter"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_coral_navy_surf_bodysuit",
@@ -1710,7 +2222,11 @@
         "neoprene",
         "athletic",
         "one_piece"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_terracotta_linen_offshoulder_crop",
@@ -1725,7 +2241,11 @@
         "linen",
         "offshoulder",
         "terracotta"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_pearl_white_cutout_monokini",
@@ -1741,7 +2261,11 @@
         "halter",
         "cutout",
         "one_piece"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_emerald_micro_triangle_bikini",
@@ -1756,7 +2280,11 @@
         "bikini",
         "emerald",
         "micro"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_leaf_cutout_longsleeve_micro_dress",
@@ -1772,22 +2300,31 @@
         "longsleeve",
         "bodycon",
         "one_piece"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cosplay_jessica_adventurer_corset_blouse",
-      "name": "98. [Cosplay] Blus Magenta & Underbust Korset Kulit Jessica (Outfit 98)",
+      "name": "98. [Cosplay] Blus Magenta Off-Shoulder & Underbust Korset Kulit Jessica (Outfit 98)",
       "category": "outer_top",
-      "description": "Blus magenta pas badan berkerah V dibalut korset kulit cokelat bawah dada penegas pinggang ramping.",
-      "prompt_fragment": "a form-fitting magenta-purple short-sleeved blouse with a V-neckline, cinched with a fitted tan-brown leather underbust corset belt sculpting an hourglass waist",
+      "description": "Blus magenta pas badan berkerah terbuka off-shoulder mengekspos bahu dan sedikit memperlihatkan bagian atas dada, dibalut korset kulit cokelat penegas pinggang ramping.",
+      "prompt_fragment": "a form-fitting magenta-fuchsia blouse with an open off-shoulder neckline exposing bare porcelain shoulders and collarbones, cinched with a structured tan-brown leather underbust corset belt subtly pushing up and revealing the upper curves of her breasts",
       "is_one_piece": false,
       "style_tags": [
         "cosplay",
         "dragonquest",
         "jessica",
         "corset",
-        "blouse"
-      ]
+        "blouse",
+        "offshoulder"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_jessica_divine_bustier",
@@ -1803,7 +2340,11 @@
         "bustier",
         "angelic",
         "one_piece"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cosplay_jessica_dancer_bra",
@@ -1818,7 +2359,11 @@
         "dancer",
         "bra",
         "gold"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cosplay_jessica_hexlet_tunic",
@@ -1833,7 +2378,11 @@
         "hexlet",
         "witch",
         "tunic"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_onepiece_jessica_dangerous_bustier",
@@ -1849,7 +2398,11 @@
         "bustier",
         "leather",
         "one_piece"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_top_cosplay_jessica_canonical_dancer_bra",
@@ -1865,7 +2418,11 @@
         "canonical",
         "white",
         "bra"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "inner_bottoms": [
@@ -1878,7 +2435,11 @@
       "is_one_piece": false,
       "style_tags": [
         "universal"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_highwaist_black_cotton",
@@ -1890,7 +2451,11 @@
       "style_tags": [
         "retail",
         "casual"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_black_lace_cheeky",
@@ -1902,7 +2467,11 @@
       "style_tags": [
         "lingerie",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_white_silk_thong",
@@ -1914,7 +2483,11 @@
       "style_tags": [
         "lingerie",
         "boudoir"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_garter_sheer_stockings",
@@ -1927,7 +2500,11 @@
         "lingerie",
         "gothic",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_side_tie_bikini",
@@ -1939,7 +2516,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": "swimwear_metallic",
+      "default_color_id": "emerald_green",
+      "color_template": "a {color} low-rise bikini bottom with slender adjustable side-tie ribbon bows",
+      "id_name_template": "Bawahan Bikini Tali Samping ({color_id})"
     },
     {
       "id": "inner_bottom_seamless_nude_boyshorts",
@@ -1951,7 +2532,11 @@
       "style_tags": [
         "casual",
         "sport"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_crimson_strappy_briefs",
@@ -1963,7 +2548,11 @@
       "style_tags": [
         "lingerie",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_terracotta_lace_bikini",
@@ -1975,7 +2564,11 @@
       "style_tags": [
         "traditional",
         "casual"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_metallic_gold_micro",
@@ -1987,7 +2580,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_bumimart_teal_bikini",
@@ -2000,7 +2597,11 @@
         "beach",
         "summer",
         "retail"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_turquoise_ruched_cheeky",
@@ -2012,7 +2613,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_lilac_strappy_bikini",
@@ -2024,7 +2629,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_nautical_highwaist_sailor",
@@ -2037,7 +2646,11 @@
         "beach",
         "summer",
         "retro"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_copper_micro_string",
@@ -2049,7 +2662,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_coral_satin_string",
@@ -2062,7 +2679,11 @@
         "beach",
         "summer",
         "lingerie"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_black_garter_stockings",
@@ -2075,7 +2696,11 @@
         "party",
         "formal",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_cosplay_rin_black_thigh_highs",
@@ -2088,7 +2713,11 @@
         "cosplay",
         "anime",
         "stockings"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_cosplay_chunli_navy_athletic_briefs",
@@ -2101,7 +2730,11 @@
         "cosplay",
         "gaming",
         "athletic"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_sheer_black_nylon_tights",
@@ -2115,7 +2748,11 @@
         "office",
         "formal",
         "tights"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_crimson_lace_highwaist_strappy",
@@ -2129,7 +2766,11 @@
         "lingerie",
         "lace",
         "bottoms"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_sapphire_silk_cheeky_bottoms",
@@ -2143,7 +2784,11 @@
         "lingerie",
         "silk",
         "cheeky"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_snow_white_string_lace_thong",
@@ -2157,7 +2802,11 @@
         "lingerie",
         "bridal",
         "thong"
-      ]
+      ],
+      "color_palette": "silk_lace",
+      "default_color_id": "pure_white",
+      "color_template": "matching low-rise {color} string floral lace thong bottoms",
+      "id_name_template": "Thong Renda Bunga Bertali ({color_id})"
     },
     {
       "id": "inner_bottom_champagne_metallic_micro_sidetie",
@@ -2171,7 +2820,11 @@
         "micro",
         "metallic",
         "bikini"
-      ]
+      ],
+      "color_palette": "swimwear_metallic",
+      "default_color_id": "champagne_gold",
+      "color_template": "matching ultra-thin side-tie {color} micro bikini bottoms sitting low on slender hips",
+      "id_name_template": "Bawahan Bikini Mikro Tali Samping ({color_id})"
     },
     {
       "id": "inner_bottom_onyx_mesh_thong_dual_straps",
@@ -2185,7 +2838,11 @@
         "mesh",
         "harness",
         "thong"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_cobalt_90s_french_cut_bottoms",
@@ -2199,7 +2856,11 @@
         "swim",
         "frenchcut",
         "bottoms"
-      ]
+      ],
+      "color_palette": "swimwear_metallic",
+      "default_color_id": "cobalt_blue",
+      "color_template": "matching seamless high-waisted 90s French-cut {color} bikini bottoms",
+      "id_name_template": "Bawahan Bikini 90s French-Cut ({color_id})"
     },
     {
       "id": "inner_bottom_lavender_velvet_lace_cheeky_bottoms",
@@ -2213,7 +2874,11 @@
         "lingerie",
         "velvet",
         "cheeky"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_scarlet_ring_cheeky_bottoms",
@@ -2227,7 +2892,11 @@
         "swim",
         "cheeky",
         "bottoms"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_tropical_sage_sidetie_bikini",
@@ -2241,7 +2910,11 @@
         "swimwear",
         "sage",
         "sidetie"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_sand_beige_crochet_cheeky",
@@ -2255,7 +2928,11 @@
         "crochet",
         "cheeky",
         "beige"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "inner_bottom_emerald_micro_sidetie_bikini",
@@ -2270,7 +2947,11 @@
         "bikini",
         "emerald",
         "sidetie"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "outer_bottoms": [
@@ -2283,7 +2964,11 @@
       "is_one_piece": false,
       "style_tags": [
         "universal"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_bumimart_trousers",
@@ -2296,7 +2981,11 @@
         "retail",
         "formal",
         "uniform"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_caramel_corduroy",
@@ -2308,7 +2997,11 @@
       "style_tags": [
         "casual",
         "streetwear"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sand_culottes",
@@ -2320,7 +3013,11 @@
       "style_tags": [
         "casual",
         "streetwear"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_pleated_midi_skirt",
@@ -2333,7 +3030,11 @@
         "retail",
         "casual",
         "formal"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_terracotta_slit_pencil",
@@ -2346,7 +3047,11 @@
         "mature",
         "formal",
         "party"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_frayed_denim_micro",
@@ -2359,7 +3064,11 @@
         "casual",
         "summer",
         "beach"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_tennis_pleated_skort",
@@ -2371,7 +3080,11 @@
       "style_tags": [
         "sport",
         "casual"
-      ]
+      ],
+      "color_palette": "casual_cotton",
+      "default_color_id": "sage_green",
+      "color_template": "a crisp {color} pleated tennis mini skort with a snug high-rise waistband",
+      "id_name_template": "Rok Tenis Lipit Mini ({color_id})"
     },
     {
       "id": "outer_bottom_parang_batik_wrap",
@@ -2383,7 +3096,11 @@
       "style_tags": [
         "traditional",
         "arcana"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_megamendung_batik_wrap",
@@ -2395,7 +3112,11 @@
       "style_tags": [
         "traditional",
         "modern"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_tactical_cargo",
@@ -2407,7 +3128,11 @@
       "style_tags": [
         "tactical",
         "streetwear"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_leather_mini_pencil",
@@ -2419,7 +3144,11 @@
       "style_tags": [
         "party",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_white_linen_palazzo",
@@ -2432,7 +3161,11 @@
         "beach",
         "resort",
         "casual"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_bumimart_mini_pencil_skirt",
@@ -2445,7 +3178,11 @@
         "retail",
         "summer",
         "uniform"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_bumimart_faux_leather_mini",
@@ -2458,7 +3195,11 @@
         "retail",
         "summer",
         "casual"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_bumimart_tennis_pleated_skirt",
@@ -2471,7 +3212,11 @@
         "retail",
         "summer",
         "sport"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_bumimart_frayed_denim_microshorts",
@@ -2484,7 +3229,11 @@
         "retail",
         "summer",
         "casual"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_bumimart_highslit_leather_skirt",
@@ -2497,7 +3246,11 @@
         "retail",
         "formal",
         "party"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_bumimart_charcoal_micro_skort",
@@ -2510,7 +3263,11 @@
         "retail",
         "summer",
         "casual"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_bumimart_wrap_mini_skirt",
@@ -2523,7 +3280,11 @@
         "retail",
         "summer",
         "barista"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_bumimart_sheer_wrap_sarong",
@@ -2536,7 +3297,11 @@
         "retail",
         "summer",
         "beach"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_aqua_translucent_pleated_sarong",
@@ -2548,7 +3313,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_unbuttoned_frayed_denim_shorts",
@@ -2561,7 +3330,11 @@
         "beach",
         "summer",
         "casual"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_black_athletic_surf_boyshorts",
@@ -2574,7 +3347,11 @@
         "beach",
         "summer",
         "sport"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_white_tiered_ruffle_maxi",
@@ -2587,7 +3364,11 @@
         "beach",
         "summer",
         "resort"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_nautical_highwaist_sailor",
@@ -2600,7 +3381,11 @@
         "beach",
         "summer",
         "retro"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_highslit_black_silk_maxi",
@@ -2613,7 +3398,11 @@
         "party",
         "formal",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_burgundy_velvet_flare_trousers",
@@ -2626,7 +3415,11 @@
         "formal",
         "party",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_kamen_songket_bali",
@@ -2639,7 +3432,11 @@
         "traditional",
         "adat",
         "bali"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_jarik_sidomukti_wiron",
@@ -2652,7 +3449,11 @@
         "traditional",
         "adat",
         "jawa"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_songket_pandai_sikek",
@@ -2665,7 +3466,11 @@
         "traditional",
         "adat",
         "minang"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sarung_lagosi_sengkang",
@@ -2678,7 +3483,11 @@
         "traditional",
         "adat",
         "bugis"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sarung_tenun_ikat_batak",
@@ -2691,7 +3500,11 @@
         "traditional",
         "adat",
         "batak"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sarung_ikat_flores_rumbai",
@@ -2704,7 +3517,11 @@
         "traditional",
         "adat",
         "ntt"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_rok_taa_manik_berumbai",
@@ -2717,7 +3534,11 @@
         "traditional",
         "adat",
         "dayak"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sarung_kotak_ambon",
@@ -2730,7 +3551,11 @@
         "traditional",
         "adat",
         "maluku"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_celana_sileuweu_songket_aceh",
@@ -2743,7 +3568,11 @@
         "traditional",
         "adat",
         "aceh"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_kain_tapis_pepadun_lampung",
@@ -2756,7 +3585,11 @@
         "traditional",
         "adat",
         "lampung"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_cosplay_tifa_leather_miniskirt",
@@ -2769,7 +3602,11 @@
         "cosplay",
         "gaming",
         "skirt"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_cosplay_rin_pleated_skirt",
@@ -2782,7 +3619,11 @@
         "cosplay",
         "anime",
         "skirt"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_cosplay_makima_trousers",
@@ -2796,7 +3637,11 @@
         "anime",
         "formal",
         "pants"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_cosplay_lara_khaki_shorts",
@@ -2809,7 +3654,11 @@
         "cosplay",
         "gaming",
         "shorts"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_biz_pinstripe_cigarette_pants",
@@ -2823,7 +3672,11 @@
         "office",
         "formal",
         "pants"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_biz_black_cropped_trousers",
@@ -2837,7 +3690,11 @@
         "office",
         "formal",
         "pants"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_biz_houndstooth_tweed_mini",
@@ -2850,7 +3707,11 @@
         "business",
         "formal",
         "skirt"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_biz_navy_wideleg_trousers",
@@ -2864,7 +3725,11 @@
         "office",
         "formal",
         "pants"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_retail_distressed_denim_shorts",
@@ -2878,7 +3743,11 @@
         "casual",
         "denim",
         "shorts"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_retail_daisy_dukes",
@@ -2892,7 +3761,11 @@
         "casual",
         "denim",
         "shorts"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_etnik_sheer_gold_songket_wrap",
@@ -2906,7 +3779,11 @@
         "party",
         "etnik",
         "skirt"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sport_mauve_contour_leggings",
@@ -2920,7 +3797,11 @@
         "yoga",
         "leggings",
         "pants"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sport_emerald_pleated_skort",
@@ -2934,7 +3815,11 @@
         "tennis",
         "skort",
         "skirt"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sport_sagemint_vwaist_bikershorts",
@@ -2947,7 +3832,11 @@
         "sport",
         "pilates",
         "shorts"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sport_scarlet_dolphin_running_shorts",
@@ -2960,7 +3849,11 @@
         "sport",
         "running",
         "shorts"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sport_charcoal_scrunch_shorts",
@@ -2973,7 +3866,11 @@
         "sport",
         "gym",
         "shorts"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sport_coral_terrycloth_shorts",
@@ -2986,7 +3883,11 @@
         "sport",
         "retro",
         "shorts"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sport_ruby_muay_thai_shorts",
@@ -2999,7 +3900,11 @@
         "sport",
         "combat",
         "shorts"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sport_cobalt_cheeky_surf_bottoms",
@@ -3013,7 +3918,11 @@
         "surf",
         "swim",
         "bottom"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_crimson_lace_highwaist_strappy",
@@ -3027,7 +3936,11 @@
         "lingerie",
         "lace",
         "bottoms"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sapphire_silk_cheeky_bottoms",
@@ -3041,7 +3954,11 @@
         "lingerie",
         "silk",
         "cheeky"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_snow_white_string_lace_thong",
@@ -3055,7 +3972,11 @@
         "lingerie",
         "bridal",
         "thong"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_champagne_metallic_micro_sidetie",
@@ -3069,7 +3990,11 @@
         "micro",
         "metallic",
         "bikini"
-      ]
+      ],
+      "color_palette": "swimwear_metallic",
+      "default_color_id": "champagne_gold",
+      "color_template": "ultra-thin side-tie {color} micro bikini bottoms sitting low on slender hips",
+      "id_name_template": "Bawahan Bikini Mikro Tali Samping ({color_id})"
     },
     {
       "id": "outer_bottom_onyx_mesh_thong_dual_straps",
@@ -3083,7 +4008,11 @@
         "mesh",
         "harness",
         "thong"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_cobalt_90s_french_cut_bottoms",
@@ -3097,7 +4026,11 @@
         "swim",
         "frenchcut",
         "bottoms"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_lavender_velvet_lace_cheeky_bottoms",
@@ -3111,7 +4044,11 @@
         "lingerie",
         "velvet",
         "cheeky"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_scarlet_ring_cheeky_bottoms",
@@ -3125,7 +4062,11 @@
         "swim",
         "cheeky",
         "bottoms"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_tropical_sage_sidetie_bikini",
@@ -3139,7 +4080,11 @@
         "swimwear",
         "sage",
         "sidetie"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_sand_beige_crochet_cheeky",
@@ -3153,7 +4098,11 @@
         "crochet",
         "cheeky",
         "beige"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_terracotta_highslit_flowy_palazzos",
@@ -3168,7 +4117,11 @@
         "palazzo",
         "linen",
         "highslit"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_emerald_micro_sidetie_bikini",
@@ -3183,22 +4136,32 @@
         "bikini",
         "emerald",
         "sidetie"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_cosplay_jessica_adventurer_pleated_skirt",
-      "name": "69. [Cosplay] Rok Mini Lipit Merah Renda Rumbai Putih Jessica (Outfit 98)",
+      "name": "69. [Cosplay] Rok Setengah Betis Merah Renda Putih & Stoking Hitam Jessica (Outfit 98)",
       "category": "outer_bottom",
-      "description": "Rok mini lipit merah cerah berpinggang pas dengan aksen rumbai renda putih lembut di sepanjang keliman.",
-      "prompt_fragment": "a vibrant red pleated mini skirt finished with a delicate white ruffle lace trim along the hemline",
+      "description": "Rok lipit merah cerah panjang setengah betis dengan aksen rumbai renda putih di kelimannya, dikenakan di atas stoking hitam pekat yang membungkus kaki.",
+      "prompt_fragment": "a vibrant red calf-length pleated flared skirt falling to mid-calf edged with delicate white ruffle lace trim along the hemline, layered over sleek opaque black stockings wrapping her legs",
       "is_one_piece": false,
       "style_tags": [
         "cosplay",
         "dragonquest",
         "jessica",
         "skirt",
-        "pleated"
-      ]
+        "pleated",
+        "midi",
+        "stockings"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_cosplay_jessica_dancer_slit_skirt",
@@ -3213,7 +4176,11 @@
         "dancer",
         "skirt",
         "slit"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_cosplay_jessica_hexlet_skirt",
@@ -3228,7 +4195,11 @@
         "hexlet",
         "witch",
         "skirt"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "outer_bottom_cosplay_jessica_canonical_dancer_skirt",
@@ -3244,7 +4215,11 @@
         "canonical",
         "skirt",
         "orange"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "layer_accessories": [
@@ -3257,7 +4232,11 @@
       "is_one_piece": false,
       "style_tags": [
         "universal"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_bumimart_vest",
@@ -3269,7 +4248,11 @@
       "style_tags": [
         "retail",
         "uniform"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_bumimart_apron",
@@ -3281,7 +4264,11 @@
       "style_tags": [
         "retail",
         "uniform"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_dago_denim_jacket",
@@ -3293,7 +4280,11 @@
       "style_tags": [
         "casual",
         "streetwear"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_waist_tied_denim_shirt",
@@ -3305,7 +4296,11 @@
       "style_tags": [
         "casual",
         "streetwear"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_waist_tied_red_flannel",
@@ -3317,7 +4312,11 @@
       "style_tags": [
         "casual",
         "streetwear"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_arcana_copper_stagen",
@@ -3329,7 +4328,11 @@
       "style_tags": [
         "traditional",
         "arcana"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_sheer_beach_sarong",
@@ -3341,7 +4344,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_slouchy_knit_cardigan",
@@ -3353,7 +4360,11 @@
       "style_tags": [
         "casual",
         "lounge"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_fitted_black_bolero",
@@ -3365,7 +4376,11 @@
       "style_tags": [
         "formal",
         "party"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_tactical_canvas_belt",
@@ -3377,7 +4392,11 @@
       "style_tags": [
         "tactical",
         "night"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_bumimart_summer_crop_vest",
@@ -3390,7 +4409,11 @@
         "retail",
         "summer",
         "uniform"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_bumimart_micro_waist_apron",
@@ -3403,7 +4426,11 @@
         "retail",
         "summer",
         "casual"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_bumimart_canvas_utility_pouch",
@@ -3416,7 +4443,11 @@
         "retail",
         "summer",
         "casual"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_bumimart_corset_boning_vest",
@@ -3429,7 +4460,11 @@
         "retail",
         "formal",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_bumimart_barista_half_apron",
@@ -3442,7 +4477,11 @@
         "retail",
         "summer",
         "barista"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_bumimart_cashier_pouch_apron",
@@ -3455,7 +4494,11 @@
         "retail",
         "summer",
         "beach"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_bumimart_micro_bolero_vest",
@@ -3468,7 +4511,11 @@
         "retail",
         "night",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_chiffon_boho_kimono_duster",
@@ -3481,7 +4528,11 @@
         "beach",
         "summer",
         "resort"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_raffia_sun_hat",
@@ -3493,7 +4544,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_sheer_organza_beach_duster",
@@ -3506,7 +4561,11 @@
         "beach",
         "summer",
         "resort"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_gold_chain_link_belt",
@@ -3519,7 +4578,11 @@
         "party",
         "formal",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_sheer_black_chiffon_shawl",
@@ -3532,7 +4595,11 @@
         "party",
         "formal",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_sabuk_selendang_kuning_bali",
@@ -3545,7 +4612,11 @@
         "traditional",
         "adat",
         "bali"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_stagen_marun_bros_keraton",
@@ -3558,7 +4629,11 @@
         "traditional",
         "adat",
         "jawa"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_selendang_songket_balapak",
@@ -3571,7 +4646,11 @@
         "traditional",
         "adat",
         "minang"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_gelang_gandang_kalung_burung",
@@ -3584,7 +4663,11 @@
         "traditional",
         "adat",
         "bugis"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_ulos_ragi_hotang_sortali",
@@ -3597,7 +4680,11 @@
         "traditional",
         "adat",
         "batak"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_kalung_mamuli_perak_ntt",
@@ -3610,7 +4697,11 @@
         "traditional",
         "adat",
         "ntt"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_gelang_spiral_kuningan_dayak",
@@ -3623,7 +4714,11 @@
         "traditional",
         "adat",
         "dayak"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_lenso_putih_pending_perak",
@@ -3636,7 +4731,11 @@
         "traditional",
         "adat",
         "maluku"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_pending_perak_bros_sirih_aceh",
@@ -3649,7 +4748,11 @@
         "traditional",
         "adat",
         "aceh"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_selendang_tapis_sabuk_gajah",
@@ -3662,7 +4765,11 @@
         "traditional",
         "adat",
         "lampung"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_cosplay_yor_thorn_tiara_opera_gloves",
@@ -3676,7 +4783,11 @@
         "anime",
         "gloves",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_cosplay_tifa_suspenders_brawler_gloves",
@@ -3690,7 +4801,11 @@
         "gaming",
         "gloves",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_cosplay_fern_traveling_coat_brooch",
@@ -3704,7 +4819,11 @@
         "anime",
         "cape",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_cosplay_boa_officer_cape_snake_earrings",
@@ -3718,7 +4837,11 @@
         "anime",
         "cape",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_cosplay_kiki_red_bow_messenger_bag",
@@ -3732,7 +4855,11 @@
         "anime",
         "bag",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_cosplay_2b_headband_gloves",
@@ -3746,7 +4873,11 @@
         "gaming",
         "gloves",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_cosplay_rin_black_hair_ribbons",
@@ -3760,7 +4891,11 @@
         "anime",
         "hairpin",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_cosplay_chunli_obi_spiked_bracelets",
@@ -3774,7 +4909,11 @@
         "gaming",
         "belt",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_cosplay_makima_tie_trench_coat",
@@ -3788,7 +4927,11 @@
         "anime",
         "coat",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_cosplay_lara_dual_holsters_gloves",
@@ -3802,7 +4945,11 @@
         "gaming",
         "holster",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_biz_silver_minimalist_chain_watch",
@@ -3816,7 +4963,11 @@
         "office",
         "formal",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_biz_toffee_wide_buckled_belt",
@@ -3830,7 +4981,11 @@
         "office",
         "belt",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_etnik_delicate_gold_anklet",
@@ -3844,7 +4999,11 @@
         "party",
         "etnik",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_sport_translucent_white_crop_windbreaker",
@@ -3858,7 +5017,11 @@
         "running",
         "jacket",
         "layer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_sport_retro_striped_tube_socks",
@@ -3872,7 +5035,11 @@
         "retro",
         "socks",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_sport_white_hand_wraps",
@@ -3886,7 +5053,11 @@
         "combat",
         "gloves",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_sport_burgundy_satin_ankle_ribbons",
@@ -3900,7 +5071,11 @@
         "dance",
         "ribbon",
         "accessory"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_snow_white_lace_garter_belt",
@@ -3914,7 +5089,11 @@
         "lingerie",
         "bridal",
         "garter"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_sage_mint_chiffon_mini_sarong",
@@ -3928,7 +5107,11 @@
         "sarong",
         "chiffon",
         "sage"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_macrame_beach_fringe_wrap",
@@ -3942,7 +5125,11 @@
         "macrame",
         "fringe",
         "boho"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_oversized_open_white_linen_shirt",
@@ -3957,7 +5144,11 @@
         "oversized",
         "layer",
         "coverup"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_translucent_white_floral_silk_kimono_robe",
@@ -3972,7 +5163,11 @@
         "robe",
         "silk",
         "sheer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_sheer_black_chiffon_sarong_wrap",
@@ -3986,7 +5181,11 @@
         "sarong",
         "chiffon",
         "black"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_cosplay_jessica_adventurer_belt_whip_pouch",
@@ -4001,7 +5200,11 @@
         "jessica",
         "belt",
         "whip"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_cosplay_jessica_dancer_coin_hip_scarf",
@@ -4016,7 +5219,11 @@
         "dancer",
         "coins",
         "scarf"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "layer_cosplay_jessica_hexlet_witch_hat",
@@ -4031,7 +5238,11 @@
         "hexlet",
         "witch",
         "hat"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "footwear": [
@@ -4046,7 +5257,11 @@
         "retail",
         "casual",
         "uniform"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_dago_ankle_boots",
@@ -4058,7 +5273,11 @@
       "style_tags": [
         "casual",
         "streetwear"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_arcana_velvet_slippers",
@@ -4070,7 +5289,11 @@
       "style_tags": [
         "traditional",
         "arcana"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_minimalist_nude_heels",
@@ -4083,7 +5306,11 @@
         "mature",
         "party",
         "formal"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_classic_white_tennis",
@@ -4095,7 +5322,11 @@
       "style_tags": [
         "sport",
         "casual"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_platform_combat_boots",
@@ -4107,7 +5338,11 @@
       "style_tags": [
         "tactical",
         "gothic"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_strappy_beach_sandals",
@@ -4119,7 +5354,11 @@
       "style_tags": [
         "beach",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_black_stiletto_pumps",
@@ -4131,7 +5370,11 @@
       "style_tags": [
         "formal",
         "party"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_barefoot_anklet",
@@ -4145,7 +5388,11 @@
         "beach",
         "lounge",
         "arcana"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_bumimart_canvas_slipon",
@@ -4158,7 +5405,11 @@
         "retail",
         "casual",
         "summer"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_thigh_high_leather_boots",
@@ -4171,7 +5422,11 @@
         "party",
         "gothic",
         "cyber"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_emerald_stiletto_pumps",
@@ -4184,7 +5439,11 @@
         "formal",
         "party",
         "arcana"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_gold_metallic_strappy_heels",
@@ -4197,7 +5456,11 @@
         "party",
         "formal",
         "mature"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_cosplay_yor_thigh_high_boots",
@@ -4211,7 +5474,11 @@
         "anime",
         "boots",
         "heels"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_cosplay_tifa_red_combat_boots",
@@ -4225,7 +5492,11 @@
         "gaming",
         "boots",
         "combat"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_cosplay_fern_brown_laceup_boots",
@@ -4239,7 +5510,11 @@
         "anime",
         "boots",
         "mage"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_cosplay_kiki_scarlet_flats",
@@ -4253,7 +5528,11 @@
         "anime",
         "shoes",
         "flats"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_cosplay_2b_suede_thigh_boots",
@@ -4267,7 +5546,11 @@
         "gaming",
         "boots",
         "heels"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_cosplay_rin_oxford_shoes",
@@ -4281,7 +5564,11 @@
         "anime",
         "shoes",
         "oxford"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_cosplay_chunli_white_wrestling_boots",
@@ -4295,7 +5582,11 @@
         "gaming",
         "boots",
         "athletic"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_cosplay_makima_black_heels",
@@ -4309,7 +5600,11 @@
         "anime",
         "shoes",
         "formal"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_cosplay_lara_mountaineer_boots",
@@ -4323,7 +5618,11 @@
         "gaming",
         "boots",
         "hiking"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_biz_pointed_patent_black_pumps",
@@ -4337,7 +5636,11 @@
         "office",
         "formal",
         "heels"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_biz_black_velvet_stiletto_heels",
@@ -4351,7 +5654,11 @@
         "formal",
         "party",
         "heels"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_biz_pointed_black_ankle_boots",
@@ -4365,7 +5672,11 @@
         "office",
         "boots",
         "heels"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_biz_chocolate_kneehigh_boots",
@@ -4379,7 +5690,11 @@
         "office",
         "boots",
         "heels"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_biz_metallic_silver_stiletto_pumps",
@@ -4393,7 +5708,11 @@
         "party",
         "formal",
         "heels"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_retail_white_slipon_canvas",
@@ -4407,7 +5726,11 @@
         "casual",
         "canvas",
         "shoes"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_retail_white_running_sneakers",
@@ -4421,7 +5744,11 @@
         "sporty",
         "casual",
         "sneakers"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_sport_white_tennis_sneakers",
@@ -4434,7 +5761,11 @@
         "sport",
         "tennis",
         "sneakers"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_sport_black_running_sneakers",
@@ -4447,7 +5778,11 @@
         "sport",
         "running",
         "sneakers"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_sport_sheer_grip_pilates_socks",
@@ -4460,7 +5795,11 @@
         "sport",
         "pilates",
         "socks"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_sport_retro_running_trainers",
@@ -4474,7 +5813,11 @@
         "running",
         "retro",
         "sneakers"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_sport_charcoal_crosstrainers",
@@ -4487,7 +5830,11 @@
         "sport",
         "gym",
         "sneakers"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_sport_retro_quad_roller_skates",
@@ -4500,7 +5847,11 @@
         "sport",
         "retro",
         "skates"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_braided_jute_rope_sandals",
@@ -4515,7 +5866,11 @@
         "jute",
         "espadrille",
         "resort"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_cosplay_jessica_adventurer_riding_boots",
@@ -4530,7 +5885,11 @@
         "jessica",
         "boots",
         "riding"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     },
     {
       "id": "footwear_cosplay_jessica_hexlet_boots",
@@ -4545,7 +5904,11 @@
         "hexlet",
         "witch",
         "boots"
-      ]
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "style_recipes": [
@@ -5924,15 +7287,15 @@
     {
       "id": "recipe_cosplay_jessica_adventurer",
       "name": "99. [Cosplay] Jessica Albert Adventurer Outfit (Outfit 98)",
-      "description": "Blus magenta pas badan + korset kulit cokelat + rok mini lipit merah renda putih + sabuk pouch & cambuk + bot penunggang kuda.",
+      "description": "Blus magenta off-shoulder + korset kulit penegas dada atas + rok lipit merah setengah betis renda putih + stoking hitam + sabuk pouch & cambuk + bot kulit betis.",
       "slots": {
         "inner_top": null,
-        "inner_bottom": null,
+        "inner_bottom": "inner_bottom_sheer_black_nylon_tights",
         "outer_top": "outer_top_cosplay_jessica_adventurer_corset_blouse",
         "outer_bottom": "outer_bottom_cosplay_jessica_adventurer_pleated_skirt",
         "layer_accessory": "layer_cosplay_jessica_adventurer_belt_whip_pouch",
         "footwear": "footwear_cosplay_jessica_adventurer_riding_boots",
-        "inner_visibility": "hidden"
+        "inner_visibility": "subtle"
       }
     },
     {
@@ -6005,5 +7368,195 @@
         "inner_visibility": "hidden"
       }
     }
-  ]
+  ],
+  "color_palettes": {
+    "swimwear_metallic": [
+      {
+        "id": "champagne_gold",
+        "name": "Emas Sampanye Metalik",
+        "en_color": "champagne-gold metallic",
+        "id_color": "Emas Sampanye"
+      },
+      {
+        "id": "onyx_black",
+        "name": "Hitam Onyx Metalik",
+        "en_color": "glossy onyx-black metallic",
+        "id_color": "Hitam Onyx"
+      },
+      {
+        "id": "crimson_red",
+        "name": "Merah Crimson Metalik",
+        "en_color": "deep crimson-red metallic",
+        "id_color": "Merah Crimson"
+      },
+      {
+        "id": "emerald_green",
+        "name": "Hijau Zamrud Metalik",
+        "en_color": "emerald-green metallic",
+        "id_color": "Hijau Zamrud"
+      },
+      {
+        "id": "pearly_white",
+        "name": "Putih Mutiara Metalik",
+        "en_color": "pearly snow-white metallic",
+        "id_color": "Putih Mutiara"
+      },
+      {
+        "id": "cobalt_blue",
+        "name": "Biru Kobalt Metalik",
+        "en_color": "vibrant cobalt-blue metallic",
+        "id_color": "Biru Kobalt"
+      },
+      {
+        "id": "fuchsia_pink",
+        "name": "Merah Muda Fuchsia Metalik",
+        "en_color": "electric fuchsia-pink metallic",
+        "id_color": "Pink Fuchsia"
+      },
+      {
+        "id": "midnight_purple",
+        "name": "Ungu Midnight Metalik",
+        "en_color": "deep midnight-purple metallic",
+        "id_color": "Ungu Midnight"
+      },
+      {
+        "id": "gilded_copper",
+        "name": "Tembaga Gilded Metalik",
+        "en_color": "gilded-copper metallic",
+        "id_color": "Tembaga Gilded"
+      }
+    ],
+    "silk_lace": [
+      {
+        "id": "onyx_black",
+        "name": "Hitam Onyx Sutra",
+        "en_color": "onyx-black silk",
+        "id_color": "Hitam Onyx"
+      },
+      {
+        "id": "pure_white",
+        "name": "Putih Salju Renda",
+        "en_color": "pure snow-white",
+        "id_color": "Putih Salju"
+      },
+      {
+        "id": "crimson_maroon",
+        "name": "Merah Marun Crimson",
+        "en_color": "deep crimson-red",
+        "id_color": "Merah Marun"
+      },
+      {
+        "id": "mint_sage",
+        "name": "Hijau Sage Mint",
+        "en_color": "delicate mint sage-green",
+        "id_color": "Sage Mint"
+      },
+      {
+        "id": "lavender_mist",
+        "name": "Ungu Lavender Lembut",
+        "en_color": "soft pastel lavender",
+        "id_color": "Lavender"
+      },
+      {
+        "id": "blush_rose",
+        "name": "Merah Mawar Blush",
+        "en_color": "dusty blush-rose",
+        "id_color": "Blush Rose"
+      },
+      {
+        "id": "terracotta",
+        "name": "Terakota Tradisional",
+        "en_color": "traditional terracotta-red",
+        "id_color": "Terakota"
+      },
+      {
+        "id": "midnight_navy",
+        "name": "Biru Navy Gelap",
+        "en_color": "deep midnight-navy",
+        "id_color": "Navy Gelap"
+      }
+    ],
+    "casual_cotton": [
+      {
+        "id": "pure_white",
+        "name": "Putih Bersih",
+        "en_color": "pure-white",
+        "id_color": "Putih Bersih"
+      },
+      {
+        "id": "charcoal_black",
+        "name": "Hitam Arang",
+        "en_color": "charcoal-black",
+        "id_color": "Hitam Arang"
+      },
+      {
+        "id": "heather_gray",
+        "name": "Abu-abu Heather",
+        "en_color": "heather-gray",
+        "id_color": "Abu-abu Heather"
+      },
+      {
+        "id": "navy_blue",
+        "name": "Biru Navy",
+        "en_color": "deep navy-blue",
+        "id_color": "Biru Navy"
+      },
+      {
+        "id": "sage_green",
+        "name": "Hijau Sage",
+        "en_color": "muted sage-green",
+        "id_color": "Hijau Sage"
+      },
+      {
+        "id": "terracotta_orange",
+        "name": "Oranye Terakota",
+        "en_color": "warm terracotta-orange",
+        "id_color": "Terakota"
+      },
+      {
+        "id": "cream_vanilla",
+        "name": "Krem Vanila",
+        "en_color": "warm vanilla-cream",
+        "id_color": "Krem Vanila"
+      },
+      {
+        "id": "baby_blue",
+        "name": "Biru Pastel / Baby Blue",
+        "en_color": "soft baby-blue",
+        "id_color": "Baby Blue"
+      },
+      {
+        "id": "mustard_yellow",
+        "name": "Kuning Mustard",
+        "en_color": "warm mustard-yellow",
+        "id_color": "Kuning Mustard"
+      }
+    ],
+    "leather_vinyl": [
+      {
+        "id": "glossy_black",
+        "name": "Hitam Mengkilap",
+        "en_color": "glossy jet-black",
+        "id_color": "Hitam Mengkilap"
+      },
+      {
+        "id": "oxblood_red",
+        "name": "Merah Oxblood / Darah",
+        "en_color": "deep oxblood-red",
+        "id_color": "Merah Oxblood"
+      },
+      {
+        "id": "cognac_brown",
+        "name": "Cokelat Cognac",
+        "en_color": "rich cognac-brown",
+        "id_color": "Cokelat Cognac"
+      },
+      {
+        "id": "pearl_white",
+        "name": "Putih Mutiara Vinyl",
+        "en_color": "sleek pearl-white",
+        "id_color": "Putih Mutiara"
+      }
+    ]
+  }
 }
