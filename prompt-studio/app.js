@@ -174,11 +174,14 @@
 
     // 4. Outfit Categories & Outfits
     const catSelect = $('select-outfit-category');
-    catSelect.innerHTML = '<option value="all">Semua Kategori (103 Busana)</option>';
-    (presets.outfit_categories || []).forEach(cat => {
+    catSelect.innerHTML = '<option value="all">🌟 Semua Kategori (103 Busana)</option>';
+    const categories = presets.outfit_categories || {};
+    Object.keys(categories).forEach(catId => {
+      if (catId === 'all') return;
+      const cat = categories[catId];
       const opt = document.createElement('option');
-      opt.value = cat.id;
-      opt.textContent = `${cat.icon} ${cat.name}`;
+      opt.value = catId;
+      opt.textContent = cat.name;
       catSelect.appendChild(opt);
     });
     updateOutfitDropdown('all');
@@ -231,11 +234,13 @@
     });
 
     const fitCatSelect = $('select-fitting-category');
-    fitCatSelect.innerHTML = '<option value="all">Semua Koleksi (103 Busana Penuh)</option>';
-    (presets.outfit_categories || []).forEach(cat => {
+    fitCatSelect.innerHTML = '<option value="all">🌟 Semua Koleksi (103 Busana Penuh)</option>';
+    Object.keys(categories).forEach(catId => {
+      if (catId === 'all') return;
+      const cat = categories[catId];
       const opt = document.createElement('option');
-      opt.value = cat.id;
-      opt.textContent = `${cat.icon} ${cat.name}`;
+      opt.value = catId;
+      opt.textContent = cat.name;
       fitCatSelect.appendChild(opt);
     });
   }
