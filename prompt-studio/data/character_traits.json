@@ -1197,11 +1197,13 @@
     },
     {
       "id": "attire_fitted_minimal_bodycon",
-      "name": "4. Fitted Minimalist Studio Bodycon Silhouette Top",
-      "description": "Atasan fitted hitam polos tanpa lengan siluet bodycon menonjolkan lekuk pinggang alami.",
-      "prompt_fragment": "a minimalist form-fitting matte black sleeveless studio top accentuating her tapered waistline and natural feminine hourglass curves, paired with sleek fitted black leggings",
+      "name": "4. Fitted Minimalist Studio Bodycon Long-Sleeve Top (Hitam Lengan Panjang)",
+      "description": "Atasan fitted hitam polos lengan panjang siluet bodycon menonjolkan lekuk tubuh dan pinggang ramping alami, dipadukan celana legging hitam fitted.",
+      "prompt_fragment": "a minimalist form-fitting matte black long-sleeve studio top accentuating her tapered waistline and natural feminine hourglass curves, paired with sleek fitted black leggings",
       "category": "neutral_attire",
-      "extra": null
+      "extra": {
+        "modest_compatible": true
+      }
     },
     {
       "id": "attire_canon_bumimart_fitted",
