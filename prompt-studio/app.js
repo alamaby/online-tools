@@ -432,6 +432,16 @@
   }
 
   function syncStateToInputs() {
+    // If current selected outfit does not belong to active category filter, reset to 'all'
+    const curCat = $('select-outfit-category').value;
+    if (curCat !== 'all') {
+      const outfitItem = (presets.outfits || []).find(o => o.id === state.outfit_id);
+      if (outfitItem && outfitItem.category !== curCat) {
+        $('select-outfit-category').value = 'all';
+        updateOutfitDropdown('all');
+      }
+    }
+
     $('select-engine').value = state.target_engine_id;
     $('select-ar').value = state.aspect_ratio_id;
     $('select-image-ref').value = state.image_ref_id;
@@ -529,7 +539,8 @@
         lock_camera_angle: $('check-lock-angle').checked,
         locked_camera_angle_id: state.camera_angle_id,
 
-        lock_lighting: false,
+        lock_lighting: $('check-lock-lighting') ? $('check-lock-lighting').checked : false,
+        locked_lighting_id: state.lighting_id,
       };
 
       const results = generator.generateBulk(vibeId, count, state, locks);
