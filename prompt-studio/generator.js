@@ -532,7 +532,8 @@
       const parts = [];
 
       // Shot type & master style
-      const shotText = shotType ? shotType.prompt_fragment : 'intimate close-up portrait';
+      const defaultShot = (this.traits.shot_types && this.traits.shot_types[0]) ? this.traits.shot_types[0].prompt_fragment : 'horizontal wide composition displaying 4 full-body views in consistent proportions: Front View, Three-Quarter (3/4) View, Side Profile View, and Back View of the same character on a clean neutral studio backdrop';
+      const shotText = shotType ? shotType.prompt_fragment : defaultShot;
       const artStyle = (this.traits.art_styles || []).find(x => x.id === t.art_style_id);
       const styleText = artStyle ? artStyle.prompt_fragment : this.presets.art_style_master;
       parts.push(`${shotText}, ${styleText}`);
@@ -541,24 +542,30 @@
       parts.push(`depicting a 23-year-old Sundanese young woman with graceful Sundanese facial features`);
 
       // Face shape & complexion
-      const faceText = faceShape ? faceShape.prompt_fragment : 'soft oval face contour';
-      const compText = complexion ? complexion.prompt_fragment : 'porcelain golden-undertone complexion';
+      const defaultFace = (this.traits.face_shapes && this.traits.face_shapes[0]) ? this.traits.face_shapes[0].prompt_fragment : 'charming delicate oval face contour with soft feminine jawline';
+      const defaultComp = (this.traits.skin_complexions && this.traits.skin_complexions[0]) ? this.traits.skin_complexions[0].prompt_fragment : 'flawless radiant porcelain-bright fair skin (kulit putih cerah berseri)';
+      const faceText = faceShape ? faceShape.prompt_fragment : defaultFace;
+      const compText = complexion ? complexion.prompt_fragment : defaultComp;
       parts.push(`${faceText}, ${compText}`);
 
       // Eyes & expression
-      const eyeText = eyeType ? eyeType.prompt_fragment : 'captivating almond-shaped eyes with subtle glowing amber-gold irises';
-      const exprText = expression ? expression.prompt_fragment : 'composed calm expression with subtle warm smile';
+      const defaultEye = (this.traits.eye_types && this.traits.eye_types[0]) ? this.traits.eye_types[0].prompt_fragment : 'warm walnut-brown almond eyes with a gentle, intelligent, and welcoming gaze';
+      const defaultExpr = (this.traits.expressions && this.traits.expressions[0]) ? this.traits.expressions[0].prompt_fragment : 'an authentic welcoming two-finger symmetric retail smile radiating genuine hospitality, natural rosy lips';
+      const eyeText = eyeType ? eyeType.prompt_fragment : defaultEye;
+      const exprText = expression ? expression.prompt_fragment : defaultExpr;
       parts.push(`${eyeText}, ${exprText}`);
 
       // Facial details
       if (facialDetail && facialDetail.prompt_fragment) {
         parts.push(facialDetail.prompt_fragment);
+      } else if (this.traits.facial_details && this.traits.facial_details[0]) {
+        parts.push(this.traits.facial_details[0].prompt_fragment);
       }
 
       // Hair / Hijab
       const isHijab = hairstyle && hairstyle.extra && hairstyle.extra.is_hijab;
-      const colorText = hairColor ? hairColor.prompt_fragment : 'glossy raven-black';
-      const hairStyleText = hairstyle ? hairstyle.prompt_fragment : 'hair styled in an elegant high barista bun';
+      const colorText = hairColor ? hairColor.prompt_fragment : (this.traits.hair_colors && this.traits.hair_colors[0] ? this.traits.hair_colors[0].prompt_fragment : 'glossy raven-black');
+      const hairStyleText = hairstyle ? hairstyle.prompt_fragment : (this.traits.hairstyles && this.traits.hairstyles[0] ? this.traits.hairstyles[0].prompt_fragment : 'hair styled in an elegant high barista bun');
       let hairOrHijabPrompt = '';
       if (isHijab) {
         hairOrHijabPrompt = `Headwear & Hijab: ${hairstyle.prompt_fragment}, with hair, ears, and neck completely concealed underneath`;
@@ -570,6 +577,8 @@
       // Neutral attire
       if (neutralAttire && neutralAttire.prompt_fragment) {
         parts.push(`Attire: ${neutralAttire.prompt_fragment}`);
+      } else if (this.traits.neutral_attires && this.traits.neutral_attires[0]) {
+        parts.push(`Attire: ${this.traits.neutral_attires[0].prompt_fragment}`);
       }
 
       // Regalia

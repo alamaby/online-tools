@@ -57,18 +57,18 @@
     slot_colors: {},
   };
 
-  // Character Traits State
+  // Character Traits State (Aligned with Canonical Aluna Baseline)
   const traitsState = {
     art_style_id: 'style_semi_realistic_ln',
     hairstyle_id: 'hair_barista_bun',
-    hair_color_id: 'color_raven_black',
-    expression_id: 'expr_composed_smile',
-    skin_complexion_id: 'skin_porcelain_warm',
-    face_shape_id: 'face_soft_oval',
-    eye_type_id: 'eye_amber_almond',
-    facial_detail_id: 'detail_natural_radiance',
-    shot_type_id: 'shot_intimate_closeup',
-    neutral_attire_id: 'attire_black_crewneck_cotton',
+    hair_color_id: 'color_glossy_raven_black',
+    face_shape_id: 'face_oval_delicate',
+    skin_complexion_id: 'skin_porcelain_bright',
+    eye_type_id: 'eyes_walnut_almond',
+    facial_detail_id: 'detail_right_dimple',
+    expression_id: 'expr_retail_sop_smile',
+    neutral_attire_id: 'attire_fitted_ivory_mockneck',
+    shot_type_id: 'shot_turnaround_4views',
     include_clan_regalia: true,
   };
 
@@ -222,6 +222,21 @@
     populateSelect($('select-trait-shottype'), traits.shot_types, traitsState.shot_type_id);
     populateSelect($('select-trait-attire'), traits.neutral_attires, traitsState.neutral_attire_id);
     syncTraitAttireForHair();
+
+    // Ensure traitsState strictly reflects the selected values in populated dropdowns
+    traitsState.art_style_id = $('select-trait-artstyle').value;
+    traitsState.hairstyle_id = $('select-trait-hairstyle').value;
+    traitsState.hair_color_id = $('select-trait-haircolor').value;
+    traitsState.expression_id = $('select-trait-expression').value;
+    traitsState.skin_complexion_id = $('select-trait-complexion').value;
+    traitsState.face_shape_id = $('select-trait-faceshape').value;
+    traitsState.eye_type_id = $('select-trait-eyetype').value;
+    traitsState.facial_detail_id = $('select-trait-detail').value;
+    traitsState.shot_type_id = $('select-trait-shottype').value;
+    traitsState.neutral_attire_id = $('select-trait-attire').value;
+    if ($('check-trait-regalia')) {
+      traitsState.include_clan_regalia = $('check-trait-regalia').checked;
+    }
 
     // 12. Bulk Vibe & Fitting Categories
     const vibeSelect = $('select-bulk-vibe');
