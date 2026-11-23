@@ -855,6 +855,15 @@
   }
 
   // --- Tab Switching Logic ---
+  function updateContextualBars(activeTabId) {
+    document.querySelectorAll('.quick-bar-tab').forEach(el => {
+      el.style.display = (el.getAttribute('data-tab') === activeTabId) ? 'flex' : 'none';
+    });
+    document.querySelectorAll('.mobile-bar-tab').forEach(el => {
+      el.style.display = (el.getAttribute('data-tab') === activeTabId) ? 'flex' : 'none';
+    });
+  }
+
   function initTabs() {
     const tabBtns = document.querySelectorAll('.tab-btn');
     tabBtns.forEach(btn => {
@@ -866,8 +875,10 @@
         const targetId = btn.getAttribute('data-tab');
         const pane = $(targetId);
         if (pane) pane.classList.add('active');
+        updateContextualBars(targetId);
       });
     });
+    updateContextualBars('tab-studio');
   }
 
   // --- Event Bindings ---
@@ -951,7 +962,7 @@
       updatePromptOutput();
     });
 
-    // Quick Action Bar Buttons
+    // Quick Action Bar Buttons (Studio Utama)
     $('btn-quick-roll-character').addEventListener('click', rollCharacter);
     $('btn-quick-roll-vibe').addEventListener('click', rollThematicVibe);
     $('btn-quick-roll-total').addEventListener('click', rollTotal);
@@ -960,12 +971,42 @@
     $('btn-quick-download').addEventListener('click', downloadActivePromptMarkdown);
     $('btn-quick-reset').addEventListener('click', resetForm);
 
-    // Mobile Bottom Bar Buttons
+    // Mobile Bottom Bar Buttons (Studio Utama)
     $('btn-m-roll-char').addEventListener('click', rollCharacter);
     $('btn-m-roll-vibe').addEventListener('click', rollThematicVibe);
     $('btn-m-generate').addEventListener('click', updatePromptOutput);
     $('btn-m-copy').addEventListener('click', () => copyTextToClipboard($('output-prompt-box').textContent));
     $('btn-m-download').addEventListener('click', downloadActivePromptMarkdown);
+
+    // Contextual Quick & Mobile Buttons (Wardrobe Modular)
+    $('btn-quick-wardrobe-random').addEventListener('click', () => $('btn-random-wardrobe').click());
+    $('btn-m-wardrobe-random').addEventListener('click', () => $('btn-random-wardrobe').click());
+    $('btn-quick-wardrobe-match').addEventListener('click', () => $('btn-match-set-colors').click());
+    $('btn-quick-wardrobe-apply').addEventListener('click', () => $('btn-use-modular-in-studio').click());
+    $('btn-m-wardrobe-apply').addEventListener('click', () => $('btn-use-modular-in-studio').click());
+    $('btn-quick-wardrobe-copy').addEventListener('click', () => copyTextToClipboard($('wardrobe-prompt-text').textContent, 'Teks busana modular disalin!'));
+    $('btn-m-wardrobe-copy').addEventListener('click', () => copyTextToClipboard($('wardrobe-prompt-text').textContent, 'Teks busana modular disalin!'));
+    $('btn-quick-wardrobe-download').addEventListener('click', downloadModularWardrobeMarkdown);
+    $('btn-m-wardrobe-download').addEventListener('click', downloadModularWardrobeMarkdown);
+    $('btn-quick-wardrobe-clear').addEventListener('click', () => clearModularAttire(true));
+
+    // Contextual Quick & Mobile Buttons (Explore Karakter)
+    $('btn-quick-traits-random').addEventListener('click', () => $('btn-random-traits').click());
+    $('btn-m-traits-random').addEventListener('click', () => $('btn-random-traits').click());
+    $('btn-quick-traits-apply').addEventListener('click', () => $('btn-apply-hair-to-studio').click());
+    $('btn-m-traits-apply').addEventListener('click', () => $('btn-apply-hair-to-studio').click());
+    $('btn-quick-traits-copy').addEventListener('click', () => copyTextToClipboard($('trait-prompt-preview').textContent, 'Prompt potret acuan disalin!'));
+    $('btn-m-traits-copy').addEventListener('click', () => copyTextToClipboard($('trait-prompt-preview').textContent, 'Prompt potret acuan disalin!'));
+    $('btn-quick-traits-download').addEventListener('click', downloadCharacterTraitMarkdown);
+    $('btn-m-traits-download').addEventListener('click', downloadCharacterTraitMarkdown);
+
+    // Contextual Quick & Mobile Buttons (Bulk Vibe & Fitting Room)
+    $('btn-quick-bulk-run').addEventListener('click', runBulkGeneration);
+    $('btn-m-bulk-run').addEventListener('click', runBulkGeneration);
+    $('btn-quick-bulk-copy').addEventListener('click', copyAllBulk);
+    $('btn-m-bulk-copy').addEventListener('click', copyAllBulk);
+    $('btn-quick-bulk-download').addEventListener('click', downloadBulkMarkdown);
+    $('btn-m-bulk-download').addEventListener('click', downloadBulkMarkdown);
 
     // Studio Buttons
     $('btn-copy-prompt').addEventListener('click', () => copyTextToClipboard($('output-prompt-box').textContent));
@@ -1160,36 +1201,79 @@
       }
     });
 
-    // Keyboard Shortcuts
+    // Contextual Keyboard Shortcuts
     window.addEventListener('keydown', (e) => {
       // Ignore if user is inside input, textarea, or select
       const tag = (e.target.tagName || '').toLowerCase();
       if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
       if (e.ctrlKey || e.metaKey || e.altKey) return;
 
+      const activePane = document.querySelector('.tab-pane.active')?.id || 'tab-studio';
       const key = e.key.toLowerCase();
-      if (key === 'g') {
-        e.preventDefault();
-        updatePromptOutput();
-        showToast('⚡ Prompt diperbarui!', 'info');
-      } else if (key === 'z') {
-        e.preventDefault();
-        rollCharacter();
-      } else if (key === 'x') {
-        e.preventDefault();
-        rollThematicVibe();
-      } else if (key === 't') {
-        e.preventDefault();
-        rollTotal();
-      } else if (key === 'c') {
-        e.preventDefault();
-        copyTextToClipboard($('output-prompt-box').textContent);
-      } else if (key === 's') {
-        e.preventDefault();
-        downloadActivePromptMarkdown();
-      } else if (key === 'r') {
-        e.preventDefault();
-        resetForm();
+
+      if (activePane === 'tab-studio') {
+        if (key === 'g') {
+          e.preventDefault();
+          updatePromptOutput();
+          showToast('⚡ Prompt diperbarui!', 'info');
+        } else if (key === 'z') {
+          e.preventDefault();
+          rollCharacter();
+        } else if (key === 'x') {
+          e.preventDefault();
+          rollThematicVibe();
+        } else if (key === 't') {
+          e.preventDefault();
+          rollTotal();
+        } else if (key === 'c') {
+          e.preventDefault();
+          copyTextToClipboard($('output-prompt-box').textContent);
+        } else if (key === 's') {
+          e.preventDefault();
+          downloadActivePromptMarkdown();
+        } else if (key === 'r') {
+          e.preventDefault();
+          resetForm();
+        }
+      } else if (activePane === 'tab-wardrobe') {
+        if (key === 'z') {
+          e.preventDefault();
+          $('btn-random-wardrobe').click();
+        } else if (key === 'g') {
+          e.preventDefault();
+          $('btn-use-modular-in-studio').click();
+        } else if (key === 'c') {
+          e.preventDefault();
+          copyTextToClipboard($('wardrobe-prompt-text').textContent, 'Teks busana modular disalin!');
+        } else if (key === 's') {
+          e.preventDefault();
+          downloadModularWardrobeMarkdown();
+        }
+      } else if (activePane === 'tab-traits') {
+        if (key === 'z') {
+          e.preventDefault();
+          $('btn-random-traits').click();
+        } else if (key === 'g') {
+          e.preventDefault();
+          $('btn-apply-hair-to-studio').click();
+        } else if (key === 'c') {
+          e.preventDefault();
+          copyTextToClipboard($('trait-prompt-preview').textContent, 'Prompt potret acuan disalin!');
+        } else if (key === 's') {
+          e.preventDefault();
+          downloadCharacterTraitMarkdown();
+        }
+      } else if (activePane === 'tab-bulk') {
+        if (key === 'g') {
+          e.preventDefault();
+          runBulkGeneration();
+        } else if (key === 'c') {
+          e.preventDefault();
+          copyAllBulk();
+        } else if (key === 's') {
+          e.preventDefault();
+          downloadBulkMarkdown();
+        }
       }
     });
   }

@@ -154,6 +154,23 @@ header.app-header {
   flex-wrap: wrap;
 }
 
+.quick-bar-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.mobile-bar-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 8px;
+  width: 100%;
+}
+
 .quick-btn-group {
   display: flex;
   gap: 8px;

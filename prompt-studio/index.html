@@ -38,16 +38,56 @@
 
   <!-- Quick Action Bar (Desktop / Tablet) -->
   <div class="quick-action-bar">
-    <div class="quick-btn-group">
-      <button id="btn-quick-roll-character" class="btn btn-gold" title="Pintasan: Tekan Z">🎲 Acak Karakter (Z)</button>
-      <button id="btn-quick-roll-vibe" class="btn btn-purple" title="Pintasan: Tekan X">✨ Roll Bertema (X)</button>
-      <button id="btn-quick-roll-total" class="btn btn-outline" title="Pintasan: Tekan T">🌐 Acak Total (T)</button>
+    <!-- Tab 1: Studio Utama -->
+    <div class="quick-bar-tab active" data-tab="tab-studio">
+      <div class="quick-btn-group">
+        <button id="btn-quick-roll-character" class="btn btn-gold" title="Pintasan: Tekan Z">🎲 Acak Karakter (Z)</button>
+        <button id="btn-quick-roll-vibe" class="btn btn-purple" title="Pintasan: Tekan X">✨ Roll Bertema (X)</button>
+        <button id="btn-quick-roll-total" class="btn btn-outline" title="Pintasan: Tekan T">🌐 Acak Total (T)</button>
+      </div>
+      <div class="quick-btn-group">
+        <button id="btn-quick-generate" class="btn btn-primary" title="Pintasan: Tekan G">⚡ Generate Prompt (G)</button>
+        <button id="btn-quick-copy" class="btn btn-outline" title="Pintasan: Tekan C">📋 Salin Prompt (C)</button>
+        <button id="btn-quick-download" class="btn btn-outline" title="Pintasan: Tekan S">📥 Unduh MD (S)</button>
+        <button id="btn-quick-reset" class="btn btn-outline" title="Pintasan: Tekan R">🔄 Reset Form (R)</button>
+      </div>
     </div>
-    <div class="quick-btn-group">
-      <button id="btn-quick-generate" class="btn btn-primary" title="Pintasan: Tekan G">⚡ Generate Prompt (G)</button>
-      <button id="btn-quick-copy" class="btn btn-outline" title="Pintasan: Tekan C">📋 Salin Prompt (C)</button>
-      <button id="btn-quick-download" class="btn btn-outline" title="Pintasan: Tekan S">📥 Unduh MD (S)</button>
-      <button id="btn-quick-reset" class="btn btn-outline" title="Pintasan: Tekan R">🔄 Reset Form (R)</button>
+
+    <!-- Tab 2: Wardrobe Modular -->
+    <div class="quick-bar-tab" data-tab="tab-wardrobe" style="display:none;">
+      <div class="quick-btn-group">
+        <button id="btn-quick-wardrobe-random" class="btn btn-gold" title="Pintasan: Tekan Z">🎲 Acak Busana (Z)</button>
+        <button id="btn-quick-wardrobe-match" class="btn btn-outline" title="Serasikan warna atasan &amp; bawahan bikini/setelan">🔗 Serasikan Warna Set</button>
+      </div>
+      <div class="quick-btn-group">
+        <button id="btn-quick-wardrobe-apply" class="btn btn-primary" title="Pintasan: Tekan G">⚡ Pasang ke Studio (G)</button>
+        <button id="btn-quick-wardrobe-copy" class="btn btn-outline" title="Pintasan: Tekan C">📋 Salin Busana (C)</button>
+        <button id="btn-quick-wardrobe-download" class="btn btn-outline" title="Pintasan: Tekan S">📥 Unduh MD (S)</button>
+        <button id="btn-quick-wardrobe-clear" class="btn btn-outline">🔄 Lepas Busana</button>
+      </div>
+    </div>
+
+    <!-- Tab 3: Explore Karakter -->
+    <div class="quick-bar-tab" data-tab="tab-traits" style="display:none;">
+      <div class="quick-btn-group">
+        <button id="btn-quick-traits-random" class="btn btn-gold" title="Pintasan: Tekan Z">🎲 Acak Sifat (Z)</button>
+      </div>
+      <div class="quick-btn-group">
+        <button id="btn-quick-traits-apply" class="btn btn-primary" title="Pintasan: Tekan G">⚡ Terapkan Rambut (G)</button>
+        <button id="btn-quick-traits-copy" class="btn btn-outline" title="Pintasan: Tekan C">📋 Salin Acuan (C)</button>
+        <button id="btn-quick-traits-download" class="btn btn-outline" title="Pintasan: Tekan S">📥 Unduh MD (S)</button>
+      </div>
+    </div>
+
+    <!-- Tab 4: Bulk Vibe & Fitting Room -->
+    <div class="quick-bar-tab" data-tab="tab-bulk" style="display:none;">
+      <div class="quick-btn-group">
+        <button id="btn-quick-bulk-run" class="btn btn-primary" title="Pintasan: Tekan G">⚡ Mulai Generate Batch (G)</button>
+      </div>
+      <div class="quick-btn-group">
+        <button id="btn-quick-bulk-copy" class="btn btn-outline" title="Pintasan: Tekan C">📋 Salin Semua Batch (C)</button>
+        <button id="btn-quick-bulk-download" class="btn btn-outline" title="Pintasan: Tekan S">📥 Unduh MD (S)</button>
+      </div>
     </div>
   </div>
 
@@ -468,11 +508,37 @@
 
 <!-- Sticky Bottom Floating Action Bar for Mobile -->
 <div class="mobile-bottom-bar">
-  <button id="btn-m-roll-char" class="btn btn-gold btn-sm">🎲 Acak (Z)</button>
-  <button id="btn-m-roll-vibe" class="btn btn-purple btn-sm">✨ Vibe (X)</button>
-  <button id="btn-m-generate" class="btn btn-primary btn-sm">⚡ Gen (G)</button>
-  <button id="btn-m-copy" class="btn btn-outline btn-sm">📋 Salin (C)</button>
-  <button id="btn-m-download" class="btn btn-outline btn-sm">📥 Unduh (S)</button>
+  <!-- Tab 1: Studio Utama -->
+  <div class="mobile-bar-tab active" data-tab="tab-studio">
+    <button id="btn-m-roll-char" class="btn btn-gold btn-sm">🎲 Acak (Z)</button>
+    <button id="btn-m-roll-vibe" class="btn btn-purple btn-sm">✨ Vibe (X)</button>
+    <button id="btn-m-generate" class="btn btn-primary btn-sm">⚡ Gen (G)</button>
+    <button id="btn-m-copy" class="btn btn-outline btn-sm">📋 Salin (C)</button>
+    <button id="btn-m-download" class="btn btn-outline btn-sm">📥 Unduh (S)</button>
+  </div>
+
+  <!-- Tab 2: Wardrobe Modular -->
+  <div class="mobile-bar-tab" data-tab="tab-wardrobe" style="display:none;">
+    <button id="btn-m-wardrobe-random" class="btn btn-gold btn-sm">🎲 Acak (Z)</button>
+    <button id="btn-m-wardrobe-apply" class="btn btn-primary btn-sm">⚡ Pasang (G)</button>
+    <button id="btn-m-wardrobe-copy" class="btn btn-outline btn-sm">📋 Salin (C)</button>
+    <button id="btn-m-wardrobe-download" class="btn btn-outline btn-sm">📥 Unduh (S)</button>
+  </div>
+
+  <!-- Tab 3: Explore Karakter -->
+  <div class="mobile-bar-tab" data-tab="tab-traits" style="display:none;">
+    <button id="btn-m-traits-random" class="btn btn-gold btn-sm">🎲 Acak (Z)</button>
+    <button id="btn-m-traits-apply" class="btn btn-primary btn-sm">⚡ Pasang (G)</button>
+    <button id="btn-m-traits-copy" class="btn btn-outline btn-sm">📋 Salin (C)</button>
+    <button id="btn-m-traits-download" class="btn btn-outline btn-sm">📥 Unduh (S)</button>
+  </div>
+
+  <!-- Tab 4: Bulk Vibe & Fitting Room -->
+  <div class="mobile-bar-tab" data-tab="tab-bulk" style="display:none;">
+    <button id="btn-m-bulk-run" class="btn btn-primary btn-sm">⚡ Batch (G)</button>
+    <button id="btn-m-bulk-copy" class="btn btn-outline btn-sm">📋 Salin (C)</button>
+    <button id="btn-m-bulk-download" class="btn btn-outline btn-sm">📥 Unduh (S)</button>
+  </div>
 </div>
 
 <!-- Toast Container -->
