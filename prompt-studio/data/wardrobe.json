@@ -1961,8 +1961,8 @@
       "id": "outer_top_sport_cobalt_cropped_rashguard",
       "name": "79. [Olahraga] Cropped Surf Rashguard Neoprena Biru Kobalt-Toska (Outfit 50)",
       "category": "outer_top",
-      "description": "Atasan renang rashguard neoprena lengan panjang warna biru kobalt gradasi toska dengan ritsleting depan setengah terbuka.",
-      "prompt_fragment": "a sleek ocean cobalt-blue and turquoise cropped long-sleeve neoprene surf rashguard, with a half-zipped front exposing radiant porcelain collarbones",
+      "description": "Atasan renang rashguard neoprena lengan panjang warna biru kobalt gradasi toska dengan ritsleting depan terbuka sampai bawah.",
+      "prompt_fragment": "a sleek ocean cobalt-blue and turquoise cropped long-sleeve neoprene surf rashguard, with a fully unzipped front opening all the way down exposing radiant porcelain cleavage and bare midriff",
       "is_one_piece": false,
       "style_tags": [
         "sport",
@@ -3908,15 +3908,16 @@
     },
     {
       "id": "outer_bottom_sport_cobalt_cheeky_surf_bottoms",
-      "name": "56. [Olahraga] Celana Renang Cheeky Selancar Biru Kobalt (Outfit 50)",
+      "name": "56. [Olahraga] Celana Bikini Tali Samping Biru Kobalt-Toska (Outfit 50)",
       "category": "outer_bottom",
-      "description": "Bawahan celana renang selancar cheeky berpinggang tinggi warna biru kobalt membalut pinggul dan kaki jenjang.",
-      "prompt_fragment": "matching high-cut cheeky surf bikini bottoms accentuating her slender waistline",
+      "description": "Bawahan celana bikini tali samping dua warna biru kobalt dan toska laut berpotongan rendah yang senada dengan rashguard.",
+      "prompt_fragment": "matching two-tone ocean cobalt-blue and turquoise low-rise side-tie string bikini bottoms accentuating her slender waistline and fair hips",
       "is_one_piece": false,
       "style_tags": [
         "sport",
         "surf",
         "swim",
+        "bikini",
         "bottom"
       ],
       "color_palette": null,
@@ -4215,6 +4216,24 @@
         "canonical",
         "skirt",
         "orange"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_tropical_flora_sidetie_bikini",
+      "name": "73. [Pantai] Celana Bikini Tali Samping Botani Tropis (Outfit 83)",
+      "category": "outer_bottom",
+      "description": "Bawahan bikini tali samping berpotongan rendah dengan motif botani daun palem tropis hijau sage dan gading senada atasan.",
+      "prompt_fragment": "matching low-rise side-tie string bikini bottoms in the same deep sage-green and ivory botanical tropical palm print accentuating her slender hips and fair thighs",
+      "is_one_piece": false,
+      "style_tags": [
+        "beach",
+        "summer",
+        "swim",
+        "bikini"
       ],
       "color_palette": null,
       "default_color_id": null,
@@ -6278,13 +6297,13 @@
     },
     {
       "id": "recipe_pantai_tropical_flora_rashguard",
-      "name": "27. [Pantai] Tropical Flora Long-Sleeve Crop Rashguard & Surf Briefs (Outfit 83)",
-      "description": "Crop rashguard lengan panjang motif botani tropis daun monstera toska-krem + celana renang boy-short.",
+      "name": "27. [Pantai] Tropical Flora Long-Sleeve Crop Rashguard & Side-Tie String Bikini (Outfit 83)",
+      "description": "Crop rashguard lengan panjang motif botani tropis daun monstera toska-krem + celana bikini tali samping motif senada.",
       "slots": {
         "inner_top": "inner_top_sport_compression_bra",
         "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
         "outer_top": "outer_top_tropical_flora_crop_rashguard",
-        "outer_bottom": "outer_bottom_black_athletic_surf_boyshorts",
+        "outer_bottom": "outer_bottom_tropical_flora_sidetie_bikini",
         "layer_accessory": "layer_none",
         "footwear": "footwear_barefoot_anklet",
         "inner_visibility": "hidden"
@@ -7006,8 +7025,8 @@
     },
     {
       "id": "recipe_sport_surf_cropped_rashguard",
-      "name": "79. [Olahraga] Ocean Cobalt Cropped Rashguard & Surf Bottoms (Outfit 50)",
-      "description": "Atasan renang neoprena biru kobalt ritsleting setengah terbuka + celana renang cheeky + barefoot.",
+      "name": "79. [Olahraga] Ocean Cobalt Open-Zip Cropped Rashguard & Two-Tone String Bikini (Outfit 50)",
+      "description": "Atasan renang neoprena biru kobalt ritsleting terbuka sampai bawah + celana bikini tali samping dua warna + barefoot.",
       "slots": {
         "inner_top": null,
         "inner_bottom": null,
