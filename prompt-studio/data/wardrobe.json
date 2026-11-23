@@ -1961,8 +1961,8 @@
       "id": "outer_top_sport_cobalt_cropped_rashguard",
       "name": "79. [Olahraga] Cropped Surf Rashguard Neoprena Biru Kobalt-Toska (Outfit 50)",
       "category": "outer_top",
-      "description": "Atasan renang rashguard neoprena lengan panjang warna biru kobalt gradasi toska dengan ritsleting depan terbuka sampai bawah.",
-      "prompt_fragment": "a sleek ocean cobalt-blue and turquoise cropped long-sleeve neoprene surf rashguard, with a fully unzipped front opening all the way down exposing radiant porcelain cleavage and bare midriff",
+      "description": "Atasan renang rashguard neoprena lengan panjang warna biru kobalt gradasi toska dengan ritsleting depan ditarik sampai batas paling bawah.",
+      "prompt_fragment": "a sleek ocean cobalt-blue and turquoise cropped long-sleeve neoprene surf rashguard, with a front zipper pulled all the way down to the lowest hem forming a deep plunging zipper neckline exposing radiant porcelain cleavage and sternum",
       "is_one_piece": false,
       "style_tags": [
         "sport",
@@ -7025,8 +7025,8 @@
     },
     {
       "id": "recipe_sport_surf_cropped_rashguard",
-      "name": "79. [Olahraga] Ocean Cobalt Open-Zip Cropped Rashguard & Two-Tone String Bikini (Outfit 50)",
-      "description": "Atasan renang neoprena biru kobalt ritsleting terbuka sampai bawah + celana bikini tali samping dua warna + barefoot.",
+      "name": "79. [Olahraga] Ocean Cobalt Zip-Front Cropped Rashguard & Two-Tone String Bikini (Outfit 50)",
+      "description": "Atasan renang neoprena biru kobalt ritsleting depan ditarik sampai batas paling bawah + celana bikini tali samping dua warna + barefoot.",
       "slots": {
         "inner_top": null,
         "inner_bottom": null,
