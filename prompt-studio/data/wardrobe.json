@@ -1961,8 +1961,8 @@
       "id": "outer_top_sport_cobalt_cropped_rashguard",
       "name": "79. [Olahraga] Cropped Surf Rashguard Neoprena Biru Kobalt-Toska (Outfit 50)",
       "category": "outer_top",
-      "description": "Atasan renang rashguard neoprena lengan panjang warna biru kobalt gradasi toska dengan ritsleting depan ditarik sampai batas paling bawah.",
-      "prompt_fragment": "a sleek ocean cobalt-blue and turquoise cropped long-sleeve neoprene surf rashguard, with a front zipper pulled all the way down to the lowest hem forming a deep plunging zipper neckline exposing radiant porcelain cleavage and sternum",
+      "description": "Atasan renang rashguard neoprena lengan panjang model ultra-crop di bawah dada dengan ritsleting depan ditarik ke keliman paling bawah membelah dada dan menampakkan perut terbuka.",
+      "prompt_fragment": "a sleek ocean cobalt-blue and turquoise ultra-cropped long-sleeve neoprene surf rashguard ending high right beneath the bust, featuring a front metal zipper pulled all the way down to the lowest bottom hem splitting the front wide open to expose bare porcelain cleavage and sternum, fully showcasing a bare flat midriff and exposed navel",
       "is_one_piece": false,
       "style_tags": [
         "sport",
@@ -3908,10 +3908,10 @@
     },
     {
       "id": "outer_bottom_sport_cobalt_cheeky_surf_bottoms",
-      "name": "56. [Olahraga] Celana Bikini Tali Samping Biru Kobalt-Toska (Outfit 50)",
+      "name": "56. [Olahraga] Celana String Bikini Tali Tipis Biru Kobalt-Toska (Outfit 50)",
       "category": "outer_bottom",
-      "description": "Bawahan celana bikini tali samping dua warna biru kobalt dan toska laut berpotongan rendah yang senada dengan rashguard.",
-      "prompt_fragment": "matching two-tone ocean cobalt-blue and turquoise low-rise side-tie string bikini bottoms accentuating her slender waistline and fair hips",
+      "description": "Bawahan string bikini sejati dua warna biru kobalt dan toska dengan panel segitiga minimal yang hanya dihubungkan oleh tali tipis spageti di kedua tulang pinggul.",
+      "prompt_fragment": "matching two-tone ocean cobalt-blue and turquoise skimpy string bikini bottoms made of minimal triangle coverage connected only by ultra-thin spaghetti string ties knotted at the hip bones, baring smooth porcelain hips and slender waistline",
       "is_one_piece": false,
       "style_tags": [
         "sport",
@@ -7026,7 +7026,7 @@
     {
       "id": "recipe_sport_surf_cropped_rashguard",
       "name": "79. [Olahraga] Ocean Cobalt Zip-Front Cropped Rashguard & Two-Tone String Bikini (Outfit 50)",
-      "description": "Atasan renang neoprena biru kobalt ritsleting depan ditarik sampai batas paling bawah + celana bikini tali samping dua warna + barefoot.",
+      "description": "Atasan renang neoprena ultra-crop ritsleting ditarik ke keliman paling bawah + celana string bikini segitiga tali spageti tipis + barefoot.",
       "slots": {
         "inner_top": null,
         "inner_bottom": null,
