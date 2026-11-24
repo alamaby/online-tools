@@ -2193,6 +2193,76 @@
       "prompt_text": "Relaxing in a seated lounge posture at the edge of a weathered wooden sun deck, legs dangling toward the sparkling water; leaning casually back on one palm while her other hand casually adjusts the bow tie of her side-tie bikini bottom resting on her hip; breezy, serene tropical holiday expression, warm ambient daylight.",
       "category": null,
       "extra": null
+    },
+    {
+      "id": "pose_action_thug_wrist_lock_disarm",
+      "name": "150. [Action/Laga] Tangkisan & Kuncian Pergelangan Tangan Perlucutan Senjata (Cinematic Golok Disarm & Wrist Lock)",
+      "prompt_text": "Action movie martial arts scene in a dimly lit market alleyway, dramatic over-the-shoulder angle from behind a burly street thug whose back is to the camera; Aluna executing a swift Pencak Silat wrist-lock disarm technique, her slender porcelain hands precisely twisting the thug's wrist backward, forcing an iron machete to fly loose mid-air between them; the thug is grimacing in blurred foreground silhouette, while Aluna stands in razor-sharp focus with steady breathing, cold focused hazel eyes, perfectly maintained posture, and immaculate hair bun.",
+      "category": null,
+      "extra": null
+    },
+    {
+      "id": "pose_action_thug_low_sweep_airborne",
+      "name": "151. [Action/Laga] Sapuan Bawah Rebah & Preman Terhempas Melayang (Low Sweep Kick & Airborne Thug)",
+      "prompt_text": "Dynamic low-angle wide action shot, Aluna dropping into a deep grounded low-sweep kick (besut silat), one pale hand planted firmly on the wet cobblestone pavement for balance; a heavy-set street thug is sent flying horizontally mid-air above her from the momentum of the sweep, caught in kinetic motion blur with wooden market crates splintering in the atmospheric background; Aluna remains in crisp pristine focus, her sharp gaze tracking the airborne target with fluid martial grace.",
+      "category": null,
+      "extra": null
+    },
+    {
+      "id": "pose_action_thug_flying_knee_counter",
+      "name": "152. [Action/Laga] Serangan Lutut Balasan Melayang di Gang Sempit (Flying Knee Counter in Narrow Alley)",
+      "prompt_text": "Cinematic action frame with a dynamic Dutch angle in a narrow shadowy alley; Aluna springing airborne to deliver a precision flying knee strike, her body angled with athletic poise; the heavy brawler opponent is staggering backward against a mossy brick wall with arms raised defensively, face obscured by cinematic shadows and motion blur; intense rim lighting highlighting Aluna's flying silhouette, focused determined hazel eyes, and signature sleek hair bun.",
+      "category": null,
+      "extra": null
+    },
+    {
+      "id": "pose_action_thug_fluid_shoulder_throw",
+      "name": "153. [Action/Laga] Bantingan Bahu Mengalir Memanfaatkan Momentum (Fluid Shoulder Throw & Airborne Opponent)",
+      "prompt_text": "Martial arts cinematic action sequence, Aluna executing a fluid leverage-based shoulder throw against a charging muscular thug; pivoting gracefully low to redirect his brute force, sending the heavy opponent flipping over her shoulder through the air; the opponent's flailing form is captured in dynamic motion blur overhead, while Aluna anchors her stance on solid ground in tack-sharp focus, her elegant porcelain facial features calm and untroubled.",
+      "category": null,
+      "extra": null
+    },
+    {
+      "id": "pose_action_harasser_finger_lock_stare",
+      "name": "154. [Action/Laga] Kuncian Sendi Jari Halus & Tatapan Dingin Menundukkan (Subtle Finger Lock & Disdainful Gaze)",
+      "prompt_text": "Intimate cinematic eye-level medium shot; an uncouth street harasser kneeling in agony with his back facing the camera foreground after attempting an unwanted touch; Aluna's delicate pale fingers firmly locking two of his fingers in a hyper-extension joint lock without breaking a sweat; Aluna looking down at him with a chillingly calm, disdainful gaze, flawless porcelain skin, elegant head tilt, and a slight smirk of effortless mastery.",
+      "category": null,
+      "extra": null
+    },
+    {
+      "id": "pose_action_harasser_palm_strike_burst",
+      "name": "155. [Action/Laga] Dorongan Telapak Dada Bertenaga Dalam (Open-Palm Burst & Harasser Stumble)",
+      "prompt_text": "High-impact cinematic action frame; Aluna delivering a crisp open-palm internal strike directly to the sternum of a sleazy intruder who stepped too close; a subtle shockwave ripple effect radiating from the palm contact point; the harasser stumbling backward off-balance in blurred motion toward the edge of frame, while Aluna stands completely rooted, tall and poised with radiating lunar aura, one palm outstretched and the other held gracefully in defensive guard.",
+      "category": null,
+      "extra": null
+    },
+    {
+      "id": "pose_action_harasser_heel_stomp_pivot",
+      "name": "156. [Action/Laga] Hentakan Tumit ke Kaki & Elakan Memutar Menghindar Cengkeraman (Heel Stomp & Fluid Evasive Pivot)",
+      "prompt_text": "Full body dynamic action sequence; Aluna executing an evasive spin maneuver after stomping her heel onto an unruly harasser's foot; her silhouette twirling with graceful silat evasion, fabric of her outfit flowing dynamically around her slender 162cm hourglass figure; the harasser hunched over in pain clutching his foot in the soft-focus background, while Aluna glances back over her bare shoulder with a sharp confident hazel-eyed smirk.",
+      "category": null,
+      "extra": null
+    },
+    {
+      "id": "pose_action_sparring_forearm_clash",
+      "name": "157. [Action/Laga] Adu Silang Lengan Bawah & Tatapan Sparing Intens (Crossed Forearm Clash & Dojo Sparring Focus)",
+      "prompt_text": "Intense close-up profile action shot in a traditional wooden dojo hall; Aluna and a skilled sparring companion locking crossed forearms in an explosive martial arts block (adu tangkis Cimande); sparks of kinetic tension between their forearms, a light sheen of sweat on Aluna's porcelain skin; their eyes locked in mutual respect and razor-sharp competitive focus; warm natural light streaming through wooden slatted windows, illuminating Aluna's serene athletic poise.",
+      "category": null,
+      "extra": null
+    },
+    {
+      "id": "pose_action_sparring_duck_high_kick",
+      "name": "158. [Action/Laga] Liukan Lentur Menunduk di Bawah Tendangan Melingkar (Fluid Duck Under High Roundhouse Kick)",
+      "prompt_text": "Breathtaking slow-motion style action frame from a low wide perspective; a sparring partner's high roundhouse kick slicing cleanly through the air just inches above Aluna's head; Aluna gracefully bending backward in a flexible limber ducking maneuver, one palm lightly brushing the polished wooden training floor; wind trails fluttering her loose hair strands, her hazel eyes locked calmly on the passing foot, poised for an immediate counter-attack.",
+      "category": null,
+      "extra": null
+    },
+    {
+      "id": "pose_action_sparring_back_to_back_ready",
+      "name": "159. [Action/Laga] Sikap Pasang Bertolak Punggung Siap Tempur Berdua (Back-to-Back Combat Stance with Sparring Partner)",
+      "prompt_text": "Cinematic movie poster composition; Aluna and her sparring partner standing back-to-back in an elite dual combat stance, facing opposite directions to guard against surrounding threats; Aluna dropping into a low coiled cat stance (sikap pasang kucing), palms open with focused energy, her sharp hazel eyes vigilant; dramatic dual-tone rim lighting carving their athletic silhouettes against a misty, moody martial arts training courtyard.",
+      "category": null,
+      "extra": null
     }
   ],
   "camera_angles": [
@@ -3148,7 +3218,11 @@
         "pose_ride_scrambler_gravel_stand",
         "pose_ride_adventure_tourer_cockpit",
         "pose_ride_naked_streetfighter_corner",
-        "pose_ride_vintage_basket_bicycle"
+        "pose_ride_vintage_basket_bicycle",
+        "pose_action_sparring_forearm_clash",
+        "pose_action_sparring_duck_high_kick",
+        "pose_action_sparring_back_to_back_ready",
+        "pose_action_thug_flying_knee_counter"
       ],
       "camera_angles": [
         "full_body",
@@ -3480,7 +3554,11 @@
         "pose_stagen_binding_focus",
         "pose_celestial_moon_invocation",
         "pose_unbound_hair",
-        "pose_kinetic_defensive"
+        "pose_kinetic_defensive",
+        "pose_action_thug_wrist_lock_disarm",
+        "pose_action_thug_low_sweep_airborne",
+        "pose_action_sparring_forearm_clash",
+        "pose_action_sparring_back_to_back_ready"
       ],
       "camera_angles": [
         "low_angle_hero",
@@ -4661,6 +4739,68 @@
       "low_angle_hero",
       "angle_three_quarter_profile",
       "angle_cinematic_crop_collarbone"
+    ],
+    "pose_action_thug_wrist_lock_disarm": [
+      "over_the_shoulder",
+      "dutch_angle",
+      "medium_shot",
+      "angle_cinematic_crop_collarbone"
+    ],
+    "pose_action_thug_low_sweep_airborne": [
+      "low_angle_hero",
+      "angle_extreme_worms_eye",
+      "dutch_angle",
+      "wide_establishing",
+      "full_body"
+    ],
+    "pose_action_thug_flying_knee_counter": [
+      "dutch_angle",
+      "medium_shot",
+      "low_angle_hero",
+      "angle_three_quarter_profile"
+    ],
+    "pose_action_thug_fluid_shoulder_throw": [
+      "angle_three_quarter_profile",
+      "full_body",
+      "dutch_angle",
+      "wide_establishing"
+    ],
+    "pose_action_harasser_finger_lock_stare": [
+      "over_the_shoulder",
+      "medium_shot",
+      "close_up_portrait",
+      "angle_three_quarter_profile"
+    ],
+    "pose_action_harasser_palm_strike_burst": [
+      "medium_shot",
+      "dutch_angle",
+      "low_angle_hero",
+      "angle_anamorphic_widescreen"
+    ],
+    "pose_action_harasser_heel_stomp_pivot": [
+      "full_body",
+      "angle_hip_level_street",
+      "angle_back_view_walkaway",
+      "angle_three_quarter_profile"
+    ],
+    "pose_action_sparring_forearm_clash": [
+      "medium_shot",
+      "close_up_portrait",
+      "angle_three_quarter_profile",
+      "angle_anamorphic_widescreen"
+    ],
+    "pose_action_sparring_duck_high_kick": [
+      "low_angle_hero",
+      "angle_low_ground_ootd",
+      "full_body",
+      "dutch_angle"
+    ],
+    "pose_action_sparring_back_to_back_ready": [
+      "medium_shot",
+      "full_body",
+      "angle_anamorphic_widescreen",
+      "wide_establishing",
+      "low_angle_hero"
     ]
   },
   "vehicle_poses": [
