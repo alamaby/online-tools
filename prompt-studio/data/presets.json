@@ -2158,6 +2158,41 @@
       "prompt_text": "Sitting perched on the dropped flat tailgate of an overland expedition jeep, facing outward; both legs dangling freely over the back bumper, slender hands resting flat on the sturdy tailgate metal at her sides; gazing sideways toward a breathtaking golden hour sunset over the horizon, rugged rear spare tire mount and camping gear visible, peaceful reflective aura.",
       "category": null,
       "extra": null
+    },
+    {
+      "id": "pose_beach_twohanded_halter_tie",
+      "name": "145. [Pantai/Bikini] Merapikan Tali Halter Leher dengan Kedua Tangan (Two-Handed Halter Neck Tie)",
+      "prompt_text": "A captivating sunlit posture standing tall with both hands raised gracefully behind the nape of her neck to fasten and adjust the halter neck straps of her bikini top, elbows angled outward framing her porcelain collarbones and toned natural hourglass posture; direct confident warm hazel gaze with a radiant dimpled smile.",
+      "category": null,
+      "extra": null
+    },
+    {
+      "id": "pose_beach_kneeling_sidetie_fasten",
+      "name": "146. [Pantai/Bikini] Berlutut di Pasir Mengencangkan Simpul Tali Samping (Kneeling Side-Tie Fastening)",
+      "prompt_text": "Elegantly kneeling on warm white beach sand leaning slightly to one side; slender right hand delicately pinching and adjusting the fluttering trailing ribbon of her side-tie string bikini bottom on her tapered hip, left hand resting softly on her thigh; candid downward glance showcasing her graceful profile, gentle coastal breeze.",
+      "category": null,
+      "extra": null
+    },
+    {
+      "id": "pose_beach_back_ribbon_glance",
+      "name": "147. [Pantai/Bikini] Menoleh dari Balik Punggung Memeriksa Tali Belakang (Over-the-Shoulder Back Tie Check)",
+      "prompt_text": "An alluring three-quarter back view posture standing near the shoreline, one hand reaching behind her back to gently check the tied ribbon clasp of her bikini top, head turned gracefully over her bare porcelain shoulder looking back toward the camera with a soft, warm over-the-shoulder gaze, sun-kissed skin highlight.",
+      "category": null,
+      "extra": null
+    },
+    {
+      "id": "pose_beach_wet_surf_sidetie_tighten",
+      "name": "148. [Pantai/Bikini] Melangkah Keluar Ombak Mengencangkan Tali Samping Basah (Post-Surf Wet String Tighten)",
+      "prompt_text": "Dynamically stepping out of gentle ocean wave foam onto the wet sand; glistening sunlit wet porcelain skin, right hand reaching down to tighten and secure the side-tie string of her bikini bottom after swimming, while left hand pushes wet wavy raven hair back from her temple; lively, refreshed smile, glistening water droplets.",
+      "category": null,
+      "extra": null
+    },
+    {
+      "id": "pose_beach_sundeck_seated_sidetie_check",
+      "name": "149. [Pantai/Bikini] Duduk Santai di Tepi Dek Kayu Merapikan Pita Samping (Sun Deck Seated Side-Tie Check)",
+      "prompt_text": "Relaxing in a seated lounge posture at the edge of a weathered wooden sun deck, legs dangling toward the sparkling water; leaning casually back on one palm while her other hand casually adjusts the bow tie of her side-tie bikini bottom resting on her hip; breezy, serene tropical holiday expression, warm ambient daylight.",
+      "category": null,
+      "extra": null
     }
   ],
   "camera_angles": [
@@ -3649,7 +3684,12 @@
         "pose_jeep_bullbar_grille_confident_lean",
         "pose_jeep_fender_perch_with_cat",
         "pose_jeep_passenger_tube_door_wind_reach",
-        "pose_jeep_tailgate_drop_sunset_sit"
+        "pose_jeep_tailgate_drop_sunset_sit",
+        "pose_beach_twohanded_halter_tie",
+        "pose_beach_kneeling_sidetie_fasten",
+        "pose_beach_back_ribbon_glance",
+        "pose_beach_wet_surf_sidetie_tighten",
+        "pose_beach_sundeck_seated_sidetie_check"
       ],
       "camera_angles": [
         "full_body",
