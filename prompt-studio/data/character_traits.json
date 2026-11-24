@@ -123,6 +123,72 @@
         "sdxl": "monochrome manga illustration, detailed ink linework, screentone shading, black and white manga page, sharp G-pen lines",
         "neg": "full color, chromatic, rainbow, photo, 3d render, western comic, blurry"
       }
+    },
+    {
+      "id": "style_ff7_remake_3d",
+      "name": "12. Square Enix 3D Cinematic Render (Final Fantasy VII Remake Style)",
+      "description": "Render 3D CGI sinematik Square Enix Visual Works ala FF7 Remake, subsurface scattering kulit, helaian rambut halus, dan material PBR realistis.",
+      "prompt_fragment": "Cinematic 3D CGI character render, Square Enix Visual Works aesthetic, Final Fantasy VII Remake high-end in-engine cutscene quality, Unreal Engine 5 character model, realistic subsurface scattering on fair porcelain skin, finely rendered individual dark hair strands catching soft light, physically based rendering (PBR) realistic fabric weave and leather textures, dramatic soft cinematic rim lighting, raytraced ambient occlusion, breathtaking JRPG hero fidelity, 8k resolution, Octane Render",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "3d cgi render, final fantasy vii remake style, unreal engine 5, square enix visual works, subsurface scattering, octane render, pbr materials, raytracing, realistic hair strands, 8k uhd",
+        "neg": "2d, flat anime, cartoon, sketch, plastic doll, uncanny valley, low poly, bad render, oversaturated"
+      }
+    },
+    {
+      "id": "style_cel_shaded_anime_3d",
+      "name": "13. 3D Cel-Shaded Anime NPR (Genshin / Honkai RPG Style)",
+      "description": "Model 3D anime cel-shaded modern (Non-Photorealistic Rendering) ala Genshin & Honkai, kontur tinta bersih, shading gradasi pastel, dan highlight tajam.",
+      "prompt_fragment": "Modern 3D cel-shaded anime video game render, Non-Photorealistic Rendering (NPR) toon shader aesthetic, Genshin Impact and Honkai Star Rail high-end character model style, crisp clean stylized dark contour outlines, smooth vibrant pastel gradient cell-shading, sharp anime hair geometry with silky rim sheen, luminous transparent eye shaders, high-fidelity 3D anime game hero quality, 8k resolution",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "3d cel-shaded anime style, genshin impact character render, toon shader, npr rendering, clean lineart, vibrant anime colors, 3d anime model, best quality",
+        "neg": "photorealistic, real life photo, western 3d, messy lines, realistic skin texture, pores, dark gritty"
+      }
+    },
+    {
+      "id": "style_painterly_arcane_3d",
+      "name": "14. 3D Painterly & Expressive Animation (Arcane / Fortiche Style)",
+      "description": "Animasi 3D bertekstur sapuan kuas cat minyak ala Arcane (League of Legends) oleh Fortiche, pencahayaan kontras dramatis dan tekstur ekspresif.",
+      "prompt_fragment": "Masterpiece stylized 3D animation art style, Fortiche Production and Arcane League of Legends visual aesthetic, dynamic 3D CGI character geometry overlaid with rich hand-painted oil brushstrokes, dramatic expressive chiaroscuro lighting, textured painterly skin and fabric surfaces, bold atmospheric color grading, cinematic emotional depth, award-winning feature animation fidelity, 8k resolution",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "arcane style, fortiche production aesthetic, stylized 3d animation, hand-painted texture, painterly brushstrokes, dramatic cinematic lighting, 8k",
+        "neg": "flat 2d, photorealistic, plain 3d render, plastic skin, lowres, blurry, smooth airbrushed"
+      }
+    },
+    {
+      "id": "style_action_rpg_gothic_3d",
+      "name": "15. 3D Action RPG Sci-Fi Gothic (NieR: Automata / Stellar Blade Style)",
+      "description": "Render karakter 3D action RPG sci-fi/gothic premium ala NieR: Automata & Stellar Blade, kulit porselen dewy, material beludru/kulit mengilap, dan rim light dingin.",
+      "prompt_fragment": "High-end Japanese 3D action RPG character render, NieR Automata meets Stellar Blade visual aesthetic, sleek luminous porcelain skin with dewy translucent luster, detailed high-gloss leather and rich velvet fabric shaders, intricate metallic filigree reflections, cool atmospheric rim light cutting through misty dark ambiance, elegant melancholic heroine poise, cutting-edge console game cutscene render, 8k resolution",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "3d action rpg render, nier automata style, stellar blade character model, porcelain skin, high-gloss leather, dramatic rim lighting, unreal engine 5, 8k",
+        "neg": "2d, cartoon, sketch, low poly, plastic doll, flat lighting, sunny cartoon, lowres"
+      }
+    },
+    {
+      "id": "style_stylized_feature_film_3d",
+      "name": "16. 3D Stylized Feature Film Animation (Disney / Pixar Aesthetic)",
+      "description": "Animasi 3D layar lebar penuh pesona ala Pixar & Walt Disney Animation Studios, proporsi ekspresif manis, subsurface scattering lembut, dan cahaya beludru hangat.",
+      "prompt_fragment": "Whimsical high-end 3D feature film character animation style, modern Pixar and Walt Disney Animation Studios aesthetic, beautifully stylized expressive facial proportions, soft velvety subsurface scattering on warm fair skin, delicate micro-fuzz peach skin lighting, finely groomed voluminous stylized hair strands, rich tactile clothing textures with visible yarn and fabric weave, warm charming cinematic lighting, heart-warming feature film fidelity, 8k resolution",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "pixar style 3d render, disney animation character, stylized 3d, subsurface scattering, warm cinematic lighting, soft focus, 8k render",
+        "neg": "photorealistic, gritty, anime 2d, flat drawing, horror, dark, sharp edges, lowres"
+      }
+    },
+    {
+      "id": "style_cyberpunk_photoreal_3d",
+      "name": "17. 3D Gritty Cyberpunk Photorealism (Cyberpunk 2077 / REDengine RTX Style)",
+      "description": "Model 3D fotorealistis generasi baru CD Projekt Red ala Cyberpunk 2077, tekstur kulit mikro berpori, refleksi neon raytraced, dan shader material techwear mutakhir.",
+      "prompt_fragment": "Hyper-detailed next-gen 3D video game character model, CD Projekt Red Cyberpunk 2077 aesthetic, REDengine and Unreal Engine 5 raytracing with full path tracing, ultra-realistic skin micro-pores and delicate moisture sheen, complex multi-layered subsurface scattering, vivid neon aqua and magenta reflections dancing in eyes and wet techwear, hard-surface carbon fiber and weathered fabric shaders, gritty futuristic high-fidelity render, 8k resolution",
+      "category": "art_style",
+      "extra": {
+        "sdxl": "cyberpunk 2077 character render, redengine, unreal engine 5 path tracing, photorealistic 3d, skin micro-pores, neon reflections, techwear textures, 8k uhd",
+        "neg": "2d, anime, cartoon, sketch, doll skin, airbrushed, low poly, bad render, flat lighting"
+      }
     }
   ],
   "hairstyles": [
