@@ -838,6 +838,76 @@
       "prompt_text": "A faithful canonical cosplay of Jessica Albert's Dancer's Costume from Dragon Quest VIII: a minimalist crisp white two-piece halter bikini bra top accentuating her feminine neckline, cleavage, and bare midriff; paired with a vibrant reddish-orange wrap-style dancer skirt tied off in a flowing side knot at her hip, exposing her slender bare midriff, toned waist, and long porcelain legs; barefoot on warm polished wooden floors with sacred silver ankle chain The Silent Anklet; Aluna's radiant dewy porcelain skin, delicate acacia wood hair pin, lively and alluring stage performer grace.",
       "category": "cosplay",
       "extra": null
+    },
+    {
+      "id": "cosplay_ada_wong_cheongsam",
+      "name": "104. [Cosplay] Ada Wong Crimson Cheongsam Qipao (Resident Evil)",
+      "prompt_text": "A faithful cosplay of Ada Wong's iconic crimson silk cheongsam qipao from Resident Evil: form-fitting deep red dress with delicate gold-embroidered butterfly motifs, a structured mandarin collar, sleeveless cut, daring high thigh slit on one side secured with a black leather tactical thigh holster; barefoot on polished wood; Aluna's dewy radiant porcelain skin, delicate acacia wood hair pin, mysterious, graceful, and deadly femme fatale aura.",
+      "category": "cosplay",
+      "extra": null
+    },
+    {
+      "id": "cosplay_lucy_netrunner_suit",
+      "name": "105. [Cosplay] Lucy Netrunner Bodysuit & Cropped Jacket (Cyberpunk: Edgerunners)",
+      "prompt_text": "A faithful cosplay of Lucy's netrunner outfit from Cyberpunk Edgerunners: a sleek two-tone white and slate-grey form-fitting netrunner bodysuit with subtle luminescent circuitry accents, layered with an ultra-cropped white leather flight jacket with an oversized high collar and neon lining trim; sleek cybernetic socket ports along the spine; barefoot on reflective cyber-flooring; Aluna's porcelain skin, delicate acacia wood hair pin, enigmatic lunar netrunner intensity.",
+      "category": "cosplay",
+      "extra": null
+    },
+    {
+      "id": "cosplay_frieren_centuries_mage",
+      "name": "106. [Cosplay] Frieren Centuries Mage Robe & Capelet (Frieren)",
+      "prompt_text": "A faithful cosplay of Frieren's traveling mage attire from Frieren: Beyond Journey's End: a pristine white long-sleeved tunic dress with subtle gold trim along the hem, layered with a distinct cropped shoulder capelet in white wool with bold black and gold trim, cinched at the waist with an antique brown leather belt and brass buckle; long red drop earrings; barefoot on soft meadow moss; Aluna's calm, serene, centuries-old ethereal elven mage tranquility.",
+      "category": "cosplay",
+      "extra": null
+    },
+    {
+      "id": "cosplay_mai_shiranui_kunoichi",
+      "name": "107. [Cosplay] Mai Shiranui Fiery Kunoichi Shinobi Shozoku (Fatal Fury / KOF)",
+      "prompt_text": "A faithful canonical cosplay of Mai Shiranui's fiery kunoichi shinobi shozoku from Fatal Fury and King of Fighters: a vibrant scarlet red sleeveless ninja tunic with an ultra-deep plunging V-neckline framed in white trim, a broad white fabric sash tied around the hips with oversized dangling white decorative pom-pom tassels, loincloth-style apron front and open back drape exposing bare flanks and porcelain legs; holding a traditional painted Japanese folding fan; barefoot on polished dojo timber; Aluna's luminous dewy complexion, delicate acacia wood hair pin, dynamic kunoichi agility.",
+      "category": "cosplay",
+      "extra": null
+    },
+    {
+      "id": "cosplay_sailor_moon_fuku",
+      "name": "108. [Cosplay] Sailor Moon Sailor Senshi Sailor Fuku (Pretty Guardian Sailor Moon)",
+      "prompt_text": "A faithful cosplay of Usagi Tsukino's iconic Sailor Senshi guardian uniform from Pretty Guardian Sailor Moon: a crisp white sleeveless leotard bodice with an oversized royal blue sailor collar trimmed with white stripes, a vibrant magenta-red satin bow at the bust centered with a polished gold star crescent compact brooch, a matching blue pleated mini skirt, and a large magenta bow on the lower back; a delicate gold crescent moon tiara resting on her forehead; barefoot on starry lunar crystal; Aluna's radiant dewy porcelain skin, delicate acacia wood hair pin, legendary champion of justice charm.",
+      "category": "cosplay",
+      "extra": null
+    },
+    {
+      "id": "cosplay_mikasa_survey_corps",
+      "name": "109. [Cosplay] Mikasa Ackerman Survey Corps Uniform & Red Scarf (Attack on Titan)",
+      "prompt_text": "A faithful cosplay of Mikasa Ackerman's Survey Corps scout regiment uniform from Attack on Titan: a fitted cropped caramel-brown military jacket featuring the Wings of Freedom embroidered crest on shoulders and chest pocket, worn over an open-collar ivory linen shirt, dark brown leather body harness wrapping across the torso, snug white trousers with leather thigh holsters, and her signature frayed deep crimson-red knitted scarf warmly draped around her neck; barefoot on ancient stone masonry; Aluna's stoic porcelain beauty, delicate acacia wood hair pin, fierce scout resolve.",
+      "category": "cosplay",
+      "extra": null
+    },
+    {
+      "id": "cosplay_aerith_slum_florist",
+      "name": "110. [Cosplay] Aerith Gainsborough Slum Florist Pink Bolero & Dress (Final Fantasy VII)",
+      "prompt_text": "A faithful cosplay of Aerith Gainsborough's beloved florist outfit from Final Fantasy VII: a sleeveless pastel blush-pink button-down midi dress with brass buttons running down the center, layered beneath a cropped crimson-red leather bolero jacket with puff sleeves and metallic buckle accents at the cuffs, polished leather cord wristbands and silver bangles, her signature large pink hair ribbon tying back her hair; holding a wicker basket of yellow lilies; barefoot on green church moss; Aluna's gentle radiant smile, delicate acacia wood hair pin, soothing Ancient Cetra warmth.",
+      "category": "cosplay",
+      "extra": null
+    },
+    {
+      "id": "cosplay_asuka_eva_plugsuit",
+      "name": "111. [Cosplay] Asuka Langley EVA Unit-02 Plugsuit (Neon Genesis Evangelion)",
+      "prompt_text": "A faithful cosplay of Asuka Langley Soryu's iconic EVA Unit-02 pilot plugsuit from Neon Genesis Evangelion: an ultra-form-fitting glossy scarlet red synthetic latex-look plugsuit sculpted precisely to her silhouette, featuring segmented mechanical panelling in matte black, fiery orange shoulder plates with numeral '02' markings, luminescent chest calibration dials, and red A10 neural interface clips in her hair; barefoot on high-tech launch hangar steel; Aluna's proud porcelain demeanor, delicate acacia wood hair pin, fiery ace pilot spirit.",
+      "category": "cosplay",
+      "extra": null
+    },
+    {
+      "id": "cosplay_nami_cat_burglar",
+      "name": "112. [Cosplay] Nami Cat Burglar Bikini Top & Low-Rise Jeans (One Piece)",
+      "prompt_text": "A faithful cosplay of Nami's post-timeskip pirate navigator outfit from One Piece: a bold green and white diagonally striped halterneck bikini top revealing a toned midriff and slender waist, paired with low-rise faded blue denim jeans unbuttoned slightly at the waistband resting low on her hips, a glass Log Pose compass bracelet on her wrist and black tribal pinwheel-tangerine tattoo on her left shoulder; barefoot on sunlit galleon teak deck; Aluna's sun-kissed dewy skin, delicate acacia wood hair pin, lively cat-burglar charm.",
+      "category": "cosplay",
+      "extra": null
+    },
+    {
+      "id": "cosplay_morrigan_succubus_corset",
+      "name": "113. [Cosplay] Morrigan Aensland Succubus Leotard & Bat Wings (Darkstalkers)",
+      "prompt_text": "A faithful cosplay of Morrigan Aensland's noble succubus costume from Darkstalkers: a form-fitting black velvet sweetheart-bustier leotard with feathered purple scalloped trim along the daring plunging neckline, pair of small dark bat wings sprouting playfully from her temple hair sides and larger bat wings arching from her shoulder blades, opaque sheer lavender tights decorated with scattered black bat silhouettes; barefoot on gothic cathedral gargoyles; Aluna's playful dewy porcelain skin, delicate acacia wood hair pin, bewitching succubus royalty.",
+      "category": "cosplay",
+      "extra": null
     }
   ],
   "sceneries": [
@@ -2924,7 +2994,17 @@
         "cosplay_jessica_dancer_costume",
         "cosplay_jessica_hexlet_witch",
         "cosplay_jessica_dangerous_bustier",
-        "cosplay_jessica_canonical_dancer_costume"
+        "cosplay_jessica_canonical_dancer_costume",
+        "cosplay_ada_wong_cheongsam",
+        "cosplay_lucy_netrunner_suit",
+        "cosplay_frieren_centuries_mage",
+        "cosplay_mai_shiranui_kunoichi",
+        "cosplay_sailor_moon_fuku",
+        "cosplay_mikasa_survey_corps",
+        "cosplay_aerith_slum_florist",
+        "cosplay_asuka_eva_plugsuit",
+        "cosplay_nami_cat_burglar",
+        "cosplay_morrigan_succubus_corset"
       ],
       "sceneries": [
         "dago_glass_cafe",

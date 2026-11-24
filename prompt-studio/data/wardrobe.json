@@ -2423,6 +2423,214 @@
       "default_color_id": null,
       "color_template": null,
       "id_name_template": null
+    },
+    {
+      "id": "outer_top_cosplay_ada_wong_cheongsam",
+      "name": "104. [One-Piece] Qipao Cheongsam Sutra Merah Ada Wong (Outfit 104)",
+      "category": "outer_top",
+      "description": "Qipao cheongsam sutra merah tua pas badan dengan bordir kupu-kupu emas elegan, belahan paha tinggi, dan sarung pistol paha taktis.",
+      "prompt_fragment": "a form-fitting deep red silk cheongsam qipao with delicate gold-embroidered butterfly motifs, a structured mandarin collar, sleeveless cut, and a daring high thigh slit on one side secured with a black leather tactical thigh holster",
+      "is_one_piece": true,
+      "style_tags": [
+        "cosplay",
+        "residentevil",
+        "qipao",
+        "cheongsam",
+        "crimson",
+        "silk",
+        "one_piece"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_cosplay_lucy_netrunner_suit",
+      "name": "105. [One-Piece] Bodysuit Netrunner & Jaket Cropped Lucy (Outfit 105)",
+      "category": "outer_top",
+      "description": "Bodysuit netrunner monokrom putih-abu pas badan dengan aksen cyberware luminesens dan jaket cropped kerah tinggi neon futuristik.",
+      "prompt_fragment": "a sleek two-tone white and slate-grey form-fitting netrunner bodysuit with subtle luminescent circuitry accents, layered with an ultra-cropped white leather flight jacket with an oversized high collar and neon lining trim",
+      "is_one_piece": true,
+      "style_tags": [
+        "cosplay",
+        "cyberpunk",
+        "edgerunners",
+        "netrunner",
+        "bodysuit",
+        "sci_fi",
+        "one_piece"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_cosplay_frieren_mage_robe",
+      "name": "106. [One-Piece] Gaun Tunik Putih & Jubah Capelet Bahu Frieren (Outfit 106)",
+      "category": "outer_top",
+      "description": "Gaun tunik putih bersih bergaris emas elegan dengan jubah capelet bahu wol berkerah tinggi garis hitam-emas dan sabuk kulit cokelat.",
+      "prompt_fragment": "a pristine white long-sleeved tunic dress with subtle gold trim along the hem, layered with a distinct cropped shoulder capelet in white wool with bold black and gold trim, cinched at the waist with an antique brown leather belt and brass buckle",
+      "is_one_piece": true,
+      "style_tags": [
+        "cosplay",
+        "frieren",
+        "mage",
+        "fantasy",
+        "robe",
+        "capelet",
+        "white",
+        "one_piece"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_cosplay_mai_shiranui_ninja_tunic",
+      "name": "107. [One-Piece] Tunik Kunoichi Merah Menyala & Selempang Pom-Pom Mai Shiranui (Outfit 107)",
+      "category": "outer_top",
+      "description": "Busana kunoichi merah menyala tanpa lengan berbelahan dada sangat rendah dengan selempang putih tebal berhias pom-pom besar di pinggul.",
+      "prompt_fragment": "a vibrant scarlet red sleeveless ninja tunic with an ultra-deep plunging V-neckline framed in white trim, a broad white fabric sash tied around the hips with oversized dangling white decorative pom-pom tassels, and open loincloth-style drape",
+      "is_one_piece": true,
+      "style_tags": [
+        "cosplay",
+        "kof",
+        "fatalfury",
+        "kunoichi",
+        "ninja",
+        "scarlet",
+        "one_piece"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_cosplay_sailor_moon_fuku",
+      "name": "108. [One-Piece] Seragam Sailor Senshi Fuku Biru-Putih Usagi (Outfit 108)",
+      "category": "outer_top",
+      "description": "Seragam pelaut ikonik leotard putih dengan kerah pelaut biru kobalt, pita dada magenta besar dengan bros bintang emas, dan rok lipit mini.",
+      "prompt_fragment": "a crisp white sleeveless leotard bodice with an oversized royal blue sailor collar trimmed with white stripes, a vibrant magenta-red satin bow at the bust centered with a polished gold star crescent compact brooch, and a matching royal blue pleated mini skirt",
+      "is_one_piece": true,
+      "style_tags": [
+        "cosplay",
+        "sailormoon",
+        "magicalgirl",
+        "sailorfuku",
+        "anime",
+        "one_piece"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_cosplay_mikasa_scout_jacket",
+      "name": "109. [Cosplay] Jaket Cropped Survey Corps & Kemeja Linen Mikasa (Outfit 109)",
+      "category": "outer_top",
+      "description": "Jaket cropped cokelat karamel Survey Corps dengan bordir Sayap Kebebasan di atas kemeja linen putih gading dan syal merah rajut.",
+      "prompt_fragment": "a fitted cropped caramel-brown military jacket featuring the Wings of Freedom embroidered crest on shoulders and chest pocket, worn over an open-collar ivory linen shirt, dark brown leather body harness wrapping across the torso, and a signature deep crimson-red knitted scarf draped around her neck",
+      "is_one_piece": false,
+      "style_tags": [
+        "cosplay",
+        "attackontitan",
+        "scout",
+        "surveycorps",
+        "jacket",
+        "military"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_cosplay_aerith_florist_dress",
+      "name": "110. [One-Piece] Gaun Midi Merah Muda & Bolero Kulit Merah Aerith (Outfit 110)",
+      "category": "outer_top",
+      "description": "Gaun terusan katun merah muda pastel berkerah kancing kuningan dibalut bolero cropped kulit merah marun berlengan pendek mengembang.",
+      "prompt_fragment": "a sleeveless pastel blush-pink button-down midi dress with brass buttons running down the center, layered beneath a cropped crimson-red leather bolero jacket with puff sleeves and metallic buckle accents at the cuffs",
+      "is_one_piece": true,
+      "style_tags": [
+        "cosplay",
+        "finalfantasy",
+        "aerith",
+        "florist",
+        "pink",
+        "bolero",
+        "one_piece"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_cosplay_asuka_plugsuit",
+      "name": "111. [One-Piece] Plugsuit EVA Unit-02 Merah Mengilap Asuka (Outfit 111)",
+      "category": "outer_top",
+      "description": "Plugsuit pilot Unit-02 merah menyala mengilap pas badan dengan aksen panel mekanis hitam-oranye dan dial kalibrasi dada luminesens.",
+      "prompt_fragment": "an ultra-form-fitting glossy scarlet red synthetic latex-look plugsuit sculpted precisely to her silhouette, featuring segmented mechanical panelling in matte black, fiery orange shoulder plates with numeral '02' markings, and luminescent chest calibration dials",
+      "is_one_piece": true,
+      "style_tags": [
+        "cosplay",
+        "evangelion",
+        "plugsuit",
+        "asuka",
+        "pilot",
+        "mecha",
+        "one_piece"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_cosplay_nami_striped_bikini_top",
+      "name": "112. [Cosplay] Bra Halter Garis Hijau-Putih Nami Cat Burglar (Outfit 112)",
+      "category": "outer_top",
+      "description": "Atasan bikini halter bergaris diagonal hijau zamrud dan putih bersih khas navigator bajak laut Nami post-timeskip.",
+      "prompt_fragment": "a bold green and white diagonally striped halterneck bikini top revealing a toned midriff and slender waist",
+      "is_one_piece": false,
+      "style_tags": [
+        "cosplay",
+        "onepiece",
+        "nami",
+        "bikini",
+        "striped",
+        "summer"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_cosplay_morrigan_succubus_leotard",
+      "name": "113. [One-Piece] Leotard Korset Beludru Hitam Sweetheart Morrigan (Outfit 113)",
+      "category": "outer_top",
+      "description": "Leotard korset beludru hitam berbelahan dada rendah berbentuk hati dengan aksen bulu ungu scalloped dan stoking tipis motif siluet kelelawar.",
+      "prompt_fragment": "a form-fitting black velvet sweetheart-bustier leotard with feathered purple scalloped trim along the daring plunging neckline, paired with opaque sheer lavender tights decorated with scattered black bat silhouettes",
+      "is_one_piece": true,
+      "style_tags": [
+        "cosplay",
+        "darkstalkers",
+        "morrigan",
+        "succubus",
+        "leotard",
+        "gothic",
+        "one_piece"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "inner_bottoms": [
@@ -4234,6 +4442,46 @@
         "summer",
         "swim",
         "bikini"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_cosplay_nami_lowrise_jeans",
+      "name": "74. [Cosplay] Celana Denim Low-Rise Pudar Nami Pirate Navigator (Outfit 112)",
+      "category": "outer_bottom",
+      "description": "Celana jeans biru pudar berpinggang sangat rendah yang sedikit terbuka di kancing pinggangnya santai di atas pinggul ramping.",
+      "prompt_fragment": "low-rise faded blue denim jeans unbuttoned slightly at the waistband resting effortlessly low on her slender hips",
+      "is_one_piece": false,
+      "style_tags": [
+        "cosplay",
+        "onepiece",
+        "nami",
+        "jeans",
+        "denim",
+        "low_rise"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_cosplay_mikasa_white_trousers_harness",
+      "name": "75. [Cosplay] Celana Pas Badan Putih & Leather Thigh Harness Mikasa (Outfit 109)",
+      "category": "outer_bottom",
+      "description": "Celana panjang militer putih pas badan dengan tali harness kulit cokelat tua melingkar di paha dan sarung senjata vertikal.",
+      "prompt_fragment": "snug white military trousers crisscrossed with dark brown leather thigh harness straps and scabbard holsters",
+      "is_one_piece": false,
+      "style_tags": [
+        "cosplay",
+        "attackontitan",
+        "mikasa",
+        "trousers",
+        "harness",
+        "military"
       ],
       "color_palette": null,
       "default_color_id": null,
@@ -7382,6 +7630,146 @@
         "inner_bottom": null,
         "outer_top": "outer_top_cosplay_jessica_canonical_dancer_bra",
         "outer_bottom": "outer_bottom_cosplay_jessica_canonical_dancer_skirt",
+        "layer_accessory": null,
+        "footwear": "footwear_barefoot_anklet",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_cosplay_ada_wong",
+      "name": "105. [Cosplay] Ada Wong Crimson Cheongsam Qipao (Outfit 104)",
+      "description": "Qipao sutra merah bordir emas kupu-kupu + belahan paha tinggi + tactical thigh holster + barefoot.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": null,
+        "outer_top": "outer_top_cosplay_ada_wong_cheongsam",
+        "outer_bottom": null,
+        "layer_accessory": null,
+        "footwear": "footwear_barefoot_anklet",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_cosplay_lucy_netrunner",
+      "name": "106. [Cosplay] Lucy Netrunner Bodysuit & Cropped Jacket (Outfit 105)",
+      "description": "Bodysuit netrunner monokrom putih-abu + jaket cropped kerah tinggi neon + aksen cyberware + barefoot.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": null,
+        "outer_top": "outer_top_cosplay_lucy_netrunner_suit",
+        "outer_bottom": null,
+        "layer_accessory": null,
+        "footwear": "footwear_barefoot_anklet",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_cosplay_frieren_mage",
+      "name": "107. [Cosplay] Frieren Centuries Mage Robe & Capelet (Outfit 106)",
+      "description": "Gaun tunik putih bersih + jubah capelet bahu wol garis hitam-emas + sabuk kulit kuningan + anting merah panjang.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": null,
+        "outer_top": "outer_top_cosplay_frieren_mage_robe",
+        "outer_bottom": null,
+        "layer_accessory": null,
+        "footwear": "footwear_barefoot_anklet",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_cosplay_mai_shiranui",
+      "name": "108. [Cosplay] Mai Shiranui Fiery Kunoichi Shinobi Shozoku (Outfit 107)",
+      "description": "Tunik ninja merah menyala belahan dada plunging + selempang putih pom-pom besar di pinggul + kipas Jepang lipat.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": null,
+        "outer_top": "outer_top_cosplay_mai_shiranui_ninja_tunic",
+        "outer_bottom": null,
+        "layer_accessory": null,
+        "footwear": "footwear_barefoot_anklet",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_cosplay_sailor_moon",
+      "name": "109. [Cosplay] Sailor Moon Sailor Senshi Sailor Fuku (Outfit 108)",
+      "description": "Seragam leotard pelaut putih-biru kobalt + pita dada magenta bros bintang + tiara bulan sabit emas di dahi.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": null,
+        "outer_top": "outer_top_cosplay_sailor_moon_fuku",
+        "outer_bottom": null,
+        "layer_accessory": null,
+        "footwear": "footwear_barefoot_anklet",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_cosplay_mikasa_scout",
+      "name": "110. [Cosplay] Mikasa Ackerman Survey Corps Uniform & Red Scarf (Outfit 109)",
+      "description": "Jaket cropped cokelat lencana Sayap Kebebasan + kemeja linen putih + celana putih tali harness + syal rajut merah tua.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": null,
+        "outer_top": "outer_top_cosplay_mikasa_scout_jacket",
+        "outer_bottom": "outer_bottom_cosplay_mikasa_white_trousers_harness",
+        "layer_accessory": null,
+        "footwear": "footwear_barefoot_anklet",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_cosplay_aerith_florist",
+      "name": "111. [Cosplay] Aerith Gainsborough Slum Florist Pink Bolero & Dress (Outfit 110)",
+      "description": "Gaun midi merah muda kancing kuningan + bolero kulit merah marun lengan puffed + pita rambut merah muda.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": null,
+        "outer_top": "outer_top_cosplay_aerith_florist_dress",
+        "outer_bottom": null,
+        "layer_accessory": null,
+        "footwear": "footwear_barefoot_anklet",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_cosplay_asuka_plugsuit",
+      "name": "112. [Cosplay] Asuka Langley EVA Unit-02 Plugsuit (Outfit 111)",
+      "description": "Plugsuit pilot Unit-02 merah mengilap pas badan + panel hitam-oranye + dial kalibrasi + A10 nerve clips.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": null,
+        "outer_top": "outer_top_cosplay_asuka_plugsuit",
+        "outer_bottom": null,
+        "layer_accessory": null,
+        "footwear": "footwear_barefoot_anklet",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_cosplay_nami_navigator",
+      "name": "113. [Cosplay] Nami Cat Burglar Bikini Top & Low-Rise Jeans (Outfit 112)",
+      "description": "Bikini halter garis hijau-putih + celana jeans pudar low-rise + gelang log pose kaca + tato kincir angin jeruk.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": null,
+        "outer_top": "outer_top_cosplay_nami_striped_bikini_top",
+        "outer_bottom": "outer_bottom_cosplay_nami_lowrise_jeans",
+        "layer_accessory": null,
+        "footwear": "footwear_barefoot_anklet",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_cosplay_morrigan_succubus",
+      "name": "114. [Cosplay] Morrigan Aensland Succubus Leotard & Bat Wings (Outfit 113)",
+      "description": "Leotard korset beludru hitam leher hati trim ungu + sayap kelelawar pelipis dan punggung + stoking motif kelelawar.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": null,
+        "outer_top": "outer_top_cosplay_morrigan_succubus_leotard",
+        "outer_bottom": null,
         "layer_accessory": null,
         "footwear": "footwear_barefoot_anklet",
         "inner_visibility": "hidden"
