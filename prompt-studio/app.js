@@ -25,6 +25,7 @@
   // App State
   const state = {
     target_engine_id: 'midjourney',
+    art_style_id: 'style_semi_realistic_ln',
     aspect_ratio_id: '16:9',
     image_ref_id: 'master_both_ab',
     custom_ref_path: '',
@@ -150,6 +151,35 @@
   }
 
   // --- Populate Dropdowns ---
+  function updateStudioArtStyleDesc(styleId) {
+    const el = $('desc-studio-artstyle');
+    if (!el) return;
+    const style = (traits.art_styles || []).find(s => s.id === styleId);
+    if (style) {
+      el.textContent = `🎨 ${style.description}`;
+    } else {
+      el.textContent = '';
+    }
+  }
+
+  function updateBulkArtStyleDesc(styleId) {
+    const el = $('desc-bulk-artstyle');
+    if (!el) return;
+    const style = (traits.art_styles || []).find(s => s.id === styleId);
+    if (style) {
+      el.textContent = `💡 ${style.description}`;
+    } else {
+      el.textContent = '';
+    }
+  }
+
+  function updateBulkEngineLabel() {
+    const el = $('lbl-bulk-engine-name');
+    if (!el) return;
+    const eng = (presets.target_engines || []).find(e => e.id === state.target_engine_id);
+    el.textContent = eng ? eng.name : state.target_engine_id.toUpperCase();
+  }
+
   function populateSelect(selectEl, items, selectedValue, formatFn) {
     if (!selectEl) return;
     selectEl.innerHTML = '';
@@ -168,6 +198,12 @@
 
     // 2. Aspect Ratio
     populateSelect($('select-ar'), presets.aspect_ratios, state.aspect_ratio_id);
+
+    // 2b. Art Style in Studio Utama
+    if ($('select-studio-artstyle')) {
+      populateSelect($('select-studio-artstyle'), traits.art_styles, state.art_style_id);
+      updateStudioArtStyleDesc(state.art_style_id);
+    }
 
     // 3. Image Reference
     populateSelect($('select-image-ref'), presets.image_references, state.image_ref_id);
@@ -260,6 +296,13 @@
       opt.textContent = cat.name;
       fitCatSelect.appendChild(opt);
     });
+
+    // Bulk Art Style & Engine label
+    if ($('select-bulk-artstyle')) {
+      populateSelect($('select-bulk-artstyle'), traits.art_styles, state.art_style_id);
+      updateBulkArtStyleDesc(state.art_style_id);
+    }
+    updateBulkEngineLabel();
   }
 
   // --- Dynamic Outfits by Category ---
@@ -346,6 +389,7 @@
     const m = gen.metadata;
     const chips = [
       `Engine: <strong>${m.engine}</strong>`,
+      `Art Style: <strong>${m.art_style || 'Kanonik'}</strong>`,
       `Rasio: <strong>${m.aspect_ratio}</strong>`,
       `Busana: <strong>${m.outfit}</strong>`,
       `Latar: <strong>${m.scenery}</strong>`,
@@ -465,6 +509,10 @@
     }
 
     $('select-engine').value = state.target_engine_id;
+    if ($('select-studio-artstyle')) {
+      $('select-studio-artstyle').value = state.art_style_id || 'style_semi_realistic_ln';
+      updateStudioArtStyleDesc(state.art_style_id || 'style_semi_realistic_ln');
+    }
     $('select-ar').value = state.aspect_ratio_id;
     $('select-image-ref').value = state.image_ref_id;
     $('input-custom-ref').value = state.custom_ref_path;
@@ -597,8 +645,12 @@
     if (mode === 'vibe') {
       const vibeId = $('select-bulk-vibe').value;
       const count = parseInt($('select-bulk-count').value, 10) || 5;
+      const bulkArtStyleId = ($('select-bulk-artstyle') && $('select-bulk-artstyle').value) ? $('select-bulk-artstyle').value : (state.art_style_id || 'style_semi_realistic_ln');
 
       const locks = {
+        lock_art_style: $('check-lock-art-style') ? $('check-lock-art-style').checked : true,
+        locked_art_style_id: bulkArtStyleId,
+
         lock_outfit: $('check-lock-outfit').checked,
         locked_outfit_id: state.outfit_id,
         locked_custom_prompt: state.custom_attire_prompt,
@@ -617,7 +669,8 @@
         locked_lighting_id: state.lighting_id,
       };
 
-      const results = generator.generateBulk(vibeId, count, state, locks);
+      const baseCfg = Object.assign({}, state, { art_style_id: bulkArtStyleId });
+      const results = generator.generateBulk(vibeId, count, baseCfg, locks);
       lastBulkResults = results;
       titleEl.textContent = `Hasil Bulk Vibe: ${count} Prompt Unik`;
 
@@ -638,12 +691,14 @@
     } else {
       // Virtual Fitting Room
       const cat = $('select-fitting-category').value;
+      const bulkArtStyleId = ($('select-bulk-artstyle') && $('select-bulk-artstyle').value) ? $('select-bulk-artstyle').value : (state.art_style_id || 'style_semi_realistic_ln');
+      const baseCfg = Object.assign({}, state, { art_style_id: bulkArtStyleId });
       const results = generator.generateOutfitMatrix(
         state.pose_id,
         state.scenery_id,
         state.camera_angle_id,
         state.lighting_id,
-        state,
+        baseCfg,
         cat
       );
       lastBulkResults = results;
@@ -691,6 +746,7 @@
 
     let md = `# 🧙‍♀️ Aluna Prompt — Snapshot\n\n`;
     md += `**Waktu Generasi:** ${humanDate} | **Engine:** ${gen.metadata.engine.toUpperCase()} | **Aspek Rasio:** ${gen.metadata.aspect_ratio}\n`;
+    md += `**Gaya Seni (Art Style):** ${gen.metadata.art_style || 'Semi-Realistic Anime Light Novel'}\n`;
     md += `**Image Reference:** ${gen.metadata.image_reference} (--cw ${gen.metadata.cw_weight})\n`;
     md += `**Busana:** ${gen.metadata.outfit}\n`;
     md += `**Latar:** ${gen.metadata.scenery}\n`;
@@ -797,11 +853,12 @@
     if (mode === 'vibe') {
       const vibeId = $('select-bulk-vibe').value;
       const vibeName = $('select-bulk-vibe').options[$('select-bulk-vibe').selectedIndex]?.text || vibeId;
+      const bulkArtStyleName = (lastBulkResults[0] && lastBulkResults[0].metadata && lastBulkResults[0].metadata.art_style) ? lastBulkResults[0].metadata.art_style : 'Semi-Realistic Anime Light Novel';
       filename = `bulk_${vibeId}_${timestamp}.md`;
 
       md += `# 📦 Bulk Thematic Vibe: ${vibeName}\n\n`;
       md += `**Waktu Generasi:** ${humanDate} | **Total Prompt:** ${lastBulkResults.length}\n`;
-      md += `**Engine:** ${state.target_engine_id.toUpperCase()} | **Aspek Rasio:** ${state.aspect_ratio_id}\n\n`;
+      md += `**Engine:** ${state.target_engine_id.toUpperCase()} | **Aspek Rasio:** ${state.aspect_ratio_id} | **Art Style:** ${bulkArtStyleName}\n\n`;
       md += `> Batch prompt Aluna Prompt Studio dihasilkan dengan jaminan anti-duplikasi kombinasi (*sampling without replacement*).\n\n`;
 
       md += `## 📋 Indeks Prompt dalam Batch:\n\n`;
@@ -812,6 +869,7 @@
 
       lastBulkResults.forEach((item, i) => {
         md += `### Prompt #${i + 1}: ${item.metadata.outfit}\n\n`;
+        md += `- **Gaya Seni (Art Style)**: ${item.metadata.art_style || 'Kanonik'}\n`;
         md += `- **Latar**: ${item.metadata.scenery}\n`;
         md += `- **Pose**: ${item.metadata.pose}\n`;
         md += `- **Kamera**: ${item.metadata.camera_angle}\n`;
@@ -824,9 +882,11 @@
       });
     } else {
       // Virtual Fitting Room
+      const bulkArtStyleName = (lastBulkResults[0] && lastBulkResults[0].metadata && lastBulkResults[0].metadata.art_style) ? lastBulkResults[0].metadata.art_style : 'Semi-Realistic Anime Light Novel';
       filename = `fitting_room_${state.pose_id}_${state.scenery_id}_${timestamp}.md`;
       md += `# 👗 Virtual Fitting Room: Komparasi Busana Aluna (${lastBulkResults.length} Outfits)\n\n`;
       md += `**Waktu Generasi:** ${humanDate} | **Engine:** ${state.target_engine_id.toUpperCase()} | **Aspek Rasio:** ${state.aspect_ratio_id}\n`;
+      md += `**🔒 Gaya Seni Tetap:** ${bulkArtStyleName}\n`;
       md += `**🔒 Pose Tetap:** ${$('select-pose').options[$('select-pose').selectedIndex]?.text || state.pose_id}\n`;
       md += `**🔒 Latar Tetap:** ${$('select-scenery').options[$('select-scenery').selectedIndex]?.text || state.scenery_id}\n`;
       md += `**🔒 Kamera & Cahaya:** ${$('select-camera-angle').options[$('select-camera-angle').selectedIndex]?.text || state.camera_angle_id} | ${$('select-lighting').options[$('select-lighting').selectedIndex]?.text || state.lighting_id}\n`;
@@ -886,12 +946,29 @@
     // Dropdown changes in Studio Utama
     $('select-engine').addEventListener('change', (e) => {
       state.target_engine_id = e.target.value;
+      updateBulkEngineLabel();
       updatePromptOutput();
     });
     $('select-ar').addEventListener('change', (e) => {
       state.aspect_ratio_id = e.target.value;
       updatePromptOutput();
     });
+    if ($('select-studio-artstyle')) {
+      $('select-studio-artstyle').addEventListener('change', (e) => {
+        state.art_style_id = e.target.value;
+        updateStudioArtStyleDesc(e.target.value);
+        if ($('select-bulk-artstyle')) {
+          $('select-bulk-artstyle').value = e.target.value;
+          updateBulkArtStyleDesc(e.target.value);
+        }
+        updatePromptOutput();
+      });
+    }
+    if ($('select-bulk-artstyle')) {
+      $('select-bulk-artstyle').addEventListener('change', (e) => {
+        updateBulkArtStyleDesc(e.target.value);
+      });
+    }
     $('select-image-ref').addEventListener('change', (e) => {
       state.image_ref_id = e.target.value;
       updatePromptOutput();

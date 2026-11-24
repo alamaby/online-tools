@@ -68,6 +68,7 @@
       this.engineMap = new Map((this.presets.target_engines || []).map(item => [item.id, item]));
       this.loverMap = new Map((this.presets.lover_archetypes || []).map(item => [item.id, item]));
       this.refMap = new Map((this.presets.image_references || []).map(item => [item.id, item]));
+      this.artStyleMap = new Map(((this.traits && this.traits.art_styles) || []).map(item => [item.id, item]));
 
       // Wardrobe maps
       this.innerTopMap = new Map((this.wardrobe.inner_tops || []).map(p => [p.id, p]));
@@ -190,7 +191,18 @@
       }
 
       // 1. Base Art Style & Camera Framing
-      const header = `${this.presets.art_style_master}. ${angle.prompt_text || ''}`;
+      const artStyleId = config.art_style_id || 'style_semi_realistic_ln';
+      const selectedStyle = this.artStyleMap.get(artStyleId) || ((this.traits && this.traits.art_styles && this.traits.art_styles.length > 0) ? this.traits.art_styles[0] : {
+        id: 'style_semi_realistic_ln',
+        name: 'Semi-Realistic Anime Light Novel (Kanonik)',
+        prompt_fragment: this.presets.art_style_master,
+        extra: {
+          sdxl: `official art, ${this.presets.art_style_concise}`,
+          neg: ''
+        }
+      });
+      const stylePrompt = (selectedStyle.prompt_fragment || this.presets.art_style_master || '').trim().replace(/\.+$/, '');
+      const header = `${stylePrompt}. ${angle.prompt_text || ''}`;
 
       // 2. Scene Environment & Lighting
       const sceneSection = `Scene & Setting: ${sceneTextMain}`;
@@ -247,7 +259,8 @@
         fullPrompt = `${basePrompt} \n\n${params.join(' ')}`;
         negativePrompt = null;
       } else if (engineId === 'sdxl_flux') {
-        const sdxlHeader = `masterpiece, best quality, ultra-detailed 8k, official art, ${this.presets.art_style_concise}. ${angle.prompt_text || ''}`;
+        const sdxlStyleStr = (selectedStyle.extra && selectedStyle.extra.sdxl) ? selectedStyle.extra.sdxl : `official art, ${this.presets.art_style_concise}`;
+        const sdxlHeader = `masterpiece, best quality, ultra-detailed 8k, ${sdxlStyleStr}. ${angle.prompt_text || ''}`;
         const sdxlScene = `Setting: ${sceneTextSdxl}`;
         const alunaPhysicalConcise = resolveAlunaPhysicalPrompt(selectedRef, config.custom_hair_trait || '', true, this.presets);
         const sdxlCharacter = `Character: ${alunaPhysicalConcise} ${posePrompt}`;
@@ -269,10 +282,31 @@
         } else {
           negativePrompt = this.presets.negative_prompt_default;
         }
+
+        const negStyleExtra = (selectedStyle.extra && selectedStyle.extra.neg) ? selectedStyle.extra.neg.trim() : '';
+        if (negStyleExtra) {
+          negativePrompt = `${negativePrompt}, ${negStyleExtra}`;
+        }
       } else {
         // Natural Language API (DALL-E 3 / Imagen / Gemini / ChatGPT)
         const arRatio = config.aspect_ratio_id || '16:9';
-        fullPrompt = `An ultra-detailed illustration in semi-realistic anime light novel style with an aspect ratio of ${arRatio}. \n\n${basePrompt}`;
+        const styleId = selectedStyle.id || '';
+        let styleIntro = '';
+        if (styleId.startsWith('style_ff7_remake') || styleId.includes('3d')) {
+          styleIntro = '3D CGI cinematic character render';
+        } else if (styleId === 'style_photorealistic' || styleId === 'style_cinematic_film') {
+          styleIntro = 'photographic character portrait';
+        } else if (styleId === 'style_soft_watercolor' || styleId === 'style_renaissance_oil') {
+          styleIntro = 'fine-art illustration';
+        } else if (styleId === 'style_seinen_manga_ink') {
+          styleIntro = 'high-contrast Japanese manga ink illustration';
+        } else if (styleId === 'style_kawaii_chibi') {
+          styleIntro = 'adorable kawaii chibi character illustration';
+        } else {
+          styleIntro = 'illustration in semi-realistic anime light novel style';
+        }
+
+        fullPrompt = `An ultra-detailed ${styleIntro} with an aspect ratio of ${arRatio}. \n\n${basePrompt}`;
         if (crefPath) {
           fullPrompt += ` Maintain strict visual identity, hairstyle, and facial consistency with reference image: ${crefPath}.`;
         }
@@ -281,6 +315,7 @@
 
       const metadata = {
         aspect_ratio: ar.name || '',
+        art_style: selectedStyle.name || '',
         image_reference: crefPath ? crefPath : 'None',
         cw_weight: String(config.cw_weight || 80),
         outfit: outfitName,
@@ -344,11 +379,13 @@
         const angleId = l.lock_camera_angle ? (l.locked_camera_angle_id || 'medium_shot') : getRandomItem(poolAngles);
         const lightingId = l.lock_lighting ? (l.locked_lighting_id || 'morning_sunbeams') : getRandomItem(poolLightings);
 
-        const comboKey = `${outfitId}|${sceneryId}|${poseId}|${angleId}|${lightingId}`;
+        const bulkArtStyleId = (l.lock_art_style && l.locked_art_style_id) ? l.locked_art_style_id : (base.art_style_id || 'style_semi_realistic_ln');
+        const comboKey = `${outfitId}|${sceneryId}|${poseId}|${angleId}|${lightingId}|${bulkArtStyleId}`;
         if (seenCombos.has(comboKey)) continue;
         seenCombos.add(comboKey);
 
         const cfg = Object.assign({}, base, {
+          art_style_id: bulkArtStyleId,
           outfit_id: outfitId,
           custom_attire_prompt: (l.lock_outfit && l.locked_custom_prompt) ? l.locked_custom_prompt : '',
           custom_attire_name: (l.lock_outfit && l.locked_custom_name) ? l.locked_custom_name : '',
@@ -381,6 +418,7 @@
 
       for (const outfitItem of outfits) {
         const cfg = Object.assign({}, base, {
+          art_style_id: base.art_style_id || 'style_semi_realistic_ln',
           outfit_id: outfitItem.id,
           custom_attire_prompt: '',
           custom_attire_name: '',

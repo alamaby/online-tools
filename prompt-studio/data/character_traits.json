@@ -7,7 +7,7 @@
       "id": "style_semi_realistic_ln",
       "name": "1. Semi-Realistic Anime Light Novel (Kanon Master Aluna)",
       "description": "Gaya kanon novel Aluna: perpaduan Makoto Shinkai & Kyoto Animation, tekstur kain nyata, kedalaman sinematik.",
-      "prompt_fragment": "Semi-realistic anime light novel art style, soft painterly digital art, Kyoto Animation meets Makoto Shinkai aesthetic, authentic rich fabric textures, cinematic depth of field, fine-art digital painting, master reference fidelity, pristine anatomical accuracy, 8k resolution.. Semi-realistic anime light novel character reference sheet",
+      "prompt_fragment": "Semi-realistic anime light novel art style, soft painterly digital art, Kyoto Animation meets Makoto Shinkai aesthetic, authentic rich fabric textures, cinematic depth of field, fine-art digital painting, master reference fidelity, pristine anatomical accuracy, 8k resolution.",
       "category": "art_style",
       "extra": {
         "sdxl": "official art, Semi-realistic anime light novel style, soft painterly digital art, Makoto Shinkai meets Kyoto Animation aesthetic, crisp focus, 8k resolution.",

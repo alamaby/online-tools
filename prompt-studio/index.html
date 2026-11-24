@@ -100,7 +100,7 @@
         <!-- Engine & Rasio Card -->
         <div class="card">
           <div class="card-title">
-            <span>⚙️ 1. Target Engine &amp; Aspek Rasio</span>
+            <span>⚙️ 1. Target Engine, Gaya Seni &amp; Aspek Rasio</span>
           </div>
           <div class="form-row two-col">
             <div class="form-group">
@@ -111,6 +111,11 @@
               <label class="form-label" for="select-ar">Aspek Rasio</label>
               <select id="select-ar"></select>
             </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="select-studio-artstyle">Gaya Seni Visual (Art Style - 17 Variasi)</label>
+            <select id="select-studio-artstyle"></select>
+            <div id="desc-studio-artstyle" class="form-hint" style="margin-top:4px;font-size:12px;color:#94a3b8;font-style:italic;"></div>
           </div>
           <div class="form-group">
             <label class="form-label" for="select-image-ref">Image Reference (--cref)</label>
@@ -432,6 +437,19 @@
         </div>
       </div>
 
+      <!-- Bulk Art Style & Settings -->
+      <div class="form-row two-col" style="margin-bottom:16px;">
+        <div class="form-group">
+          <label class="form-label" for="select-bulk-artstyle">Gaya Seni Visual (Art Style)</label>
+          <select id="select-bulk-artstyle"></select>
+          <div id="desc-bulk-artstyle" class="form-hint" style="margin-top:4px;font-size:12px;color:#94a3b8;font-style:italic;"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Format Prompt &amp; Engine</label>
+          <div style="font-size:12px;color:#94a3b8;padding-top:8px;">Mengikuti Target Engine Studio: <strong id="lbl-bulk-engine-name" style="color:#38bdf8;">Natural API</strong></div>
+        </div>
+      </div>
+
       <!-- Bulk Vibe Settings -->
       <div id="bulk-vibe-controls">
         <div class="form-row two-col">
@@ -450,6 +468,10 @@
 
         <div class="form-label" style="margin-top:10px;">Kunci Parameter Tertentu (Selective Lock):</div>
         <div class="checkbox-grid">
+          <label class="checkbox-label">
+            <input type="checkbox" id="check-lock-art-style" checked>
+            <span>Kunci Gaya Seni (Art Style) Pilihan</span>
+          </label>
           <label class="checkbox-label">
             <input type="checkbox" id="check-lock-outfit">
             <span>Kunci Busana Saat Ini</span>
