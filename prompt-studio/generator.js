@@ -119,7 +119,7 @@
       return refItem && refItem.prompt_text ? refItem.prompt_text.trim() : '';
     }
 
-    generate(config) {
+    _resolvePromptComponents(config) {
       let outfitPrompt = '';
       let outfitName = '';
 
@@ -190,7 +190,6 @@
         sceneTextSdxl = `${scenery.prompt_text || ''} ${lighting.prompt_text || ''}`;
       }
 
-      // 1. Base Art Style & Camera Framing
       const artStyleId = config.art_style_id || 'style_semi_realistic_ln';
       const selectedStyle = this.artStyleMap.get(artStyleId) || ((this.traits && this.traits.art_styles && this.traits.art_styles.length > 0) ? this.traits.art_styles[0] : {
         id: 'style_semi_realistic_ln',
@@ -201,6 +200,49 @@
           neg: ''
         }
       });
+
+      return {
+        outfitPrompt,
+        outfitName,
+        scenery,
+        pose,
+        posePrompt,
+        isDuoPose,
+        loverProfileName,
+        angle,
+        lighting,
+        ar,
+        crefPath,
+        selectedRef,
+        spatialAdapted,
+        sceneTextMain,
+        sceneTextSdxl,
+        selectedStyle,
+      };
+    }
+
+    generate(config) {
+      const resolved = this._resolvePromptComponents(config);
+      const {
+        outfitPrompt,
+        outfitName,
+        scenery,
+        pose,
+        posePrompt,
+        isDuoPose,
+        loverProfileName,
+        angle,
+        lighting,
+        ar,
+        crefPath,
+        selectedRef,
+        spatialAdapted,
+        sceneTextMain,
+        sceneTextSdxl,
+        selectedStyle,
+      } = resolved;
+
+      // 1. Base Art Style & Camera Framing
       const stylePrompt = (selectedStyle.prompt_fragment || this.presets.art_style_master || '').trim().replace(/\.+$/, '');
       const header = `${stylePrompt}. ${angle.prompt_text || ''}`;
 
@@ -637,26 +679,147 @@
     }
 
     /**
-     * Build compacted text-to-image preview payloads for Tier 1 free web providers
-     * (Pollinations GET URL & AI Horde POST JSON), always using concise SDXL/Flux
-     * formatting regardless of the currently selected Target Engine.
+     * Build Style-Shot-Subject-First compacted text-to-image preview payloads
+     * for Tier 1 free web providers (Pollinations GET URL & AI Horde POST JSON).
+     * Keeps Pollinations ultra-tight (~450-560 chars, ~70-85 words) so Art Style,
+     * Shot, Hairstyle, Pose, Outfit, and Setting ALL fit inside CLIP's primary
+     * 77-token window instead of fading out or rendering empty rooms.
      */
-    buildWebImagePreviewPayloads(config, maxPollinationsChars = 1400) {
-      const sdxlCfg = Object.assign({}, config || {}, {
+    buildWebImagePreviewPayloads(config, maxPollinationsChars = 580) {
+      const cfg = Object.assign({}, config || {}, {
         target_engine_id: 'sdxl_flux',
       });
-      const sdxlGen = this.generate(sdxlCfg);
-      const arId = (config && config.aspect_ratio_id) || '16:9';
+      const resolved = this._resolvePromptComponents(cfg);
+      const sdxlGen = this.generate(cfg);
+      const arId = cfg.aspect_ratio_id || '16:9';
       const dimensions = getPreviewDimensions(arId);
+
+      // 1. Concise Art Style (<= 58 chars)
+      const rawStyle = (resolved.selectedStyle && resolved.selectedStyle.extra && resolved.selectedStyle.extra.sdxl)
+        ? resolved.selectedStyle.extra.sdxl
+        : (this.presets.art_style_concise || '');
+      const cleanStyle = sanitizeVisualFragment(rawStyle)
+        .replace(/^(?:masterpiece|best quality|ultra-detailed 8k|official art|raw photo),?\s*/gi, '')
+        .replace(/,?\s*(?:crisp focus|8k resolution|8k uhd|high resolution|photorealistic lighting)+\.?/gi, '')
+        .split(',')[0]
+        .trim();
+      const stylePart = trimToSentenceOrWord(cleanStyle, 58).replace(/[.,]+$/, '');
+
+      // 2. Concise Camera Shot (avoid 'close-up' face zoom bias on medium waist-up shots)
+      const rawAngle = sanitizeVisualFragment(resolved.angle.prompt_text || '');
+      let firstAngleClause = rawAngle.split(/[.,]/)[0].trim();
+      if (resolved.angle && resolved.angle.id === 'medium_shot') {
+        firstAngleClause = 'waist-up medium shot';
+      }
+      const shotPart = trimToSentenceOrWord(firstAngleClause, 55).replace(/[.,]+$/, '');
+
+      // 3. Subject + Hair/Hijab (<= 115 chars)
+      const physicalRaw = resolveAlunaPhysicalPrompt(
+        resolved.selectedRef,
+        cfg.custom_hair_trait || '',
+        true,
+        this.presets
+      );
+      const physicalClean = sanitizeVisualFragment(physicalRaw);
+      let hairPhrase = 'wavy black hair in high bun with wooden hairpin';
+      const sentences = physicalClean.split(/\.\s+/).map((s) => s.trim()).filter(Boolean);
+      const hairSentence = sentences.find((s) => /\b(hair|bun|braid|hijab|chignon|ponytail)\b/i.test(s));
+      if (hairSentence) {
+        hairPhrase = hairSentence
+          .replace(/^Her\s+/i, '')
+          .replace(/\bGlossy wavy black hair\b/i, 'wavy black hair')
+          .replace(/\bsecured with a carved rustic dark acacia wulung\b/gi, 'with')
+          .replace(/\bhigh neat bun\b/i, 'high bun')
+          .replace(/\.+$/, '')
+          .trim();
+      }
+      const subjectPart = trimToSentenceOrWord(
+        `23-year-old Indonesian woman, ${hairPhrase}`,
+        115
+      ).replace(/[.,]+$/, '');
+
+      // 4. Pose (core posture/expression, <= 78 chars)
+      const poseClean = trimToSentenceOrWord(
+        sanitizeVisualFragment(resolved.posePrompt || '')
+          .replace(/\bwith poised, graceful posture\b/gi, 'poised')
+          .replace(/\bin a courteous retail gesture\b/gi, ''),
+        78
+      ).replace(/[.,]+$/, '');
+
+      // 5. Outfit (distill semicolon clauses cleanly into <= 155 chars)
+      const rawOutfit = sanitizeVisualFragment(resolved.outfitPrompt || '')
+        .replace(/\btailored slim-fit\b/gi, '')
+        .replace(/\bfeaturing princess seams and cream edge trim\b/gi, '')
+        .replace(/\bfitting snugly around her slender waist with an adjustable back-cinch buckle\b/gi, '')
+        .replace(/\bmagnetic acrylic nametag pinned to the LEFT CHEST reading\b/gi, 'nametag')
+        .replace(/\bshort-sleeved collared\b/gi, '')
+        .replace(/\btied with a neat bow at the natural high waist[^.;]*/gi, '')
+        .replace(/\bcut cleanly at the ankle\b/gi, '')
+        .replace(/\bwith ergonomic white soles\b/gi, '')
+        .replace(/\bhigh-waisted\b/gi, '')
+        .replace(/\bslim-straight\b/gi, '')
+        .replace(/^A\s+/i, 'a ')
+        .replace(/^An\s+/i, 'an ')
+        .replace(/\s+/g, ' ')
+        .replace(/\s+,/g, ',')
+        .trim();
+      const outfitClauses = rawOutfit
+        .split(/[;.]/)
+        .map((c) => c.trim().replace(/^layered over\s+/i, 'over ').replace(/^completing the ensemble with\s+/i, ''))
+        .filter(Boolean);
+      const compactOutfit = [];
+      let outfitLen = 0;
+      for (const clause of outfitClauses) {
+        const shortClause = trimToSentenceOrWord(clause, 52).replace(/[.,]+$/, '');
+        if (!shortClause) continue;
+        if (outfitLen + shortClause.length + 2 > 155 && compactOutfit.length > 0) break;
+        compactOutfit.push(shortClause);
+        outfitLen += shortClause.length + 2;
+      }
+      const attirePart = compactOutfit.length
+        ? `wearing ${compactOutfit.join(', ')}`
+        : '';
+
+      // 6. Setting + Lighting (concise backdrop AFTER subject & attire, <= 125 chars)
+      const rawScene = sanitizeVisualFragment(resolved.sceneTextSdxl || '')
+        .replace(/\bCrisp early morning at 06:30 AM inside the cozy, pristine modern interior of\b/gi, 'inside')
+        .replace(/\billuminating delicate dancing dust motes and long diagonal shadows across polished wood-vinyl floors\b/gi, 'morning sunlight')
+        .trim();
+      const scenePart = trimToSentenceOrWord(rawScene, 125).replace(/[.,]+$/, '');
+
+      // 7. Optional cues (compact, <= 55 chars)
+      const extras = [];
+      if (cfg.custom_details && cfg.custom_details.trim()) {
+        extras.push(trimToSentenceOrWord(sanitizeVisualFragment(cfg.custom_details), 45));
+      }
+      if (cfg.include_aki_bolang) {
+        extras.push('calico cat nearby');
+      }
+      if (cfg.include_clan_regalia && extras.length < 2) {
+        extras.push('braided wrist cord');
+      }
+
+      const leadClause = [stylePart, shotPart ? `${shotPart} of a ${subjectPart}` : subjectPart]
+        .filter(Boolean)
+        .join(', ');
+      const bodyClause = [poseClean, attirePart, scenePart, extras.join(', ')]
+        .filter(Boolean)
+        .join(', ');
+
+      const orderedParts = [leadClause, bodyClause].filter(Boolean);
+
+      let pollinationsPrompt = orderedParts
+        .map((s) => s.replace(/\.+$/, '').trim())
+        .filter(Boolean)
+        .join('. ') + '.';
+      if (pollinationsPrompt.length > maxPollinationsChars) {
+        pollinationsPrompt = trimToSentenceOrWord(pollinationsPrompt, maxPollinationsChars);
+      }
 
       return {
         dimensions,
         aspectRatioId: arId,
-        pollinationsPrompt: compactPromptForWebImage(
-          sdxlGen.fullPrompt,
-          maxPollinationsChars,
-          this.presets
-        ),
+        pollinationsPrompt,
         hordePrompt: compactPromptForWebImage(
           sdxlGen.fullPrompt,
           2200,
@@ -683,6 +846,42 @@
     return PREVIEW_DIMENSIONS[aspectRatioId] || PREVIEW_DIMENSIONS['16:9'];
   }
 
+  function sanitizeVisualFragment(text) {
+    if (!text) return '';
+    return String(text)
+      .replace(/--[a-zA-Z0-9_-]+(?:\s+(?!--)\S+)*/g, ' ')
+      .replace(/https?:\/\/\S+/g, ' ')
+      .replace(/\bassets\/[^\s,;]+/g, ' ')
+      // Strip Indonesian/lore parenthetical notes that dilute English diffusion models
+      .replace(/\((?:Teh Luna|kulit putih cerah berseri|Pasak Pangeker Mana[^)]*)\)/gi, '')
+      .replace(/\bAluna Arundati Buana\b/gi, '')
+      .replace(/,?\s*162cm\/50kg/gi, '')
+      .replace(/\bon Jalan Dipatiukur Bandung\b/gi, 'in Bandung')
+      .replace(/\bof BumiMart convenience store\b/gi, 'of a modern convenience cafe store')
+      .replace(/\s+/g, ' ')
+      .replace(/\s+,/g, ',')
+      .replace(/\s+\./g, '.')
+      .replace(/,\s*,+/g, ',')
+      .replace(/\.\.+/g, '.')
+      .trim();
+  }
+
+  function findLastSentenceBoundary(slice) {
+    const matches = slice.matchAll(/\.(?=\s|$)/g);
+    let last = -1;
+    for (const m of matches) {
+      last = m.index;
+    }
+    return last;
+  }
+
+  function stripDanglingTailWords(text) {
+    return text
+      .replace(/[\s,]+$/, '')
+      .replace(/(?:\s+\b(?:a|an|the|in|on|at|with|of|to|for|from|and|or|over|by|through|across|along|near|beside|around|into|onto|toward|towards|behind|under|above|below|between))+$/gi, '')
+      .trim();
+  }
+
   function trimToSentenceOrWord(text, maxChars) {
     if (!text) return '';
     const clean = text.trim();
@@ -690,17 +889,17 @@
     if (maxChars <= 16) return clean.slice(0, maxChars).trim();
 
     const slice = clean.slice(0, maxChars);
-    const lastPeriod = slice.lastIndexOf('.');
-    if (lastPeriod >= Math.floor(maxChars * 0.55)) {
+    const lastPeriod = findLastSentenceBoundary(slice);
+    if (lastPeriod >= Math.floor(maxChars * 0.5)) {
       return slice.slice(0, lastPeriod + 1).trim();
     }
     const lastComma = slice.lastIndexOf(',');
-    if (lastComma >= Math.floor(maxChars * 0.65)) {
-      return slice.slice(0, lastComma).trim();
+    if (lastComma >= Math.floor(maxChars * 0.6)) {
+      return stripDanglingTailWords(slice.slice(0, lastComma));
     }
     const lastSpace = slice.lastIndexOf(' ');
     if (lastSpace > 0) {
-      return slice.slice(0, lastSpace).trim();
+      return stripDanglingTailWords(slice.slice(0, lastSpace));
     }
     return slice.trim();
   }

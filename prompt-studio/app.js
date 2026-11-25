@@ -222,6 +222,12 @@
       const emptyEl = $('preview-empty');
       const stageEl = $('preview-stage');
       const metaEl = $('preview-meta');
+      const detailsEl = $('preview-prompt-details');
+      const sentEl = $('preview-sent-prompt');
+      const summaryEl = $('preview-prompt-summary');
+      const sentPrompt = result.provider === 'stable_horde'
+        ? payloads.hordePrompt
+        : payloads.pollinationsPrompt;
 
       if (imgEl && emptyEl && stageEl) {
         imgEl.src = result.src;
@@ -230,15 +236,22 @@
         stageEl.classList.add('has-image');
       }
 
+      if (detailsEl && sentEl && summaryEl) {
+        sentEl.textContent = sentPrompt;
+        summaryEl.textContent = `🔍 Lihat Prompt Ringkas yang Dikirim (${sentPrompt.length} karakter)`;
+        detailsEl.style.display = 'block';
+      }
+
       if (metaEl) {
-        const secStr = ((result.elapsedMs || 0) / 1000).toFixed(1);
+        const elapsedMs = result.elapsedMs || 0;
+        const secStr = elapsedMs < 150 ? '<0.1s (cache)' : `${(elapsedMs / 1000).toFixed(1)}s`;
         metaEl.innerHTML = '';
         [
           `Provider: <strong>${escapeHtml(result.providerLabel || result.provider)}</strong>`,
           `Model: <strong>${escapeHtml(result.model || '-')}</strong>`,
           `Ukuran: <strong>${result.width}&times;${result.height}</strong>`,
           `Seed: <strong>${result.seed}</strong>`,
-          `Waktu: <strong>${secStr}s</strong>`,
+          `Waktu: <strong>${secStr}</strong>`,
         ].forEach((chipHtml) => {
           const chip = document.createElement('div');
           chip.className = 'chip';
