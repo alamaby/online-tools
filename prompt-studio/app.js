@@ -76,14 +76,33 @@
   // Bulk Results Storage
   let lastBulkResults = [];
 
-  // Free Tier 1 Preview State
+  // Image Preview State (Tier 1 Zero-Auth + Tier 2 BYOK LocalStorage)
   const HORDE_KEY_STORAGE = 'aluna_horde_api_key';
+  const PREVIEW_PROVIDER_STORAGE = 'aluna_preview_provider';
+  const PREVIEW_MODEL_STORAGE_PREFIX = 'aluna_preview_model_';
+  const PREVIEW_KEY_FIELDS = [
+    { id: 'pollinations', storageKey: 'aluna_pollinations_api_key', inputId: 'input-preview-pollinations-key', label: 'Pollinations Keyed' },
+    { id: 'gemini', storageKey: 'aluna_gemini_api_key', inputId: 'input-preview-gemini-key', label: 'Google Gemini' },
+    { id: 'pixazo', storageKey: 'aluna_pixazo_api_key', inputId: 'input-preview-pixazo-key', label: 'Pixazo AI' },
+    { id: 'together', storageKey: 'aluna_together_api_key', inputId: 'input-preview-together-key', label: 'Together AI' },
+    { id: 'huggingface', storageKey: 'aluna_hf_api_key', inputId: 'input-preview-hf-key', label: 'HuggingFace' },
+    { id: 'horde', storageKey: HORDE_KEY_STORAGE, inputId: 'input-preview-horde-key', label: 'AI Horde' },
+  ];
+  const TIER2_PROVIDER_HINTS = {
+    pollinations_key: 'Gunakan Pollen Publishable Key (<code>pk_...</code>) dari enter.pollinations.ai — mendapat jatah Pollen harian gratis.',
+    gemini: 'Mendukung upload foto referensi wajah. <em>Catatan: endpoint gambar Gemini di AI Studio umumnya mensyaratkan billing/kredit aktif.</em>',
+    pixazo: 'Free tier Pixazo menyediakan kuota terbatas per akun. Pilih SDXL 1.0 jika ingin memakai negative prompt.',
+    together: 'Memakai <code>FLUX.1-schnell-Free</code> dan otomatis fallback ke <code>FLUX.1-schnell</code> (kredit uji coba / pay-as-you-go).',
+    huggingface: '<em>Paket Free HF kini $0 kredit router</em> — memerlukan akun HF PRO atau kredit inference prabayar (HTTP 402 jika kosong).',
+  };
+
   const previewState = {
     isGenerating: false,
     controller: null,
     cooldownTimer: null,
     lastResult: null,
     lastObjectUrl: null,
+    referenceImages: [],
   };
 
   function safeStorageGet(key) {
@@ -104,6 +123,201 @@
       }
     } catch (_) {
       // Ignore storage errors in private / restricted file:/// contexts
+    }
+  }
+
+  function getPreviewKeys() {
+    const keys = {};
+    PREVIEW_KEY_FIELDS.forEach((field) => {
+      const el = $(field.inputId);
+      keys[field.id] = el ? el.value.trim() : safeStorageGet(field.storageKey).trim();
+    });
+    return keys;
+  }
+
+  function getSelectedPreviewModels() {
+    const previewApi = window.AlunaWebImagePreview;
+    const catalog = (previewApi && previewApi.TIER2_MODEL_CATALOG) || {};
+    const pick = (providerId) => {
+      const saved = safeStorageGet(PREVIEW_MODEL_STORAGE_PREFIX + providerId);
+      const list = catalog[providerId] || [];
+      if (saved && list.some((m) => m.id === saved)) return saved;
+      return list[0] ? list[0].id : '';
+    };
+    return {
+      gemini: pick('gemini'),
+      pollinationsGen: pick('pollinations_key'),
+      pixazo: pick('pixazo'),
+      together: pick('together'),
+      huggingface: pick('huggingface'),
+    };
+  }
+
+  function syncPreviewKeyBadge() {
+    const badge = $('preview-key-count-badge');
+    if (!badge) return;
+    const keys = getPreviewKeys();
+    const activeTier2Count = ['pollinations', 'gemini', 'pixazo', 'together', 'huggingface']
+      .filter((k) => Boolean(keys[k]))
+      .length;
+    const hasHorde = Boolean(keys.horde);
+    const totalCount = activeTier2Count + (hasHorde ? 1 : 0);
+
+    badge.textContent = totalCount > 0 ? `${totalCount} key aktif` : '0 aktif';
+    badge.classList.toggle('has-keys', totalCount > 0);
+  }
+
+  function syncPreviewModelDropdown() {
+    const providerSel = $('select-preview-provider');
+    const groupEl = $('preview-model-group');
+    const modelSel = $('select-preview-model');
+    const hintEl = $('preview-model-hint');
+    if (!providerSel || !groupEl || !modelSel) return;
+
+    const previewApi = window.AlunaWebImagePreview;
+    const catalog = (previewApi && previewApi.TIER2_MODEL_CATALOG) || {};
+    const mode = providerSel.value;
+    const list = catalog[mode];
+
+    if (!Array.isArray(list) || list.length === 0) {
+      groupEl.style.display = 'none';
+      if (hintEl) hintEl.innerHTML = '';
+      return;
+    }
+
+    const savedModel = safeStorageGet(PREVIEW_MODEL_STORAGE_PREFIX + mode);
+    modelSel.innerHTML = '';
+    list.forEach((item) => {
+      const opt = document.createElement('option');
+      opt.value = item.id;
+      opt.textContent = item.label;
+      modelSel.appendChild(opt);
+    });
+    if (savedModel && list.some((m) => m.id === savedModel)) {
+      modelSel.value = savedModel;
+    }
+    groupEl.style.display = 'block';
+    if (hintEl) {
+      hintEl.innerHTML = TIER2_PROVIDER_HINTS[mode] || '';
+    }
+  }
+
+  function syncPreviewDisclaimer() {
+    const providerSel = $('select-preview-provider');
+    const badgeEl = $('preview-tier-badge');
+    const discEl = $('preview-disclaimer');
+    const refBox = $('preview-ref-section');
+    const mode = providerSel ? providerSel.value : 'auto';
+    const isTier2 = ['byok_auto', 'pollinations_key', 'gemini', 'pixazo', 'together', 'huggingface'].includes(mode);
+    const supportsRefs = mode === 'gemini' || mode === 'byok_auto';
+
+    if (refBox) {
+      refBox.style.display = supportsRefs ? 'block' : 'none';
+    }
+    if (badgeEl) {
+      badgeEl.textContent = isTier2 ? 'TIER 2 • BYOK LOKAL' : 'TIER 1 • GRATIS';
+    }
+    if (discEl) {
+      if (mode === 'gemini') {
+        const refCount = previewState.referenceImages.length;
+        discEl.innerHTML = refCount > 0
+          ? `Mode <strong>Google Gemini Image</strong> aktif dengan <strong>${refCount} foto referensi</strong> wajah. API key hanya tersimpan lokal di browser Anda.`
+          : 'Mode <strong>Google Gemini Image</strong> aktif. Anda dapat mengunggah foto referensi wajah Aluna di bawah agar lebih konsisten.';
+      } else if (isTier2) {
+        discEl.innerHTML =
+          'Mode <strong>Tier 2 BYOK</strong> memakai API key yang tersimpan lokal di browser Anda (<code>localStorage</code>) untuk mengakses model lebih stabil tanpa antrean panjang.';
+      } else {
+        discEl.innerHTML =
+          'Preview cepat tanpa API key wajib (<strong>Pollinations.ai</strong> &rarr; fallback <strong>AI Horde</strong>). Bersifat <em>text-to-image</em> tanpa referensi wajah (<code>--cref</code>). Pilih mode <strong>Tier 2 BYOK</strong> jika ingin memakai key free tier atau foto referensi Gemini.';
+      }
+    }
+  }
+
+  function renderReferenceThumbs() {
+    const thumbsEl = $('preview-ref-thumbs');
+    const clearBtn = $('btn-preview-clear-refs');
+    if (!thumbsEl) return;
+
+    thumbsEl.innerHTML = '';
+    if (!previewState.referenceImages.length) {
+      thumbsEl.style.display = 'none';
+      if (clearBtn) clearBtn.style.display = 'none';
+      return;
+    }
+
+    previewState.referenceImages.forEach((item) => {
+      const box = document.createElement('div');
+      box.className = 'preview-ref-thumb';
+      box.title = item.name || 'Referensi';
+      const img = document.createElement('img');
+      img.src = item.dataUrl;
+      img.alt = item.name || 'Foto referensi Aluna';
+      box.appendChild(img);
+      thumbsEl.appendChild(box);
+    });
+    thumbsEl.style.display = 'flex';
+    if (clearBtn) clearBtn.style.display = 'inline-flex';
+  }
+
+  function clearReferenceImages(notify = false) {
+    previewState.referenceImages = [];
+    if ($('input-preview-ref-files')) {
+      $('input-preview-ref-files').value = '';
+    }
+    renderReferenceThumbs();
+    syncPreviewDisclaimer();
+    if (notify) {
+      showToast('Foto referensi lokal dihapus dari memori.', 'info');
+    }
+  }
+
+  function downscaleImageFileToInlineData(file, maxEdge = 1024) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onerror = () => reject(new Error(`Gagal membaca file ${file.name}`));
+      reader.onload = () => {
+        const img = new Image();
+        img.onerror = () => reject(new Error(`Format gambar tidak valid: ${file.name}`));
+        img.onload = () => {
+          const w = img.naturalWidth || img.width;
+          const h = img.naturalHeight || img.height;
+          const scale = Math.max(w, h) > maxEdge ? maxEdge / Math.max(w, h) : 1;
+          const targetW = Math.max(1, Math.round(w * scale));
+          const targetH = Math.max(1, Math.round(h * scale));
+          const canvas = document.createElement('canvas');
+          canvas.width = targetW;
+          canvas.height = targetH;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, targetW, targetH);
+          const dataUrl = canvas.toDataURL('image/jpeg', 0.88);
+          const b64 = dataUrl.split(',', 2)[1] || '';
+          resolve({
+            name: file.name,
+            mimeType: 'image/jpeg',
+            data: b64,
+            dataUrl,
+          });
+        };
+        img.src = reader.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  async function handleReferenceFilesSelected(fileList) {
+    const files = Array.from(fileList || []).filter((f) => f && f.type && f.type.startsWith('image/')).slice(0, 3);
+    if (!files.length) {
+      clearReferenceImages(false);
+      return;
+    }
+    try {
+      const encoded = await Promise.all(files.map((f) => downscaleImageFileToInlineData(f)));
+      previewState.referenceImages = encoded;
+      renderReferenceThumbs();
+      syncPreviewDisclaimer();
+      showToast(`🖼️ ${encoded.length} foto referensi siap untuk Gemini Image.`, 'ok');
+    } catch (err) {
+      showToast((err && err.message) || 'Gagal memproses foto referensi.', 'err');
     }
   }
 
@@ -209,15 +423,37 @@
     const effectiveCfg = getEffectivePreviewConfig();
     const payloads = generator.buildWebImagePreviewPayloads(effectiveCfg);
     const providerMode = ($('select-preview-provider') && $('select-preview-provider').value) || 'auto';
+    const framingMode = ($('select-preview-framing') && $('select-preview-framing').value) || 'studio';
     const rawSeed = $('input-preview-seed') ? parseInt($('input-preview-seed').value, 10) : NaN;
     const seed = Number.isFinite(rawSeed) && rawSeed >= 0 ? rawSeed : Math.floor(Math.random() * 999999);
     if ($('input-preview-seed')) $('input-preview-seed').value = String(seed);
-    const hordeApiKey = ($('input-preview-horde-key') && $('input-preview-horde-key').value.trim()) || '';
+
+    const keys = getPreviewKeys();
+    const models = getSelectedPreviewModels();
+    const requiredKeyMap = {
+      pollinations_key: 'pollinations',
+      gemini: 'gemini',
+      pixazo: 'pixazo',
+      together: 'together',
+      huggingface: 'huggingface',
+    };
+    const reqFieldId = requiredKeyMap[providerMode];
+    if (reqFieldId && !keys[reqFieldId]) {
+      const detailsEl = $('preview-keys-details');
+      if (detailsEl) detailsEl.open = true;
+      const fieldMeta = PREVIEW_KEY_FIELDS.find((f) => f.id === reqFieldId);
+      const focusEl = fieldMeta && $(fieldMeta.inputId);
+      if (focusEl) focusEl.focus();
+      const warnMsg = `API key ${fieldMeta ? fieldMeta.label : providerMode} belum diisi. Masukkan key di panel Konfigurasi Key BYOK (tersimpan lokal).`;
+      setPreviewStatus(warnMsg, 'warn');
+      showToast(warnMsg, 'err');
+      return;
+    }
 
     previewState.isGenerating = true;
     previewState.controller = new AbortController();
     syncPreviewControls();
-    setPreviewStatus('Menyiapkan payload prompt ringkas...', 'loading');
+    setPreviewStatus('Menyiapkan payload prompt...', 'loading');
 
     try {
       const result = await previewApi.generatePreview(
@@ -225,12 +461,18 @@
           providerMode,
           pollinationsPrompt: payloads.pollinationsPrompt,
           hordePrompt: payloads.hordePrompt,
+          naturalPrompt: payloads.naturalPrompt,
           negativePrompt: payloads.negativePrompt,
           width: payloads.dimensions.width,
           height: payloads.dimensions.height,
           seed,
-          artStyleId: state.art_style_id,
-          hordeApiKey,
+          artStyleId: effectiveCfg.art_style_id,
+          aspectRatioId: payloads.aspectRatioId,
+          framingMode,
+          hordeApiKey: keys.horde,
+          keys,
+          models,
+          referenceImages: previewState.referenceImages,
         },
         {
           signal: previewState.controller.signal,
@@ -258,13 +500,12 @@
       const detailsEl = $('preview-prompt-details');
       const sentEl = $('preview-sent-prompt');
       const summaryEl = $('preview-prompt-summary');
-      const sentPrompt = result.provider === 'stable_horde'
-        ? payloads.hordePrompt
-        : payloads.pollinationsPrompt;
+      const sentPrompt = result.sentPrompt
+        || (result.provider === 'stable_horde' ? payloads.hordePrompt : payloads.pollinationsPrompt);
 
       if (detailsEl && sentEl && summaryEl) {
         sentEl.textContent = sentPrompt;
-        summaryEl.textContent = `🔍 Lihat Prompt Ringkas yang Dikirim (${sentPrompt.length} karakter)`;
+        summaryEl.textContent = `🔍 Lihat Prompt yang Dikirim (${sentPrompt.length} karakter)`;
         detailsEl.style.display = 'block';
       }
 
@@ -1382,7 +1623,7 @@
     });
     $('btn-export-md').addEventListener('click', downloadActivePromptMarkdown);
 
-    // Free Tier 1 Preview Events
+    // Preview Events (Tier 1 & Tier 2 BYOK)
     if ($('btn-preview-generate')) {
       $('btn-preview-generate').addEventListener('click', runWebImagePreview);
     }
@@ -1400,22 +1641,68 @@
       });
     }
     if ($('select-preview-provider')) {
-      $('select-preview-provider').addEventListener('change', syncPreviewControls);
+      $('select-preview-provider').addEventListener('change', (e) => {
+        safeStorageSet(PREVIEW_PROVIDER_STORAGE, e.target.value);
+        syncPreviewModelDropdown();
+        syncPreviewDisclaimer();
+        syncPreviewControls();
+      });
+    }
+    if ($('select-preview-model')) {
+      $('select-preview-model').addEventListener('change', (e) => {
+        const providerMode = $('select-preview-provider') ? $('select-preview-provider').value : '';
+        if (providerMode) {
+          safeStorageSet(PREVIEW_MODEL_STORAGE_PREFIX + providerMode, e.target.value);
+        }
+      });
     }
     if ($('select-preview-framing')) {
       $('select-preview-framing').addEventListener('change', updatePreviewDimensionHint);
     }
-    if ($('input-preview-horde-key')) {
-      $('input-preview-horde-key').addEventListener('input', (e) => {
-        safeStorageSet(HORDE_KEY_STORAGE, e.target.value.trim());
+
+    PREVIEW_KEY_FIELDS.forEach((field) => {
+      const inputEl = $(field.inputId);
+      if (inputEl) {
+        inputEl.addEventListener('input', (e) => {
+          safeStorageSet(field.storageKey, e.target.value.trim());
+          syncPreviewKeyBadge();
+          syncPreviewDisclaimer();
+        });
+      }
+    });
+
+    document.querySelectorAll('[data-clear-key]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const keyId = btn.getAttribute('data-clear-key');
+        const field = PREVIEW_KEY_FIELDS.find((f) => f.id === keyId);
+        if (!field) return;
+        if ($(field.inputId)) $(field.inputId).value = '';
+        safeStorageSet(field.storageKey, '');
+        syncPreviewKeyBadge();
+        syncPreviewDisclaimer();
+        showToast(`API key ${field.label} dihapus dari browser.`, 'info');
+      });
+    });
+
+    if ($('btn-preview-clear-all-keys')) {
+      $('btn-preview-clear-all-keys').addEventListener('click', () => {
+        PREVIEW_KEY_FIELDS.forEach((field) => {
+          if ($(field.inputId)) $(field.inputId).value = '';
+          safeStorageSet(field.storageKey, '');
+        });
+        syncPreviewKeyBadge();
+        syncPreviewDisclaimer();
+        showToast('Semua API key lokal BYOK dihapus dari browser.', 'info');
       });
     }
-    if ($('btn-preview-clear-horde-key')) {
-      $('btn-preview-clear-horde-key').addEventListener('click', () => {
-        if ($('input-preview-horde-key')) $('input-preview-horde-key').value = '';
-        safeStorageSet(HORDE_KEY_STORAGE, '');
-        showToast('AI Horde API key lokal dihapus.', 'info');
+
+    if ($('input-preview-ref-files')) {
+      $('input-preview-ref-files').addEventListener('change', (e) => {
+        handleReferenceFilesSelected(e.target.files);
       });
+    }
+    if ($('btn-preview-clear-refs')) {
+      $('btn-preview-clear-refs').addEventListener('click', () => clearReferenceImages(true));
     }
 
     // Modular Wardrobe Events
@@ -1694,10 +1981,19 @@
     updateCameraAngleDropdown();
     updatePromptOutput();
 
-    // Restore optional AI Horde key & initialize preview controls
-    if ($('input-preview-horde-key')) {
-      $('input-preview-horde-key').value = safeStorageGet(HORDE_KEY_STORAGE);
+    // Restore Tier 1 & Tier 2 BYOK keys, provider mode, and initialize preview controls
+    PREVIEW_KEY_FIELDS.forEach((field) => {
+      const el = $(field.inputId);
+      if (el) el.value = safeStorageGet(field.storageKey);
+    });
+    const providerSel = $('select-preview-provider');
+    const savedProvider = safeStorageGet(PREVIEW_PROVIDER_STORAGE);
+    if (providerSel && savedProvider && Array.from(providerSel.options).some((o) => o.value === savedProvider)) {
+      providerSel.value = savedProvider;
     }
+    syncPreviewKeyBadge();
+    syncPreviewModelDropdown();
+    syncPreviewDisclaimer();
     updatePreviewDimensionHint();
     syncPreviewControls();
   }

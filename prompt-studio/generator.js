@@ -825,6 +825,17 @@
         pollinationsPrompt = trimToSentenceOrWord(pollinationsPrompt, maxPollinationsChars);
       }
 
+      // Rich cleaned natural-language prompt for multimodal / LLM image providers (e.g. Gemini)
+      const naturalGen = this.generate(
+        Object.assign({}, config || {}, { target_engine_id: 'natural_api' })
+      );
+      const naturalPrompt = String(naturalGen.fullPrompt || '')
+        .replace(/Maintain strict visual identity, hairstyle, and facial consistency with reference image:\s*[^\n.]*\.?/gi, '')
+        .replace(/\bassets\/[^\s,;]+/g, '')
+        .replace(/[ \t]+/g, ' ')
+        .replace(/\n{3,}/g, '\n\n')
+        .trim();
+
       return {
         dimensions,
         aspectRatioId: arId,
@@ -834,6 +845,7 @@
           2200,
           this.presets
         ),
+        naturalPrompt,
         negativePrompt: sdxlGen.negativePrompt || '',
         metadata: sdxlGen.metadata,
       };

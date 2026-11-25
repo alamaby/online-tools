@@ -10,7 +10,7 @@
   <script src="data/data.js"></script>
   <!-- Load standalone prompt generator engine -->
   <script src="generator.js"></script>
-  <!-- Load client-side free image preview adapter (Tier 1) -->
+  <!-- Load client-side image preview adapter (Tier 1 Zero-Auth + Tier 2 BYOK) -->
   <script src="preview.js"></script>
 </head>
 <body>
@@ -244,25 +244,35 @@
           </div>
         </div>
 
-        <!-- Free Tier 1 Image Preview Card -->
+        <!-- Image Preview Card (Tier 1 Zero-Auth + Tier 2 BYOK) -->
         <div class="card" id="card-preview">
           <div class="card-title">
-            <span>🎨 Preview Gambar (Free Tier 1)</span>
-            <span class="badge-beta">BETA • TEXT-TO-IMAGE</span>
+            <span>🎨 Preview Gambar (Tier 1 &amp; 2)</span>
+            <span class="badge-beta" id="preview-tier-badge">TIER 1 • GRATIS</span>
           </div>
 
-          <p class="preview-disclaimer">
+          <p class="preview-disclaimer" id="preview-disclaimer">
             Preview cepat tanpa API key wajib (<strong>Pollinations.ai</strong> &rarr; fallback <strong>AI Horde</strong>).
-            Bersifat <em>text-to-image</em> tanpa referensi wajah (<code>--cref</code>), sehingga wajah tidak 100% identik kanon. Pollinations menyertakan watermark &amp; batas 1 gambar/45 detik per IP.
+            Bersifat <em>text-to-image</em> tanpa referensi wajah (<code>--cref</code>). Untuk konsistensi wajah &amp; kualitas lebih tinggi, gunakan mode <strong>Tier 2 BYOK</strong> (API key tersimpan lokal di browser).
           </p>
 
           <div class="form-row two-col" style="margin-bottom:12px;">
             <div class="form-group" style="margin-bottom:0;">
               <label class="form-label" for="select-preview-provider">Layanan Preview</label>
               <select id="select-preview-provider">
-                <option value="auto">⚡ Auto (Pollinations &rarr; AI Horde)</option>
-                <option value="pollinations">🌸 Pollinations.ai (Cepat, Cooldown 45s)</option>
-                <option value="stable_horde">🐝 AI Horde (Antrean Komunitas + Negative)</option>
+                <optgroup label="Tier 1 — Tanpa API Key Wajib">
+                  <option value="auto">⚡ Auto Tier 1 (Pollinations &rarr; AI Horde)</option>
+                  <option value="pollinations">🌸 Pollinations Gratis (Tanpa Key, Cooldown 45s)</option>
+                  <option value="stable_horde">🐝 AI Horde (Tanpa/Dengan Key, Antrean)</option>
+                </optgroup>
+                <optgroup label="Tier 2 — BYOK Free Tier / Trial Key (Lokal Browser)">
+                  <option value="byok_auto">🚀 Auto Tier 2 &rarr; Tier 1 (Pakai Key Terisi)</option>
+                  <option value="pollinations_key">🧬 Pollinations Keyed (Daily Free Pollen)</option>
+                  <option value="gemini">✨ Google Gemini Image (+ Referensi Wajah)</option>
+                  <option value="pixazo">🎨 Pixazo AI Gateway (Flux / SDXL Free Tier)</option>
+                  <option value="together">⚡ Together AI (Flux Schnell Free/Trial)</option>
+                  <option value="huggingface">🤗 HuggingFace Router (PRO / Kredit)</option>
+                </optgroup>
               </select>
             </div>
             <div class="form-group" style="margin-bottom:0;">
@@ -272,6 +282,12 @@
                 <button type="button" id="btn-preview-random-seed" class="btn btn-outline btn-sm" title="Acak seed">🎲</button>
               </div>
             </div>
+          </div>
+
+          <div class="form-group" id="preview-model-group" style="display:none;margin-bottom:12px;">
+            <label class="form-label" for="select-preview-model">Model Provider Tier 2</label>
+            <select id="select-preview-model"></select>
+            <div id="preview-model-hint" class="preview-hint"></div>
           </div>
 
           <div class="form-group" style="margin-bottom:12px;">
@@ -284,15 +300,83 @@
             <div id="preview-framing-hint" class="preview-hint" style="margin-top:5px;">Target aktif: <strong id="preview-dim-hint">16:9 &bull; 1024&times;576</strong></div>
           </div>
 
-          <details class="preview-advanced">
-            <summary>⚙️ Opsi AI Horde API Key (Opsional — untuk antrean lebih cepat)</summary>
+          <div class="preview-ref-box" id="preview-ref-section" style="display:none;">
+            <div class="preview-ref-header">
+              <label class="form-label" for="input-preview-ref-files" style="margin:0;">🖼️ Foto Referensi Wajah (Opsional • Khusus Gemini)</label>
+              <button type="button" id="btn-preview-clear-refs" class="btn btn-outline btn-sm" style="display:none;">Hapus Foto</button>
+            </div>
+            <input type="file" id="input-preview-ref-files" accept="image/*" multiple class="preview-file-input">
+            <div class="preview-hint">Diupload langsung dari memori browser ke Gemini API saat generate (tidak disimpan ke server maupun <code>localStorage</code>). Maks 3 foto.</div>
+            <div id="preview-ref-thumbs" class="preview-ref-thumbs" style="display:none;"></div>
+          </div>
+
+          <details class="preview-advanced" id="preview-keys-details">
+            <summary>
+              <span>🔑 Konfigurasi Key BYOK Tier 2</span>
+              <span id="preview-key-count-badge" class="preview-key-badge">0 aktif</span>
+            </summary>
             <div class="preview-advanced-body">
-              <label class="form-label" for="input-preview-horde-key">AI Horde API Key <span class="note">(Tersimpan lokal di browser)</span></label>
-              <div class="preview-seed-row">
-                <input type="password" id="input-preview-horde-key" placeholder="Kosong = guest key 0000000000" autocomplete="off">
-                <button type="button" id="btn-preview-clear-horde-key" class="btn btn-outline btn-sm">Hapus</button>
+              <div class="preview-hint" style="margin-top:0;margin-bottom:10px;">
+                API key disimpan hanya di <code>localStorage</code> browser Anda dan dikirim langsung ke endpoint resmi provider.
               </div>
-              <div class="preview-hint">Daftar gratis di <a href="https://aihorde.net/register" target="_blank" rel="noopener noreferrer">aihorde.net</a> untuk prioritas antrean lebih baik saat Pollinations cooldown.</div>
+
+              <div class="preview-key-item">
+                <label class="form-label" for="input-preview-pollinations-key">Pollinations Pollen Key <span class="note">(Daily Free Pollen)</span></label>
+                <div class="preview-seed-row">
+                  <input type="password" id="input-preview-pollinations-key" placeholder="pk_... (disarankan Publishable Key)" autocomplete="off">
+                  <button type="button" class="btn btn-outline btn-sm" data-clear-key="pollinations" title="Hapus key Pollinations">Hapus</button>
+                </div>
+                <div class="preview-hint">Daftar gratis di <a href="https://enter.pollinations.ai" target="_blank" rel="noopener noreferrer">enter.pollinations.ai</a>. Gunakan <code>pk_</code> untuk browser agar aman.</div>
+              </div>
+
+              <div class="preview-key-item">
+                <label class="form-label" for="input-preview-gemini-key">Google Gemini API Key <span class="note">(Mendukung Foto Referensi)</span></label>
+                <div class="preview-seed-row">
+                  <input type="password" id="input-preview-gemini-key" placeholder="AIza..." autocomplete="off">
+                  <button type="button" class="btn btn-outline btn-sm" data-clear-key="gemini" title="Hapus key Gemini">Hapus</button>
+                </div>
+                <div class="preview-hint">Buat key di <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio</a>. <em>Catatan: model image Gemini sering mensyaratkan billing/kredit AI Studio aktif.</em></div>
+              </div>
+
+              <div class="preview-key-item">
+                <label class="form-label" for="input-preview-pixazo-key">Pixazo Subscription Key <span class="note">(Flux / SDXL Free Tier)</span></label>
+                <div class="preview-seed-row">
+                  <input type="password" id="input-preview-pixazo-key" placeholder="Ocp-Apim-Subscription-Key" autocomplete="off">
+                  <button type="button" class="btn btn-outline btn-sm" data-clear-key="pixazo" title="Hapus key Pixazo">Hapus</button>
+                </div>
+                <div class="preview-hint">Daftar free tier di <a href="https://www.pixazo.ai" target="_blank" rel="noopener noreferrer">pixazo.ai</a> (kuota gratis terbatas).</div>
+              </div>
+
+              <div class="preview-key-item">
+                <label class="form-label" for="input-preview-together-key">Together AI API Key <span class="note">(Trial Credit / Serverless)</span></label>
+                <div class="preview-seed-row">
+                  <input type="password" id="input-preview-together-key" placeholder="tgp_v1_... / key Together" autocomplete="off">
+                  <button type="button" class="btn btn-outline btn-sm" data-clear-key="together" title="Hapus key Together AI">Hapus</button>
+                </div>
+                <div class="preview-hint">Kredit uji coba akun baru / pay-as-you-go murah di <a href="https://api.together.xyz" target="_blank" rel="noopener noreferrer">api.together.xyz</a>.</div>
+              </div>
+
+              <div class="preview-key-item">
+                <label class="form-label" for="input-preview-hf-key">HuggingFace Token <span class="note">(Perlu PRO / Kredit Router)</span></label>
+                <div class="preview-seed-row">
+                  <input type="password" id="input-preview-hf-key" placeholder="hf_..." autocomplete="off">
+                  <button type="button" class="btn btn-outline btn-sm" data-clear-key="huggingface" title="Hapus token HuggingFace">Hapus</button>
+                </div>
+                <div class="preview-hint">Token dari <a href="https://huggingface.co/settings/tokens" target="_blank" rel="noopener noreferrer">huggingface.co</a>. <em>Paket Free HF kini $0 kredit router (HTTP 402 jika tanpa kredit/PRO).</em></div>
+              </div>
+
+              <div class="preview-key-item" style="margin-bottom:0;">
+                <label class="form-label" for="input-preview-horde-key">AI Horde API Key <span class="note">(100% Gratis, Antrean Cepat)</span></label>
+                <div class="preview-seed-row">
+                  <input type="password" id="input-preview-horde-key" placeholder="Kosong = guest key 0000000000" autocomplete="off">
+                  <button type="button" id="btn-preview-clear-horde-key" class="btn btn-outline btn-sm" data-clear-key="horde" title="Hapus key AI Horde">Hapus</button>
+                </div>
+                <div class="preview-hint">Daftar gratis di <a href="https://aihorde.net/register" target="_blank" rel="noopener noreferrer">aihorde.net</a> untuk prioritas antrean lebih baik saat Tier 1 fallback.</div>
+              </div>
+
+              <div class="preview-keys-footer">
+                <button type="button" id="btn-preview-clear-all-keys" class="btn btn-outline btn-danger-outline btn-sm">🗑️ Hapus Semua Key Lokal</button>
+              </div>
             </div>
           </details>
 

@@ -20,7 +20,16 @@ Atau dibuka secara offline langsung di peramban web tanpa memerlukan web server 
    * **Multi-Engine Formatting**: Midjourney v6 (`--ar`, `--stylize`, `--cref`, `--cw`), SDXL / Flux (masterpiece, setting, character, negative prompt otomatis), dan Natural Language (Imagen 3 / Gemini / DALL-E 3 / ChatGPT).
    * **Spatial Guard**: Otomatis mendeteksi pose kendaraan roda dua/mobil dan mengadaptasi latar tertutup menjadi area jalan dan pelataran parkir luar gedung.
    * **Pusaka Klan & Lore Toggles**: Kujang Pasak Pangeker Mana limiter, Familiar Aki Bolang (kucing belang tiga), dan Lapisan Lunar Ward.
-   * **🎨 Preview Gambar (Free Tier 1 — Beta)**: Pratinjau visual cepat 100% *client-side* tanpa backend dan tanpa API key wajib melalui *cascading fallback* (**Pollinations.ai** &rarr; **AI Horde / Stable Horde**), dilengkapi pemadatan prompt otomatis, hitung mundur cooldown 45 detik Pollinations, progress antrean AI Horde + tombol Batal, opsi AI Horde key lokal di `localStorage`, dan tombol Unduh Gambar. *(Catatan: preview bersifat text-to-image tanpa referensi wajah `--cref` dan Pollinations menyertakan watermark bawaan).*
+   * **🎨 Preview Gambar (Tier 1 Gratis & Tier 2 BYOK)**:
+     * **Tier 1 (Tanpa API Key Wajib)**: Pratinjau cepat 100% *client-side* melalui *cascading fallback* (**Pollinations.ai** &rarr; **AI Horde / Stable Horde**), dilengkapi pemadatan prompt *Style-Shot-Subject-First*, mode framing full-body (`2:3` / `9:16`), hitung mundur cooldown 45 detik Pollinations, antrean AI Horde + tombol Batal, dan tombol Unduh Gambar. *(Bersifat text-to-image tanpa `--cref`; Pollinations gratis menyertakan watermark).*
+     * **Tier 2 BYOK (`localStorage` Browser)**: Dukungan API key milik pengguna yang disimpan eksklusif di `localStorage` browser (disertai opsi **Hapus Semua Key** serta redaksi token pada pesan error):
+       * **Pollinations Keyed (`gen.pollinations.ai`)**: Mendukung Pollen key (`pk_` disarankan untuk browser) dengan jatah Pollen gratis harian dari `enter.pollinations.ai` (`flux`, `zimage`, `flux-klein`, `kontext`).
+       * **Google Gemini Image (`gemini-2.5-flash-image` / `gemini-3.1-flash-image-preview`)**: Mendukung **upload foto referensi wajah lokal (maks 3 foto)** langsung dari memori browser untuk konsistensi wajah Aluna lebih baik *(catatan: endpoint image Gemini di AI Studio umumnya mensyaratkan akun billing/kredit aktif)*.
+       * **Pixazo AI Gateway (`flux-1-schnell` / `sdxl-1.0`)**: Autentikasi `Ocp-Apim-Subscription-Key` dengan free tier kuota terbatas.
+       * **Together AI (`FLUX.1-schnell-Free` &rarr; fallback `FLUX.1-schnell`)**: Menggunakan kredit uji coba akun baru / pay-as-you-go serverless.
+       * **HuggingFace Inference Router (`FLUX.1-schnell` / `SDXL 1.0`)**: Auto-retry warmup `503` *(catatan: akun Free HF kini tidak lagi mendapat kredit bulanan, memerlukan paket HF PRO atau kredit prabayar)*.
+       * **AI Horde Registered Key**: 100% gratis dengan prioritas antrean lebih tinggi dibanding guest key.
+       * Mode **`byok_auto`**: Mencoba seluruh provider Tier 2 yang key-nya terisi secara berurutan, lalu otomatis fallback ke Tier 1 gratis apabila diperlukan.
 
 2. **👗 Modular Wardrobe Mix & Match Studio (Tab 2):**
    * Penyusunan busana kustom per lapisan melalui 6 slot modular:
