@@ -114,13 +114,45 @@
     bar.textContent = text;
   }
 
+  function getEffectivePreviewConfig() {
+    const framingSel = $('select-preview-framing');
+    const framingMode = framingSel ? framingSel.value : 'studio';
+    if (framingMode === 'full_body_2x3') {
+      return Object.assign({}, state, {
+        aspect_ratio_id: '2:3',
+        camera_angle_id: 'full_body',
+      });
+    }
+    if (framingMode === 'full_body_9x16') {
+      return Object.assign({}, state, {
+        aspect_ratio_id: '9:16',
+        camera_angle_id: 'full_body',
+      });
+    }
+    return Object.assign({}, state);
+  }
+
   function updatePreviewDimensionHint() {
     if (!PromptGeneratorEngine || !PromptGeneratorEngine.getPreviewDimensions) return;
-    const dims = PromptGeneratorEngine.getPreviewDimensions(state.aspect_ratio_id);
-    const hint = $('preview-dim-hint');
-    if (hint) hint.textContent = `${state.aspect_ratio_id} • ${dims.width}×${dims.height}`;
+    const eff = getEffectivePreviewConfig();
+    const dims = PromptGeneratorEngine.getPreviewDimensions(eff.aspect_ratio_id);
+    const angleObj = (presets.camera_angles || []).find((a) => a.id === eff.camera_angle_id);
+    const angleLabel = angleObj ? angleObj.name.replace(/^\d+\.\s*/, '') : eff.camera_angle_id;
+    const isHorizontal = ['16:9', '3:2', '21:9'].includes(eff.aspect_ratio_id);
+
+    const hintEl = $('preview-framing-hint');
+    if (hintEl) {
+      let msg = `Target aktif: <strong>${escapeHtml(eff.aspect_ratio_id)} • ${dims.width}×${dims.height}</strong> (${escapeHtml(angleLabel)})`;
+      if (eff.camera_angle_id === 'full_body' && isHorizontal) {
+        msg += ' — <span style="color:var(--gold);">⚠️ Rasio horizontal sering memotong kaki; pilih mode Paksa Full-Body (2:3) agar utuh.</span>';
+      } else if (eff.camera_angle_id === 'medium_shot') {
+        msg += ' — <span style="color:var(--text-muted);">Setengah badan; pilih "Paksa Full-Body Utuh" untuk seluruh busana.</span>';
+      }
+      hintEl.innerHTML = msg;
+    }
+
     const emptyDim = $('preview-empty-dim');
-    if (emptyDim) emptyDim.textContent = `Dimensi target: ${dims.width} × ${dims.height} px (${state.aspect_ratio_id})`;
+    if (emptyDim) emptyDim.textContent = `Dimensi target: ${dims.width} × ${dims.height} px (${eff.aspect_ratio_id})`;
   }
 
   function syncPreviewControls() {
@@ -174,7 +206,8 @@
     }
     if (previewState.isGenerating) return;
 
-    const payloads = generator.buildWebImagePreviewPayloads(state);
+    const effectiveCfg = getEffectivePreviewConfig();
+    const payloads = generator.buildWebImagePreviewPayloads(effectiveCfg);
     const providerMode = ($('select-preview-provider') && $('select-preview-provider').value) || 'auto';
     const rawSeed = $('input-preview-seed') ? parseInt($('input-preview-seed').value, 10) : NaN;
     const seed = Number.isFinite(rawSeed) && rawSeed >= 0 ? rawSeed : Math.floor(Math.random() * 999999);
@@ -229,13 +262,6 @@
         ? payloads.hordePrompt
         : payloads.pollinationsPrompt;
 
-      if (imgEl && emptyEl && stageEl) {
-        imgEl.src = result.src;
-        imgEl.style.display = 'block';
-        emptyEl.style.display = 'none';
-        stageEl.classList.add('has-image');
-      }
-
       if (detailsEl && sentEl && summaryEl) {
         sentEl.textContent = sentPrompt;
         summaryEl.textContent = `🔍 Lihat Prompt Ringkas yang Dikirim (${sentPrompt.length} karakter)`;
@@ -247,18 +273,32 @@
         const secStr = elapsedMs < 150 ? '<0.1s (cache)' : `${(elapsedMs / 1000).toFixed(1)}s`;
         metaEl.innerHTML = '';
         [
-          `Provider: <strong>${escapeHtml(result.providerLabel || result.provider)}</strong>`,
-          `Model: <strong>${escapeHtml(result.model || '-')}</strong>`,
-          `Ukuran: <strong>${result.width}&times;${result.height}</strong>`,
-          `Seed: <strong>${result.seed}</strong>`,
-          `Waktu: <strong>${secStr}</strong>`,
-        ].forEach((chipHtml) => {
+          { key: 'provider', html: `Provider: <strong>${escapeHtml(result.providerLabel || result.provider)}</strong>` },
+          { key: 'model', html: `Model: <strong>${escapeHtml(result.model || '-')}</strong>` },
+          { key: 'size', html: `Ukuran: <strong>${result.width}&times;${result.height}</strong>` },
+          { key: 'seed', html: `Seed: <strong>${result.seed}</strong>` },
+          { key: 'time', html: `Waktu: <strong>${secStr}</strong>` },
+        ].forEach((item) => {
           const chip = document.createElement('div');
           chip.className = 'chip';
-          chip.innerHTML = chipHtml;
+          chip.setAttribute('data-meta', item.key);
+          chip.innerHTML = item.html;
           metaEl.appendChild(chip);
         });
         metaEl.style.display = 'flex';
+      }
+
+      if (imgEl && emptyEl && stageEl) {
+        imgEl.onload = () => {
+          const sizeChip = metaEl && metaEl.querySelector('[data-meta="size"] strong');
+          if (sizeChip && imgEl.naturalWidth > 0 && imgEl.naturalHeight > 0) {
+            sizeChip.textContent = `${imgEl.naturalWidth}×${imgEl.naturalHeight}`;
+          }
+        };
+        imgEl.src = result.src;
+        imgEl.style.display = 'block';
+        emptyEl.style.display = 'none';
+        stageEl.classList.add('has-image');
       }
 
       const fallbackNote = result.fallbackReason ? ` (Fallback: ${result.fallbackReason})` : '';
@@ -1361,6 +1401,9 @@
     }
     if ($('select-preview-provider')) {
       $('select-preview-provider').addEventListener('change', syncPreviewControls);
+    }
+    if ($('select-preview-framing')) {
+      $('select-preview-framing').addEventListener('change', updatePreviewDimensionHint);
     }
     if ($('input-preview-horde-key')) {
       $('input-preview-horde-key').addEventListener('input', (e) => {

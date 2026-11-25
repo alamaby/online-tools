@@ -274,6 +274,16 @@
             </div>
           </div>
 
+          <div class="form-group" style="margin-bottom:12px;">
+            <label class="form-label" for="select-preview-framing">Framing &amp; Rasio Preview</label>
+            <select id="select-preview-framing">
+              <option value="studio">📐 Ikuti Form Studio (Rasio &amp; Sudut Kamera Aktif)</option>
+              <option value="full_body_2x3">🧍 Paksa Full-Body Utuh (2:3 &bull; 768&times;1152 — Kepala s/d Sepatu)</option>
+              <option value="full_body_9x16">📱 Paksa Full-Body Tinggi (9:16 &bull; 576&times;1024 — Ekstra Vertikal)</option>
+            </select>
+            <div id="preview-framing-hint" class="preview-hint" style="margin-top:5px;">Target aktif: <strong id="preview-dim-hint">16:9 &bull; 1024&times;576</strong></div>
+          </div>
+
           <details class="preview-advanced">
             <summary>⚙️ Opsi AI Horde API Key (Opsional — untuk antrean lebih cepat)</summary>
             <div class="preview-advanced-body">
@@ -293,7 +303,7 @@
           </div>
 
           <div id="preview-status-bar" class="preview-status" role="status" aria-live="polite">
-            Siap membuat preview dari prompt aktif (<span id="preview-dim-hint">16:9 &bull; 1024&times;576</span>).
+            Siap membuat preview dari prompt aktif.
           </div>
 
           <div id="preview-stage" class="preview-stage">

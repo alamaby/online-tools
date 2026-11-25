@@ -705,13 +705,15 @@
         .trim();
       const stylePart = trimToSentenceOrWord(cleanStyle, 58).replace(/[.,]+$/, '');
 
-      // 2. Concise Camera Shot (avoid 'close-up' face zoom bias on medium waist-up shots)
+      // 2. Concise Camera Shot (avoid 'close-up' face zoom bias; strengthen full_body head-to-toe cues)
       const rawAngle = sanitizeVisualFragment(resolved.angle.prompt_text || '');
       let firstAngleClause = rawAngle.split(/[.,]/)[0].trim();
       if (resolved.angle && resolved.angle.id === 'medium_shot') {
         firstAngleClause = 'waist-up medium shot';
+      } else if (resolved.angle && resolved.angle.id === 'full_body') {
+        firstAngleClause = 'full-length head-to-toe shot, shoes visible on floor';
       }
-      const shotPart = trimToSentenceOrWord(firstAngleClause, 55).replace(/[.,]+$/, '');
+      const shotPart = trimToSentenceOrWord(firstAngleClause, 60).replace(/[.,]+$/, '');
 
       // 3. Subject + Hair/Hijab (<= 115 chars)
       const physicalRaw = resolveAlunaPhysicalPrompt(
@@ -746,13 +748,14 @@
         78
       ).replace(/[.,]+$/, '');
 
-      // 5. Outfit (distill semicolon clauses cleanly into <= 155 chars)
+      // 5. Outfit (preserve upper garments AND lower/footwear so full-body framing has legs/shoes)
       const rawOutfit = sanitizeVisualFragment(resolved.outfitPrompt || '')
         .replace(/\btailored slim-fit\b/gi, '')
         .replace(/\bfeaturing princess seams and cream edge trim\b/gi, '')
         .replace(/\bfitting snugly around her slender waist with an adjustable back-cinch buckle\b/gi, '')
-        .replace(/\bmagnetic acrylic nametag pinned to the LEFT CHEST reading\b/gi, 'nametag')
-        .replace(/\bshort-sleeved collared\b/gi, '')
+        .replace(/\bmagnetic acrylic nametag pinned to the LEFT CHEST reading\s*['"][^'"]*['"]/gi, '')
+        .replace(/\bmagnetic acrylic nametag pinned to the LEFT CHEST reading\b/gi, '')
+        .replace(/\bshort-sleeved collared\b/gi, 'collared')
         .replace(/\btied with a neat bow at the natural high waist[^.;]*/gi, '')
         .replace(/\bcut cleanly at the ankle\b/gi, '')
         .replace(/\bwith ergonomic white soles\b/gi, '')
@@ -765,14 +768,20 @@
         .trim();
       const outfitClauses = rawOutfit
         .split(/[;.]/)
-        .map((c) => c.trim().replace(/^layered over\s+/i, 'over ').replace(/^completing the ensemble with\s+/i, ''))
-        .filter(Boolean);
+        .map((c) => c.trim().replace(/^layered over\s+/i, 'over ').replace(/^completing the ensemble with\s+/i, '').replace(/^paired with\s+/i, ''))
+        .filter((c) => c && c.length > 2);
+
+      // When outfit has many layers, prioritize first 2 upper clauses + last 2 lower/footwear clauses
+      const prioritizedClauses = outfitClauses.length > 4
+        ? [...outfitClauses.slice(0, 2), ...outfitClauses.slice(-2)]
+        : outfitClauses;
+
       const compactOutfit = [];
       let outfitLen = 0;
-      for (const clause of outfitClauses) {
-        const shortClause = trimToSentenceOrWord(clause, 52).replace(/[.,]+$/, '');
+      for (const clause of prioritizedClauses) {
+        const shortClause = trimToSentenceOrWord(clause, 48).replace(/[.,]+$/, '');
         if (!shortClause) continue;
-        if (outfitLen + shortClause.length + 2 > 155 && compactOutfit.length > 0) break;
+        if (outfitLen + shortClause.length + 2 > 180 && compactOutfit.length > 0) break;
         compactOutfit.push(shortClause);
         outfitLen += shortClause.length + 2;
       }
