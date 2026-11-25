@@ -10,6 +10,8 @@
   <script src="data/data.js"></script>
   <!-- Load standalone prompt generator engine -->
   <script src="generator.js"></script>
+  <!-- Load client-side free image preview adapter (Tier 1) -->
+  <script src="preview.js"></script>
 </head>
 <body>
 
@@ -240,6 +242,70 @@
             <button id="btn-export-md" class="btn btn-outline" style="flex:1;">📥 Unduh Markdown (.md)</button>
             <button id="btn-reset-form" class="btn btn-outline">🔄 Reset</button>
           </div>
+        </div>
+
+        <!-- Free Tier 1 Image Preview Card -->
+        <div class="card" id="card-preview">
+          <div class="card-title">
+            <span>🎨 Preview Gambar (Free Tier 1)</span>
+            <span class="badge-beta">BETA • TEXT-TO-IMAGE</span>
+          </div>
+
+          <p class="preview-disclaimer">
+            Preview cepat tanpa API key wajib (<strong>Pollinations.ai</strong> &rarr; fallback <strong>AI Horde</strong>).
+            Bersifat <em>text-to-image</em> tanpa referensi wajah (<code>--cref</code>), sehingga wajah tidak 100% identik kanon. Pollinations menyertakan watermark &amp; batas 1 gambar/45 detik per IP.
+          </p>
+
+          <div class="form-row two-col" style="margin-bottom:12px;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="select-preview-provider">Layanan Preview</label>
+              <select id="select-preview-provider">
+                <option value="auto">⚡ Auto (Pollinations &rarr; AI Horde)</option>
+                <option value="pollinations">🌸 Pollinations.ai (Cepat, Cooldown 45s)</option>
+                <option value="stable_horde">🐝 AI Horde (Antrean Komunitas + Negative)</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="input-preview-seed">Seed Preview</label>
+              <div class="preview-seed-row">
+                <input type="number" id="input-preview-seed" value="42" min="0" max="2147483647" aria-label="Seed preview gambar">
+                <button type="button" id="btn-preview-random-seed" class="btn btn-outline btn-sm" title="Acak seed">🎲</button>
+              </div>
+            </div>
+          </div>
+
+          <details class="preview-advanced">
+            <summary>⚙️ Opsi AI Horde API Key (Opsional — untuk antrean lebih cepat)</summary>
+            <div class="preview-advanced-body">
+              <label class="form-label" for="input-preview-horde-key">AI Horde API Key <span class="note">(Tersimpan lokal di browser)</span></label>
+              <div class="preview-seed-row">
+                <input type="password" id="input-preview-horde-key" placeholder="Kosong = guest key 0000000000" autocomplete="off">
+                <button type="button" id="btn-preview-clear-horde-key" class="btn btn-outline btn-sm">Hapus</button>
+              </div>
+              <div class="preview-hint">Daftar gratis di <a href="https://aihorde.net/register" target="_blank" rel="noopener noreferrer">aihorde.net</a> untuk prioritas antrean lebih baik saat Pollinations cooldown.</div>
+            </div>
+          </details>
+
+          <div class="preview-actions">
+            <button type="button" id="btn-preview-generate" class="btn btn-purple" style="flex:1;">🎨 Generate Preview</button>
+            <button type="button" id="btn-preview-cancel" class="btn btn-outline btn-danger-outline" disabled>⏹️ Batal</button>
+            <button type="button" id="btn-preview-download" class="btn btn-outline" disabled>💾 Unduh</button>
+          </div>
+
+          <div id="preview-status-bar" class="preview-status" role="status" aria-live="polite">
+            Siap membuat preview dari prompt aktif (<span id="preview-dim-hint">16:9 &bull; 1024&times;576</span>).
+          </div>
+
+          <div id="preview-stage" class="preview-stage">
+            <div id="preview-empty" class="preview-empty">
+              <div style="font-size:26px;margin-bottom:6px;">🖼️</div>
+              <div>Klik <strong>Generate Preview</strong> untuk menguji hasil visual prompt secara gratis.</div>
+              <div id="preview-empty-dim" class="preview-empty-dim">Dimensi target: 1024 &times; 576 px (16:9)</div>
+            </div>
+            <img id="preview-image" alt="Preview gambar hasil generasi prompt Aluna" style="display:none;">
+          </div>
+
+          <div id="preview-meta" class="preview-meta" style="display:none;"></div>
         </div>
       </div>
     </div>

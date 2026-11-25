@@ -76,6 +76,238 @@
   // Bulk Results Storage
   let lastBulkResults = [];
 
+  // Free Tier 1 Preview State
+  const HORDE_KEY_STORAGE = 'aluna_horde_api_key';
+  const previewState = {
+    isGenerating: false,
+    controller: null,
+    cooldownTimer: null,
+    lastResult: null,
+    lastObjectUrl: null,
+  };
+
+  function safeStorageGet(key) {
+    try {
+      return window.localStorage ? window.localStorage.getItem(key) || '' : '';
+    } catch (_) {
+      return '';
+    }
+  }
+
+  function safeStorageSet(key, value) {
+    try {
+      if (!window.localStorage) return;
+      if (value) {
+        window.localStorage.setItem(key, value);
+      } else {
+        window.localStorage.removeItem(key);
+      }
+    } catch (_) {
+      // Ignore storage errors in private / restricted file:/// contexts
+    }
+  }
+
+  function setPreviewStatus(text, tone = '') {
+    const bar = $('preview-status-bar');
+    if (!bar) return;
+    bar.className = 'preview-status' + (tone ? ` is-${tone}` : '');
+    bar.textContent = text;
+  }
+
+  function updatePreviewDimensionHint() {
+    if (!PromptGeneratorEngine || !PromptGeneratorEngine.getPreviewDimensions) return;
+    const dims = PromptGeneratorEngine.getPreviewDimensions(state.aspect_ratio_id);
+    const hint = $('preview-dim-hint');
+    if (hint) hint.textContent = `${state.aspect_ratio_id} • ${dims.width}×${dims.height}`;
+    const emptyDim = $('preview-empty-dim');
+    if (emptyDim) emptyDim.textContent = `Dimensi target: ${dims.width} × ${dims.height} px (${state.aspect_ratio_id})`;
+  }
+
+  function syncPreviewControls() {
+    const genBtn = $('btn-preview-generate');
+    const cancelBtn = $('btn-preview-cancel');
+    const dlBtn = $('btn-preview-download');
+    const providerSel = $('select-preview-provider');
+    if (!genBtn || !cancelBtn || !dlBtn) return;
+
+    const previewApi = window.AlunaWebImagePreview;
+    const cooldownSec = previewApi ? previewApi.getPollinationsCooldownRemainingSec() : 0;
+    const selectedMode = providerSel ? providerSel.value : 'auto';
+    const blockedByCooldown = selectedMode === 'pollinations' && cooldownSec > 0;
+
+    genBtn.disabled = previewState.isGenerating || blockedByCooldown;
+    if (previewState.isGenerating) {
+      genBtn.textContent = '⏳ Memproses...';
+    } else if (blockedByCooldown) {
+      genBtn.textContent = `⏳ Tunggu ${cooldownSec}s`;
+    } else {
+      genBtn.textContent = '🎨 Generate Preview';
+    }
+
+    cancelBtn.disabled = !previewState.isGenerating;
+    dlBtn.disabled = !previewState.lastResult || previewState.isGenerating;
+  }
+
+  function ensureCooldownTicker() {
+    if (previewState.cooldownTimer) return;
+    const previewApi = window.AlunaWebImagePreview;
+    if (!previewApi || previewApi.getPollinationsCooldownRemainingSec() <= 0) return;
+
+    previewState.cooldownTimer = setInterval(() => {
+      const left = previewApi.getPollinationsCooldownRemainingSec();
+      syncPreviewControls();
+      if (left <= 0) {
+        clearInterval(previewState.cooldownTimer);
+        previewState.cooldownTimer = null;
+        if (!previewState.isGenerating) {
+          setPreviewStatus('Cooldown Pollinations selesai. Siap membuat preview baru.');
+        }
+      }
+    }, 1000);
+  }
+
+  async function runWebImagePreview() {
+    const previewApi = window.AlunaWebImagePreview;
+    if (!previewApi) {
+      showToast('Modul preview.js belum termuat.', 'err');
+      return;
+    }
+    if (previewState.isGenerating) return;
+
+    const payloads = generator.buildWebImagePreviewPayloads(state);
+    const providerMode = ($('select-preview-provider') && $('select-preview-provider').value) || 'auto';
+    const rawSeed = $('input-preview-seed') ? parseInt($('input-preview-seed').value, 10) : NaN;
+    const seed = Number.isFinite(rawSeed) && rawSeed >= 0 ? rawSeed : Math.floor(Math.random() * 999999);
+    if ($('input-preview-seed')) $('input-preview-seed').value = String(seed);
+    const hordeApiKey = ($('input-preview-horde-key') && $('input-preview-horde-key').value.trim()) || '';
+
+    previewState.isGenerating = true;
+    previewState.controller = new AbortController();
+    syncPreviewControls();
+    setPreviewStatus('Menyiapkan payload prompt ringkas...', 'loading');
+
+    try {
+      const result = await previewApi.generatePreview(
+        {
+          providerMode,
+          pollinationsPrompt: payloads.pollinationsPrompt,
+          hordePrompt: payloads.hordePrompt,
+          negativePrompt: payloads.negativePrompt,
+          width: payloads.dimensions.width,
+          height: payloads.dimensions.height,
+          seed,
+          artStyleId: state.art_style_id,
+          hordeApiKey,
+        },
+        {
+          signal: previewState.controller.signal,
+          onStatus: (info) => {
+            if (info && info.message) {
+              setPreviewStatus(info.message, info.stage === 'fallback' ? 'warn' : 'loading');
+            }
+          },
+        }
+      );
+
+      if (previewState.lastObjectUrl && previewState.lastObjectUrl !== result.src) {
+        URL.revokeObjectURL(previewState.lastObjectUrl);
+        previewState.lastObjectUrl = null;
+      }
+      if (result.isObjectUrl) {
+        previewState.lastObjectUrl = result.src;
+      }
+      previewState.lastResult = result;
+
+      const imgEl = $('preview-image');
+      const emptyEl = $('preview-empty');
+      const stageEl = $('preview-stage');
+      const metaEl = $('preview-meta');
+
+      if (imgEl && emptyEl && stageEl) {
+        imgEl.src = result.src;
+        imgEl.style.display = 'block';
+        emptyEl.style.display = 'none';
+        stageEl.classList.add('has-image');
+      }
+
+      if (metaEl) {
+        const secStr = ((result.elapsedMs || 0) / 1000).toFixed(1);
+        metaEl.innerHTML = '';
+        [
+          `Provider: <strong>${escapeHtml(result.providerLabel || result.provider)}</strong>`,
+          `Model: <strong>${escapeHtml(result.model || '-')}</strong>`,
+          `Ukuran: <strong>${result.width}&times;${result.height}</strong>`,
+          `Seed: <strong>${result.seed}</strong>`,
+          `Waktu: <strong>${secStr}s</strong>`,
+        ].forEach((chipHtml) => {
+          const chip = document.createElement('div');
+          chip.className = 'chip';
+          chip.innerHTML = chipHtml;
+          metaEl.appendChild(chip);
+        });
+        metaEl.style.display = 'flex';
+      }
+
+      const fallbackNote = result.fallbackReason ? ` (Fallback: ${result.fallbackReason})` : '';
+      setPreviewStatus(`Preview berhasil dibuat via ${result.providerLabel}${fallbackNote}.`, 'ok');
+      showToast(`🎨 Preview siap via ${result.providerLabel}!`, 'ok');
+    } catch (err) {
+      if (err && err.name === 'AbortError') {
+        setPreviewStatus('Generasi preview dibatalkan.', 'warn');
+        showToast('Preview dibatalkan.', 'info');
+      } else {
+        const msg = (err && err.message) ? err.message : 'Gagal membuat preview gambar.';
+        setPreviewStatus(msg, 'err');
+        showToast(msg, 'err');
+      }
+    } finally {
+      previewState.isGenerating = false;
+      previewState.controller = null;
+      ensureCooldownTicker();
+      syncPreviewControls();
+    }
+  }
+
+  function cancelWebImagePreview() {
+    if (previewState.controller) {
+      previewState.controller.abort();
+    }
+  }
+
+  function downloadPreviewImage() {
+    const res = previewState.lastResult;
+    if (!res) {
+      showToast('Belum ada gambar preview untuk diunduh.', 'err');
+      return;
+    }
+    const ext = (res.mimeType || '').includes('png')
+      ? 'png'
+      : (res.mimeType || '').includes('webp')
+        ? 'webp'
+        : 'jpg';
+    const now = new Date();
+    const pad = (n) => String(n).padStart(2, '0');
+    const ts = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}_${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
+    const filename = `aluna_preview_${res.provider || 'free'}_${ts}.${ext}`;
+
+    if (res.blob) {
+      const url = URL.createObjectURL(res.blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.rel = 'noopener';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 250);
+      showToast(`💾 Mengunduh gambar: ${filename}`, 'ok');
+    } else if (res.src) {
+      window.open(res.src, '_blank', 'noopener,noreferrer');
+    }
+  }
+
   // --- Utility: Toast Notification ---
   function showToast(message, type = 'info') {
     const container = $('toast-container');
@@ -406,6 +638,8 @@
       chip.innerHTML = html;
       chipsContainer.appendChild(chip);
     });
+
+    updatePreviewDimensionHint();
   }
 
   // --- Quick Roll Functions ---
@@ -1095,6 +1329,39 @@
     });
     $('btn-export-md').addEventListener('click', downloadActivePromptMarkdown);
 
+    // Free Tier 1 Preview Events
+    if ($('btn-preview-generate')) {
+      $('btn-preview-generate').addEventListener('click', runWebImagePreview);
+    }
+    if ($('btn-preview-cancel')) {
+      $('btn-preview-cancel').addEventListener('click', cancelWebImagePreview);
+    }
+    if ($('btn-preview-download')) {
+      $('btn-preview-download').addEventListener('click', downloadPreviewImage);
+    }
+    if ($('btn-preview-random-seed')) {
+      $('btn-preview-random-seed').addEventListener('click', () => {
+        if ($('input-preview-seed')) {
+          $('input-preview-seed').value = String(Math.floor(Math.random() * 999999) + 1);
+        }
+      });
+    }
+    if ($('select-preview-provider')) {
+      $('select-preview-provider').addEventListener('change', syncPreviewControls);
+    }
+    if ($('input-preview-horde-key')) {
+      $('input-preview-horde-key').addEventListener('input', (e) => {
+        safeStorageSet(HORDE_KEY_STORAGE, e.target.value.trim());
+      });
+    }
+    if ($('btn-preview-clear-horde-key')) {
+      $('btn-preview-clear-horde-key').addEventListener('click', () => {
+        if ($('input-preview-horde-key')) $('input-preview-horde-key').value = '';
+        safeStorageSet(HORDE_KEY_STORAGE, '');
+        showToast('AI Horde API key lokal dihapus.', 'info');
+      });
+    }
+
     // Modular Wardrobe Events
     $('select-wardrobe-recipe').addEventListener('change', (e) => applyWardrobeRecipe(e.target.value));
     $('btn-apply-recipe').addEventListener('click', () => applyWardrobeRecipe($('select-wardrobe-recipe').value));
@@ -1370,6 +1637,13 @@
     // Initial Studio Output
     updateCameraAngleDropdown();
     updatePromptOutput();
+
+    // Restore optional AI Horde key & initialize preview controls
+    if ($('input-preview-horde-key')) {
+      $('input-preview-horde-key').value = safeStorageGet(HORDE_KEY_STORAGE);
+    }
+    updatePreviewDimensionHint();
+    syncPreviewControls();
   }
 
   // Run on DOM ready

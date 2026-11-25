@@ -635,10 +635,147 @@
         hairstylePrompt: isHijab ? hairstyle.prompt_fragment : (hairstyle ? `${colorText} ${hairStyleText}` : ''),
       };
     }
+
+    /**
+     * Build compacted text-to-image preview payloads for Tier 1 free web providers
+     * (Pollinations GET URL & AI Horde POST JSON), always using concise SDXL/Flux
+     * formatting regardless of the currently selected Target Engine.
+     */
+    buildWebImagePreviewPayloads(config, maxPollinationsChars = 1400) {
+      const sdxlCfg = Object.assign({}, config || {}, {
+        target_engine_id: 'sdxl_flux',
+      });
+      const sdxlGen = this.generate(sdxlCfg);
+      const arId = (config && config.aspect_ratio_id) || '16:9';
+      const dimensions = getPreviewDimensions(arId);
+
+      return {
+        dimensions,
+        aspectRatioId: arId,
+        pollinationsPrompt: compactPromptForWebImage(
+          sdxlGen.fullPrompt,
+          maxPollinationsChars,
+          this.presets
+        ),
+        hordePrompt: compactPromptForWebImage(
+          sdxlGen.fullPrompt,
+          2200,
+          this.presets
+        ),
+        negativePrompt: sdxlGen.negativePrompt || '',
+        metadata: sdxlGen.metadata,
+      };
+    }
+  }
+
+  const PREVIEW_DIMENSIONS = {
+    '16:9': { width: 1024, height: 576 },
+    '2:3':  { width: 768,  height: 1152 },
+    '9:16': { width: 576,  height: 1024 },
+    '1:1':  { width: 1024, height: 1024 },
+    '4:5':  { width: 832,  height: 1024 },
+    '3:4':  { width: 768,  height: 1024 },
+    '3:2':  { width: 1152, height: 768 },
+    '21:9': { width: 1344, height: 576 },
+  };
+
+  function getPreviewDimensions(aspectRatioId) {
+    return PREVIEW_DIMENSIONS[aspectRatioId] || PREVIEW_DIMENSIONS['16:9'];
+  }
+
+  function trimToSentenceOrWord(text, maxChars) {
+    if (!text) return '';
+    const clean = text.trim();
+    if (clean.length <= maxChars) return clean;
+    if (maxChars <= 16) return clean.slice(0, maxChars).trim();
+
+    const slice = clean.slice(0, maxChars);
+    const lastPeriod = slice.lastIndexOf('.');
+    if (lastPeriod >= Math.floor(maxChars * 0.55)) {
+      return slice.slice(0, lastPeriod + 1).trim();
+    }
+    const lastComma = slice.lastIndexOf(',');
+    if (lastComma >= Math.floor(maxChars * 0.65)) {
+      return slice.slice(0, lastComma).trim();
+    }
+    const lastSpace = slice.lastIndexOf(' ');
+    if (lastSpace > 0) {
+      return slice.slice(0, lastSpace).trim();
+    }
+    return slice.trim();
+  }
+
+  function compactPromptForWebImage(rawPrompt, maxChars = 1400, presets = null) {
+    if (!rawPrompt) return '';
+    let p = String(rawPrompt)
+      // Strip Midjourney CLI flags (--ar 16:9, --stylize 250, --cref ..., --cw 80)
+      .replace(/--[a-zA-Z0-9_-]+(?:\s+(?!--)\S+)*/g, ' ')
+      // Strip URLs and local asset paths that free text-to-image endpoints cannot read
+      .replace(/https?:\/\/\S+/g, ' ')
+      .replace(/\bassets\/[^\s,;]+/g, ' ')
+      .replace(/Maintain strict visual identity, hairstyle, and facial consistency with reference image:\s*\.?/gi, ' ');
+
+    if (presets) {
+      const pairs = [
+        [presets.aluna_baseline_physical, presets.aluna_physical_concise],
+        [presets.clan_regalia_accessories, presets.clan_regalia_concise],
+        [presets.familiar_aki_bolang, presets.familiar_bolang_concise],
+        [presets.lunar_ward_layer, presets.lunar_ward_concise],
+        [presets.art_style_master, presets.art_style_concise],
+      ];
+      pairs.forEach(([longStr, shortStr]) => {
+        if (longStr && shortStr) {
+          p = p.split(longStr).join(shortStr);
+        }
+      });
+    }
+
+    const rawSections = p
+      .split(/\n\s*\n/)
+      .map((s) =>
+        s
+          .replace(/Scene\s*&\s*Setting:\s*/gi, 'Setting: ')
+          .replace(/Character\s*&\s*Pose:\s*/gi, 'Character: ')
+          .replace(/Sacred Clan Regalia:\s*/gi, 'Regalia: ')
+          .replace(/Familiar Mentor:\s*/gi, 'Familiar: ')
+          .replace(/Additional Details:\s*/gi, '')
+          .replace(/\s+/g, ' ')
+          .replace(/\.\.+/g, '.')
+          .trim()
+      )
+      .filter(Boolean);
+
+    if (rawSections.length === 0) return '';
+    const joined = rawSections.join(' ');
+    if (joined.length <= maxChars) return joined;
+
+    if (rawSections.length === 1) {
+      return trimToSentenceOrWord(rawSections[0], maxChars);
+    }
+
+    // Allocate character budget proportionally across sections so key elements
+    // (Style, Setting, Character+Pose, Attire, Details) are all preserved.
+    const totalLen = rawSections.reduce((acc, s) => acc + s.length, 0);
+    const separatorReserve = Math.max(0, rawSections.length - 1);
+    const available = Math.max(120, maxChars - separatorReserve);
+
+    const compacted = rawSections.map((sec) => {
+      const share = Math.max(80, Math.floor((sec.length / totalLen) * available));
+      return trimToSentenceOrWord(sec, share);
+    });
+
+    let result = compacted.join(' ').replace(/\s+/g, ' ').trim();
+    if (result.length > maxChars) {
+      result = trimToSentenceOrWord(result, maxChars);
+    }
+    return result;
   }
 
   return {
     PromptGenerator,
     resolveAlunaPhysicalPrompt,
+    PREVIEW_DIMENSIONS,
+    getPreviewDimensions,
+    compactPromptForWebImage,
   };
 });
