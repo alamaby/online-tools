@@ -72,9 +72,9 @@
   ],
   "outfit_categories": {
     "all": {
-      "name": "🌟 Seluruh Katalog Busana (134 Outfits - Full Catalog)",
-      "badge": "Full Catalog (134)",
-      "desc": "Menguji seluruh 134 busana yang tersedia secara komparatif dari outfit #1 sampai #134."
+      "name": "🌟 Seluruh Katalog Busana (144 Outfits - Full Catalog)",
+      "badge": "Full Catalog (144)",
+      "desc": "Menguji seluruh 144 busana yang tersedia secara komparatif dari outfit #1 sampai #144."
     },
     "canon_bumimart": {
       "name": "🏪 Koleksi Kanon & Variasi BumiMart (21 Outfits)",
@@ -115,6 +115,11 @@
       "name": "🌺 Koleksi Wastra & Adat Nusantara (10 Outfits)",
       "badge": "Wastra Adat Nusantara (10)",
       "desc": "Busana adat 10 suku: Bali, Jawa, Minang, Bugis, Batak, NTT, Dayak, Maluku, Aceh, dan Lampung."
+    },
+    "asian_heritage": {
+      "name": "🏮 Koleksi Busana Adat Asia Fitted (10 Outfits)",
+      "badge": "Adat Asia Fitted (10)",
+      "desc": "10 busana tradisional fitted dari Asia: Vietnam, Thailand, Filipina, India, Sri Lanka, Myanmar, Laos, Kamboja, Tiongkok, dan Korea."
     },
     "beach_resort": {
       "name": "🏖️ Koleksi Pantai & Resort Tropis (18 Outfits)",
@@ -1059,6 +1064,76 @@
       "name": "134. [Bisnis Sensual] Mid-Buttoned Champagne Cardigan & Espresso Leather Midi Skirt",
       "prompt_text": "A minimalist sensual office ensemble featuring a fitted soft champagne fine-knit long-sleeve cardigan fastened solely by two central buttons to create a refined upper V-neckline and subtle lower-rib peek, paired with a high-waisted espresso faux-leather midi pencil skirt with an alluring high back slit and minimalist nude heels.",
       "category": "business",
+      "extra": null
+    },
+    {
+      "id": "asia_vietnam_ao_dai",
+      "name": "135. [Adat Asia] Vietnam — Áo Dài Sutra Teratai Fitted & Celana Lebar",
+      "prompt_text": "An authentic fitted Vietnamese Ao Dai ensemble in luminous lotus-ivory silk; a skintight high-collar long-sleeve tunic delicately hand-painted with subtle lotus motifs hugging her bust and waist before splitting at the hips into flowing front and back panels, paired with fluid wide-leg ivory silk Quan Ong Rong trousers and minimalist nude heels.",
+      "category": "asian_heritage",
+      "extra": null
+    },
+    {
+      "id": "asia_thailand_chut_thai_chakkri",
+      "name": "136. [Adat Asia] Thailand — Chut Thai Chakkri Sabai Satu Bahu & Pha Sinh",
+      "prompt_text": "A regal fitted Thai Chut Thai Chakkri attire in shimmering golden-champagne and deep burgundy Yok Dok silk brocade; a pleated diagonal Sabai chest wrap draped across one shoulder leaving her opposite collarbone bare, paired with a figure-hugging front-pleated Pha Sinh wrap skirt cinched at the waist by an engraved gold Khem Khat belt and metallic gold heels.",
+      "category": "asian_heritage",
+      "extra": null
+    },
+    {
+      "id": "asia_philippines_terno_filipiniana",
+      "name": "137. [Adat Asia] Filipina — Modernized Terno Filipiniana Butterfly Sleeves",
+      "prompt_text": "A modernized pearl-ivory Filipino Terno Filipiniana gown crafted from finely embroidered pina silk; featuring iconic structured butterfly sleeves framing her shoulders, a tightly fitted sweetheart corset bodice with intricate calado openwork, and a sleek hip-hugging column skirt paired with cream pointed slingback heels.",
+      "category": "asian_heritage",
+      "extra": null
+    },
+    {
+      "id": "asia_india_saree_backless_choli",
+      "name": "138. [Adat Asia] India — Saree Sutra Kanjeevaram & Fitted Backless Choli",
+      "prompt_text": "A sculpted Indian Kanjeevaram silk Saree ensemble in rich ruby-red and antique gold Zari thread; a tightly fitted cropped Choli blouse featuring a deep scoop neckline and an open dori-tie back exposing her smooth porcelain back and slender midriff, wrapped in a sleek Nivi-draped saree hugging her hips with metallic gold strappy heels.",
+      "category": "asian_heritage",
+      "extra": null
+    },
+    {
+      "id": "asia_srilanka_kandyan_osariya",
+      "name": "139. [Adat Asia] Sri Lanka — Kandyan Osariya Waist-Frill & Fitted Hetta",
+      "prompt_text": "A traditional Sri Lankan Kandyan Osariya attire pairing a cropped fitted ivory Hetta blouse trimmed with golden jasmine motifs stopping at the upper ribcage, with a royal sapphire-and-gold silk Osariya drape featuring the signature ruffled waist frill hugging her hips and revealing a graceful slice of bare waist, finished with gold heels.",
+      "category": "asian_heritage",
+      "extra": null
+    },
+    {
+      "id": "asia_myanmar_eingyi_htamein",
+      "name": "140. [Adat Asia] Myanmar — Blus Organza Eingyi Fitted & Rok Lilit Htamein",
+      "prompt_text": "A refined Burmese traditional outfit combining a fitted sheer peach-coral floral organza Eingyi blouse with asymmetric side fastenings and 3/4 sleeves layered over a contoured silk camisole, paired with a hip-hugging Amarapura Acheik wave-patterned silk Htamein wrap skirt contouring her long legs and nude heels.",
+      "category": "asian_heritage",
+      "extra": null
+    },
+    {
+      "id": "asia_laos_pha_biang_sinh",
+      "name": "141. [Adat Asia] Laos — Selendang Tenun Pha Biang & Rok Tabung Pha Sinh",
+      "prompt_text": "An elegant Lao traditional ensemble featuring a fitted deep mulberry-purple silk bodice draped diagonally with a handwoven gold-threaded Pha Biang shoulder sash, paired with a sleek form-fitting silk Pha Sinh tube skirt bordered at the hem with intricate golden Tin Sinh geometric weaving and gold metallic heels.",
+      "category": "asian_heritage",
+      "extra": null
+    },
+    {
+      "id": "asia_cambodia_sbey_sampot",
+      "name": "142. [Adat Asia] Kamboja — Selendang Manik Emas Sbey & Kain Lilit Sampot Hol",
+      "prompt_text": "A regal Cambodian Khmer classical attire featuring an ornate golden-beaded crimson silk Sbey wrap draped tautly over one shoulder across her torso leaving her opposite shoulder bare, paired with a crimson-and-gold silk ikat Sampot Hol wrap skirt folded cleanly at the waist and metallic gold heels.",
+      "category": "asian_heritage",
+      "extra": null
+    },
+    {
+      "id": "asia_china_haipai_velvet_qipao",
+      "name": "143. [Adat Asia] Tiongkok — Haipai Qipao Beludru Zamrud Cap-Sleeve",
+      "prompt_text": "A Shanghai 1920s Haipai style figure-hugging emerald-green silk velvet Qipao cheongsam dress featuring fitted cap sleeves, a high mandarin collar with golden piping, diagonal pankou frog buttons, and daring high side thigh slits revealing radiant porcelain legs, paired with emerald stiletto pumps.",
+      "category": "asian_heritage",
+      "extra": null
+    },
+    {
+      "id": "asia_korea_modern_short_jeogori_hanbok",
+      "name": "144. [Adat Asia] Korea — Short-Jeogori & Modernized Organza Chima Hanbok",
+      "prompt_text": "A modernized fitted Korean Hanbok inspired by late-Joseon proportions; featuring a cropped porcelain-blue silk short-Jeogori jacket stopping cleanly under the bust with a crisp white dongjeong collar and flowing satin otgoreum ribbons, paired with a high-waisted empire-line layered sheer blush-ivory silk organza Chima skirt over a fitted satin underskirt and cream pointed slingbacks.",
+      "category": "asian_heritage",
       "extra": null
     }
   ],
@@ -3981,6 +4056,59 @@
         "bioluminescent_tide_moonlit",
         "coastal_mist_diffuse_overcast",
         "water_caustics_shimmer"
+      ]
+    },
+    "vibe_asian_heritage": {
+      "name": "🏮 16. Pesona Busana Adat Asia Fitted (Asian Heritage)",
+      "outfits": [
+        "asia_vietnam_ao_dai",
+        "asia_thailand_chut_thai_chakkri",
+        "asia_philippines_terno_filipiniana",
+        "asia_india_saree_backless_choli",
+        "asia_srilanka_kandyan_osariya",
+        "asia_myanmar_eingyi_htamein",
+        "asia_laos_pha_biang_sinh",
+        "asia_cambodia_sbey_sampot",
+        "asia_china_haipai_velvet_qipao",
+        "asia_korea_modern_short_jeogori_hanbok",
+        "ruby_silk_qipao"
+      ],
+      "sceneries": [
+        "baroque_crystal_ballroom",
+        "luxury_tokyo_penthouse",
+        "victorian_glasshouse_botanical",
+        "snowy_mountain_shrine",
+        "vintage_orient_express",
+        "maribaya_springs",
+        "kebun_teh_rancabali",
+        "neutral_studio"
+      ],
+      "poses": [
+        "pose_confident_standing",
+        "pose_seated_stool",
+        "pose_over_shoulder_glance",
+        "pose_dress_twirl_motion",
+        "pose_walking_candid_stride",
+        "pose_tucking_hair_golden_hour",
+        "pose_balcony_golden_hour_stretch",
+        "pose_duo_slow_dance",
+        "pose_duo_whisper_backhug"
+      ],
+      "camera_angles": [
+        "full_body",
+        "medium_shot",
+        "angle_three_quarter_profile",
+        "angle_golden_hour_rim_side",
+        "angle_telephoto_compression",
+        "low_angle_hero"
+      ],
+      "lightings": [
+        "morning_sunbeams",
+        "soft_studio",
+        "sunset_amber",
+        "golden_hour_backlight_flare",
+        "chiaroscuro_candlelight",
+        "volumetric_fog_god_rays"
       ]
     }
   },

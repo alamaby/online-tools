@@ -3088,6 +3088,197 @@
       "default_color_id": null,
       "color_template": null,
       "id_name_template": null
+    },
+    {
+      "id": "outer_top_asia_vietnam_ao_dai_tunic",
+      "name": "134. [Adat Asia] Tunik Áo Dài Sutra Teratai Fitted Vietnam (Outfit 135)",
+      "category": "outer_top",
+      "description": "Tunik Áo Dài Vietnam berkerah mandarin tinggi dan lengan panjang pas badan dari sutra teratai berkilau dengan belahan pinggang tinggi.",
+      "prompt_fragment": "a skintight lotus-ivory silk Vietnam Ao Dai tunic with a high mandarin collar, fitted long sleeves, delicate hand-painted lotus motifs, and high waist-level side splits",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "vietnam",
+        "aodai",
+        "silk",
+        "fitted"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_asia_thailand_sabai_wrap",
+      "name": "135. [Adat Asia] Selendang Dada Sabai Satu Bahu Brokat Emas Thailand (Outfit 136)",
+      "category": "outer_top",
+      "description": "Atasan selendang lipit Sabai Thailand melintang diagonal di satu bahu memamerkan bahu sebelah dan tulang selangka dalam kilau brokat emas.",
+      "prompt_fragment": "a pleated Thai golden-champagne silk brocade Sabai breast wrap draped diagonally over one shoulder while leaving her opposite porcelain shoulder bare",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "thailand",
+        "sabai",
+        "chutthai",
+        "silk"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_asia_philippines_terno_gown",
+      "name": "136. [One-Piece Adat Asia] Gaun Terno Filipiniana Butterfly Sleeves (Outfit 137)",
+      "category": "outer_top",
+      "description": "Gaun formal Filipiniana Terno dengan lengan kupu-kupu kaku di bahu, korset fitted berleher sweetheart, dan rok column memeluk pinggul dari kain serat piña bordir.",
+      "prompt_fragment": "a modernized pearl-ivory Filipino Terno Filipiniana column gown featuring iconic structured butterfly sleeves, a sculpted sweetheart corset bodice with calado embroidery, and a hip-hugging silhouette",
+      "is_one_piece": true,
+      "style_tags": [
+        "asia",
+        "philippines",
+        "terno",
+        "filipiniana",
+        "one_piece"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_asia_india_backless_choli",
+      "name": "137. [Adat Asia] Blus Crop Choli Punggung Terbuka Tali Dori India (Outfit 138)",
+      "category": "outer_top",
+      "description": "Blus crop Choli pas badan berwarna merah delima bersulam benang emas Zari dengan garis leher deep scoop dan punggung terbuka bertali ikat dori.",
+      "prompt_fragment": "a tightly fitted cropped ruby-red Kanjeevaram silk Choli blouse trimmed with gold Zari embroidery, featuring a deep scoop neckline and an open tie-back dori strap silhouette",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "india",
+        "choli",
+        "saree",
+        "backless"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_asia_srilanka_fitted_hetta",
+      "name": "138. [Adat Asia] Blus Pendek Fitted Hetta Kandyan Sri Lanka (Outfit 139)",
+      "category": "outer_top",
+      "description": "Blus pendek Hetta pas badan berlengan pendek warna putih gading berlis benang emas melati yang berhenti di tulang rusuk untuk Osariya.",
+      "prompt_fragment": "a cropped fitted ivory Kandyan Hetta blouse with short puffed-trim sleeves and delicate golden jasmine-motif edging stopping neatly at the upper midriff",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "srilanka",
+        "osariya",
+        "hetta",
+        "fitted"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_asia_myanmar_sheer_eingyi",
+      "name": "139. [Adat Asia] Blus Renda Sutra Fitted Eingyi Myanmar (Outfit 140)",
+      "category": "outer_top",
+      "description": "Blus pendek Eingyi Myanmar pas badan berkancing miring dengan lengan 3/4 dari organza renda tipis di atas kamisol sutra warna peach koral.",
+      "prompt_fragment": "a fitted Burmese sheer peach-coral floral organza Eingyi blouse with an asymmetric side-fastened front and 3/4 sleeves layered over a contoured silk camisole",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "myanmar",
+        "eingyi",
+        "organza",
+        "fitted"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_asia_laos_pha_biang_bodice",
+      "name": "140. [Adat Asia] Blus Sutra & Selendang Tenun Pha Biang Laos (Outfit 141)",
+      "category": "outer_top",
+      "description": "Blus sutra fitted ungu tua berlengan pendek berpadu selendang tenun ikat Laos Pha Biang berbenang emas yang diselempangkan menyilang bahu.",
+      "prompt_fragment": "a fitted deep mulberry-purple silk short-sleeve Lao bodice draped diagonally across the chest with a handwoven gold-threaded Pha Biang silk sash",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "laos",
+        "phabiang",
+        "sinh",
+        "silk"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_asia_cambodia_beaded_sbey",
+      "name": "141. [Adat Asia] Selendang Dada Sbey Sulam Manik Emas Kamboja (Outfit 142)",
+      "category": "outer_top",
+      "description": "Selendang dada Sbey khas Khmer bersulam manik emas dan motif Angkor yang memeluk dada secara pas melewati satu bahu.",
+      "prompt_fragment": "an ornate Cambodian golden-beaded crimson silk Sbey chest wrap draped tautly over one shoulder across her torso, leaving the opposite collarbone bare",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "cambodia",
+        "sbey",
+        "khmer",
+        "gold"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_asia_china_haipai_velvet_qipao",
+      "name": "142. [One-Piece Adat Asia] Gaun Haipai Qipao Beludru Zamrud Cap-Sleeve (Outfit 143)",
+      "category": "outer_top",
+      "description": "Gaun cheongsam gaya Haipai Shanghai berbahan beludru hijau zamrud pas badan berlengan cap-sleeve dengan piping emas, kancing pankou, dan belahan paha tinggi.",
+      "prompt_fragment": "a figure-hugging emerald-green silk velvet Haipai Shanghai Qipao dress with cap sleeves, a high mandarin collar, golden piping, diagonal pankou frog buttons, and daring high side thigh slits",
+      "is_one_piece": true,
+      "style_tags": [
+        "asia",
+        "china",
+        "qipao",
+        "cheongsam",
+        "velvet",
+        "one_piece"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_asia_korea_short_jeogori",
+      "name": "143. [Adat Asia] Jaket Pendek Fitted Short-Jeogori & Pita Otgoreum Korea (Outfit 144)",
+      "category": "outer_top",
+      "description": "Jaket atasan Short-Jeogori pas badan warna biru porselen berkerah putih dongjeong dan pita simpul sutra otgoreum panjang yang berhenti tepat di bawah garis dada.",
+      "prompt_fragment": "a fitted cropped porcelain-blue silk short-Jeogori jacket stopping cleanly under the bust with a crisp white dongjeong collar and long flowing satin otgoreum ribbons",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "korea",
+        "hanbok",
+        "jeogori",
+        "fitted"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "inner_bottoms": [
@@ -5495,6 +5686,158 @@
       "default_color_id": null,
       "color_template": null,
       "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_asia_vietnam_silk_trousers",
+      "name": "98. [Adat Asia] Celana Sutra Lebar Quần Ống Rộng Putih Gading Vietnam (Outfit 135)",
+      "category": "outer_bottom",
+      "description": "Celana panjang sutra lebar Quần Ống Rộng yang jatuh mengalir lembut di balik panel terbelah Áo Dài.",
+      "prompt_fragment": "flowing ivory-white silk wide-leg Quan Ong Rong trousers sweeping softly beneath the split Ao Dai panels",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "vietnam",
+        "aodai",
+        "trousers",
+        "silk"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_asia_thailand_pha_sinh",
+      "name": "99. [Adat Asia] Rok Lilit Lipit Depan Pha Sinh Brokat Emas Thailand (Outfit 136)",
+      "category": "outer_bottom",
+      "description": "Rok panjang lilit Pha Sinh Thailand berlipit depan rapi yang memeluk pinggul dengan tenunan sutra brokat emas.",
+      "prompt_fragment": "a figure-hugging Thai golden-champagne and burgundy Yok Dok brocade Pha Sinh wrap skirt with crisp front pleats",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "thailand",
+        "phasinh",
+        "chutthai",
+        "skirt"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_asia_india_nivi_saree_skirt",
+      "name": "100. [Adat Asia] Lilitan Saree Sutra Kanjeevaram Gaya Nivi India (Outfit 138)",
+      "category": "outer_bottom",
+      "description": "Lilitan kain sutra Kanjeevaram merah delima bertepi emas Zari gaya Nivi yang membungkus pinggul secara presisi dan menyisakan pinggang ramping terbuka.",
+      "prompt_fragment": "a sculpted ruby-red and gold Zari Kanjeevaram silk Saree draped tightly around her hips in the Nivi style, leaving her slender bare midriff exposed",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "india",
+        "saree",
+        "kanjeevaram",
+        "silk"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_asia_srilanka_osariya_frill_skirt",
+      "name": "101. [Adat Asia] Rok Lilit Osariya Waist-Frill Kandyan Sri Lanka (Outfit 139)",
+      "category": "outer_bottom",
+      "description": "Rok lilit sutra Kandyan Osariya berwarna biru safir dan emas dengan lipitan frill bertumpuk di pinggang ramping.",
+      "prompt_fragment": "a royal sapphire-and-gold Kandyan Osariya silk drape featuring the signature ruffled waist frill hugging her hips and accentuating her bare waist",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "srilanka",
+        "osariya",
+        "kandyan",
+        "skirt"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_asia_myanmar_acheik_htamein",
+      "name": "102. [Adat Asia] Rok Tabung Lilit Htamein Motif Gelombang Acheik Myanmar (Outfit 140)",
+      "category": "outer_bottom",
+      "description": "Rok panjang lilit Htamein pas pinggul berbahan sutra tenun motif gelombang Acheik khas Amarapura yang memeluk siluet kaki.",
+      "prompt_fragment": "a fitted Burmese silk Htamein wrap skirt woven with intricate Amarapura Acheik wave patterns hugging her slender hips and legs",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "myanmar",
+        "htamein",
+        "acheik",
+        "skirt"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_asia_laos_gold_sinh",
+      "name": "103. [Adat Asia] Rok Tabung Tenun Pha Sinh Border Emas Tin Sinh Laos (Outfit 141)",
+      "category": "outer_bottom",
+      "description": "Rok tabung tenun sutra Pha Sinh yang memeluk pinggul dengan tepian bawah bordir emas geometris Tin Sinh khas Laos.",
+      "prompt_fragment": "a sleek form-fitting Lao handwoven silk Pha Sinh tube skirt bordered at the hem with intricate golden Tin Sinh geometric embroidery",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "laos",
+        "sinh",
+        "tinsinh",
+        "skirt"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_asia_cambodia_sampot_hol",
+      "name": "104. [Adat Asia] Kain Lilit Tenun Sutra Sampot Hol Kamboja (Outfit 142)",
+      "category": "outer_bottom",
+      "description": "Rok lilit Sampot Hol tenun ikat sutra warna merah marun dan emas khas Khmer yang memeluk pinggul dengan lipatan depan anggun.",
+      "prompt_fragment": "a traditional Cambodian crimson-and-gold silk ikat Sampot Hol wrap skirt folded cleanly at the front and hugging her hips",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "cambodia",
+        "sampot",
+        "khmer",
+        "skirt"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_asia_korea_organza_chima",
+      "name": "105. [Adat Asia] Rok High-Waist Modernized Sutra Organza Chima Korea (Outfit 144)",
+      "category": "outer_bottom",
+      "description": "Rok Chima berpinggang empire sangat tinggi dari lapisan organza sutra tipis warna blush-ivory yang memperpanjang kaki di bawah Short-Jeogori.",
+      "prompt_fragment": "a high-waisted empire-line modernized Korean Chima skirt crafted from layered sheer blush-ivory silk organza over a sleek fitted satin underskirt",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "korea",
+        "hanbok",
+        "chima",
+        "organza"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "layer_accessories": [
@@ -6663,6 +7006,25 @@
         "bolero",
         "plum",
         "satin"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "layer_asia_thailand_gold_belt",
+      "name": "67. [Adat Asia] Sabuk Logam Emas Ukir Khem Khat Thailand (Outfit 136)",
+      "category": "layer_accessory",
+      "description": "Sabuk logam emas ukiran klasik Khem Khat yang melingkar pas di pinggang di atas lilitan Pha Sinh dan Sabai.",
+      "prompt_fragment": "an ornate engraved Thai golden metal Khem Khat waist belt cinching her narrow waist",
+      "is_one_piece": false,
+      "style_tags": [
+        "asia",
+        "thailand",
+        "belt",
+        "gold",
+        "chutthai"
       ],
       "color_palette": null,
       "default_color_id": null,
@@ -9364,6 +9726,146 @@
         "outer_bottom": "outer_bottom_biz_espresso_leather_midi_pencil",
         "layer_accessory": null,
         "footwear": "footwear_minimalist_nude_heels",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_asia_vietnam_ao_dai",
+      "name": "137. [Adat Asia] Vietnam Áo Dài Sutra Teratai Fitted (Outfit 135)",
+      "description": "Tunik Áo Dài sutra gading motif teratai berkerah tinggi + celana sutra lebar Quần Ống Rộng + heels nude.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_asia_vietnam_ao_dai_tunic",
+        "outer_bottom": "outer_bottom_asia_vietnam_silk_trousers",
+        "layer_accessory": null,
+        "footwear": "footwear_minimalist_nude_heels",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_asia_thailand_chut_thai_chakkri",
+      "name": "138. [Adat Asia] Thailand Chut Thai Chakkri Sabai & Pha Sinh (Outfit 136)",
+      "description": "Selendang Sabai satu bahu brokat emas + rok lilit Pha Sinh + sabuk emas Khem Khat + heels emas.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_asia_thailand_sabai_wrap",
+        "outer_bottom": "outer_bottom_asia_thailand_pha_sinh",
+        "layer_accessory": "layer_asia_thailand_gold_belt",
+        "footwear": "footwear_gold_metallic_strappy_heels",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_asia_philippines_terno_filipiniana",
+      "name": "139. [Adat Asia] Filipina Modernized Terno Filipiniana (Outfit 137)",
+      "description": "Gaun column Filipiniana Terno lengan kupu-kupu & korset sweetheart bordir calado + slingback krem.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_asia_philippines_terno_gown",
+        "outer_bottom": null,
+        "layer_accessory": null,
+        "footwear": "footwear_biz_cream_pointed_slingbacks",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_asia_india_saree_backless_choli",
+      "name": "140. [Adat Asia] India Saree Kanjeevaram & Fitted Backless Choli (Outfit 138)",
+      "description": "Blus crop Choli merah delima punggung terbuka tali dori + lilitan Saree gaya Nivi + heels emas.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_asia_india_backless_choli",
+        "outer_bottom": "outer_bottom_asia_india_nivi_saree_skirt",
+        "layer_accessory": null,
+        "footwear": "footwear_gold_metallic_strappy_heels",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_asia_srilanka_kandyan_osariya",
+      "name": "141. [Adat Asia] Sri Lanka Kandyan Osariya & Fitted Hetta (Outfit 139)",
+      "description": "Blus crop Hetta gading melati emas + rok lilit Osariya waist-frill safir emas + heels emas.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_asia_srilanka_fitted_hetta",
+        "outer_bottom": "outer_bottom_asia_srilanka_osariya_frill_skirt",
+        "layer_accessory": null,
+        "footwear": "footwear_gold_metallic_strappy_heels",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_asia_myanmar_eingyi_htamein",
+      "name": "142. [Adat Asia] Myanmar Eingyi Organza & Htamein Acheik (Outfit 140)",
+      "description": "Blus organza renda fitted Eingyi peach koral + rok lilit Htamein motif gelombang Acheik + selop beludru.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_asia_myanmar_sheer_eingyi",
+        "outer_bottom": "outer_bottom_asia_myanmar_acheik_htamein",
+        "layer_accessory": null,
+        "footwear": "footwear_minimalist_nude_heels",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_asia_laos_pha_biang_sinh",
+      "name": "143. [Adat Asia] Laos Pha Biang & Rok Tabung Pha Sinh (Outfit 141)",
+      "description": "Blus sutra ungu & selendang Pha Biang tenun emas + rok tabung Pha Sinh border Tin Sinh + heels emas.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_asia_laos_pha_biang_bodice",
+        "outer_bottom": "outer_bottom_asia_laos_gold_sinh",
+        "layer_accessory": null,
+        "footwear": "footwear_gold_metallic_strappy_heels",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_asia_cambodia_sbey_sampot",
+      "name": "144. [Adat Asia] Kamboja Sbey Manik Emas & Sampot Hol (Outfit 142)",
+      "description": "Selendang dada Sbey sulam manik emas + kain lilit tenun ikat Sampot Hol + heels emas.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_asia_cambodia_beaded_sbey",
+        "outer_bottom": "outer_bottom_asia_cambodia_sampot_hol",
+        "layer_accessory": null,
+        "footwear": "footwear_gold_metallic_strappy_heels",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_asia_china_haipai_velvet_qipao",
+      "name": "145. [Adat Asia] Tiongkok Haipai Velvet Cap-Sleeve Qipao (Outfit 143)",
+      "description": "Gaun Qipao beludru zamrud cap-sleeve piping emas belahan paha tinggi + stiletto zamrud.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_black_lace_cheeky",
+        "outer_top": "outer_top_asia_china_haipai_velvet_qipao",
+        "outer_bottom": null,
+        "layer_accessory": null,
+        "footwear": "footwear_emerald_stiletto_pumps",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_asia_korea_modern_short_jeogori_hanbok",
+      "name": "146. [Adat Asia] Korea Short-Jeogori & Modernized Organza Chima (Outfit 144)",
+      "description": "Jaket pendek Short-Jeogori biru porselen berpita otgoreum + rok empire organza Chima blush-ivory + slingback krem.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_asia_korea_short_jeogori",
+        "outer_bottom": "outer_bottom_asia_korea_organza_chima",
+        "layer_accessory": null,
+        "footwear": "footwear_biz_cream_pointed_slingbacks",
         "inner_visibility": "hidden"
       }
     }
