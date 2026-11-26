@@ -72,9 +72,9 @@
   ],
   "outfit_categories": {
     "all": {
-      "name": "🌟 Seluruh Katalog Busana (103 Outfits - Full Catalog)",
-      "badge": "Full Catalog (103)",
-      "desc": "Menguji seluruh 103 busana yang tersedia secara komparatif dari outfit #1 sampai #103."
+      "name": "🌟 Seluruh Katalog Busana (116 Outfits - Full Catalog)",
+      "badge": "Full Catalog (116)",
+      "desc": "Menguji seluruh 116 busana yang tersedia secara komparatif dari outfit #1 sampai #116."
     },
     "canon_bumimart": {
       "name": "🏪 Koleksi Kanon & Variasi BumiMart (21 Outfits)",
@@ -92,9 +92,9 @@
       "desc": "Koleksi boudoir, bralette renda sutra, garter slip, corset malam, dan micro bikini."
     },
     "cosplay": {
-      "name": "🎮 Koleksi Pop Culture & Cosplay (16 Outfits)",
-      "badge": "Pop Culture & Cosplay (16)",
-      "desc": "Koleksi kostum anime/game: Yor, Tifa, 2B, Fern, Chun-Li, Makima, Lara Croft, dan 6 varian Jessica Albert."
+      "name": "🎮 Koleksi Pop Culture & Cosplay (26 Outfits)",
+      "badge": "Pop Culture & Cosplay (26)",
+      "desc": "Koleksi kostum anime/game: Yor, Tifa, 2B, Fern, Chun-Li, Makima, Lara Croft, 6 varian Jessica Albert, dan 10 karakter ikonik anime/game."
     },
     "sports": {
       "name": "🏃 Koleksi Olahraga & Activewear (10 Outfits)",
@@ -112,9 +112,9 @@
       "desc": "Busana adat 10 suku: Bali, Jawa, Minang, Bugis, Batak, NTT, Dayak, Maluku, Aceh, dan Lampung."
     },
     "beach_resort": {
-      "name": "🏖️ Koleksi Pantai & Resort Tropis (15 Outfits)",
-      "badge": "Pantai & Resort Tropis (15)",
-      "desc": "Dua potong halter, monokini cutout amber, crochet boho, eyelet ruffle skirt, dan linen beachwear."
+      "name": "🏖️ Koleksi Pantai & Resort Tropis (18 Outfits)",
+      "badge": "Pantai & Resort Tropis (18)",
+      "desc": "Dua potong halter, monokini cutout amber, crochet boho, 3 bikini rajut tangan Bali Bab 20.2, eyelet ruffle skirt, dan linen beachwear."
     }
   },
   "outfits": [
@@ -907,6 +907,27 @@
       "name": "113. [Cosplay] Morrigan Aensland Succubus Leotard & Bat Wings (Darkstalkers)",
       "prompt_text": "A faithful cosplay of Morrigan Aensland's noble succubus costume from Darkstalkers: a form-fitting black velvet sweetheart-bustier leotard with feathered purple scalloped trim along the daring plunging neckline, pair of small dark bat wings sprouting playfully from her temple hair sides and larger bat wings arching from her shoulder blades, opaque sheer lavender tights decorated with scattered black bat silhouettes; barefoot on gothic cathedral gargoyles; Aluna's playful dewy porcelain skin, delicate acacia wood hair pin, bewitching succubus royalty.",
       "category": "cosplay",
+      "extra": null
+    },
+    {
+      "id": "bikini_ivory_shell_crochet",
+      "name": "114. [Pantai] Ivory Shell-Stitch Handmade Crochet Bikini (Bab 20.2)",
+      "prompt_text": "An artisan Balinese handmade two-piece crochet bikini in luminous ivory-white organic cotton featuring intricate shell-stitch knit texture; a double-lined halter bikini top with contoured scalloped shell-pattern cups tied at the nape and mid-back, paired with matching low-rise ivory shell-stitch crochet side-tie bikini bottoms framing her slender hips, radiant dewy porcelain skin, barefoot on sunlit coastal stone.",
+      "category": "beach_resort",
+      "extra": null
+    },
+    {
+      "id": "bikini_terracotta_sunset_crochet",
+      "name": "115. [Pantai] Terracotta Sunset Scallop Crochet Bikini (Bab 20.2)",
+      "prompt_text": "A striking Balinese hand-crocheted two-piece bikini in warm terracotta sunset red; a sculpted scallop-edged crochet halter top tying neatly behind her neck and bare back, paired with matching low-rise terracotta crochet bottoms featuring delicate fringed side-tie straps tipped with natural sandalwood beads along her tapered hips, glowing porcelain skin, barefoot on shallow sea foam.",
+      "category": "beach_resort",
+      "extra": null
+    },
+    {
+      "id": "bikini_seafoam_gold_backless_crochet",
+      "name": "116. [Pantai] Seafoam Turquoise & Gold-Thread Backless Crochet Bikini (Bab 20.2)",
+      "prompt_text": "An exquisite Balinese artisan hand-crocheted two-piece bikini in soft seafoam turquoise embellished with fine metallic gold-thread embroidery along delicate petal-scalloped edges; an open-back crisscross lace-up crochet halter top framing her smooth bare porcelain back, paired with matching gold-trimmed seafoam turquoise crochet side-tie bikini bottoms hugging her hourglass hips, sunlit coastal glow, barefoot.",
+      "category": "beach_resort",
       "extra": null
     }
   ],
@@ -2945,6 +2966,7 @@
         "bumimart_nightshift_cutout_mini_dress",
         "bumimart_bikini_apron_beachside_pop_up",
         "leaf_cutout_longsleeve_micro_dress",
+        "bikini_seafoam_gold_backless_crochet",
         "cosplay_jessica_divine_bustier",
         "cosplay_jessica_dancer_costume",
         "cosplay_jessica_dangerous_bustier",
@@ -3591,7 +3613,10 @@
         "sport_surf_cropped_rashguard",
         "snow_white_bridal_lace_set",
         "golden_kemben_songket",
-        "boudoir_silk_babydoll"
+        "boudoir_silk_babydoll",
+        "bikini_ivory_shell_crochet",
+        "bikini_terracotta_sunset_crochet",
+        "bikini_seafoam_gold_backless_crochet"
       ],
       "sceneries": [
         "beach_club_seminyak_infinity",
@@ -3724,6 +3749,9 @@
         "metallic_gold_micro_bikini",
         "sport_surf_cropped_rashguard",
         "monokini_cutout_siren",
+        "bikini_ivory_shell_crochet",
+        "bikini_terracotta_sunset_crochet",
+        "bikini_seafoam_gold_backless_crochet",
         "bumimart_bikini_apron_beachside_pop_up",
         "bumimart_tied_front_shirt_denim_microshorts"
       ],

@@ -599,6 +599,64 @@
       "default_color_id": null,
       "color_template": null,
       "id_name_template": null
+    },
+    {
+      "id": "inner_top_ivory_shell_crochet_bikini",
+      "name": "35. [Pantai] Atasan Bikini Halter Rajut Putih Gading Shell-Stitch (Bab 20.2)",
+      "category": "inner_top",
+      "description": "Atasan bikini rajut tangan putih gading motif kerang (shell-stitch) berlapis katun organik ganda (zero see-through) bertali ikat leher dan punggung.",
+      "prompt_fragment": "an artisan ivory-white hand-crocheted shell-stitch halter bikini top with double-knit cotton lining tying behind her neck and back",
+      "is_one_piece": false,
+      "style_tags": [
+        "pantai",
+        "crochet",
+        "ivory",
+        "halter",
+        "bali"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "inner_top_terracotta_sunset_crochet_bikini",
+      "name": "36. [Pantai] Atasan Bikini Halter Rajut Scallop Terakota (Bab 20.2)",
+      "category": "inner_top",
+      "description": "Atasan bikini rajut tangan warna merah bata terakota hangat bertepi scallop halus bertali ikat leher.",
+      "prompt_fragment": "a Balinese hand-crocheted terracotta sunset-red scallop-edged halter bikini top tying behind her neck and bare back",
+      "is_one_piece": false,
+      "style_tags": [
+        "pantai",
+        "crochet",
+        "terracotta",
+        "halter",
+        "bali"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "inner_top_seafoam_gold_crochet_bikini",
+      "name": "37. [Pantai] Atasan Bikini Rajut Biru Laut Sulam Benang Emas Backless (Bab 20.2)",
+      "category": "inner_top",
+      "description": "Atasan bikini rajut tangan biru laut lembut berhias sulaman benang emas tipis dengan tali silang punggung terbuka (crisscross lace-up).",
+      "prompt_fragment": "a seafoam-turquoise hand-crocheted halter bikini top trimmed with fine metallic gold embroidery and open-back crisscross lace-up straps",
+      "is_one_piece": false,
+      "style_tags": [
+        "pantai",
+        "crochet",
+        "seafoam",
+        "gold",
+        "backless",
+        "bali"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "outer_tops": [
@@ -2631,6 +2689,65 @@
       "default_color_id": null,
       "color_template": null,
       "id_name_template": null
+    },
+    {
+      "id": "outer_top_ivory_shell_crochet_bikini",
+      "name": "114. [Pantai] Atasan Bikini Halter Rajut Putih Gading Shell-Stitch (Outfit 114 - Bab 20.2)",
+      "category": "outer_top",
+      "description": "Atasan bikini rajut tangan pengrajin Karangasem warna putih gading motif kerang (shell-stitch) berlapis katun organik ganda dengan tali ikat leher dan punggung.",
+      "prompt_fragment": "an artisan Balinese ivory-white hand-crocheted shell-stitch halter bikini top with double-knit organic cotton lining and contoured shell-pattern cups tied at the nape and mid-back",
+      "is_one_piece": false,
+      "style_tags": [
+        "pantai",
+        "crochet",
+        "ivory",
+        "halter",
+        "bali"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_terracotta_sunset_crochet_bikini",
+      "name": "115. [Pantai] Atasan Bikini Halter Rajut Scallop Terakota Sunset (Outfit 115 - Bab 20.2)",
+      "category": "outer_top",
+      "description": "Atasan bikini rajut tangan warna merah bata terakota hangat bertepi scallop halus bertali ikat leher dan punggung terbuka.",
+      "prompt_fragment": "a Balinese hand-crocheted warm terracotta sunset-red scallop-edged halter bikini top tying behind her neck and leaving her porcelain back bare",
+      "is_one_piece": false,
+      "style_tags": [
+        "pantai",
+        "crochet",
+        "terracotta",
+        "scallop",
+        "halter",
+        "bali"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_seafoam_gold_crochet_bikini",
+      "name": "116. [Pantai] Atasan Bikini Rajut Biru Laut Sulam Emas Backless (Outfit 116 - Bab 20.2)",
+      "category": "outer_top",
+      "description": "Atasan bikini rajut tangan biru laut lembut berhias sulaman benang emas tipis di tepi kelopak dengan desain punggung terbuka tali silang (open-back crisscross lace-up).",
+      "prompt_fragment": "an exquisite seafoam-turquoise Balinese hand-crocheted halter bikini top embellished with fine metallic gold-thread embroidery along petal-scalloped edges and open-back crisscross lace-up straps framing her bare back",
+      "is_one_piece": false,
+      "style_tags": [
+        "pantai",
+        "crochet",
+        "seafoam",
+        "gold",
+        "backless",
+        "bali"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "inner_bottoms": [
@@ -3155,6 +3272,63 @@
         "bikini",
         "emerald",
         "sidetie"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "inner_bottom_ivory_shell_crochet_bikini",
+      "name": "31. [Pantai] Bawahan Bikini Rajut Putih Gading Shell-Stitch Tali Samping (Bab 20.2)",
+      "category": "inner_bottom",
+      "description": "Bawahan bikini rajut tangan putih gading motif kerang berfuring katun organik ganda dengan pita tali samping di pinggul.",
+      "prompt_fragment": "matching low-rise ivory-white shell-stitch hand-crocheted bikini bottoms with soft cotton side-tie ribbons at her hips",
+      "is_one_piece": false,
+      "style_tags": [
+        "pantai",
+        "crochet",
+        "ivory",
+        "sidetie",
+        "bali"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "inner_bottom_terracotta_sunset_crochet_bikini",
+      "name": "32. [Pantai] Bawahan Bikini Rajut Terakota Rumbai Manik Cendana (Bab 20.2)",
+      "category": "inner_bottom",
+      "description": "Bawahan bikini rajut tangan terakota bertepi scallop dengan tali rumbai pinggul berujung manik kayu cendana.",
+      "prompt_fragment": "matching low-rise terracotta sunset-red crochet bikini bottoms with fringed side-tie straps tipped with natural sandalwood beads",
+      "is_one_piece": false,
+      "style_tags": [
+        "pantai",
+        "crochet",
+        "terracotta",
+        "fringe",
+        "bali"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "inner_bottom_seafoam_gold_crochet_bikini",
+      "name": "33. [Pantai] Bawahan Bikini Rajut Biru Laut Lis Benang Emas (Bab 20.2)",
+      "category": "inner_bottom",
+      "description": "Bawahan bikini rajut tangan biru laut lembut berhias sulaman benang emas tipis dan tali samping pinggul.",
+      "prompt_fragment": "matching seafoam-turquoise hand-crocheted side-tie bikini bottoms accented with delicate metallic gold-thread petal edging",
+      "is_one_piece": false,
+      "style_tags": [
+        "pantai",
+        "crochet",
+        "seafoam",
+        "gold",
+        "bali"
       ],
       "color_palette": null,
       "default_color_id": null,
@@ -4487,6 +4661,63 @@
       "default_color_id": null,
       "color_template": null,
       "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_ivory_shell_crochet_bikini",
+      "name": "76. [Pantai] Bawahan Bikini Rajut Putih Gading Shell-Stitch Tali Samping (Outfit 114 - Bab 20.2)",
+      "category": "outer_bottom",
+      "description": "Bawahan bikini rajut tangan pengrajin Bali warna putih gading motif kerang berfuring katun organik ganda dengan ikatan pita tali samping.",
+      "prompt_fragment": "matching low-rise ivory-white shell-stitch hand-crocheted bikini bottoms with soft cotton side-tie ribbons framing her slender hips",
+      "is_one_piece": false,
+      "style_tags": [
+        "pantai",
+        "crochet",
+        "ivory",
+        "sidetie",
+        "bali"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_terracotta_sunset_crochet_bikini",
+      "name": "77. [Pantai] Bawahan Bikini Rajut Terakota Rumbai Manik Cendana (Outfit 115 - Bab 20.2)",
+      "category": "outer_bottom",
+      "description": "Bawahan bikini rajut tangan warna terakota hangat dengan tali rumbai samping pinggul berujung manik-manik kayu cendana.",
+      "prompt_fragment": "matching low-rise warm terracotta crochet bikini bottoms featuring delicate fringed side-tie straps tipped with natural sandalwood beads",
+      "is_one_piece": false,
+      "style_tags": [
+        "pantai",
+        "crochet",
+        "terracotta",
+        "fringe",
+        "bali"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_seafoam_gold_crochet_bikini",
+      "name": "78. [Pantai] Bawahan Bikini Rajut Biru Laut Lis Benang Emas (Outfit 116 - Bab 20.2)",
+      "category": "outer_bottom",
+      "description": "Bawahan bikini rajut tangan biru laut lembut berhias sulaman benang emas tipis di tepi kelopak dan tali samping pinggul.",
+      "prompt_fragment": "matching seafoam-turquoise hand-crocheted side-tie bikini bottoms trimmed with delicate metallic gold-thread petal edging hugging her hips",
+      "is_one_piece": false,
+      "style_tags": [
+        "pantai",
+        "crochet",
+        "seafoam",
+        "gold",
+        "bali"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "layer_accessories": [
@@ -5505,6 +5736,26 @@
         "hexlet",
         "witch",
         "hat"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "layer_pearl_cream_open_knit_mesh_jacket",
+      "name": "59. [Pantai] Jaket Rajut Jala Pantai Krem Mutiara Open-Knit (Bab 20.2)",
+      "category": "layer_accessory",
+      "description": "Luaran jaket rajut jala pantai (open-knit mesh cover-up) berpotongan pendek sepinggul warna krem mutiara berlubang geometris lapang.",
+      "prompt_fragment": "a hip-length pearl-cream open-knit cotton mesh beach cover-up jacket with airy geometric lattice stitches allowing subtle glimpses of skin beneath",
+      "is_one_piece": false,
+      "style_tags": [
+        "pantai",
+        "crochet",
+        "mesh",
+        "coverup",
+        "jacket",
+        "bali"
       ],
       "color_palette": null,
       "default_color_id": null,
@@ -7770,6 +8021,62 @@
         "inner_bottom": null,
         "outer_top": "outer_top_cosplay_morrigan_succubus_leotard",
         "outer_bottom": null,
+        "layer_accessory": null,
+        "footwear": "footwear_barefoot_anklet",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_ivory_shell_crochet_bikini",
+      "name": "115. [Pantai] Ivory Shell-Stitch Handmade Crochet Bikini (Outfit 114 - Bab 20.2)",
+      "description": "Bikini rajut tangan putih gading motif kerang berlapis katun organik ganda + barefoot anklet.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": null,
+        "outer_top": "outer_top_ivory_shell_crochet_bikini",
+        "outer_bottom": "outer_bottom_ivory_shell_crochet_bikini",
+        "layer_accessory": null,
+        "footwear": "footwear_barefoot_anklet",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_ivory_crochet_denim_cutoffs",
+      "name": "116. [Pantai] Ivory Crochet Bikini Top & Frayed Denim Cutoffs (Fitting Seminyak Bab 20.2)",
+      "description": "Atasan bikini rajut putih gading motif kerang + bawahan rajut mengintip di balik hotpants denim berumbai + sandal pantai.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": "inner_bottom_ivory_shell_crochet_bikini",
+        "outer_top": "outer_top_ivory_shell_crochet_bikini",
+        "outer_bottom": "outer_bottom_frayed_denim_micro",
+        "layer_accessory": null,
+        "footwear": "footwear_strappy_beach_sandals",
+        "inner_visibility": "subtle"
+      }
+    },
+    {
+      "id": "recipe_terracotta_sunset_crochet_bikini",
+      "name": "117. [Pantai] Terracotta Sunset Scallop Crochet Bikini (Outfit 115 - Bab 20.2)",
+      "description": "Bikini rajut tangan terakota hangat bertepi scallop + tali rumbai manik kayu cendana + barefoot anklet.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": null,
+        "outer_top": "outer_top_terracotta_sunset_crochet_bikini",
+        "outer_bottom": "outer_bottom_terracotta_sunset_crochet_bikini",
+        "layer_accessory": null,
+        "footwear": "footwear_barefoot_anklet",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_seafoam_gold_backless_crochet_bikini",
+      "name": "118. [Pantai] Seafoam Turquoise & Gold-Thread Backless Crochet Bikini (Outfit 116 - Bab 20.2)",
+      "description": "Bikini rajut tangan biru laut sulam benang emas tipis punggung terbuka tali silang + barefoot anklet.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": null,
+        "outer_top": "outer_top_seafoam_gold_crochet_bikini",
+        "outer_bottom": "outer_bottom_seafoam_gold_crochet_bikini",
         "layer_accessory": null,
         "footwear": "footwear_barefoot_anklet",
         "inner_visibility": "hidden"
