@@ -2900,6 +2900,194 @@
       "default_color_id": "heather_gray",
       "color_template": "a fitted {color} short-sleeve snap-button henley tee",
       "id_name_template": "Kaus Henley Snap Fitted ({color_id})"
+    },
+    {
+      "id": "outer_top_biz_ivory_silk_cowl_camisole",
+      "name": "124. [Bisnis Sensual] Kamisol Sutra Liquid Cowl-Neck Ivory (Outfit 125)",
+      "category": "outer_top",
+      "description": "Kamisol sutra liquid warna gading berpotongan cowl-neck jatuh bergelombang lembut di garis dada untuk dipadukan dengan blazer cropped.",
+      "prompt_fragment": "a liquid ivory silk cowl-neck camisole draping softly across her decolletage",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "silk",
+        "cowl"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_biz_slate_keyhole_wrap_blouse",
+      "name": "125. [Bisnis Sensual] Blus Wrap Lengan Panjang Kerah Keyhole Slate-Blue (Outfit 126)",
+      "category": "outer_top",
+      "description": "Blus kerja fitted wrap lengan panjang warna biru batu berkerah mandarin terbuka dengan lubang keyhole memanjang di dada.",
+      "prompt_fragment": "a fitted slate-blue long-sleeve wrap work blouse featuring a refined mandarin collar with a sleek chest keyhole cutout",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "keyhole",
+        "wrap",
+        "blouse"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_biz_tan_mockneck_bodysuit",
+      "name": "126. [Bisnis Sensual] Bodysuit Ribbed Mock-Neck Cokelat Susu (Outfit 127)",
+      "category": "outer_top",
+      "description": "Bodysuit rajut ribbed tanpa lengan model mock-neck warna cokelat susu pas badan yang mengintip di balik celah cutout jas blazer.",
+      "prompt_fragment": "a sleek sleeveless ribbed tan mock-neck bodysuit hugging her slender waist",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "bodysuit",
+        "mockneck"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_biz_pearl_two_way_zip_midi_dress",
+      "name": "127. [One-Piece Bisnis] Gaun Midi Rajut Abu Mutiara Two-Way Zip (Outfit 128)",
+      "category": "outer_top",
+      "description": "Gaun midi rajut fine-gauge pas badan lengan 3/4 warna abu mutiara dengan ritsleting logam dua arah di kerah dan belahan lutut depan.",
+      "prompt_fragment": "a form-fitting pearl-gray fine-ribbed 3/4-sleeve midi knit dress with a sleek two-way metal front zipper partially unzipped at both the collar and knee-high front slit",
+      "is_one_piece": true,
+      "style_tags": [
+        "business",
+        "sensual",
+        "knit",
+        "zipper",
+        "one_piece"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_biz_black_lace_sweetheart_bodysuit",
+      "name": "128. [Bisnis Sensual] Bodysuit Korset Sweetheart Renda Hitam (Outfit 129)",
+      "category": "outer_top",
+      "description": "Bodysuit korset pas badan berkerah sweetheart hitam dengan tepian renda bulu mata tipis di balik bolero blazer plum.",
+      "prompt_fragment": "a fitted black sweetheart corset bodysuit edged with delicate eyelash lace along the bustline",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "sweetheart",
+        "lace",
+        "bodysuit"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_biz_sky_asymmetric_poplin_shirt",
+      "name": "129. [Bisnis Sensual] Kemeja Poplin Biru Langit Off-Shoulder Asimetris (Outfit 130)",
+      "category": "outer_top",
+      "description": "Kemeja katun poplin biru langit berkerah lancip dikancing dari tengah dada ke bawah dan ditarik melorot asimetris memamerkan satu tulang selangka.",
+      "prompt_fragment": "a crisp sky-blue cotton poplin button-down shirt worn asymmetrically unbuttoned at the top to bare one porcelain collarbone",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "poplin",
+        "asymmetric",
+        "shirt"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_biz_camel_halter_waistcoat_dress",
+      "name": "130. [One-Piece Bisnis] Gaun Mini Rompi Halter Wol Camel & Panel Suede (Outfit 131)",
+      "category": "outer_top",
+      "description": "Gaun mini tailored model rompi jas halter-neck bahan wol camel dengan panel suede pembentuk pinggang, kancing tanduk, dan punggung terbuka bergesper.",
+      "prompt_fragment": "a warm camel tailored wool halter-neck extended waistcoat mini dress accented with contouring suede waist panels, horn front buttons, and an open mid-back strap buckle",
+      "is_one_piece": true,
+      "style_tags": [
+        "business",
+        "sensual",
+        "waistcoat",
+        "halter",
+        "one_piece"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_biz_noir_polkadot_mesh_sleeve_blouse",
+      "name": "131. [Bisnis Sensual] Blus Hitam Lengan Sheer Mesh Polka-Dot (Outfit 132)",
+      "category": "outer_top",
+      "description": "Blus kerja hitam berkerah V-sweetheart lembut dengan lengan panjang sheer flocked polka-dot mesh transparan bermanset satin.",
+      "prompt_fragment": "a fitted black sweetheart-neck work blouse featuring sheer flocked polka-dot mesh long sleeves with satin cuffs",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "mesh",
+        "polkadot",
+        "blouse"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_biz_forest_shawl_tuxedo_vest",
+      "name": "132. [Bisnis Sensual] Rompi Tuksedo Tanpa Lengan Shawl Lapel Hijau Hutan (Outfit 133)",
+      "category": "outer_top",
+      "description": "Rompi tuksedo tailored tanpa lengan warna hijau hutan gelap dengan kerah shawl lapel satin mengilap plunging berkancing tunggal di pinggang.",
+      "prompt_fragment": "a sleeveless deep forest-green tailored tuxedo vest with a plunging glossy satin shawl lapel fastened by a single waist button",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "tuxedo",
+        "vest",
+        "shawl_lapel"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_biz_champagne_midbutton_cardigan",
+      "name": "133. [Bisnis Sensual] Kardigan Rajut Sampanye Kancing Tengah Dada (Outfit 134)",
+      "category": "outer_top",
+      "description": "Kardigan rajut fine-knit fitted lengan panjang warna sampanye yang dikancing hanya dua kancing di tengah dada membentuk bukaan V elegan atas dan celah bawah halus.",
+      "prompt_fragment": "a fitted soft champagne fine-knit long-sleeve cardigan fastened solely by two central buttons to create a refined upper V-neckline and subtle lower-rib peek",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "cardigan",
+        "knit",
+        "champagne"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "inner_bottoms": [
@@ -5155,6 +5343,158 @@
       "default_color_id": "crimson_maroon",
       "color_template": "low-rise {color} sheer micro-mesh cheekini panties framed by a slim crushed-velvet waistband and a seductive back teardrop keyhole cutout tied with a dainty velvet bow",
       "id_name_template": "Low-Rise Keyhole Mesh Cheekini ({color_id})"
+    },
+    {
+      "id": "outer_bottom_biz_ivory_satin_cigarette_trousers",
+      "name": "90. [Bisnis Sensual] Celana Cigarette Satin-Trimmed Ivory High-Waist (Outfit 125)",
+      "category": "outer_bottom",
+      "description": "Celana panjang cigarette berpinggang tinggi warna gading dengan lis pita satin ramping di sisi kaki.",
+      "prompt_fragment": "high-waisted ivory satin-trimmed cigarette trousers elongating her silhouette",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "ivory",
+        "cigarette",
+        "trousers"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_biz_silver_frontslit_pencil_midi",
+      "name": "91. [Bisnis Sensual] Rok Pensil Midi Wol Abu Perak Belahan Depan (Outfit 126)",
+      "category": "outer_bottom",
+      "description": "Rok pensil midi wol abu perak berpinggang tinggi dengan piping satin pinggang dan belahan depan di tengah lutut.",
+      "prompt_fragment": "a high-waisted silver-gray wool midi pencil skirt with satin waist piping and a crisp center-front slit",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "pencil_skirt",
+        "slit",
+        "midi"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_biz_mocha_slim_slacks",
+      "name": "92. [Bisnis Sensual] Celana Bahan Slim-Fit Mocha Espresso (Outfit 127)",
+      "category": "outer_bottom",
+      "description": "Celana bahan formal slim-fit berpinggang tinggi warna mocha-espresso senada blazer cutout.",
+      "prompt_fragment": "matching high-waisted slim-fit mocha-espresso tailored suiting trousers",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "mocha",
+        "slacks",
+        "slim"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_biz_plum_pleated_wide_slacks",
+      "name": "93. [Bisnis Sensual] Celana Panjang High-Rise Lipit Ungu Plum (Outfit 129)",
+      "category": "outer_bottom",
+      "description": "Celana panjang bahan high-rise berlipit rapi warna ungu plum tua yang mengalir ramping hingga mata kaki.",
+      "prompt_fragment": "high-rise pleated deep plum tailored suiting trousers draping cleanly over her legs",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "plum",
+        "pleated",
+        "slacks"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_biz_black_pleated_wool_skort",
+      "name": "94. [Bisnis Sensual] Rok Celana Wol Hitam Lipit Samping Kancing Emas (Outfit 130)",
+      "category": "outer_bottom",
+      "description": "Rok celana (tailored mini skort) bahan wol hitam berpinggang tinggi dengan lipitan samping dan kancing emas, dipadu stoking tipis hitam.",
+      "prompt_fragment": "a high-waisted black tailored wool mini skort with gold side buttons paired with sheer black tights",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "skort",
+        "wool",
+        "tights"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_biz_bordeaux_belted_culottes",
+      "name": "95. [Bisnis Sensual] Celana Kulot Panjang High-Waist Bordeaux Bersabuk (Outfit 132)",
+      "category": "outer_bottom",
+      "description": "Celana kulot panjang berpinggang tinggi warna merah anggur bordeaux dilengkapi sabuk kulit hitam tipis bergesper emas.",
+      "prompt_fragment": "high-waisted bordeaux-red tailored culottes cinched with a slim gold-buckled black leather belt",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "bordeaux",
+        "culottes",
+        "belted"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_biz_forest_ankle_slit_flare_trousers",
+      "name": "96. [Bisnis Sensual] Celana Flare Belahan Depan Mata Kaki Hijau Hutan (Outfit 133)",
+      "category": "outer_bottom",
+      "description": "Celana panjang high-waist flared warna hijau hutan gelap dengan belahan depan di pergelangan kaki.",
+      "prompt_fragment": "matching high-waisted deep forest-green front ankle-slit flare trousers",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "forest",
+        "flare",
+        "slit"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_biz_espresso_leather_midi_pencil",
+      "name": "97. [Bisnis Sensual] Rok Pensil Midi Kulit Sintetis Espresso Belahan Belakang (Outfit 134)",
+      "category": "outer_bottom",
+      "description": "Rok pensil midi pas badan berpinggang tinggi dari kulit sintetis cokelat espresso berbelahan belakang tinggi.",
+      "prompt_fragment": "a high-waisted espresso faux-leather midi pencil skirt with an alluring high back slit",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "espresso",
+        "leather",
+        "pencil_skirt"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "layer_accessories": [
@@ -6253,6 +6593,81 @@
       "default_color_id": null,
       "color_template": null,
       "id_name_template": null
+    },
+    {
+      "id": "layer_biz_chalk_cropped_blazer_jacket",
+      "name": "63. [Bisnis Sensual] Blazer Cropped Double-Breasted Putih Kapur (Outfit 125)",
+      "category": "layer_accessory",
+      "description": "Jas blazer cropped double-breasted warna putih kapur dengan lengan tersingsing 3/4 dibiarkan terbuka elegan.",
+      "prompt_fragment": "a tailored chalk-white cropped double-breasted blazer jacket with pushed-up 3/4 sleeves worn open",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "blazer",
+        "cropped",
+        "ivory"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "layer_biz_mocha_waist_cutout_jacket",
+      "name": "64. [Bisnis Sensual] Jas Blazer Mocha Cutout Pinggang Simetris (Outfit 127)",
+      "category": "layer_accessory",
+      "description": "Jas blazer tailored warna mocha-espresso dengan potongan cutout arsitektural di sisi pinggang kanan dan kiri.",
+      "prompt_fragment": "a tailored mocha-espresso blazer jacket featuring architectural side-waist cutouts",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "blazer",
+        "cutout",
+        "mocha"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "layer_biz_black_slim_obi_belt",
+      "name": "65. [Bisnis Sensual] Sabuk Obi Kulit Hitam Ramping (Outfit 128)",
+      "category": "layer_accessory",
+      "description": "Sabuk obi kulit hitam ramping berikat simpul rapi di pinggang untuk mengencangkan gaun rajut midi.",
+      "prompt_fragment": "a slim black leather obi sash belt cinched cleanly at her waist",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "obi",
+        "belt"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "layer_biz_plum_satin_bolero_jacket",
+      "name": "66. [Bisnis Sensual] Jaket Bolero Blazer Cropped Ungu Plum Lapel Satin (Outfit 129)",
+      "category": "layer_accessory",
+      "description": "Jaket bolero blazer super-cropped warna ungu plum tua berkerah peak lapel satin mengilap.",
+      "prompt_fragment": "a super-cropped deep plum tailored bolero blazer jacket with glossy satin peak lapels",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "sensual",
+        "bolero",
+        "plum",
+        "satin"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "footwear": [
@@ -6968,6 +7383,78 @@
         "noname",
         "slipon",
         "minimalist"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "footwear_biz_cream_pointed_slingbacks",
+      "name": "42. [Bisnis] Sepatu Slingback Hak Runcing Krem Gading (Outfit 125)",
+      "category": "footwear",
+      "description": "Sepatu slingback berujung runcing warna krem gading dengan hak stiletto ramping.",
+      "prompt_fragment": "cream pointed-toe slingback stiletto heels",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "slingback",
+        "heels",
+        "cream"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "footwear_biz_tortoiseshell_stiletto_mules",
+      "name": "43. [Bisnis] Sepatu Mules Stiletto Motif Tortoiseshell Mengilap (Outfit 127)",
+      "category": "footwear",
+      "description": "Sepatu mules berhak stiletto motif tempurung kura-kura mengilap bernuansa hangat.",
+      "prompt_fragment": "glossy tortoiseshell stiletto heeled mules",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "mules",
+        "stiletto",
+        "tortoiseshell"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "footwear_biz_heeled_leather_loafers",
+      "name": "44. [Bisnis] Sepatu Loafer Kulit Hitam Berhak Blok (Outfit 130)",
+      "category": "footwear",
+      "description": "Sepatu loafer kulit hitam mengilap berhak blok elegan bergaya preppy eksekutif.",
+      "prompt_fragment": "polished black heeled leather loafers",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "loafers",
+        "heels",
+        "leather"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "footwear_biz_espresso_stiletto_pumps",
+      "name": "45. [Bisnis] Sepatu Pump Stiletto Kulit Cokelat Espresso (Outfit 131)",
+      "category": "footwear",
+      "description": "Sepatu pump kulit berujung runcing warna cokelat espresso tua berhak stiletto tinggi.",
+      "prompt_fragment": "espresso-brown pointed-toe leather stiletto pumps",
+      "is_one_piece": false,
+      "style_tags": [
+        "business",
+        "pumps",
+        "stiletto",
+        "espresso"
       ],
       "color_palette": null,
       "default_color_id": null,
@@ -8737,6 +9224,146 @@
         "outer_bottom": "outer_bottom_retail_black_slim_cargo_pants",
         "layer_accessory": "layer_retail_burgundy_cropped_work_jacket",
         "footwear": "footwear_sport_black_running_sneakers",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_biz_ivory_cowl_cropped_blazer",
+      "name": "127. [Bisnis Sensual] Boardroom Ivory Cowl & Cropped Blazer (Outfit 125)",
+      "description": "Blazer cropped double-breasted putih kapur + kamisol sutra cowl-neck ivory + celana cigarette ivory + slingback krem.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_biz_ivory_silk_cowl_camisole",
+        "outer_bottom": "outer_bottom_biz_ivory_satin_cigarette_trousers",
+        "layer_accessory": "layer_biz_chalk_cropped_blazer_jacket",
+        "footwear": "footwear_biz_cream_pointed_slingbacks",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_biz_slate_keyhole_wrap_pencil",
+      "name": "128. [Bisnis Sensual] Executive Keyhole Wrap & Front-Slit Pencil Midi (Outfit 126)",
+      "description": "Blus wrap kerah keyhole slate-blue + rok pensil midi wol abu perak belahan depan + stiletto perak.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_biz_slate_keyhole_wrap_blouse",
+        "outer_bottom": "outer_bottom_biz_silver_frontslit_pencil_midi",
+        "layer_accessory": null,
+        "footwear": "footwear_biz_metallic_silver_stiletto_pumps",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_biz_mocha_waist_cutout_suit",
+      "name": "129. [Bisnis Sensual] Architectural Waist-Cutout Mocha Suit (Outfit 127)",
+      "description": "Blazer mocha cutout pinggang + bodysuit ribbed mock-neck tan + celana slim mocha + mules tortoiseshell.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_none",
+        "outer_top": "outer_top_biz_tan_mockneck_bodysuit",
+        "outer_bottom": "outer_bottom_biz_mocha_slim_slacks",
+        "layer_accessory": "layer_biz_mocha_waist_cutout_jacket",
+        "footwear": "footwear_biz_tortoiseshell_stiletto_mules",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_biz_pearl_two_way_zip_sheath",
+      "name": "130. [Bisnis Sensual] Sleek Two-Way Zip Pearl Knit Sheath (Outfit 128)",
+      "description": "Gaun midi rajut abu mutiara two-way zipper + sabuk obi kulit hitam + ankle boots hitam.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_biz_pearl_two_way_zip_midi_dress",
+        "outer_bottom": null,
+        "layer_accessory": "layer_biz_black_slim_obi_belt",
+        "footwear": "footwear_biz_pointed_black_ankle_boots",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_biz_plum_bolero_sweetheart_slacks",
+      "name": "131. [Bisnis Sensual] After-Hours Plum Bolero & Sweetheart Bodysuit (Outfit 129)",
+      "description": "Bolero blazer ungu plum lapel satin + bodysuit korset sweetheart renda hitam + celana plum high-rise + patent pumps hitam.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_none",
+        "outer_top": "outer_top_biz_black_lace_sweetheart_bodysuit",
+        "outer_bottom": "outer_bottom_biz_plum_pleated_wide_slacks",
+        "layer_accessory": "layer_biz_plum_satin_bolero_jacket",
+        "footwear": "footwear_biz_pointed_patent_black_pumps",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_biz_sky_asymmetric_poplin_skort",
+      "name": "132. [Bisnis Sensual] Sharp-Casual Asymmetric Poplin & Wool Skort (Outfit 130)",
+      "description": "Kemeja poplin biru langit off-shoulder asimetris + skort wol hitam kancing emas & tights + heeled loafers.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_biz_sky_asymmetric_poplin_shirt",
+        "outer_bottom": "outer_bottom_biz_black_pleated_wool_skort",
+        "layer_accessory": null,
+        "footwear": "footwear_biz_heeled_leather_loafers",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_biz_camel_halter_waistcoat_dress",
+      "name": "133. [Bisnis Sensual] Camel Halter Waistcoat Mini Dress (Outfit 131)",
+      "description": "Gaun mini rompi halter wol camel berpanel suede & punggung terbuka bergesper + stiletto espresso.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_biz_camel_halter_waistcoat_dress",
+        "outer_bottom": null,
+        "layer_accessory": null,
+        "footwear": "footwear_biz_espresso_stiletto_pumps",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_biz_noir_polkadot_mesh_bordeaux_culottes",
+      "name": "134. [Bisnis Sensual] Parisian Polka-Dot Mesh & Bordeaux Culottes (Outfit 132)",
+      "description": "Blus hitam lengan sheer polka-dot mesh + kulot high-waist bordeaux bersabuk emas + stiletto hitam.",
+      "slots": {
+        "inner_top": "inner_top_onyx_balconette",
+        "inner_bottom": "inner_bottom_black_lace_cheeky",
+        "outer_top": "outer_top_biz_noir_polkadot_mesh_sleeve_blouse",
+        "outer_bottom": "outer_bottom_biz_bordeaux_belted_culottes",
+        "layer_accessory": null,
+        "footwear": "footwear_black_stiletto_pumps",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_biz_forest_tuxedo_vest_flare",
+      "name": "135. [Bisnis Sensual] Forest-Green Tuxedo Vest & Ankle-Slit Flare (Outfit 133)",
+      "description": "Rompi tuksedo hijau hutan shawl lapel satin tanpa dalaman + celana flare belahan depan mata kaki + heels emas.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_biz_forest_shawl_tuxedo_vest",
+        "outer_bottom": "outer_bottom_biz_forest_ankle_slit_flare_trousers",
+        "layer_accessory": null,
+        "footwear": "footwear_gold_metallic_strappy_heels",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_biz_champagne_midbutton_cardigan_skirt",
+      "name": "136. [Bisnis Sensual] Mid-Buttoned Champagne Cardigan & Espresso Leather Skirt (Outfit 134)",
+      "description": "Kardigan rajut sampanye dikancing 2 di tengah + rok pensil midi kulit espresso belahan belakang + heels nude.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_biz_champagne_midbutton_cardigan",
+        "outer_bottom": "outer_bottom_biz_espresso_leather_midi_pencil",
+        "layer_accessory": null,
+        "footwear": "footwear_minimalist_nude_heels",
         "inner_visibility": "hidden"
       }
     }

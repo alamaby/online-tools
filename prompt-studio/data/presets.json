@@ -72,9 +72,9 @@
   ],
   "outfit_categories": {
     "all": {
-      "name": "🌟 Seluruh Katalog Busana (124 Outfits - Full Catalog)",
-      "badge": "Full Catalog (124)",
-      "desc": "Menguji seluruh 124 busana yang tersedia secara komparatif dari outfit #1 sampai #124."
+      "name": "🌟 Seluruh Katalog Busana (134 Outfits - Full Catalog)",
+      "badge": "Full Catalog (134)",
+      "desc": "Menguji seluruh 134 busana yang tersedia secara komparatif dari outfit #1 sampai #134."
     },
     "canon_bumimart": {
       "name": "🏪 Koleksi Kanon & Variasi BumiMart (21 Outfits)",
@@ -107,9 +107,9 @@
       "desc": "Seamless ribbed yoga, skort tenis, wet-look spandex, pilates biker, muay thai, dan aerial silk leotard."
     },
     "business": {
-      "name": "💼 Koleksi Smart Casual & Bisnis (10 Outfits)",
-      "badge": "Smart Casual Bisnis (10)",
-      "desc": "Plunging tuxedo blazer, champagne silk halter, pinstripe vest, organza peplum, dan cashmere tweed mini."
+      "name": "💼 Koleksi Smart Casual & Bisnis (20 Outfits)",
+      "badge": "Smart Casual Bisnis (20)",
+      "desc": "Plunging tuxedo blazer, champagne silk halter, pinstripe vest, organza peplum, cashmere tweed mini, dan 10 varian executive sensual terbaru."
     },
     "nusantara": {
       "name": "🌺 Koleksi Wastra & Adat Nusantara (10 Outfits)",
@@ -989,6 +989,76 @@
       "name": "124. [No-Name Retail] Night Shift Cropped Work Jacket, Fitted Henley & Slim Cargo",
       "prompt_text": "An unbranded night-shift minimarket cashier uniform featuring a fitted light heather-gray short-sleeve snap-button henley worn under an open cropped deep burgundy-twill work jacket with subtle unbranded piping and a clear staff ID lanyard, paired with slim-fit matte-black tapered utility cargo pants with flat pockets and lightweight black knit running trainers.",
       "category": "retail_noname",
+      "extra": null
+    },
+    {
+      "id": "biz_ivory_cowl_cropped_blazer",
+      "name": "125. [Bisnis Sensual] Boardroom Ivory Liquid Silk Cowl & Cropped Chalk Blazer",
+      "prompt_text": "An all-ivory sensual executive ensemble featuring a tailored chalk-white cropped double-breasted blazer with pushed-up 3/4 sleeves worn open over a liquid ivory silk cowl-neck camisole draping softly across her decolletage, paired with high-waisted ivory satin-trimmed cigarette trousers and cream pointed-toe slingback stiletto heels.",
+      "category": "business",
+      "extra": null
+    },
+    {
+      "id": "biz_slate_keyhole_wrap_pencil",
+      "name": "126. [Bisnis Sensual] Executive Slate-Blue Keyhole Wrap & Front-Slit Wool Pencil Midi",
+      "prompt_text": "A sharp sensual executive look featuring a fitted slate-blue long-sleeve wrap work blouse with a refined mandarin collar and sleek chest keyhole cutout, paired with a high-waisted silver-gray wool midi pencil skirt with satin waist piping and a crisp center-front slit, finished with metallic silver pointed-toe stiletto pumps.",
+      "category": "business",
+      "extra": null
+    },
+    {
+      "id": "biz_mocha_waist_cutout_suit",
+      "name": "127. [Bisnis Sensual] Architectural Mocha Waist-Cutout Blazer & Mock-Neck Bodysuit",
+      "prompt_text": "An architectural sensual business suit featuring a tailored mocha-espresso blazer with symmetrical side-waist cutouts revealing a sleek sleeveless ribbed tan mock-neck bodysuit beneath, paired with matching high-waisted slim-fit mocha suiting trousers and glossy tortoiseshell stiletto heeled mules.",
+      "category": "business",
+      "extra": null
+    },
+    {
+      "id": "biz_pearl_two_way_zip_sheath",
+      "name": "128. [Bisnis Sensual] Sleek Pearl-Gray Two-Way Zip Knit Midi & Leather Obi Sash",
+      "prompt_text": "A form-fitting pearl-gray fine-ribbed 3/4-sleeve midi knit sheath dress featuring a sleek two-way metal front zipper partially unzipped at both the collar and knee-high front slit, cinched cleanly at her narrow waist by a slim black leather obi sash belt and paired with pointed black leather ankle boots.",
+      "category": "business",
+      "extra": null
+    },
+    {
+      "id": "biz_plum_bolero_sweetheart_slacks",
+      "name": "129. [Bisnis Sensual] After-Hours Deep Plum Satin-Lapel Bolero & Sweetheart Bodysuit",
+      "prompt_text": "An after-hours executive ensemble featuring a super-cropped deep plum tailored bolero blazer with glossy satin peak lapels layered over a fitted black sweetheart corset bodysuit trimmed with delicate eyelash lace, paired with high-rise pleated plum suiting trousers and pointed patent-black stiletto pumps.",
+      "category": "business",
+      "extra": null
+    },
+    {
+      "id": "biz_sky_asymmetric_poplin_skort",
+      "name": "130. [Bisnis Sensual] Sharp-Casual Asymmetric Sky-Blue Poplin & Pleated Wool Skort",
+      "prompt_text": "A sharp-casual executive outfit featuring a crisp sky-blue cotton poplin button-down shirt worn asymmetrically unbuttoned at the top to bare one porcelain collarbone, tucked into a high-waisted black tailored wool mini skort with gold side buttons, sheer black tights, and polished black heeled leather loafers.",
+      "category": "business",
+      "extra": null
+    },
+    {
+      "id": "biz_camel_halter_waistcoat_dress",
+      "name": "131. [Bisnis Sensual] Warm Camel Halter Waistcoat Mini Dress & Suede Panels",
+      "prompt_text": "A sculpted business mini dress tailored as an extended warm camel wool halter-neck waistcoat featuring contouring suede waist panels, horn front buttons, and an open mid-back strap buckle, paired with espresso-brown pointed-toe leather stiletto pumps.",
+      "category": "business",
+      "extra": null
+    },
+    {
+      "id": "biz_noir_polkadot_mesh_bordeaux_culottes",
+      "name": "132. [Bisnis Sensual] Parisian Noir Polka-Dot Mesh Blouse & Bordeaux Belted Culottes",
+      "prompt_text": "A Parisian-chic sensual office look featuring a fitted black sweetheart-neck work blouse with sheer flocked polka-dot mesh long sleeves and satin cuffs, tucked into high-waisted bordeaux-red tailored culottes cinched with a slim gold-buckled black belt and paired with pointed black stiletto pumps.",
+      "category": "business",
+      "extra": null
+    },
+    {
+      "id": "biz_forest_tuxedo_vest_flare",
+      "name": "133. [Bisnis Sensual] Deep Forest-Green Shawl-Lapel Tuxedo Vest & Ankle-Slit Flare",
+      "prompt_text": "A bold sensual executive suiting set featuring a sleeveless deep forest-green tailored tuxedo vest with a plunging glossy satin shawl lapel fastened by a single waist button, paired with matching high-waisted front ankle-slit flare trousers and metallic gold strappy heels.",
+      "category": "business",
+      "extra": null
+    },
+    {
+      "id": "biz_champagne_midbutton_cardigan_skirt",
+      "name": "134. [Bisnis Sensual] Mid-Buttoned Champagne Cardigan & Espresso Leather Midi Skirt",
+      "prompt_text": "A minimalist sensual office ensemble featuring a fitted soft champagne fine-knit long-sleeve cardigan fastened solely by two central buttons to create a refined upper V-neckline and subtle lower-rib peek, paired with a high-waisted espresso faux-leather midi pencil skirt with an alluring high back slit and minimalist nude heels.",
+      "category": "business",
       "extra": null
     }
   ],
@@ -3364,7 +3434,17 @@
         "bumimart_offshoulder_knit_pencil_mini",
         "espresso_deep_v_crop_wideleg_trousers",
         "retail_noname_zip_vest_pencil",
-        "retail_noname_wrap_culottes"
+        "retail_noname_wrap_culottes",
+        "biz_ivory_cowl_cropped_blazer",
+        "biz_slate_keyhole_wrap_pencil",
+        "biz_mocha_waist_cutout_suit",
+        "biz_pearl_two_way_zip_sheath",
+        "biz_plum_bolero_sweetheart_slacks",
+        "biz_sky_asymmetric_poplin_skort",
+        "biz_camel_halter_waistcoat_dress",
+        "biz_noir_polkadot_mesh_bordeaux_culottes",
+        "biz_forest_tuxedo_vest_flare",
+        "biz_champagne_midbutton_cardigan_skirt"
       ],
       "sceneries": [
         "dago_glass_cafe",
