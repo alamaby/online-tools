@@ -3505,6 +3505,63 @@
       "default_color_id": "crimson_maroon",
       "color_template": "matching {color} satin and sheer eyelash lace high-leg cheeky panties with dual elastic side-hip straps and rose-gold ring accents",
       "id_name_template": "Celana Cheeky High-Leg Renda ({color_id})"
+    },
+    {
+      "id": "inner_bottom_lowrise_v_contour_lace_brazilian",
+      "name": "35. [Boudoir] Celana Low-Rise V-Contour Renda Chantilly Brazilian",
+      "category": "inner_bottom",
+      "description": "Celana dalam low-rise berpotongan V lembut di perut bawah (dipped V-front) dari renda Chantilly semi-transparan bertepian scallop dengan pita satin kecil.",
+      "prompt_fragment": "low-rise deep midnight-navy sheer Chantilly floral lace Brazilian panties with a dipped V-front scalloped waistband and a tiny satin bow at the center",
+      "is_one_piece": false,
+      "style_tags": [
+        "boudoir",
+        "lingerie",
+        "low_rise",
+        "lace",
+        "brazilian"
+      ],
+      "color_palette": "silk_lace",
+      "default_color_id": "midnight_navy",
+      "color_template": "low-rise {color} sheer Chantilly floral lace Brazilian panties with a dipped V-front scalloped waistband and a tiny satin bow at the center",
+      "id_name_template": "Low-Rise V-Contour Brazilian ({color_id})"
+    },
+    {
+      "id": "inner_bottom_lowrise_ruched_satin_tanga",
+      "name": "36. [Boudoir] Tanga Ultra-Low-Rise Satin Ruched & Tali Ganda",
+      "category": "inner_bottom",
+      "description": "Tanga ultra-low-rise duduk di tulang pinggul berpanel depan satin ruched lembut dengan tali rouleau ganda di sisi pinggul berhias cincin emas sampanye.",
+      "prompt_fragment": "ultra-low-rise onyx-black silk satin tanga bottoms with subtle front ruching and delicate dual rouleau side-hip straps anchored by miniature champagne-gold rings",
+      "is_one_piece": false,
+      "style_tags": [
+        "boudoir",
+        "lingerie",
+        "low_rise",
+        "satin",
+        "tanga"
+      ],
+      "color_palette": "silk_lace",
+      "default_color_id": "onyx_black",
+      "color_template": "ultra-low-rise {color} satin tanga bottoms with subtle front ruching and delicate dual rouleau side-hip straps anchored by miniature champagne-gold rings",
+      "id_name_template": "Ultra-Low Ruched Satin Tanga ({color_id})"
+    },
+    {
+      "id": "inner_bottom_lowrise_keyhole_mesh_cheekini",
+      "name": "37. [Boudoir] Cheekini Low-Rise Mesh Transparan & Keyhole Beludru",
+      "category": "inner_bottom",
+      "description": "Cheekini low-rise berbahan sheer micro-mesh tipis dengan ban pinggang beludru mikro dan potongan teardrop keyhole cutout berpita kecil di punggung bawah.",
+      "prompt_fragment": "low-rise deep crimson-red sheer micro-mesh cheekini panties framed by a slim crushed-velvet waistband and a seductive back teardrop keyhole cutout tied with a dainty velvet bow",
+      "is_one_piece": false,
+      "style_tags": [
+        "boudoir",
+        "lingerie",
+        "low_rise",
+        "mesh",
+        "cheekini"
+      ],
+      "color_palette": "silk_lace",
+      "default_color_id": "crimson_maroon",
+      "color_template": "low-rise {color} sheer micro-mesh cheekini panties framed by a slim crushed-velvet waistband and a seductive back teardrop keyhole cutout tied with a dainty velvet bow",
+      "id_name_template": "Low-Rise Keyhole Mesh Cheekini ({color_id})"
     }
   ],
   "outer_bottoms": [
@@ -5041,6 +5098,63 @@
       "default_color_id": "onyx_black",
       "color_template": "slim-fit {color} tapered utility cargo pants featuring flat streamlined thigh pockets",
       "id_name_template": "Celana Kargo Slim-Fit ({color_id})"
+    },
+    {
+      "id": "outer_bottom_lowrise_v_contour_lace_brazilian",
+      "name": "87. [Boudoir] Celana Low-Rise V-Contour Renda Chantilly Brazilian (Standalone)",
+      "category": "outer_bottom",
+      "description": "Celana dalam low-rise berpotongan V lembut di perut bawah (dipped V-front) dari renda Chantilly semi-transparan bertepian scallop dengan pita satin kecil.",
+      "prompt_fragment": "low-rise deep midnight-navy sheer Chantilly floral lace Brazilian panties with a dipped V-front scalloped waistband and a tiny satin bow at the center",
+      "is_one_piece": false,
+      "style_tags": [
+        "boudoir",
+        "lingerie",
+        "low_rise",
+        "lace",
+        "brazilian"
+      ],
+      "color_palette": "silk_lace",
+      "default_color_id": "midnight_navy",
+      "color_template": "low-rise {color} sheer Chantilly floral lace Brazilian panties with a dipped V-front scalloped waistband and a tiny satin bow at the center",
+      "id_name_template": "Low-Rise V-Contour Brazilian ({color_id})"
+    },
+    {
+      "id": "outer_bottom_lowrise_ruched_satin_tanga",
+      "name": "88. [Boudoir] Tanga Ultra-Low-Rise Satin Ruched & Tali Ganda (Standalone)",
+      "category": "outer_bottom",
+      "description": "Tanga ultra-low-rise duduk di tulang pinggul berpanel depan satin ruched lembut dengan tali rouleau ganda di sisi pinggul berhias cincin emas sampanye.",
+      "prompt_fragment": "ultra-low-rise onyx-black silk satin tanga bottoms with subtle front ruching and delicate dual rouleau side-hip straps anchored by miniature champagne-gold rings",
+      "is_one_piece": false,
+      "style_tags": [
+        "boudoir",
+        "lingerie",
+        "low_rise",
+        "satin",
+        "tanga"
+      ],
+      "color_palette": "silk_lace",
+      "default_color_id": "onyx_black",
+      "color_template": "ultra-low-rise {color} satin tanga bottoms with subtle front ruching and delicate dual rouleau side-hip straps anchored by miniature champagne-gold rings",
+      "id_name_template": "Ultra-Low Ruched Satin Tanga ({color_id})"
+    },
+    {
+      "id": "outer_bottom_lowrise_keyhole_mesh_cheekini",
+      "name": "89. [Boudoir] Cheekini Low-Rise Mesh Transparan & Keyhole Beludru (Standalone)",
+      "category": "outer_bottom",
+      "description": "Cheekini low-rise berbahan sheer micro-mesh tipis dengan ban pinggang beludru mikro dan potongan teardrop keyhole cutout berpita kecil di punggung bawah.",
+      "prompt_fragment": "low-rise deep crimson-red sheer micro-mesh cheekini panties framed by a slim crushed-velvet waistband and a seductive back teardrop keyhole cutout tied with a dainty velvet bow",
+      "is_one_piece": false,
+      "style_tags": [
+        "boudoir",
+        "lingerie",
+        "low_rise",
+        "mesh",
+        "cheekini"
+      ],
+      "color_palette": "silk_lace",
+      "default_color_id": "crimson_maroon",
+      "color_template": "low-rise {color} sheer micro-mesh cheekini panties framed by a slim crushed-velvet waistband and a seductive back teardrop keyhole cutout tied with a dainty velvet bow",
+      "id_name_template": "Low-Rise Keyhole Mesh Cheekini ({color_id})"
     }
   ],
   "layer_accessories": [
