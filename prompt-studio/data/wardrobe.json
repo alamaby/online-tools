@@ -657,6 +657,25 @@
       "default_color_id": null,
       "color_template": null,
       "id_name_template": null
+    },
+    {
+      "id": "inner_top_crimson_half_cup_lace_bra",
+      "name": "38. [Boudoir] Bra Half-Cup Satin & Renda Bulu Mata Merah Crimson (Outfit 117)",
+      "category": "inner_top",
+      "description": "Bra half-cup berkawat berpotongan horizontal rendah dari satin sutra merah crimson dan renda bulu mata transparan dengan tali bahu tipis.",
+      "prompt_fragment": "a structured deep crimson-red silk satin and sheer eyelash lace half-cup underwire bra with delicate scalloped trim and slender adjustable straps",
+      "is_one_piece": false,
+      "style_tags": [
+        "boudoir",
+        "lingerie",
+        "half_cup",
+        "lace",
+        "bra"
+      ],
+      "color_palette": "silk_lace",
+      "default_color_id": "crimson_maroon",
+      "color_template": "a structured {color} satin and sheer eyelash lace half-cup underwire bra with delicate scalloped trim and slender adjustable straps",
+      "id_name_template": "Bra Half-Cup Satin Renda ({color_id})"
     }
   ],
   "outer_tops": [
@@ -2748,6 +2767,44 @@
       "default_color_id": null,
       "color_template": null,
       "id_name_template": null
+    },
+    {
+      "id": "outer_top_crimson_half_cup_lace_bra",
+      "name": "117. [Boudoir] Bra Half-Cup Satin & Renda Bulu Mata Merah Crimson (Standalone - Outfit 117)",
+      "category": "outer_top",
+      "description": "Bra half-cup berkawat berpotongan horizontal rendah dari satin sutra merah crimson dan renda bulu mata transparan dengan tali bahu tipis.",
+      "prompt_fragment": "a structured deep crimson-red silk satin and sheer eyelash lace half-cup underwire bra with delicate scalloped trim and slender adjustable straps",
+      "is_one_piece": false,
+      "style_tags": [
+        "boudoir",
+        "lingerie",
+        "half_cup",
+        "lace",
+        "bra"
+      ],
+      "color_palette": "silk_lace",
+      "default_color_id": "crimson_maroon",
+      "color_template": "a structured {color} satin and sheer eyelash lace half-cup underwire bra with delicate scalloped trim and slender adjustable straps",
+      "id_name_template": "Bra Half-Cup Satin Renda ({color_id})"
+    },
+    {
+      "id": "outer_top_espresso_wide_deep_v_crop",
+      "name": "118. [Alluring] Atasan Crop Fitted Lengan Pendek Kerah V Lebar & Dalam (Espresso - Outfit 118/119)",
+      "category": "outer_top",
+      "description": "Atasan crop top rajut fine-ribbed pas badan berlengan pendek fitted dengan garis leher V lebar dan dalam menonjolkan tulang selangka dan pinggang ramping.",
+      "prompt_fragment": "a form-fitting deep espresso-brown fine-ribbed cropped short-sleeve top with an alluring wide and deep plunging V-neckline framing her collarbones and exposing a sliver of her toned midriff",
+      "is_one_piece": false,
+      "style_tags": [
+        "alluring",
+        "crop",
+        "deep_v",
+        "fitted",
+        "short_sleeve"
+      ],
+      "color_palette": "tailored_neutral",
+      "default_color_id": "espresso_brown",
+      "color_template": "a form-fitting {color} fine-ribbed cropped short-sleeve top with an alluring wide and deep plunging V-neckline framing her collarbones and exposing a sliver of her toned midriff",
+      "id_name_template": "Atasan Crop Fitted V-Neck Dalam ({color_id})"
     }
   ],
   "inner_bottoms": [
@@ -3334,6 +3391,25 @@
       "default_color_id": null,
       "color_template": null,
       "id_name_template": null
+    },
+    {
+      "id": "inner_bottom_crimson_half_cup_highleg_cheeky",
+      "name": "34. [Boudoir] Celana Cheeky High-Leg Renda Tali Samping Merah Crimson (Outfit 117)",
+      "category": "inner_bottom",
+      "description": "Celana dalam cheeky berpotongan paha tinggi bahan satin merah crimson berpadu renda bulu mata transparan dengan tali pinggul ganda dan aksen cincin emas mawar.",
+      "prompt_fragment": "matching deep crimson-red satin and sheer eyelash lace high-leg cheeky panties with dual elastic side-hip straps and rose-gold ring accents",
+      "is_one_piece": false,
+      "style_tags": [
+        "boudoir",
+        "lingerie",
+        "half_cup",
+        "lace",
+        "cheeky"
+      ],
+      "color_palette": "silk_lace",
+      "default_color_id": "crimson_maroon",
+      "color_template": "matching {color} satin and sheer eyelash lace high-leg cheeky panties with dual elastic side-hip straps and rose-gold ring accents",
+      "id_name_template": "Celana Cheeky High-Leg Renda ({color_id})"
     }
   ],
   "outer_bottoms": [
@@ -4718,6 +4794,63 @@
       "default_color_id": null,
       "color_template": null,
       "id_name_template": null
+    },
+    {
+      "id": "outer_bottom_cream_highwaist_wideleg_trousers",
+      "name": "79. [Alluring] Celana Panjang Wide-Leg High-Waist Lipit Depan (Krem Gading - Outfit 118)",
+      "category": "outer_bottom",
+      "description": "Celana panjang wide-leg berpinggang tinggi (high-waisted) warna krem gading dengan lipit depan rapi yang memperpanjang siluet kaki.",
+      "prompt_fragment": "sleek high-waisted warm cream-ivory tailored wide-leg trousers with crisp front pleats elongating her silhouette",
+      "is_one_piece": false,
+      "style_tags": [
+        "alluring",
+        "smart_casual",
+        "wide_leg",
+        "trousers",
+        "high_waist"
+      ],
+      "color_palette": "tailored_neutral",
+      "default_color_id": "cream_ivory",
+      "color_template": "sleek high-waisted {color} tailored wide-leg trousers with crisp front pleats elongating her silhouette",
+      "id_name_template": "Celana Wide-Leg High-Waist ({color_id})"
+    },
+    {
+      "id": "outer_bottom_onyx_asymmetrical_slit_miniskirt",
+      "name": "80. [Alluring] Rok Mini High-Waist Belahan Asimetris Samping (Hitam Onyx - Outfit 119)",
+      "category": "outer_bottom",
+      "description": "Rok mini pas badan berpinggang tinggi (high-waisted) warna hitam onyx dengan belahan paha asimetris di satu sisi yang menonjolkan kaki jenjang.",
+      "prompt_fragment": "a fitted high-waisted sleek onyx-black asymmetrical slit mini skirt hugging her hips and revealing her long fair legs",
+      "is_one_piece": false,
+      "style_tags": [
+        "alluring",
+        "night_out",
+        "miniskirt",
+        "slit",
+        "high_waist"
+      ],
+      "color_palette": "tailored_neutral",
+      "default_color_id": "onyx_black",
+      "color_template": "a fitted high-waisted {color} asymmetrical slit mini skirt hugging her hips and revealing her long fair legs",
+      "id_name_template": "Rok Mini High-Waist Slit Asimetris ({color_id})"
+    },
+    {
+      "id": "outer_bottom_crimson_half_cup_highleg_cheeky",
+      "name": "81. [Boudoir] Celana Cheeky High-Leg Renda Tali Samping Merah Crimson (Standalone - Outfit 117)",
+      "category": "outer_bottom",
+      "description": "Celana dalam cheeky berpotongan paha tinggi bahan satin merah crimson berpadu renda bulu mata transparan dengan tali pinggul ganda dan aksen cincin emas mawar.",
+      "prompt_fragment": "matching deep crimson-red satin and sheer eyelash lace high-leg cheeky panties with dual elastic side-hip straps and rose-gold ring accents",
+      "is_one_piece": false,
+      "style_tags": [
+        "boudoir",
+        "lingerie",
+        "half_cup",
+        "lace",
+        "cheeky"
+      ],
+      "color_palette": "silk_lace",
+      "default_color_id": "crimson_maroon",
+      "color_template": "matching {color} satin and sheer eyelash lace high-leg cheeky panties with dual elastic side-hip straps and rose-gold ring accents",
+      "id_name_template": "Celana Cheeky High-Leg Renda ({color_id})"
     }
   ],
   "layer_accessories": [
@@ -8081,6 +8214,48 @@
         "footwear": "footwear_barefoot_anklet",
         "inner_visibility": "hidden"
       }
+    },
+    {
+      "id": "recipe_crimson_half_cup_lace_set",
+      "name": "119. [Boudoir] Crimson Satin & Eyelash Lace Half-Cup Lingerie Set (Outfit 117)",
+      "description": "Bra half-cup satin & renda bulu mata merah crimson + celana cheeky high-leg tali samping + garter/stockings opsional + barefoot.",
+      "slots": {
+        "inner_top": null,
+        "inner_bottom": null,
+        "outer_top": "outer_top_crimson_half_cup_lace_bra",
+        "outer_bottom": "outer_bottom_crimson_half_cup_highleg_cheeky",
+        "layer_accessory": "layer_sheer_black_chiffon_shawl",
+        "footwear": "footwear_barefoot_anklet",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_espresso_deep_v_crop_wideleg_trousers",
+      "name": "120. [Alluring] Espresso Wide Deep-V Crop & Cream Wide-Leg Trousers (Outfit 118)",
+      "description": "Atasan crop fitted lengan pendek kerah V lebar & dalam espresso + celana wide-leg high-waist krem gading + heels nude.",
+      "slots": {
+        "inner_top": "inner_top_crimson_half_cup_lace_bra",
+        "inner_bottom": "inner_bottom_crimson_half_cup_highleg_cheeky",
+        "outer_top": "outer_top_espresso_wide_deep_v_crop",
+        "outer_bottom": "outer_bottom_cream_highwaist_wideleg_trousers",
+        "layer_accessory": null,
+        "footwear": "footwear_minimalist_nude_heels",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_espresso_deep_v_crop_slit_miniskirt",
+      "name": "121. [Alluring] Espresso Wide Deep-V Crop & Onyx Asymmetrical Slit Mini Skirt (Outfit 119)",
+      "description": "Atasan crop fitted lengan pendek kerah V lebar & dalam espresso + rok mini high-waist belahan asimetris hitam onyx + stiletto hitam.",
+      "slots": {
+        "inner_top": "inner_top_crimson_half_cup_lace_bra",
+        "inner_bottom": "inner_bottom_crimson_half_cup_highleg_cheeky",
+        "outer_top": "outer_top_espresso_wide_deep_v_crop",
+        "outer_bottom": "outer_bottom_onyx_asymmetrical_slit_miniskirt",
+        "layer_accessory": null,
+        "footwear": "footwear_black_stiletto_pumps",
+        "inner_visibility": "hidden"
+      }
     }
   ],
   "color_palettes": {
@@ -8270,6 +8445,50 @@
         "name": "Putih Mutiara Vinyl",
         "en_color": "sleek pearl-white",
         "id_color": "Putih Mutiara"
+      }
+    ],
+    "tailored_neutral": [
+      {
+        "id": "espresso_brown",
+        "name": "Cokelat Espresso",
+        "en_color": "deep espresso-brown",
+        "id_color": "Espresso"
+      },
+      {
+        "id": "cream_ivory",
+        "name": "Krem Gading",
+        "en_color": "warm cream-ivory",
+        "id_color": "Krem Gading"
+      },
+      {
+        "id": "onyx_black",
+        "name": "Hitam Onyx",
+        "en_color": "sleek onyx-black",
+        "id_color": "Hitam Onyx"
+      },
+      {
+        "id": "burgundy_wine",
+        "name": "Merah Wine Burgundy",
+        "en_color": "rich wine-burgundy",
+        "id_color": "Burgundy"
+      },
+      {
+        "id": "charcoal_slate",
+        "name": "Abu Arang Slate",
+        "en_color": "tailored charcoal-slate",
+        "id_color": "Abu Arang"
+      },
+      {
+        "id": "sage_olive",
+        "name": "Hijau Sage Zaitun",
+        "en_color": "muted olive-sage",
+        "id_color": "Sage Zaitun"
+      },
+      {
+        "id": "camel_taupe",
+        "name": "Cokelat Camel Taupe",
+        "en_color": "warm camel-taupe",
+        "id_color": "Camel Taupe"
       }
     ]
   }

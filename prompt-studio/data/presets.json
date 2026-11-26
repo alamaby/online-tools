@@ -72,9 +72,9 @@
   ],
   "outfit_categories": {
     "all": {
-      "name": "🌟 Seluruh Katalog Busana (116 Outfits - Full Catalog)",
-      "badge": "Full Catalog (116)",
-      "desc": "Menguji seluruh 116 busana yang tersedia secara komparatif dari outfit #1 sampai #116."
+      "name": "🌟 Seluruh Katalog Busana (119 Outfits - Full Catalog)",
+      "badge": "Full Catalog (119)",
+      "desc": "Menguji seluruh 119 busana yang tersedia secara komparatif dari outfit #1 sampai #119."
     },
     "canon_bumimart": {
       "name": "🏪 Koleksi Kanon & Variasi BumiMart (21 Outfits)",
@@ -82,14 +82,14 @@
       "desc": "Seragam resmi, outfit kanon harian Aluna di Bandung, dan 10 variasi modern kasir/barista BumiMart."
     },
     "alluring_party": {
-      "name": "✨ Koleksi Alluring & Night Glamour (11 Outfits)",
-      "badge": "Alluring & Glamour (11)",
-      "desc": "Gaun malam pesta, qipao sutra, kemben modern, mesh illusion, dan siluet fitted sensual."
+      "name": "✨ Koleksi Alluring & Night Glamour (13 Outfits)",
+      "badge": "Alluring & Glamour (13)",
+      "desc": "Gaun malam pesta, qipao sutra, kemben modern, crop deep-V fitted, dan siluet sensual."
     },
     "lingerie_bikini": {
-      "name": "👙 Koleksi Pakaian Dalam & Bikini Sensual (10 Outfits)",
-      "badge": "Lingerie & Bikini (10)",
-      "desc": "Koleksi boudoir, bralette renda sutra, garter slip, corset malam, dan micro bikini."
+      "name": "👙 Koleksi Pakaian Dalam & Bikini Sensual (11 Outfits)",
+      "badge": "Lingerie & Bikini (11)",
+      "desc": "Koleksi boudoir, half-cup satin renda, bralette sutra, garter slip, corset malam, dan micro bikini."
     },
     "cosplay": {
       "name": "🎮 Koleksi Pop Culture & Cosplay (26 Outfits)",
@@ -928,6 +928,27 @@
       "name": "116. [Pantai] Seafoam Turquoise & Gold-Thread Backless Crochet Bikini (Bab 20.2)",
       "prompt_text": "An exquisite Balinese artisan hand-crocheted two-piece bikini in soft seafoam turquoise embellished with fine metallic gold-thread embroidery along delicate petal-scalloped edges; an open-back crisscross lace-up crochet halter top framing her smooth bare porcelain back, paired with matching gold-trimmed seafoam turquoise crochet side-tie bikini bottoms hugging her hourglass hips, sunlit coastal glow, barefoot.",
       "category": "beach_resort",
+      "extra": null
+    },
+    {
+      "id": "crimson_half_cup_lace_lingerie_set",
+      "name": "117. [Non-Kanon] Crimson Satin & Eyelash Lace Half-Cup Lingerie Set",
+      "prompt_text": "An alluring boudoir lingerie set in deep crimson-red silk satin and sheer floral eyelash lace; a structured underwire half-cup bra with a low horizontal shelf contour, scalloped lace trim, and slender straps framing her porcelain decolletage, paired with matching high-leg cheeky panties featuring dual elastic side-hip straps and delicate rose-gold ring accents, completed with a lace garter belt holding up sheer black thigh-high stockings and an open sheer black chiffon shawl draped loosely off one shoulder, barefoot.",
+      "category": "lingerie_bikini",
+      "extra": null
+    },
+    {
+      "id": "espresso_deep_v_crop_wideleg_trousers",
+      "name": "118. [Non-Kanon] Espresso Wide Deep-V Crop & Cream High-Waist Wide-Leg Trousers",
+      "prompt_text": "A sculpted modern evening-chic ensemble featuring a form-fitting deep espresso-brown fine-ribbed cropped short-sleeve top with a wide, deep plunging V-neckline framing her porcelain collarbones and exposing a subtle sliver of her toned midriff, paired with sleek high-waisted warm cream-ivory tailored wide-leg trousers with crisp front pleats elongating her legs, accented by a delicate gold Y-chain lariat necklace and minimalist nude strappy heels.",
+      "category": "alluring_party",
+      "extra": null
+    },
+    {
+      "id": "espresso_deep_v_crop_slit_miniskirt",
+      "name": "119. [Non-Kanon] Espresso Wide Deep-V Crop & Onyx Asymmetrical Slit Mini Skirt",
+      "prompt_text": "A sleek night-out ensemble featuring a form-fitting deep espresso-brown fine-ribbed cropped short-sleeve top with a wide, deep plunging V-neckline framing her porcelain collarbones and toned midriff, paired with a fitted high-waisted onyx-black asymmetrical slit mini skirt hugging her hourglass hips and showcasing her long porcelain legs, accented by a delicate gold Y-chain lariat necklace and pointed-toe black stiletto pumps.",
+      "category": "alluring_party",
       "extra": null
     }
   ],
@@ -2762,7 +2783,8 @@
         "blush_silk_plunge_teddy",
         "lavender_velvet_lace_set",
         "sporty_chic",
-        "snow_white_bridal_lace_set"
+        "snow_white_bridal_lace_set",
+        "crimson_half_cup_lace_lingerie_set"
       ],
       "sceneries": [
         "attic_skylight",
@@ -2838,7 +2860,9 @@
         "bumimart_offshoulder_knit_pencil_mini",
         "bumimart_sleeveless_polo_tennis_skirt",
         "bumimart_corset_vest_leather_miniskirt",
-        "bumimart_ribbed_baby_tee_lowrise_skort"
+        "bumimart_ribbed_baby_tee_lowrise_skort",
+        "espresso_deep_v_crop_wideleg_trousers",
+        "espresso_deep_v_crop_slit_miniskirt"
       ],
       "sceneries": [
         "dago_glass_cafe",
@@ -2977,7 +3001,10 @@
         "cosplay_jessica_divine_bustier",
         "cosplay_jessica_dancer_costume",
         "cosplay_jessica_dangerous_bustier",
-        "cosplay_jessica_canonical_dancer_costume"
+        "cosplay_jessica_canonical_dancer_costume",
+        "crimson_half_cup_lace_lingerie_set",
+        "espresso_deep_v_crop_wideleg_trousers",
+        "espresso_deep_v_crop_slit_miniskirt"
       ],
       "sceneries": [
         "maribaya_springs",
@@ -3287,7 +3314,8 @@
         "biz_toffee_leather_trench_mini",
         "biz_navy_pinstripe_bustier_palazzo",
         "bumimart_corset_vest_leather_miniskirt",
-        "bumimart_offshoulder_knit_pencil_mini"
+        "bumimart_offshoulder_knit_pencil_mini",
+        "espresso_deep_v_crop_wideleg_trousers"
       ],
       "sceneries": [
         "dago_glass_cafe",
@@ -3373,7 +3401,10 @@
         "bumimart_halter_apron_dress_bareback",
         "bumimart_nightshift_cutout_mini_dress",
         "bumimart_summer_crop_vest_miniskirt",
-        "leaf_cutout_longsleeve_micro_dress"
+        "leaf_cutout_longsleeve_micro_dress",
+        "crimson_half_cup_lace_lingerie_set",
+        "espresso_deep_v_crop_wideleg_trousers",
+        "espresso_deep_v_crop_slit_miniskirt"
       ],
       "sceneries": [
         "attic_skylight",
