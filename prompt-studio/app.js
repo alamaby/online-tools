@@ -89,11 +89,11 @@
     { id: 'horde', storageKey: HORDE_KEY_STORAGE, inputId: 'input-preview-horde-key', label: 'AI Horde' },
   ];
   const TIER2_PROVIDER_HINTS = {
-    pollinations_key: 'Gunakan Pollen Publishable Key (<code>pk_...</code>) dari enter.pollinations.ai — mendapat jatah Pollen harian gratis.',
-    gemini: 'Mendukung upload foto referensi wajah. <em>Catatan: endpoint gambar Gemini di AI Studio umumnya mensyaratkan billing/kredit aktif.</em>',
-    pixazo: 'Free tier Pixazo menyediakan kuota terbatas per akun. Pilih SDXL 1.0 jika ingin memakai negative prompt.',
-    together: 'Memakai <code>FLUX.1-schnell-Free</code> dan otomatis fallback ke <code>FLUX.1-schnell</code> (kredit uji coba / pay-as-you-go).',
-    huggingface: '<em>Paket Free HF kini $0 kredit router</em> — memerlukan akun HF PRO atau kredit inference prabayar (HTTP 402 jika kosong).',
+    pollinations_key: 'Gunakan Pollen Publishable Key (<code>pk_...</code>) dari <a href="https://enter.pollinations.ai" target="_blank" rel="noopener noreferrer">enter.pollinations.ai</a> — mendapat jatah Pollen harian gratis.',
+    gemini: 'Mendukung upload foto referensi wajah. Buat key di <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">aistudio.google.com/apikey</a>. <em>Catatan: endpoint gambar Gemini di AI Studio umumnya mensyaratkan billing/kredit aktif.</em>',
+    pixazo: 'Free tier <a href="https://www.pixazo.ai" target="_blank" rel="noopener noreferrer">pixazo.ai</a> menyediakan kuota terbatas per akun. Pilih SDXL 1.0 jika ingin memakai negative prompt.',
+    together: 'Memakai <code>FLUX.1-schnell-Free</code> dan otomatis fallback ke <code>FLUX.1-schnell</code> dengan API key dari <a href="https://api.together.xyz" target="_blank" rel="noopener noreferrer">api.together.xyz</a> (kredit uji coba / pay-as-you-go).',
+    huggingface: 'Buat token di <a href="https://huggingface.co/settings/tokens" target="_blank" rel="noopener noreferrer">huggingface.co/settings/tokens</a>. <em>Paket Free HF kini $0 kredit router</em> — memerlukan akun HF PRO atau kredit inference prabayar (HTTP 402 jika kosong).',
   };
 
   const previewState = {

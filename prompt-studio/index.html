@@ -380,6 +380,92 @@
             </div>
           </details>
 
+          <details class="preview-advanced" id="preview-provider-guide">
+            <summary>
+              <span>📖 Panduan Provider, Free Tier &amp; Link API Key</span>
+              <span class="preview-key-badge">7 Layanan</span>
+            </summary>
+            <div class="preview-advanced-body preview-guide-body">
+              <div class="preview-guide-callout">
+                <strong>💡 Pilihan Cepat:</strong>
+                <ul>
+                  <li><strong>Tanpa daftar sama sekali:</strong> pilih <code>Auto Tier 1</code> (Pollinations Gratis &rarr; fallback AI Horde Guest).</li>
+                  <li><strong>Gratis harian paling praktis:</strong> daftar <strong>Pollinations Keyed</strong> (<code>pk_...</code>) + <strong>AI Horde Key</strong>.</li>
+                  <li><strong>Konsistensi wajah pakai foto acuan:</strong> pilih <strong>Google Gemini Image</strong> lalu unggah foto karakter.</li>
+                </ul>
+              </div>
+
+              <div class="preview-guide-list">
+                <div class="preview-guide-item">
+                  <div class="preview-guide-head">
+                    <strong>1. Pollinations.ai Gratis (Tier 1)</strong>
+                    <span class="preview-guide-tag tag-free">Tanpa Key</span>
+                  </div>
+                  <div class="preview-guide-meta">Model: <code>flux</code>, <code>flux-realism</code> &bull; Batas: 1 gambar / 45 detik per IP + watermark bawaan.</div>
+                  <div class="preview-guide-link">Web resmi: <a href="https://pollinations.ai" target="_blank" rel="noopener noreferrer">pollinations.ai</a> (otomatis jalan tanpa login).</div>
+                </div>
+
+                <div class="preview-guide-item">
+                  <div class="preview-guide-head">
+                    <strong>2. AI Horde / Stable Horde (Tier 1 &amp; Key Opsional)</strong>
+                    <span class="preview-guide-tag tag-free">100% Gratis</span>
+                  </div>
+                  <div class="preview-guide-meta">Model: Juggernaut XL, AlbedoBase XL &bull; Tanpa key memakai guest key (antrean lambat); isi key pribadi agar prioritas antrean jauh lebih cepat.</div>
+                  <div class="preview-guide-link">Daftar key gratis: <a href="https://aihorde.net/register" target="_blank" rel="noopener noreferrer">aihorde.net/register</a></div>
+                </div>
+
+                <div class="preview-guide-item">
+                  <div class="preview-guide-head">
+                    <strong>3. Pollinations Keyed — Daily Free Pollen (Tier 2)</strong>
+                    <span class="preview-guide-tag tag-key">Free Harian</span>
+                  </div>
+                  <div class="preview-guide-meta">Model: <code>flux</code>, <code>zimage</code>, <code>flux-klein</code>, <code>kontext</code> &bull; Gunakan <strong>Publishable Key (<code>pk_...</code>)</strong> agar aman di browser.</div>
+                  <div class="preview-guide-link">Buat Pollen key: <a href="https://enter.pollinations.ai" target="_blank" rel="noopener noreferrer">enter.pollinations.ai</a></div>
+                </div>
+
+                <div class="preview-guide-item">
+                  <div class="preview-guide-head">
+                    <strong>4. Google Gemini Image (Tier 2 + Foto Referensi)</strong>
+                    <span class="preview-guide-tag tag-warn">Perlu Kuota/Billing</span>
+                  </div>
+                  <div class="preview-guide-meta">Model: <code>gemini-2.5-flash-image</code>, <code>gemini-3.1-flash-image-preview</code> &bull; Format key: <code>AIza...</code>. Satu-satunya provider yang mendukung upload hingga 3 foto referensi wajah lokal. Akun gratis tanpa billing aktif sering terkena batas <code>limit: 0</code>.</div>
+                  <div class="preview-guide-link">Buat API key: <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">aistudio.google.com/apikey</a></div>
+                </div>
+
+                <div class="preview-guide-item">
+                  <div class="preview-guide-head">
+                    <strong>5. Pixazo AI Gateway (Tier 2)</strong>
+                    <span class="preview-guide-tag tag-key">Free Tier Terbatas</span>
+                  </div>
+                  <div class="preview-guide-meta">Model: <code>FLUX.1 Schnell</code>, <code>SDXL 1.0</code> (+ negative prompt) &bull; Salin <code>Ocp-Apim-Subscription-Key</code> dari dashboard developer.</div>
+                  <div class="preview-guide-link">Daftar free tier: <a href="https://www.pixazo.ai" target="_blank" rel="noopener noreferrer">pixazo.ai</a></div>
+                </div>
+
+                <div class="preview-guide-item">
+                  <div class="preview-guide-head">
+                    <strong>6. Together AI (Tier 2)</strong>
+                    <span class="preview-guide-tag tag-warn">Trial / Pay-as-you-go</span>
+                  </div>
+                  <div class="preview-guide-meta">Model: <code>FLUX.1-schnell-Free</code> &rarr; fallback <code>FLUX.1-schnell</code> &bull; Format key: <code>tgp_v1_...</code> (memakai kredit uji coba akun baru atau saldo berbayar).</div>
+                  <div class="preview-guide-link">Buat API key: <a href="https://api.together.xyz" target="_blank" rel="noopener noreferrer">api.together.xyz</a></div>
+                </div>
+
+                <div class="preview-guide-item">
+                  <div class="preview-guide-head">
+                    <strong>7. HuggingFace Inference Router (Tier 2)</strong>
+                    <span class="preview-guide-tag tag-warn">Perlu PRO / Kredit</span>
+                  </div>
+                  <div class="preview-guide-meta">Model: <code>FLUX.1-schnell</code>, <code>SDXL 1.0 Base</code> &bull; Format token: <code>hf_...</code> (centang izin <em>Inference Providers</em>). Paket Free HF kini memiliki $0 kredit router (HTTP 402 bila tanpa PRO/saldo).</div>
+                  <div class="preview-guide-link">Buat access token: <a href="https://huggingface.co/settings/tokens" target="_blank" rel="noopener noreferrer">huggingface.co/settings/tokens</a></div>
+                </div>
+              </div>
+
+              <div class="preview-hint" style="margin-top:8px;">
+                🔒 Semua key hanya disimpan di <code>localStorage</code> browser Anda dan tidak pernah dikirim ke server pihak ketiga selain endpoint resmi provider yang dipilih. Mode <code>Auto Tier 2 &rarr; Tier 1</code> akan mencoba otomatis seluruh key yang Anda isi.
+              </div>
+            </div>
+          </details>
+
           <div class="preview-actions">
             <button type="button" id="btn-preview-generate" class="btn btn-purple" style="flex:1;">🎨 Generate Preview</button>
             <button type="button" id="btn-preview-cancel" class="btn btn-outline btn-danger-outline" disabled>⏹️ Batal</button>
