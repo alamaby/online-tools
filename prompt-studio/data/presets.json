@@ -72,14 +72,19 @@
   ],
   "outfit_categories": {
     "all": {
-      "name": "🌟 Seluruh Katalog Busana (119 Outfits - Full Catalog)",
-      "badge": "Full Catalog (119)",
-      "desc": "Menguji seluruh 119 busana yang tersedia secara komparatif dari outfit #1 sampai #119."
+      "name": "🌟 Seluruh Katalog Busana (124 Outfits - Full Catalog)",
+      "badge": "Full Catalog (124)",
+      "desc": "Menguji seluruh 124 busana yang tersedia secara komparatif dari outfit #1 sampai #124."
     },
     "canon_bumimart": {
       "name": "🏪 Koleksi Kanon & Variasi BumiMart (21 Outfits)",
       "badge": "Kanon & BumiMart (21)",
       "desc": "Seragam resmi, outfit kanon harian Aluna di Bandung, dan 10 variasi modern kasir/barista BumiMart."
+    },
+    "retail_noname": {
+      "name": "🛒 Koleksi Seragam Kasir Minimarket No-Name (5 Outfits)",
+      "badge": "No-Name Minimarket (5)",
+      "desc": "5 konsep seragam kasir minimarket tanpa merek (no-name) berpotongan fitted untuk berbagai shift."
     },
     "alluring_party": {
       "name": "✨ Koleksi Alluring & Night Glamour (13 Outfits)",
@@ -949,6 +954,41 @@
       "name": "119. [Non-Kanon] Espresso Wide Deep-V Crop & Onyx Asymmetrical Slit Mini Skirt",
       "prompt_text": "A sleek night-out ensemble featuring a form-fitting deep espresso-brown fine-ribbed cropped short-sleeve top with a wide, deep plunging V-neckline framing her porcelain collarbones and toned midriff, paired with a fitted high-waisted onyx-black asymmetrical slit mini skirt hugging her hourglass hips and showcasing her long porcelain legs, accented by a delicate gold Y-chain lariat necklace and pointed-toe black stiletto pumps.",
       "category": "alluring_party",
+      "extra": null
+    },
+    {
+      "id": "retail_noname_konbini_knit",
+      "name": "120. [No-Name Retail] Urban Konbini Fitted Knit & Ankle Cigarette Pants",
+      "prompt_text": "An unbranded minimalist urban minimarket cashier uniform featuring a fitted short-sleeve charcoal-slate ribbed knit polo with a sleek open-V Johnny collar, crisp white sleeve tipping, and a blank acrylic nametag, paired with high-waisted black ankle cigarette pants equipped with a slim scanner belt clip and clean white court sneakers.",
+      "category": "retail_noname",
+      "extra": null
+    },
+    {
+      "id": "retail_noname_zip_vest_pencil",
+      "name": "121. [No-Name Retail] Morning Express Zip Work Vest & Fitted Midi Pencil Skirt",
+      "prompt_text": "A neat unbranded minimarket cashier uniform featuring a fitted white stretch-cotton short-sleeve mock-neck tee layered beneath a tailored navy-blue zip-front retail work vest with chest pen pockets and a plain 'CASHIER' badge, paired with a fitted knee-length charcoal-slate stretch pencil skirt with a back walking vent and minimalist black slip-on shoes.",
+      "category": "retail_noname",
+      "extra": null
+    },
+    {
+      "id": "retail_noname_ringer_apron_bermuda",
+      "name": "122. [No-Name Retail] Neighborhood 24/7 Ringer Tee, Waist Apron & Bermuda Shorts",
+      "prompt_text": "A fresh unbranded 24/7 neighborhood minimarket cashier uniform featuring a fitted cream-ivory combed-cotton ringer tee with crisp forest-green collar and sleeve trim, accented by a snug forest-green canvas half-waist utility apron with dual front pockets, paired with high-waisted tailored khaki Bermuda shorts hitting above the knee and white canvas sneakers.",
+      "category": "retail_noname",
+      "extra": null
+    },
+    {
+      "id": "retail_noname_wrap_culottes",
+      "name": "123. [No-Name Retail] Boutique Grocer Fitted Wrap Blouse & Chino Culottes",
+      "prompt_text": "A refined unbranded boutique-grocer cashier uniform featuring a fitted olive-sage stretch-poplin wrap-front work blouse with elbow-length sleeves and a plain clip-on nametag, paired with high-waisted fitted-hip warm oatmeal chino culottes belted with a slim dark brown leather strap and minimalist closed-toe leather flats.",
+      "category": "retail_noname",
+      "extra": null
+    },
+    {
+      "id": "retail_noname_night_jacket_cargo",
+      "name": "124. [No-Name Retail] Night Shift Cropped Work Jacket, Fitted Henley & Slim Cargo",
+      "prompt_text": "An unbranded night-shift minimarket cashier uniform featuring a fitted light heather-gray short-sleeve snap-button henley worn under an open cropped deep burgundy-twill work jacket with subtle unbranded piping and a clear staff ID lanyard, paired with slim-fit matte-black tapered utility cargo pants with flat pockets and lightweight black knit running trainers.",
+      "category": "retail_noname",
       "extra": null
     }
   ],
@@ -2716,7 +2756,12 @@
         "bumimart_corset_vest_leather_miniskirt",
         "bumimart_ribbed_baby_tee_lowrise_skort",
         "bumimart_bodysuit_barista_slit_skirt",
-        "bumimart_nightshift_cutout_mini_dress"
+        "bumimart_nightshift_cutout_mini_dress",
+        "retail_noname_konbini_knit",
+        "retail_noname_zip_vest_pencil",
+        "retail_noname_ringer_apron_bermuda",
+        "retail_noname_wrap_culottes",
+        "retail_noname_night_jacket_cargo"
       ],
       "sceneries": [
         "bumimart_pos1",
@@ -2862,7 +2907,9 @@
         "bumimart_corset_vest_leather_miniskirt",
         "bumimart_ribbed_baby_tee_lowrise_skort",
         "espresso_deep_v_crop_wideleg_trousers",
-        "espresso_deep_v_crop_slit_miniskirt"
+        "espresso_deep_v_crop_slit_miniskirt",
+        "retail_noname_konbini_knit",
+        "retail_noname_wrap_culottes"
       ],
       "sceneries": [
         "dago_glass_cafe",
@@ -3315,7 +3362,9 @@
         "biz_navy_pinstripe_bustier_palazzo",
         "bumimart_corset_vest_leather_miniskirt",
         "bumimart_offshoulder_knit_pencil_mini",
-        "espresso_deep_v_crop_wideleg_trousers"
+        "espresso_deep_v_crop_wideleg_trousers",
+        "retail_noname_zip_vest_pencil",
+        "retail_noname_wrap_culottes"
       ],
       "sceneries": [
         "dago_glass_cafe",

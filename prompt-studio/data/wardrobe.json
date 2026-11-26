@@ -2805,6 +2805,101 @@
       "default_color_id": "espresso_brown",
       "color_template": "a form-fitting {color} fine-ribbed cropped short-sleeve top with an alluring wide and deep plunging V-neckline framing her collarbones and exposing a sliver of her toned midriff",
       "id_name_template": "Atasan Crop Fitted V-Neck Dalam ({color_id})"
+    },
+    {
+      "id": "outer_top_retail_charcoal_johnny_polo",
+      "name": "119. [No-Name Retail] Polo Knit Fitted Kerah Open-V Johnny Abu Arang (Outfit 120)",
+      "category": "outer_top",
+      "description": "Polo rajut fine-ribbed pas badan lengan pendek warna abu arang dengan kerah open-V Johnny collar tanpa kancing, lis putih tipis di ujung lengan, dan nametag akrilik polos tanpa logo.",
+      "prompt_fragment": "a fitted short-sleeve charcoal-slate ribbed knit polo with a sleek open-V Johnny collar, crisp white sleeve tipping, and a blank acrylic nametag",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "fitted",
+        "polo",
+        "konbini"
+      ],
+      "color_palette": "tailored_neutral",
+      "default_color_id": "charcoal_slate",
+      "color_template": "a fitted short-sleeve {color} ribbed knit polo with a sleek open-V Johnny collar, crisp white sleeve tipping, and a blank acrylic nametag",
+      "id_name_template": "Polo Knit Fitted Johnny Collar ({color_id})"
+    },
+    {
+      "id": "outer_top_retail_white_mockneck_tee",
+      "name": "120. [No-Name Retail] Kaus Fitted Mock-Neck Putih Katun Stretch (Outfit 121)",
+      "category": "outer_top",
+      "description": "Kaus katun stretch pas badan berlengan pendek dan kerah mock-neck putih bersih sebagai dalaman rapi di balik rompi kerja kasir.",
+      "prompt_fragment": "a fitted pure-white stretch-cotton short-sleeve mock-neck tee",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "fitted",
+        "mockneck",
+        "minimalist"
+      ],
+      "color_palette": "casual_cotton",
+      "default_color_id": "pure_white",
+      "color_template": "a fitted {color} stretch-cotton short-sleeve mock-neck tee",
+      "id_name_template": "Kaus Fitted Mock-Neck ({color_id})"
+    },
+    {
+      "id": "outer_top_retail_cream_green_ringer_tee",
+      "name": "121. [No-Name Retail] Kaus Ringer Fitted Krem Gading Lis Hijau Hutan (Outfit 122)",
+      "category": "outer_top",
+      "description": "Kaus ringer baby-tee katun combed pas badan warna krem gading dengan aksen lis kerah dan lengan hijau hutan tanpa logo toko.",
+      "prompt_fragment": "a fitted cream-ivory combed-cotton ringer tee with crisp forest-green collar and sleeve trim",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "fitted",
+        "ringer",
+        "casual"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "outer_top_retail_olive_wrap_work_blouse",
+      "name": "122. [No-Name Retail] Blus Kerja Wrap-Front Fitted Poplin Hijau Zaitun (Outfit 123)",
+      "category": "outer_top",
+      "description": "Blus kerja stretch poplin berpotongan fitted wrap-front menyilang rapi di pinggang dengan lengan sesiku warna hijau zaitun dan nametag jepit polos.",
+      "prompt_fragment": "a fitted olive-sage stretch-poplin wrap-front work blouse with elbow-length sleeves and a plain clip-on nametag",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "fitted",
+        "wrap",
+        "grocer"
+      ],
+      "color_palette": "tailored_neutral",
+      "default_color_id": "sage_olive",
+      "color_template": "a fitted {color} stretch-poplin wrap-front work blouse with elbow-length sleeves and a plain clip-on nametag",
+      "id_name_template": "Blus Kerja Wrap Fitted ({color_id})"
+    },
+    {
+      "id": "outer_top_retail_gray_snap_henley",
+      "name": "123. [No-Name Retail] Kaus Henley Kancing Snap Fitted Abu Muda (Outfit 124)",
+      "category": "outer_top",
+      "description": "Kaus henley lengan pendek pas badan warna abu-abu muda berkerah kancing snap logam minimalis untuk shift malam minimarket.",
+      "prompt_fragment": "a fitted light heather-gray short-sleeve snap-button henley tee",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "fitted",
+        "henley",
+        "nightshift"
+      ],
+      "color_palette": "casual_cotton",
+      "default_color_id": "heather_gray",
+      "color_template": "a fitted {color} short-sleeve snap-button henley tee",
+      "id_name_template": "Kaus Henley Snap Fitted ({color_id})"
     }
   ],
   "inner_bottoms": [
@@ -4851,6 +4946,101 @@
       "default_color_id": "crimson_maroon",
       "color_template": "matching {color} satin and sheer eyelash lace high-leg cheeky panties with dual elastic side-hip straps and rose-gold ring accents",
       "id_name_template": "Celana Cheeky High-Leg Renda ({color_id})"
+    },
+    {
+      "id": "outer_bottom_retail_black_cigarette_pants",
+      "name": "82. [No-Name Retail] Celana Cigarette Ankle High-Waist Hitam (Outfit 120)",
+      "category": "outer_bottom",
+      "description": "Celana panjang cigarette ankle berpinggang tinggi pas kaki warna hitam arang dengan klip sabuk tipis untuk scanner nirkabel.",
+      "prompt_fragment": "high-waisted sleek onyx-black ankle cigarette pants with a slim waist clip for a wireless barcode scanner",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "cigarette",
+        "trousers",
+        "fitted"
+      ],
+      "color_palette": "tailored_neutral",
+      "default_color_id": "onyx_black",
+      "color_template": "high-waisted {color} ankle cigarette pants with a slim waist clip for a wireless barcode scanner",
+      "id_name_template": "Celana Cigarette Ankle ({color_id})"
+    },
+    {
+      "id": "outer_bottom_retail_charcoal_midi_pencil_skirt",
+      "name": "83. [No-Name Retail] Rok Pensil Midi Stretch Belahan Belakang (Outfit 121)",
+      "category": "outer_bottom",
+      "description": "Rok pensil stretch selutut pas badan warna abu arang dengan belahan belakang fungsional untuk keleluasaan gerak kasir.",
+      "prompt_fragment": "a fitted knee-length tailored charcoal-slate stretch pencil skirt with a clean back walking vent",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "pencil_skirt",
+        "midi",
+        "fitted"
+      ],
+      "color_palette": "tailored_neutral",
+      "default_color_id": "charcoal_slate",
+      "color_template": "a fitted knee-length {color} stretch pencil skirt with a clean back walking vent",
+      "id_name_template": "Rok Pensil Midi Stretch ({color_id})"
+    },
+    {
+      "id": "outer_bottom_retail_khaki_bermuda_shorts",
+      "name": "84. [No-Name Retail] Celana Pendek Bermuda Tailored High-Waist Khaki (Outfit 122)",
+      "category": "outer_bottom",
+      "description": "Celana pendek Bermuda berpotongan tailored pas pinggul di atas lutut warna khaki hangat yang rapi dan nyaman untuk shift aktif.",
+      "prompt_fragment": "high-waisted tailored warm camel-taupe khaki Bermuda shorts fitted cleanly above the knee",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "bermuda",
+        "shorts",
+        "tailored"
+      ],
+      "color_palette": "tailored_neutral",
+      "default_color_id": "camel_taupe",
+      "color_template": "high-waisted tailored {color} Bermuda shorts fitted cleanly above the knee",
+      "id_name_template": "Celana Bermuda Tailored ({color_id})"
+    },
+    {
+      "id": "outer_bottom_retail_oatmeal_chino_culottes",
+      "name": "85. [No-Name Retail] Celana Kulot Chino Fitted-Hip Krem Oatmeal (Outfit 123)",
+      "category": "outer_bottom",
+      "description": "Celana kulot chino high-waist pas di pinggul jatuh lurus rapi warna krem gading oatmeal dengan sabuk kulit ramping cokelat tua.",
+      "prompt_fragment": "high-waisted fitted-hip warm cream-ivory chino culottes belted with a slim dark brown leather strap",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "culottes",
+        "chino",
+        "fitted"
+      ],
+      "color_palette": "tailored_neutral",
+      "default_color_id": "cream_ivory",
+      "color_template": "high-waisted fitted-hip {color} chino culottes belted with a slim dark brown leather strap",
+      "id_name_template": "Kulot Chino Fitted-Hip ({color_id})"
+    },
+    {
+      "id": "outer_bottom_retail_black_slim_cargo_pants",
+      "name": "86. [No-Name Retail] Celana Kargo Utilitas Slim-Fit Hitam Matte (Outfit 124)",
+      "category": "outer_bottom",
+      "description": "Celana panjang kargo utilitas slim-fit meruncing warna hitam matte dengan saku paha rata agar tidak menggelembung.",
+      "prompt_fragment": "slim-fit matte onyx-black tapered utility cargo pants featuring flat streamlined thigh pockets",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "cargo",
+        "slim",
+        "nightshift"
+      ],
+      "color_palette": "tailored_neutral",
+      "default_color_id": "onyx_black",
+      "color_template": "slim-fit {color} tapered utility cargo pants featuring flat streamlined thigh pockets",
+      "id_name_template": "Celana Kargo Slim-Fit ({color_id})"
     }
   ],
   "layer_accessories": [
@@ -5894,6 +6084,61 @@
       "default_color_id": null,
       "color_template": null,
       "id_name_template": null
+    },
+    {
+      "id": "layer_retail_navy_zip_vest",
+      "name": "60. [No-Name Retail] Rompi Kerja Ritel Zip-Front Biru Dongker (Outfit 121)",
+      "category": "layer_accessory",
+      "description": "Rompi kerja ritel pas badan warna biru dongker beritsleting logam depan, dilengkapi saku pena di dada dan pin tag generik 'CASHIER' tanpa logo toko.",
+      "prompt_fragment": "a tailored navy-blue zip-front retail work vest zipped three-quarters up with chest pen pockets and a plain 'CASHIER' badge",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "vest",
+        "zip"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "layer_retail_forest_waist_apron",
+      "name": "61. [No-Name Retail] Celemek Pinggang Kanvas Hijau Hutan Half-Waist (Outfit 122)",
+      "category": "layer_accessory",
+      "description": "Celemek pinggang pendek (half-waist) berbahan kanvas hijau hutan pas pinggang dengan dua saku utilitas untuk koin dan pulpen tanpa bordir merek.",
+      "prompt_fragment": "a snug forest-green canvas half-waist utility apron with dual front pockets for pens and coins",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "apron",
+        "canvas"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "layer_retail_burgundy_cropped_work_jacket",
+      "name": "62. [No-Name Retail] Jaket Kerja Cropped Twill Burgundy & Lanyard ID (Outfit 124)",
+      "category": "layer_accessory",
+      "description": "Jaket kerja cropped pas badan bahan twill burgundy tua dibiarkan terbuka dengan aksen piping tipis polos dan lanyard ID staf bening.",
+      "prompt_fragment": "an open cropped deep burgundy-twill work jacket with subtle unbranded piping and a clear staff ID lanyard",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "jacket",
+        "cropped",
+        "nightshift"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
     }
   ],
   "footwear": [
@@ -6555,6 +6800,60 @@
         "hexlet",
         "witch",
         "boots"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "footwear_retail_monochrome_court_sneakers",
+      "name": "39. [No-Name Retail] Sepatu Kets Court Monokrom Putih Bersih (Outfit 120)",
+      "category": "footwear",
+      "description": "Sepatu kets low-top court monokrom putih bersih bertali rapi untuk shift kasir urban.",
+      "prompt_fragment": "clean white monochrome low-top court sneakers",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "sneakers",
+        "minimalist"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "footwear_retail_closed_toe_leather_flats",
+      "name": "40. [No-Name Retail] Sepatu Flat Kulit Cokelat Tua Bertutup Depan (Outfit 123)",
+      "category": "footwear",
+      "description": "Sepatu flat kulit cokelat tua bertutup depan yang rapi dan empuk untuk berdiri lama di kasir.",
+      "prompt_fragment": "minimalist closed-toe dark brown leather retail flats",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "flats",
+        "leather"
+      ],
+      "color_palette": null,
+      "default_color_id": null,
+      "color_template": null,
+      "id_name_template": null
+    },
+    {
+      "id": "footwear_retail_black_slipon_loafers",
+      "name": "41. [No-Name Retail] Sepatu Slip-On Kanvas Hitam Minimalis (Outfit 121)",
+      "category": "footwear",
+      "description": "Sepatu slip-on hitam minimalis bersol empuk yang praktis dan rapi dipadu rok pensil kerja.",
+      "prompt_fragment": "minimalist black slip-on retail shoes with cushioned soles",
+      "is_one_piece": false,
+      "style_tags": [
+        "retail",
+        "noname",
+        "slipon",
+        "minimalist"
       ],
       "color_palette": null,
       "default_color_id": null,
@@ -8254,6 +8553,76 @@
         "outer_bottom": "outer_bottom_onyx_asymmetrical_slit_miniskirt",
         "layer_accessory": null,
         "footwear": "footwear_black_stiletto_pumps",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_retail_noname_konbini_knit",
+      "name": "122. [No-Name Retail] Urban Konbini Fitted Knit & Cigarette Pants (Outfit 120)",
+      "description": "Polo knit fitted open-V abu arang + nametag polos + celana ankle cigarette hitam + court sneakers putih.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_highwaist_black_cotton",
+        "outer_top": "outer_top_retail_charcoal_johnny_polo",
+        "outer_bottom": "outer_bottom_retail_black_cigarette_pants",
+        "layer_accessory": null,
+        "footwear": "footwear_retail_monochrome_court_sneakers",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_retail_noname_zip_vest_pencil",
+      "name": "123. [No-Name Retail] Morning Express Zip Vest & Fitted Pencil Skirt (Outfit 121)",
+      "description": "Kaus mock-neck fitted putih + rompi zip kerja navy + rok pensil stretch abu arang + slip-on hitam.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_retail_white_mockneck_tee",
+        "outer_bottom": "outer_bottom_retail_charcoal_midi_pencil_skirt",
+        "layer_accessory": "layer_retail_navy_zip_vest",
+        "footwear": "footwear_retail_black_slipon_loafers",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_retail_noname_ringer_apron_bermuda",
+      "name": "124. [No-Name Retail] Neighborhood 24/7 Ringer Tee & Bermuda Shorts (Outfit 122)",
+      "description": "Kaus ringer fitted krem-hijau + celemek pinggang kanvas hijau hutan + celana Bermuda tailored khaki + tennis putih.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_none",
+        "outer_top": "outer_top_retail_cream_green_ringer_tee",
+        "outer_bottom": "outer_bottom_retail_khaki_bermuda_shorts",
+        "layer_accessory": "layer_retail_forest_waist_apron",
+        "footwear": "footwear_classic_white_tennis",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_retail_noname_wrap_culottes",
+      "name": "125. [No-Name Retail] Boutique Grocer Wrap Blouse & Chino Culottes (Outfit 123)",
+      "description": "Blus kerja wrap fitted hijau zaitun + nametag polos + kulot chino fitted-hip krem oatmeal + flat kulit cokelat.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_seamless_nude_boyshorts",
+        "outer_top": "outer_top_retail_olive_wrap_work_blouse",
+        "outer_bottom": "outer_bottom_retail_oatmeal_chino_culottes",
+        "layer_accessory": null,
+        "footwear": "footwear_retail_closed_toe_leather_flats",
+        "inner_visibility": "hidden"
+      }
+    },
+    {
+      "id": "recipe_retail_noname_night_jacket_cargo",
+      "name": "126. [No-Name Retail] Night Shift Cropped Work Jacket & Slim Cargo (Outfit 124)",
+      "description": "Henley snap fitted abu muda + jaket kerja cropped burgundy & lanyard ID + celana kargo slim-fit hitam + running sneakers hitam.",
+      "slots": {
+        "inner_top": "inner_top_none",
+        "inner_bottom": "inner_bottom_highwaist_black_cotton",
+        "outer_top": "outer_top_retail_gray_snap_henley",
+        "outer_bottom": "outer_bottom_retail_black_slim_cargo_pants",
+        "layer_accessory": "layer_retail_burgundy_cropped_work_jacket",
+        "footwear": "footwear_sport_black_running_sneakers",
         "inner_visibility": "hidden"
       }
     }
