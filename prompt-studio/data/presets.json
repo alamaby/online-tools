@@ -2284,6 +2284,13 @@
       "prompt_text": "Cinematic movie poster composition; Aluna and her sparring partner standing back-to-back in an elite dual combat stance, facing opposite directions to guard against surrounding threats; Aluna dropping into a low coiled cat stance (sikap pasang kucing), palms open with focused energy, her sharp hazel eyes vigilant; dramatic dual-tone rim lighting carving their athletic silhouettes against a misty, moody martial arts training courtyard.",
       "category": null,
       "extra": null
+    },
+    {
+      "id": "pose_master_reference_sheet_hero_angles",
+      "name": "160. [Reference Sheet] Master Pose Reference Sheet (Hero Pose & Berbagai Sudut)",
+      "prompt_text": "Master character reference sheet with hero pose and multi-angle views. Clean organized character design model sheet layout featuring one prominent full-body dynamic hero pose centerpiece alongside four consistent smaller full-body turnaround views (front view, three-quarter 3/4 view, side profile view, and back view) and a crisp upper-body expression inset, maintaining strict anatomical proportions, facial identity, hairstyle, and identical outfit continuity across every angle.",
+      "category": null,
+      "extra": null
     }
   ],
   "camera_angles": [
@@ -4829,6 +4836,12 @@
       "angle_anamorphic_widescreen",
       "wide_establishing",
       "low_angle_hero"
+    ],
+    "pose_master_reference_sheet_hero_angles": [
+      "full_body",
+      "wide_establishing",
+      "low_angle_hero",
+      "angle_three_quarter_profile"
     ]
   },
   "vehicle_poses": [

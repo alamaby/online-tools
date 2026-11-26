@@ -1234,6 +1234,17 @@
         "ar": "2:3",
         "type": "fullbody"
       }
+    },
+    {
+      "id": "shot_pose_master_reference_sheet",
+      "name": "6. Pose Master Reference Sheet (Hero Pose & Berbagai Sudut - 16:9)",
+      "description": "Lembar acuan pose master memadukan 1 hero pose utama penuh wibawa dengan berbagai sudut pandang konsisten (depan, 3/4, samping, dan belakang).",
+      "prompt_fragment": "horizontal 16:9 pose master character reference sheet featuring one prominent full-body dynamic hero pose centerpiece alongside consistent multi-angle full-body turnaround views (Front View, Three-Quarter 3/4 View, Side Profile View, and Back View) and a close-up expression inset of the exact same character in identical proportions and attire on a clean neutral studio backdrop",
+      "category": "shot_type",
+      "extra": {
+        "ar": "16:9",
+        "type": "pose_master_sheet"
+      }
     }
   ],
   "neutral_attires": [
