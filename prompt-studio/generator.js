@@ -13,6 +13,44 @@
 })(typeof self !== 'undefined' ? self : this, function () {
   'use strict';
 
+  function _cleanSingleOutfitLabel(raw) {
+    return String(raw || '')
+      .trim()
+      .replace(/^\d+[A-Za-z]?\.\s*/, '')
+      .replace(/^\[[^\]]+\]\s*/, '')
+      .replace(/\s*\((?:Outfit\s+[^)]+|Default|Rekomendasi Utama|Standalone[^)]*|Bab\s+[^)]+)\)\s*$/i, '')
+      .replace(/["']/g, '')
+      .trim();
+  }
+
+  function formatSheetOutfitLabel(outfitName) {
+    const text = String(outfitName || '').trim();
+    if (!text) return 'Aluna Signature Outfit';
+
+    const lines = text.split(/\r?\n/).map(ln => ln.trim()).filter(Boolean);
+    if (lines.length > 1 || lines.some(ln => /^(?:Atasan|Bawahan|Layer|Alas Kaki)/.test(ln))) {
+      let topLabel = '';
+      let bottomLabel = '';
+      for (const ln of lines) {
+        if (ln.startsWith('Atasan')) {
+          const val = ln.includes(':') ? ln.split(':').slice(1).join(':').trim() : ln;
+          topLabel = _cleanSingleOutfitLabel(val);
+        } else if (ln.startsWith('Bawahan:') && !ln.includes('[Menyatu')) {
+          const val = ln.split(':').slice(1).join(':').trim();
+          bottomLabel = _cleanSingleOutfitLabel(val);
+        }
+      }
+      const parts = [topLabel, bottomLabel].filter(Boolean);
+      if (parts.length) return parts.join(' + ');
+    }
+
+    const cleaned = _cleanSingleOutfitLabel(text.replace(/^[✨\s]+/, ''));
+    if (!cleaned || cleaned.includes('Kustom Modular')) {
+      return 'Custom Modular Outfit';
+    }
+    return cleaned;
+  }
+
   function getRandomItem(array) {
     if (!array || array.length === 0) return null;
     return array[Math.floor(Math.random() * array.length)];
@@ -169,6 +207,11 @@
         } else {
           posePrompt = `${posePrompt} ${loverDesc}`;
         }
+      }
+
+      if (pose && pose.id === 'pose_master_reference_sheet_hero_angles') {
+        const sheetOutfitLabel = formatSheetOutfitLabel(outfitName);
+        posePrompt = `${posePrompt} Include a clean minimalist header title banner at the top of the sheet clearly displaying the exact outfit name text: "${sheetOutfitLabel}" in crisp legible sans-serif typography.`;
       }
 
       // Spatial Guard (Vehicle Poses vs Enclosed Indoor Sceneries)
@@ -613,7 +656,11 @@
 
       // Shot type & master style
       const defaultShot = (this.traits.shot_types && this.traits.shot_types[0]) ? this.traits.shot_types[0].prompt_fragment : 'horizontal wide composition displaying 4 full-body views in consistent proportions: Front View, Three-Quarter (3/4) View, Side Profile View, and Back View of the same character on a clean neutral studio backdrop';
-      const shotText = shotType ? shotType.prompt_fragment : defaultShot;
+      let shotText = shotType ? shotType.prompt_fragment : defaultShot;
+      if (shotType && shotType.id === 'shot_pose_master_reference_sheet') {
+        const sheetAttireLabel = formatSheetOutfitLabel(neutralAttire ? neutralAttire.name : '');
+        shotText = `${shotText}, featuring a clean minimalist header title banner at the top of the sheet clearly displaying the exact outfit name text: "${sheetAttireLabel}" in crisp legible sans-serif typography`;
+      }
       const artStyle = (this.traits.art_styles || []).find(x => x.id === t.art_style_id);
       const styleText = artStyle ? artStyle.prompt_fragment : this.presets.art_style_master;
       parts.push(`${shotText}, ${styleText}`);
@@ -811,7 +858,11 @@
       const leadClause = [stylePart, shotPart ? `${shotPart} of a ${subjectPart}` : subjectPart]
         .filter(Boolean)
         .join(', ');
-      const bodyClause = [poseClean, attirePart, scenePart, extras.join(', ')]
+      const isMasterPoseSheet = cfg.pose_id === 'pose_master_reference_sheet_hero_angles';
+      const sheetHeaderPart = isMasterPoseSheet
+        ? `with top title banner text "${trimToSentenceOrWord(formatSheetOutfitLabel(resolved.outfitName), 64)}"`
+        : '';
+      const bodyClause = [poseClean, sheetHeaderPart, attirePart, scenePart, extras.join(', ')]
         .filter(Boolean)
         .join(', ');
 
